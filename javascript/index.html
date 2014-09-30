@@ -1,0 +1,2797 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<title>rungun</title>
+<head>
+<style type="text/css">
+body
+{ 
+background-image:url('');
+background-repeat:no-repeat;
+background-attachment:fixed;
+background-position:center; 
+}
+
+#two {
+	width:500px;
+	margin:0px auto;
+	text-align:left;
+	padding:15px;
+	border:1px dashed #333;
+	background-color:#eee;
+	}
+#button
+	{
+	width:48px;
+	border:1px dashed #333;
+	background-color:#eee;
+	margin-right:5px;
+	}
+#button2
+	{
+	width:48px;
+	border:1px dashed #333;
+	background-color:#eee;
+	margin-left:5px;
+	}
+a:link {color:#000000;}
+a:visited {color:#000000;}
+a:hover {color:#EEEEEE;}
+a:active {color:#BBBBBB;}
+</style>
+<script type="text/javascript">
+var bullets = 14;
+var choices = 1;
+var copHealth = 3;
+var copHealth2 = 6;
+var robberHealth = 5;
+var scorpionHealth = 7;
+var robberVictoryCache = 10;
+var swatHealth = 3;
+var trueSwatHealth = 3;
+var choices2 = 1;
+var choices3 = 1;
+var choices4 = 1;
+var choices5 = 1;
+var choices6 = 0;
+var bulletStorage = 0;
+
+var desertPuzzlePhase = 0;
+var sewerPuzzlePhase = 0;
+
+var easterEgg = 0;
+
+var treeHide=0;
+var copHide=0;
+var treeText="";
+var treeDamage=0;
+
+var slotMachineSlot=0;
+var slotMachineRun=0;
+var SM1 = 0;
+var SM2 = 0;
+var SM3 = 0;
+var SMT1 = "-";
+var SMT2 = "-";
+var SMT3 = "-";
+var SMO = 0;
+
+var wolfPlate = false;
+var lizardPlate = false;
+var birdPlate = false;
+var snakePlate = false;
+	
+var elephantPlate = false;
+var lionPlate = false;
+var antPlate = false;
+var dogPlate = false;
+	
+var wolfPlateText = "";
+var lizardPlateText = "";
+var birdPlateText = "";
+var snakePlateText = "";
+
+var elephantPlateText = "";
+var lionPlateText = "";
+var antPlateText = "";
+var dogPlateText = "";
+
+var minecartText = "";
+
+function changeBGC(color){
+document.bgColor = color;
+}
+
+function gunshotCounter() {
+var myCounter = document.getElementById("ammo");
+myCounter.innerHTML = "Gunshots Remaining: " + bullets + "";
+}
+
+function copHealthCounter() {
+var copCounter = document.getElementById("copboss");
+copCounter.innerHTML = "";
+}
+
+function copHealthClear () {
+var copCounter2 = document.getElementById("copboss");
+copCounter2.innterHTML = "";
+}
+
+function robberHealthCounter() {
+var copCounter = document.getElementById("copboss");
+copCounter.innerHTML = "";
+}
+
+function robberHealthClear () {
+var copCounter2 = document.getElementById("copboss");
+copCounter2.innterHTML = "";
+}
+
+function gunshotCheck() {
+if (bullets==0)
+	{
+	alert('You have run out of bullets.');
+	if (x==344 || x==345) { alert('Remember: Gambling addiction is a serious issue. If you or someone you know has a problem, seek help.'); }
+	window.location.reload(true);
+	}
+}
+
+function changeText(color)
+{
+var myPara = document.getElementById("text");
+myPara.style.color = color;
+var myPara2 = document.getElementById("ammo");
+myPara2.style.color = color;
+}
+
+if (x==undefined)
+var x=0;
+var hp=7;
+
+function myRun()
+{
+var t=""
+var chance = Math.floor(Math.random()*3)
+switch (x)
+{
+case 0: {x=1; break}
+case 1: {x=6; break}
+case 2: {x=3; break}
+case 3: {x=5; break}
+case 4: {x=3; break}
+case 5: {x=7; break}
+case 6: {x=7; break}
+case 7: {x=9; break}
+case 8: {x=7; break}
+case 9: {x=10; break}
+case 10: {x=12; break}
+case 11: {x=15; break}
+case 12: {x=16; break}
+case 13: {x=12; break}
+case 14: {x=15; break}
+case 15: {x=16; break}
+case 16: {x=18; break}
+case 17: {x=18; break}
+case 18: {x=20; break}
+case 19: {x=20; break}
+case 20: {x=22; break}
+case 21: {x=22; break}
+case 22: {x=23; break}
+case 23: {x=24; break}
+case 25: {x=24; break}
+case 26: {x=28; break}
+case 27: {x=28; break}
+case 28: {x=30; break}
+case 29: {x=30; break}
+case 30: {x=32; break}
+case 31: {x=32; break}
+case 32: {x=33; break}
+case 33: {x=32; break}
+case 34: {x=32; break}
+case 35: {x=36; break}
+case 36: {x=37; break}
+case 37: {x=39; break}
+case 38: {x=37; break}
+case 39: {x=40; break}
+case 41: {x=44; break}
+case 42: {x=44; break}
+case 43: {x=44; break}
+case 45: {x=23; break}
+case 44: {x=46; break}
+case 46: {x=49; break}
+case 47: {x=46; break}
+case 48: {x=46; break}
+case 49: {x=50; break}
+case 50: {x=50; break}
+case 51: {x=53; break}
+case 52: {x=53; break}
+case 53: {x=54; break}
+case 54: {x=54; break}
+case 55: {x=57; break}
+case 56: {x=58; break}
+case 57: {x=57; break}
+case 58: {x=59; break}
+case 59: {x=61; break}
+case 60: {x=61; break}
+case 61: {x=62; break}
+case 62: {x=65; break}
+case 63: {x=62; break}
+case 64: {x=69; break}
+case 65: {x=67; break}
+case 66: {x=69; break}
+case 67: {x=67; break}
+case 68: {x=69; break}
+case 69: {x=70; break}
+case 70: {x=72; break}
+case 71: {x=72; break}
+case 72: {x=73; break}
+case 73: {x=72; break}
+case 74: {x=72; break}
+case 75: {x=78; break}
+case 76: {x=78; break}
+case 77: {x=79; break}
+case 78: {x=81; break}
+case 79: {x=81; break}
+case 80: {x=81; break}
+case 81: {x=83; break}
+case 82: {x=83; break}
+case 83: {x=85; break}
+case 84: {x=85; break}
+case 85: {x=87; break}
+case 86: {x=87; break}
+case 87: {x=88; break}
+case 88: {x=89; break}
+case 89: {x=90; break}
+case 90: {x=91; break}
+case 91: {x=92; break}
+case 92: {x=89; break}
+case 93: {x=90; break}
+case 94: {x=91; break}
+case 95: {x=92; break}
+case 96: {x=89; break}
+case 97: {x=99; break}
+case 98: {x=99; break}
+case 99: {x=100; break}
+case 100: {x=101; break}
+case 101: {x=101; break}
+case 102: {x=101; break}
+case 103: {x=105; break}
+case 104: {x=105; break}
+case 105: {x=107; break}
+case 106: {x=107; break}
+case 107: {x=108; break}
+case 108: {x=110; break}
+case 109: {x=110; break}
+case 110: {x=111; break}
+case 111: {x=112; break}
+case 112: {x=113; break}
+case 113: {x=114; break}
+case 114: {x=117; break}
+case 115: {x=117; break}
+case 116: {x=117; break}
+case 117: {x=119; break}
+case 118: {x=119; break}
+case 119: {x=121; break}
+case 120: {x=121; break}
+case 121: {x=122; break}
+case 122: {x=121; break}
+case 123: {x=121; break}
+case 123: {x=121; break}
+case 124: {x=126; break}
+case 125: {x=126; break}
+case 126: {x=128; break}
+case 127: {x=128; break}
+case 128: {x=130; break}
+case 129: {x=130; break}
+case 130: {x=131; break}
+case 131: {x=131; break}
+case 132: {x=133; break}
+case 133: {x=133; break}
+case 134: {x=136; break}
+case 135: {x=136; break}
+case 136: {x=137; break}
+case 137: {x=139; break}
+case 139: {x=140; break}
+case 140: {x=142; break}
+case 142: {x=143; break}
+case 143: {x=145; break}
+case 144: {x=145; break}
+case 145: {x=146; break}
+case 146: {x=148; break}
+case 147: {x=148; break}
+case 148: {x=149; break}
+case 149: {x=148; break}
+case 150: {x=148; break}
+case 151: {x=153; break}
+case 152: {x=153; break}
+case 153: {x=154; break}
+case 154: {x=154; break}
+case 155: {x=156; break}
+case 156: {x=156; break}
+case 157: {x=159; break}
+case 158: {x=159; break}
+case 159: {x=161; break}
+case 160: {x=161; break}
+case 161: {x=163; break}
+case 162: {x=163; break}
+case 163: {x=165; break}
+case 164: {x=165; break}
+case 165: {x=166; break}
+case 166: {x=170; break}
+case 167: {x=170; break}
+case 168: {x=170; break}
+case 169: {x=170; break}
+case 170: {x=172; break}
+case 171: {x=172; break}
+case 172: {x=174; break}
+case 173: {x=174; break}
+case 174: {x=176; break}
+case 175: {x=174; break}
+case 176: {x=177; break}
+case 177: {x=178; break}
+case 178: {x=179; break}
+case 179: {x=176; break}
+case 180: {x=177; break}
+case 181: {x=178; break}
+case 182: {x=179; break}
+case 183: {x=176; break}
+case 184: {x=186; break}
+case 185: {x=186; break}
+case 186: {x=188; break}
+case 187: {x=188; break}
+case 188: {x=195; break}
+case 189: {x=190; break}
+case 190: {x=192; break}
+case 191: {x=192; break}
+case 192: {x=194; break}
+case 193: {x=194; break}
+case 194: {x=199; break}
+case 195: {x=197; break}
+case 196: {x=197; break}
+case 197: {x=195; break}
+case 198: {x=199; break}
+case 199: {x=201; break}
+case 200: {x=201; break}
+case 201: {x=202; break}
+case 202: {x=201; break}
+case 203: {x=201; break}
+case 204: {x=206; break}
+case 205: {x=206; break}
+case 206: {x=207; break}
+case 207: {x=207; break}
+case 208: {x=209; break}
+case 209: {x=210; break}
+case 210: {x=211; break}
+case 211: {x=201; break}
+case 212: {x=201; break}
+case 213: {x=215; break}
+case 214: {x=215; break}
+case 215: {x=217; break}
+case 216: {x=217; break}
+case 217: {x=219; break}
+case 218: {x=219; break}
+case 219: {x=222; break}
+case 220: {x=222; break}
+case 221: {x=222; break}
+case 222: {x=223; break}
+case 223: {x=231; break}
+case 224: {x=226; break}
+case 225: {x=227; break}
+case 226: {x=228; break}
+case 227: {x=228; break}
+case 228: {x=230; break}
+case 229: {x=230; break}
+case 230: {x=237; break}
+case 231: {x=231; break}
+case 232: {x=233; break}
+case 233: {x=233; break}
+case 234: {x=235; break}
+case 235: {x=237; break}
+case 236: {x=237; break}
+case 237: {x=239; break}
+case 238: {x=239; break}
+case 239: {x=241; break}
+case 240: {x=241; break}
+case 241: {x=243; break}
+case 242: {x=243; break}
+case 243: {x=245; break}
+case 244: {x=245; break}
+case 245: {x=246; break}
+case 246: {x=247; break}
+case 247: {x=247; break}
+case 248: {x=250; break}
+case 249: {x=252; break}
+case 250: {x=252; break}
+case 251: {x=252; break}
+case 252: {x=254; break}
+case 253: {x=254; break}
+case 254: {x=256; break}
+case 255: {x=256; break}
+case 256: {x=258; break}
+case 257: {x=258; break}
+case 258: {x=260; break}
+case 259: {x=260; break}
+case 260: {x=262; break}
+case 261: {x=262; break}
+case 262: {x=264; break}
+case 263: {x=264; break}
+case 264: {x=266; break}
+case 265: {x=266; break}
+case 266: {x=268; break}
+case 267: {x=268; break}
+case 268: {x=270; break}
+case 269: {x=270; break}
+case 270: {x=272; break}
+case 271: {x=272; break}
+case 272: {x=274; break}
+case 273: {x=274; break}
+case 274: {x=275; break}
+case 275: {x=274; break}
+case 276: {x=274; break}
+case 277: {x=279; break}
+case 278: {x=279; break}
+case 279: {x=279; break}
+case 280: {x=279; break}
+case 281: {x=283; break}
+case 282: {x=283; break}
+case 283: {x=285; break}
+case 284: {x=285; break}
+case 285: {x=286; break}
+case 286: {x=287; break}
+case 287: {x=288; break}
+case 288: {x=289; break}
+case 289: {x=292; break}
+case 290: {x=292; break}
+case 291: {x=292; break}
+case 292: {x=294; break}
+case 293: {x=294; break}
+case 294: {x=296; break}
+case 295: {x=296; break}
+case 296: {x=297; break}
+case 297: {x=297; break}
+case 298: {x=300; break}
+case 299: {x=300; break}
+case 300: {x=303; break}
+case 301: {x=303; break}
+case 302: {x=303; break}
+case 303: {x=306; break}
+case 304: {x=306; break}
+case 305: {x=306; break}
+case 306: {x=308; break}
+case 307: {x=308; break}
+case 308: {x=310; break}
+case 309: {x=310; break}
+case 310: {x=311; break}
+case 311: {x=313; break}
+case 312: {x=313; break}
+case 313: {x=314; break}
+case 314: {x=313; break}
+case 315: {x=313; break}
+case 316: {x=318; break}
+case 317: {x=318; break}
+case 318: {x=320; break}
+case 319: {x=320; break}
+case 320: {x=322; break}
+case 321: {x=322; break}
+case 322: {x=324; break}
+case 323: {x=324; break}
+case 324: {x=326; break}
+case 325: {x=326; break}
+case 326: {x=327; break}
+case 327: {x=327; break}
+case 328: {x=329; break}
+case 329: {x=331; break}
+case 330: {x=331; break}
+case 331: {x=332; break}
+case 332: {x=332; break}
+case 333: {x=335; break}
+case 334: {x=337; break}
+case 335: {x=337; break}
+case 336: {x=337; break}
+case 337: {x=339; break}
+case 338: {x=339; break}
+case 339: {x=341; break}
+case 340: {x=341; break}
+case 341: {x=343; break}
+case 342: {x=343; break}
+case 343: {x=345; break}
+case 344: {x=345; break}
+
+}
+
+myText();
+}
+function myGun()
+{
+var t=""
+minecartText = "You shoot one of the circuits, and the rails shift and set you on another circuit.";
+var chance = Math.floor(Math.random()*3)
+switch (x)
+{
+case 0: {x=2; break}
+case 1: {x=2; break}
+case 2: {x=4; break}
+case 3: {x=4; break}
+case 4: {x=4; break}
+case 5: {x=8; break}
+case 6: {x=8; break}
+case 7: {x=8; break}
+case 8: {x=8; break}
+case 9: {x=11; break}
+case 10: {x=13; break}
+case 11: {x=14; break}
+case 12: {x=13; break}
+case 13: {x=13; break}
+case 14: {x=14; break}
+case 15: {x=14; break}
+case 16: {x=17; break}
+case 17: {x=17; break}
+case 18: {x=19; break}
+case 19: {x=19; break}
+case 20: {x=21; break}
+case 21: {x=21; break}
+case 22: {x=45; break}
+case 23: {x=25; break}
+case 24: {x=25; break}
+case 25: {x=26; break}
+case 26: {x=27; break}
+case 27: {x=27; break}
+case 28: {x=29; break}
+case 29: {x=29; break}
+case 30: {x=31; break}
+case 31: {x=32; break}
+case 32: {x=34; break}
+case 33: {x=32; break}
+case 34: {x=32; break}
+case 35: {x=36; break}
+case 36: {x=38; break}
+case 37: {x=41; break}
+case 38: {x=39; break}
+case 39: {x=42; break}
+case 40: {x=42; break}
+case 41: {x=43; break}
+case 42: {x=43; break}
+case 45: {x=45; break}
+case 44: {x=47; break}
+case 46: {x=48; break}
+case 47: {x=47; break}
+case 48: {x=48; break}
+case 49: {x=50; break}
+case 50: {x=51; break}
+case 51: {x=52; break}
+case 52: {x=52; break}
+case 53: {x=55; break}
+case 54: {x=55; break}
+case 55: {x=56; break}
+case 56: {x=56; break}
+case 57: {x=56; break}
+case 58: {x=60; break}
+case 59: {x=60; break}
+case 60: {x=60; break}
+case 61: {x=63; break}
+case 62: {x=64; break}
+case 63: {x=64; break}
+case 64: {x=68; break}
+case 65: {x=66; break}
+case 66: {x=68; break}
+case 67: {x=66; break}
+case 68: {x=69; break}
+case 69: {x=70; break}
+case 70: {x=71; break}
+case 71: {x=72; break}
+case 72: {x=74; break}
+case 73: {x=72; break}
+case 74: {x=72; break}
+case 75: {x=76; break}
+case 76: {x=77; break}
+case 77: {x=77; break}
+case 78: {x=80; break}
+case 79: {x=80; break}
+case 80: {x=80; break}
+case 81: {x=82; break}
+case 82: {x=82; break}
+case 83: {x=84; break}
+case 84: {x=84; break}
+case 85: {x=86; break}
+case 86: {x=86; break}
+case 87: {x=88; break}
+case 88: {x=89; break}
+case 89: {x=93; break}
+case 90: {x=94; break}
+case 91: {x=95; break}
+case 92: {x=96; break}
+case 93: {x=93; break}
+case 94: {x=94; break}
+case 95: {x=95; break}
+case 96: {x=96; break}
+case 97: {x=98; break}
+case 98: {x=98; break}
+case 99: {x=102; break}
+case 100: {x=102; break}
+case 101: {x=102; break}
+case 102: {x=103; break}
+case 103: {x=104; break}
+case 104: {x=104; break}
+case 105: {x=106; break}
+case 106: {x=106; break}
+case 107: {x=109; break}
+case 108: {x=115; break}
+case 109: {x=115; break}
+case 110: {x=115; break}
+case 111: {x=115; break}
+case 112: {x=115; break}
+case 113: {x=115; break}
+case 114: {x=116; break}
+case 115: {x=117; break}
+case 116: {x=116; break}
+case 117: {x=118; break}
+case 118: {x=118; break}
+case 119: {x=120; break}
+case 120: {x=120; break}
+case 121: {x=123; break}
+case 122: {x=121; break}
+case 123: {x=121; break}
+case 124: {x=125; break}
+case 125: {x=125; break}
+case 126: {x=127; break}
+case 127: {x=127; break}
+case 128: {x=129; break}
+case 129: {x=129; break}
+case 130: {x=132; break}
+case 131: {x=132; break}
+case 132: {x=134; break}
+case 133: {x=134; break}
+case 134: {x=135; break}
+case 135: {x=135; break}
+case 136: {x=137; break}
+case 137: {x=138; break}
+case 139: {x=138; break}
+case 140: {x=141; break}
+case 142: {x=138; break}
+case 143: {x=144; break}
+case 144: {x=144; break}
+case 145: {x=147; break}
+case 146: {x=148; break}
+case 147: {x=148; break}
+case 148: {x=150; break}
+case 149: {x=148; break}
+case 150: {x=148; break}
+case 151: {x=152; break}
+case 152: {x=152; break}
+case 153: {x=155; break}
+case 154: {x=155; break}
+case 155: {x=155; break}
+case 156: {x=157; break}
+case 157: {x=158; break}
+case 158: {x=158; break}
+case 159: {x=160; break}
+case 160: {x=160; break}
+case 161: {x=162; break}
+case 162: {x=162; break}
+case 163: {x=164; break}
+case 164: {x=164; break}
+case 165: {x=167; break}
+case 166: {x=169; break}
+case 167: {x=168; break}
+case 168: {x=168; break}
+case 169: {x=169; break}
+case 170: {x=171; break}
+case 171: {x=171; break}
+case 172: {x=173; break}
+case 173: {x=173; break}
+case 174: {x=175; break}
+case 175: {x=175; break}
+case 176: {x=180; break}
+case 177: {x=181; break}
+case 178: {x=182; break}
+case 179: {x=183; break}
+case 180: {x=180; break}
+case 181: {x=181; break}
+case 182: {x=182; break}
+case 183: {x=183; break}
+case 184: {x=185; break}
+case 185: {x=185; break}
+case 186: {x=187; break}
+case 187: {x=187; break}
+case 188: {x=189; break}
+case 189: {x=189; break}
+case 190: {x=191; break}
+case 191: {x=191; break}
+case 192: {x=193; break}
+case 193: {x=193; break}
+case 194: {x=198; break}
+case 195: {x=196; break}
+case 196: {x=196; break}
+case 197: {x=189; break}
+case 198: {x=198; break}
+case 199: {x=200; break}
+case 200: {x=200; break}
+case 201: {x=203; break}
+case 202: {x=201; break}
+case 203: {x=201; break}
+case 204: {x=205; break}
+case 205: {x=205; break}
+case 206: {x=208; break}
+case 207: {x=208; break}
+case 208: {x=212; break}
+case 209: {x=212; break}
+case 210: {x=212; break}
+case 211: {x=200; break}
+case 212: {x=200; break}
+case 213: {x=214; break}
+case 214: {x=214; break}
+case 215: {x=216; break}
+case 216: {x=216; break}
+case 217: {x=218; break}
+case 218: {x=218; break}
+case 219: {x=220; break}
+case 220: {x=221; break}
+case 221: {x=221; break}
+case 222: {x=224; break}
+case 223: {x=232; break}
+case 224: {x=225; break}
+case 225: {x=225; break}
+case 226: {x=229; break}
+case 227: {x=229; break}
+case 228: {x=229; break}
+case 229: {x=229; break}
+case 230: {x=236; break}
+case 231: {x=232; break}
+case 232: {x=234; break}
+case 233: {x=234; break}
+case 234: {x=234; break}
+case 235: {x=236; break}
+case 236: {x=236; break}
+case 237: {x=238; break}
+case 238: {x=238; break}
+case 239: {x=240; break}
+case 240: {x=240; break}
+case 241: {x=242; break}
+case 242: {x=242; break}
+case 243: {x=244; break}
+case 244: {x=244; break}
+case 245: {x=251; break}
+case 246: {x=248; break}
+case 247: {x=248; break}
+case 248: {x=249; break}
+case 249: {x=249; break}
+case 250: {x=249; break}
+case 251: {x=249; break}
+case 252: {x=253; break}
+case 253: {x=253; break}
+case 254: {x=255; break}
+case 255: {x=255; break}
+case 256: {x=257; break}
+case 257: {x=257; break}
+case 258: {x=259; break}
+case 259: {x=259; break}
+case 260: {x=261; break}
+case 261: {x=261; break}
+case 262: {x=263; break}
+case 263: {x=263; break}
+case 264: {x=265; break}
+case 265: {x=265; break}
+case 266: {x=267; break}
+case 267: {x=267; break}
+case 268: {x=269; break}
+case 269: {x=269; break}
+case 270: {x=271; break}
+case 271: {x=271; break}
+case 272: {x=273; break}
+case 273: {x=273; break}
+case 274: {x=276; break}
+case 275: {x=274; break}
+case 276: {x=274; break}
+case 277: {x=278; break}
+case 278: {x=278; break}
+case 279: {x=280; break}
+case 280: {x=279; break}
+case 281: {x=282; break}
+case 282: {x=282; break}
+case 283: {x=284; break}
+case 284: {x=284; break}
+case 285: {x=286; break}
+case 286: {x=287; break}
+case 287: {x=288; break}
+case 288: {x=290; break}
+case 289: {x=291; break}
+case 290: {x=291; break}
+case 291: {x=291; break}
+case 292: {x=293; break}
+case 293: {x=293; break}
+case 294: {x=295; break}
+case 295: {x=295; break}
+case 296: {x=298; break}
+case 297: {x=298; break}
+case 298: {x=299; break}
+case 299: {x=299; break}
+case 300: {x=301; break}
+case 301: {x=302; break}
+case 302: {x=302; break}
+case 303: {x=304; break}
+case 304: {x=305; break}
+case 305: {x=305; break}
+case 306: {x=307; break}
+case 307: {x=307; break}
+case 308: {x=309; break}
+case 309: {x=309; break}
+case 310: {x=309; break}
+case 311: {x=312; break}
+case 312: {x=312; break}
+case 313: {x=315; break}
+case 314: {x=313; break}
+case 315: {x=313; break}
+case 316: {x=317; break}
+case 317: {x=317; break}
+case 318: {x=319; break}
+case 319: {x=319; break}
+case 320: {x=321; break}
+case 321: {x=321; break}
+case 322: {x=323; break}
+case 323: {x=323; break}
+case 324: {x=325; break}
+case 325: {x=325; break}
+case 326: {x=328; break}
+case 327: {x=328; break}
+case 328: {x=328; break}
+case 329: {x=330; break}
+case 330: {x=330; break}
+case 331: {x=333; break}
+case 332: {x=333; break}
+case 333: {x=334; break}
+case 334: {x=336; break}
+case 335: {x=336; break}
+case 336: {x=336; break}
+case 337: {x=338; break}
+case 338: {x=338; break}
+case 339: {x=340; break}
+case 340: {x=340; break}
+case 341: {x=342; break}
+case 342: {x=342; break}
+case 343: {x=344; break}
+case 344: {x=344; break}
+
+}
+
+myText();
+}
+function myText()
+{
+gunshotCheck();
+if (desertPuzzlePhase==1) { x=97; }
+if (sewerPuzzlePhase==1) { x=184; }
+if (x==1){t="<code>You grab your gun and walk over to your door. Do you dare exit the safety of your garage?</code>"};
+if (x==2)
+	{
+	t="<code>You take the gun and shoot the light out on accident. Good luck navigating in the dark!</code>"
+	changeBGC('#000000');
+	bullets = bullets - 1;
+	};
+if (x==3){t="<code>You stumble around aimlessly in the dark, stubbing your toe in the process.</code>"};
+if (x==4)
+	{
+	t="<code>You randomly shoot in the dark. Stop wasting your ammo like that!</code>"
+	bullets = bullets - 1;
+	};
+if (x==5)
+	{
+	t="<code>You manage to find the way out of your garage and step into the blinding light.</code>"
+	changeBGC('#FFFFFF');
+	};
+if (x==6){t="<code>You calmly exit your garage into the outside world.</code>"
+		  changeBGC('#FFFFFF');};
+if (x==7){t="<code>You walk down the street, your gun firmly grasped in your hand.</code>"};
+if (x==8)
+	{
+	t="<code>You shoot one of your neighboors on accident.<br><b>OOPSIES.</b></br></code>"
+	bullets = bullets - 1;
+	};
+if (x==9){t="<code>You notice a car heading towards you!</code>"};
+if (x==10){t="<code>You jump out of the way as the car speeds past you.</code>"};
+if (x==11)
+	{
+	t="<code>You panic and shoot at the driver. You shoot him and accidentally kill him. At least you stopped the car.</code>"
+	bullets = bullets - 1;
+	};
+if (x==12){t="<code>As the car sputters off into the distance, you continue your walk down the street.</code>"};
+if (x==13)
+	{
+	t="<code>You shoot at the car as it drives away. What a waste of precious ammunition.</code>"
+	bullets = bullets - 1;
+	};
+if (x==14)
+	{
+	t="<code>You shoot the cadaver of the motorist again. Shooting him won't help, and you lack a magical vacuum gun to revive him. He's dead. Stop that.</code>"
+	bullets = bullets - 1;
+	};
+if (x==15){t="<code>You slowly back away, then run from the crime scene. As far as you are concerned, you were never aware some guy driving a Prius was shot to death.</code>"};
+if (x==16)
+	{
+	t="<code>You reach the end of your street, and a path into a forest begins at your feet.</code>"
+	};
+if (x==17)
+	{
+	t="<code>You shoot a few gunshots into the forest. Nothing happens.</code>"
+	bullets = bullets - 1;
+	};
+if (x==18){t="<code>You're walking in the woods. There's no one around, and it's rather quiet.</code>"};
+if (x==19)
+	{
+	t="<code>You shoot around and at the ground. What a waste of ammo.</code>"
+	bullets = bullets - 1;
+	};
+if (x==20)
+	{
+	t="<code>You run and trip over a small box of bullets.<br>+5 bullets.</code>"
+	bullets = bullets + 5;
+	};
+if (x==21)
+	{
+	t="<code>You shoot the box of bullets... wait, what the hell is wrong with you.</code>"
+	bullets = bullets - 1;
+	};
+if (x==22){t="<code>You run through the forest, gun in tow.</code>"};
+if (x==23){t="<code>You bump into a rather large man blocking your path.</code>"};
+if (x==24){t="<code>Unfortunately, you cannot simply run past the man.</code>"};
+if (x==25)
+	{
+	t="<code>You shoot the man. His astonishing girth absorbs the impact of the bullet.</code>"
+	bullets = bullets - 1;
+	};
+if (x==26)
+	{
+	t="<code>You shoot him again. This time, the man falls to the ground.</code>"
+	bullets = bullets - 1;
+	};
+if (x==27)
+	{
+	t="<code>Shooting dead people doesn't do anything, you know.</code>"
+	bullets = bullets - 1;
+	};
+if (x==28)
+	{
+	t="<code>You run past the morbidly obese man's cadaver and towards the edge of the forest.</code>"
+	}
+if (x==29)
+	{
+	t="<code>Shooting dead people doesn't do anything, you know.</code>"
+	bullets = bullets - 1;
+	};
+if (x==30)
+	{
+	t="<code>A cop approaches you. He's not too happy you've been wantonly shooting people.</code>"
+	};
+if (x==31)
+	{
+	t="<code>The cop deflects your gunshot with ease. Looks like you're in for a fight!</code>"
+	bullets = bullets - 1;
+	};
+if (x==32)
+	{
+	chances = Math.floor(Math.random()*2)
+	if (chances!==1)
+		{
+		t="<code>The cop raises his gun and points it at you.<br>(Cop health: " + copHealth + "/3) </code>"
+		}
+	else
+		{
+		t="<code>The cop reloads his gun, lowering his arms.<br>(Cop health: " + copHealth + "/3) </code>"
+		}
+	copHealthCounter()
+	};
+if (x==33)
+	{
+	if (chances!==1)
+		{
+		t="<code>You nimbly dodge the cop's bullet!</code>"
+		}
+	else
+		{
+		t="<code>As you run, the cop finishes reloading and shoots you. The bullet grazes your arm, leaving a small scrape.</code>"
+		}
+	chances = Math.floor(Math.random()*2);
+	copHealthCounter();
+	};
+if (x==34)
+	{
+	if (chances!==1)
+		{
+		t="<code>The cop dodges the bullet with minimal effort. Best to wait until he's vulnerable...</code>"
+		bullets = bullets - 1;
+		}
+	else
+		{
+		t="<code>You successfully shoot the cop!</code>"
+		copHealth = copHealth - 1;
+		bullets = bullets - 1;
+		}
+	if (copHealth==0){x=35};
+	chances = Math.floor(Math.random()*2);
+	copHealthCounter();
+	};
+if (x==35)
+	{
+	t="<code>You shoot the cop and he falls over, dead.<br><br><b>VICTORY!</b><br><br>You loot eight bullets off the cop's body.<br>+8 bullets</code>"
+	bullets = bullets + 8;
+	};
+if (x==36)
+	{
+	t="<code>You are now out of the forest, and find yourself next to an empty highway.</code>"
+	var copCounter3 = document.getElementById("copboss");
+	copCounter3.innterHTML = "";
+	copHealthClear();
+	};
+if (x==37)
+	{
+	t="<code>You run along the highway and spot a car in the distance coming down the highway. Perhaps you can get a ride.</code>"
+	}
+if (x==38)
+	{
+	t="<code>You shoot your gun into the air out of sheer boredom. Like that will accomplish anything.</code>"
+	bullets = bullets - 1;
+	}
+if (x==39){t="<code>The car passes you as you chase after it. Your legs slowly begin to feel like jelly.</code>"};
+if (x==40){t="<code>Dude. You can't run at fifty miles an hour. That car is long gone, bro.</code>"};
+if (x==41)
+	{
+	t="<code>You shoot your gun into the air, signaling the car to stop for you.</code>"
+	bullets = bullets - 1;
+	};
+if (x==42)
+	{
+	t="<code>You fire your gun in a desperate attempt to get the car to stop for you. The driver brakes and slows to a stop."
+	bullets = bullets - 1;
+	};
+if (x==43)
+	{
+	t="<code>Stop firing bullets into the air. The car has already stopped for you.</code>"
+	bullets = bullets - 1;
+	}
+if (x==44){t="<code>You run up and climb into the car.</code>"};
+<!--the next line is disjointed, do not associate it with nearby events-->
+if (x==45)
+	{
+	t="<code>You shoot and kill a defenseless bird. Another bird calls the police.</code>"
+	bullets = bullets - 1;
+	};
+if (x==46)
+	{
+	t="<code>You patiently wait as the man drives you around.</code>"
+	}
+if (x==47)
+	{
+	t="<code>You shoot your gun, and startle the cab driver. Relax!</code>"
+	bullets = bullets - 1;
+	}
+if (x==48)
+	{
+	t="<code>You shoot again. The driver asks you to stop. You're making him nervous.</code>"
+	bullets = bullets - 1;
+	}
+if (x==49)
+	{
+	var nameLoop = 1;
+	while (nameLoop==1)
+		{	
+		var playerName = prompt("The driver politely asks for your name.","John");
+		if (playerName==null)
+			{
+			playerName = prompt("Hah, downright hilarious, you card you. No, seriously, enter your name.","John");
+			}
+		else
+			{
+			nameLoop=3;
+			}
+		}
+	t="<code>The man thanks you, " + playerName + ", and continues driving.</code>"
+	}
+if (x==50)
+	{
+	t="<code>The driver simply continues to drive you around, occasionally fiddling with the radio.</code>"
+	}
+if (x==51)
+	{
+	t="<code>You shoot again, and this time, you kill the driver in the process. The car skids out of control and crashes in a dirt ditch. Congratulations, you know how to perpetually screw up!</code>"
+	bullets = bullets - 1;
+	}
+if (x==52)
+	{
+	t="<code>You shoot the driver's body. Stop doing that to everyone you kill.</code>"
+	bullets = bullets - 1;
+	}
+if (x==53)
+	{
+	t="<code>You make an attempt to exit the car. Much to your displeasure, the doors are locked shut and the keys are broken and mangled from the car wreck.</code>"
+	}
+if (x==54)
+	{
+	t="<code>Haven't you learned by now solid objects are impassable to mere mortals such as you?</code>"
+	}
+if (x==55)
+	{
+	t="<code>You fire a bullet into one of the windows, shattering it.</code>"
+	bullets = bullets - 1;
+	}
+if (x==56)
+	{
+	t="<code>Wasting more ammo, you eliminate more glass fragments where the window once was.</code>"
+	bullets = bullets - 1;
+	}
+if (x==57)
+	{
+	t="<code>You try to climb out of the car, but a quick observation tells you trying to climb through the window's broken glass would likely cut you to ribbons. Therefore, you do not exit through the window.</code>"
+	}
+if (x==58)
+	{
+	t="<code>You finally escape the deathtrap which the car has become. From now on, no hitchhiking.</code>"
+	}
+if (x==59)
+	{
+	t="<code>You walk away from the burning wreck.</code>"
+	}
+if (x==60)
+	{
+	t="<code>You shoot what is left of the car.</code>"
+	bullets = bullets - 1;
+	}
+if (x==61)
+	{
+	t="<code>You run along the highway, taking a good look at your surroundings. It appears you decided to kill the driver and make the car crash in the middle of an empty, soul-crushingly barren desert wasteland.</code>"
+	}
+if (x==62)
+	{
+	t="<code>You keep running in the hopes you will discover some sign of human civilization.</code>"
+	}
+if (x==63)
+	{
+	t="<code>You shoot and kill a poisonous scorpion. One less thing to worry about.</code>"
+	bullets = bullets - 1;
+	}
+if (x==64)
+	{
+	t="<code>Another untimely shot from you manages to clear out a cactus that happened to be in your path.</code>"
+	bullets = bullets - 1;
+	}
+if (x==65)
+	{
+	t="<code>You run headfirst into a cactus. Moron.</code>"
+	}
+if (x==66)
+	{
+	t="<code>You shoot the cactus blocking your path.</code>"
+	bullets = bullets - 1;
+	}
+if (x==67)
+	{
+	t="<code>You cannot just walk through the cactus. The cactus is not Platform 9 3/4. Get your head out of the clouds.</code>"
+	}
+if (x==68)
+	{
+	t="<code>You shoot a small lizard. A member of a committe for the preservation of desert wildlife yells at you, then runs off. The committeeperson refuses to let you follow her, as no unintelligent jackass like you should ever get out of the desert. Nor should you be toting that gun. Do you even have a legal gun license?</code>"
+	bullets = bullets - 1;
+	}
+if (x==69)
+	{
+	t="<code>You run past the remains of the cactus and spot a gas station in the distance.</code>"
+	}
+if (x==70)
+	{
+	t="<code>Upon approaching, it appears the gas station is being held up by a robber! He has a gun and looks pretty angry.</code>"
+	}
+if (x==71)
+	{
+	t="<code>The robber leaps out of the way, and your bullet hits a gas tank. The resulting explosion nearly kills both of you. The robber, not to happy, immediately rushes in to fight you.</code>"
+	bullets = bullets - 1;
+	}
+if (x==72)
+	{
+	choices2 = Math.floor(Math.random()*2);
+	choices3 = Math.floor(Math.random()*2);
+	if (choices2==0)
+		{
+		t="<code>The robber raises his gun and points it at you.<br>(Robber health: " + robberHealth + "/5) </code>"
+		}
+	else
+		{
+		if (choices3==0)
+			{
+			t="<code>The robber reloads his gun, lowering his arms.<br>(Robber health: " + robberHealth + "/5) </code>"
+			}
+		else
+			{
+			t="<code>The robber lowers his arms, smiling. His grin is kind of unsettling...<br>(Robber health: " + robberHealth + "/5)</code>"
+			}
+		}
+	}
+if (x==73)
+	{
+	if (choices2==0)
+		{
+		t="<code>You nimbly dodge the robber's bullet!</code>"
+		}
+	else
+		{
+		if (choices3==0)
+			{
+			t="<code>As you run, the robber finishes reloading and shoots you. The bullet grazes your arm, leaving a small scrape.</code>"
+			}
+		else
+			{
+			t="<code>You refuse to shoot him. The smile fades, and he readies his gun again.</code>"
+			}
+		}
+	choices2 = Math.floor(Math.random()*2);
+	}
+if (x==74)
+	{
+	if (choices2==0)
+		{
+		t="<code>The robber, being prepared, dodges the bullet with minimal effort.</code>"
+		bullets = bullets - 1;
+		}
+	else
+		{
+		if (choices3==0)
+			{
+			t="<code>You successfully shoot the robber!</code>"
+			robberHealth = robberHealth - 1;
+			bullets = bullets - 1;
+			}
+		else
+			{
+			t="<code>The robber leaps out of the way, and you hit another gas tank! More of the building goes up in flames. It's probably best not to play into his ruse, especially when he makes it obvious by smirking.</code>"
+			if (robberVictoryCache!=0)
+				{
+				robberVictoryCache = robberVictoryCache - 1;
+				}
+			bullets = bullets - 1;
+			}
+		}
+	if (robberHealth==0){
+		gunshotCheck();
+		document.getElementById("text").innerHTML=t;
+		x=75;
+		}
+	}
+if (x==75)
+	{
+	t="<code>You shoot the robber, killing him once and for all. The management cheers.<br><br><b>VICTORY!</b><br><br>The management gives you " + robberVictoryCache + " bullet(s) from the storeroom in the back. Some of the bullets were ruined by the gas explosions the robber caused.<br><br>+" + robberVictoryCache + " bullets</code>"
+	bullets = bullets + robberVictoryCache;
+	}
+if (x==76)
+	{
+	t="<code>You shoot another gas tank. But that's okay, the management likes you and they promptly forgive you.</code>"
+	bullets = bullets - 1;
+	}
+if (x==77)
+	{
+	t="<code>You shoot into the air at random.</code>"
+	bullets = bullets - 1;
+	}
+if (x==78)
+	{
+	t="<code>As you run forward, you hear a faint but sincere voice asking you to come again.</code>"
+	}
+if (x==79)
+	{
+	t="<code>The bullets you fired into the air fall from above and kill an unlucky sap. As you walk away from the crime scene, you hear a faint but sincere voice requesting you come again.</code>"
+	}
+if (x==80)
+	{
+	t="<code>For all that is good and cherishable, stop shooting everywhere, anywhere, at anything.</code>"
+	bullets = bullets - 1;
+	}
+if (x==81)
+	{
+	t="<code>You proceed in your trek through the barren wasteland of a desert this is. Thankfully, you find a few bullets lodged into the side of a nearby cactus.<br>+3 bullets.</code>"
+	bullets = bullets + 3;
+	}
+if (x==82)
+	{
+	t="<code>You put another poor, defenseless cactus out of his/her misery. Do plants even have gender?</code>"
+	bullets = bullets - 1;
+	}
+if (x==83)
+	{
+	t="<code>Your depressing trek through the desert resumes.</code>"
+	}
+if (x==84)
+	{
+	t="<code>You shoot the air randomly. Being in the desert sucks.</code>"
+	bullets = bullets - 1;
+	}
+if (x==85)
+	{
+	t="<code>As you run along, you spot an opening in the sand. It appears to lead into a temple of some sort.</code>"
+	}
+if (x==86)
+	{
+	t="<code>You shoot a warning bullet into the temple. Nothing appears to stir within.</code>"
+	bullets = bullets - 1;
+	}
+if (x==87)
+	{
+	t="<code>You fearlessly march into the desert temple. Everything you've seen in movies tells you this is a terrible idea, but you proceed anyways.</code>"
+	}
+if (x==88)
+	{
+	t="<code>At the bottom of a temple, you find yourself in a circular room with four markings - the WOLF PLATE, the LIZARD PLATE, the BIRD PLATE, and the SNAKE PLATE. Markings on the wall appear to depict a wolf eating a bird, and a snake eating a lizard. You feel the compulsion to protect the prey from the predators.</code>"
+	}
+if (x==89)
+	{
+	t="<code>You walk around the room in a circular motion.<br>You are standing in front of the WOLF PLATE.</code>"
+	}
+if (x==90)
+	{
+	t="<code>You walk around the room in a circular motion.<br>You are standing in front of the LIZARD PLATE.</code>"
+	}
+if (x==91)
+	{
+	t="<code>You walk around the room in a circular motion.<br>You are standing in front of the BIRD PLATE.</code>"
+	}
+if (x==92)
+	{
+	t="<code>You walk around the room in a circular motion.<br>You are standing in front of the SNAKE PLATE.</code>"
+	}
+if (x==93)
+	{
+	wolfPlate = !wolfPlate;
+	if (wolfPlate==true) { wolfPlateText="The eyes of the wolf light up." } else { wolfPlateText="The eyes of the wolf fade and stop glowing." }
+	t="<code>You lift your gun and shoot the WOLF PLATE. " + wolfPlateText + "<br>You are standing in front of the WOLF PLATE."
+	bullets = bullets - 1;
+	if (wolfPlate==true && lizardPlate==false && birdPlate==false && snakePlate==true)
+		{
+		desertPuzzlePhase = 1;
+		}
+	}
+if (x==94)
+	{
+	lizardPlate = !lizardPlate;
+	if (lizardPlate==true) { lizardPlateText="The eyes of the lizard light up."; } else { lizardPlateText="The eyes of the lizard fade and stop glowing."; }
+	t="<code>You lift your gun and shoot the LIZARD PLATE. " + lizardPlateText + "<br>You are standing in front of the LIZARD PLATE.</code>"
+	bullets = bullets - 1;
+	if (wolfPlate==true && lizardPlate==false && birdPlate==false && snakePlate==true)
+		{
+		desertPuzzlePhase = 1;
+		}
+	}
+if (x==95)
+	{
+	birdPlate = !birdPlate;
+	if (birdPlate==true) { birdPlateText="The eyes of the bird light up."; } else { birdPlateText="The eyes of the bird fade and stop glowing."; }
+	t="<code>You lift your gun and shoot the BIRD PLATE. " + birdPlateText + "<br>You are standing in front of the BIRD PLATE.</code>"
+	bullets = bullets - 1;
+	if (wolfPlate==true && lizardPlate==false && birdPlate==false && snakePlate==true)
+		{
+			desertPuzzlePhase = 1;
+		}
+	}
+if (x==96)
+	{
+	snakePlate = !snakePlate;
+	if (snakePlate==true) { snakePlateText="The eyes of the snake light up."; } else { snakePlateText="The eyes of the snake fade and stop glowing."; }
+	t="<code>You lift your gun and shoot the SNAKE PLATE. " + snakePlateText + "<br>You are standing in front of the SNAKE PLATE.</code>"
+	bullets = bullets - 1;
+	if (wolfPlate==true && lizardPlate==false && birdPlate==false && snakePlate==true)
+		{
+		desertPuzzlePhase = 1;
+		}
+	}
+if (x==97)
+	{
+	t="<code>Before you can react, the floor drops suddenly. A doorway is revealed. It looks like you solved this puzzle, somehow.</code>"
+	desertPuzzlePhase = 0;
+	}
+if (x==98)
+	{
+	t="<code>You shoot upwards at the plates, but the floor refuses to rise.</code>"
+	bullets = bullets - 1;
+	}
+if (x==99)
+	{
+	changeBGC('#000000');
+	t="<code>You wander through the doorway, deeper into the desert temple. The door behind you slowly slides shut, leaving you sealed inside. It has suddenly become very, very dark in here. You find this darkness quite unsettling.</code>"
+	}
+if (x==100)
+	{
+	t="<code>You walk down the dark hallway, looking for an exit. There does not appear to be one...</code>"
+	}
+if (x==101)
+	{
+	t="<code>You stub your toe on a rock. Ow.</code>"
+	}
+if (x==102)
+	{
+	t="<code>You shoot a loose brick, which cracks. A sliver of light shines through the crack.</code>"
+	bullets = bullets - 1;
+	}
+if (x==103)
+	{
+	t="<code>You shoot the wall's weak point again, causing a collapse which reveals an exit!</code>"
+	changeBGC('#FFFFFF');
+	bullets = bullets - 1;
+	}
+if (x==104)
+	{
+	t="<code>You put a bullet elsewhere in the wall to look for more hidden exits, but no other paths present themselves.</code>"
+	bullets = bullets - 1;
+	}
+if (x==105)
+	{
+	t="<code>You proceed down the corridor. It is dimly lit by torches running along the walls.</code>"
+	}
+if (x==106)
+	{
+	t="<code>You shoot out a torch on accident.</code>"
+	bullets = bullets - 1;
+	}
+if (x==107)
+	{
+	t="<code>You spot a really nice little glass vase in the middle of the hallway. Do you take the treasure?</code>"	
+	}
+if (x==108)
+	{
+	t="<code>You run past the treasure, deciding to ignore it. The wind you generate while running, though, knocks the little vase off to the side and it breaks. The pedestal was a pressure plate, and OH GOD NOW THERE'S A GIANT ROLLING BOULDER COMING AT YOU! RUN FOR YOUR LIFE!</code>"
+	}
+if (x==109)
+	{
+	t="<code>You shoot the vase, and it explodes into a million harmful glass fragments. The pedestal was a pressure plate, and OH GOD THERES NOW A GIANT ROLLING BOULDER COMING AT YOU! RUN FOR YOUR LIFE!</code>"
+	}
+if (x==110)
+	{
+	t="<code>THERE'S A GIANT BOULDER. IT'S COMING AT YOU. DON'T EVEN THINK JUST KEEP RUNNING.</code>"
+	}
+if (x==111)
+	{
+	t="<code>SERIOUSLY RUN LIKE YOU'VE NEVER RUN BEFORE. DON'T STOP AT ALL, OR YOU WILL DIE. OH CRAP OH CRAP OH CRAP.</code>"
+	}
+if (x==112)
+	{
+	t="<code>I DON'T CARE HOW IMPOLITE CAPS LOCK IS BUT I MUST REINFORCE THE FACT THAT YOU WILL DIE IF YOU STOP RUNNING FOR EVEN A SPLIT SECOND.</code>"
+	}
+if (x==113)
+	{
+	t="<code>ALMOST SAFE. ALMOST THERE. COME ON YOU CAN DO IT.</code>"
+	}
+if (x==114)
+	{
+	t="<code>With one last, proud stride, you bolt back into the dark hallway. The boulder slams the hidden exit shut, and then the floor under it gives way. Looks like you can jump down from there.</code>"
+	}
+if (x==115)
+	{
+	t="<code>You try to break the boulder with your gun, but that merely results in you nearly getting steamrolled. The floor beneath the rolling rock of death gives away, much to your favor. You fall down with it into the lower level.</code>"
+	bullets = bullets - 1;
+	}
+if (x==116)
+	{
+	t="<code>There is nothing to shoot. Stop firing, please. You're wasting precious ammunition.</code>"
+	bullets = bullets - 1;
+	}
+if (x==117)
+	{
+	t="<code>You land and find yourself in the lower level. After you get up, you see another entrance leading to another torch-lit corridor that proceeds deeper into the temple.</code>"
+	}
+if (x==118)
+	{
+	t="<code>You cautiously shoot down the corridor to ensure there are no traps.</code>"
+	bullets = bullets - 1;
+	}
+if (x==119)
+	{
+	t="<code>You walk into the next room, and find a giant scorpion breathing heavily in your direction. He doesn't look happy.</code>"
+	}
+if (x==120)
+	{
+	t="<code>Your bullet reflects off the scorpion's natural exoskeleton! This is gonna be one hell of a fight, isn't it?</code>"
+	bullets = bullets - 1;
+	}
+if (x==121)
+	{
+	choices4 = Math.floor(Math.random()*2);
+	choices5 = Math.floor(Math.random()*2);
+	if (choices4==0)
+		{
+		t="<code>The scorpion stands, ready to attack.<br>(Scorpion health: " + scorpionHealth + "/7) </code>"
+		}
+	else
+		{
+		if (choices5==0)
+			{
+			t="<code>The scorpion stands on its back legs, ready to strike. A soft, pink underbelly is exposed.<br>(Scorpion health: " + scorpionHealth + "/7) </code>"
+			}
+		else	
+			{
+			t="<code>The scorpion crouches into its armor, and charges directly at you!<br>(Scorpion health: " + scorpionHealth + "/7) </code>"
+			}
+		}
+	}
+if (x==122)
+	{
+	if (choices4==0)
+		{
+		t="<code>You run around a bit, but the scorpion does not seem to come after you. It merely continues to wait for the opportunity to strike.</code>"
+		}
+	else
+		{
+		if (choices5==0)
+			{
+			t="<code>The scorpion comes down and strikes, its poisonous stinger missing your weak human head by about three centimeters.</code>"
+			}
+		else
+			{
+			t="<code>You cannot outrun the scorpion! You are flung across the room with a swipe of its pincher, some bullets spilling out of your pockets.<br>-2 bullets</code>"
+			bullets-=2;
+			}
+		}
+	choices4 = Math.floor(Math.random()*2);
+	}
+if (x==123)
+	{
+	if (choices4==0)
+		{
+		t="<code>The scorpion's tough natural armor effortlessly reflects your bullet. Better wait until he's vulnerable.</code>"
+		bullets = bullets - 1;
+		}
+	else
+		{
+		if (choices5==0)
+			{
+			t="<code>You successfully shoot the scorpion!</code>"
+			scorpionHealth = scorpionHealth - 1;
+			bullets = bullets - 1;
+			}
+		else
+			{
+			t="<code>In a panic, you fire directly between the scorpion's eyes. The great insect is momentarily stunned, and you run for cover. As the scorpion turns to face you, the bullet dislodges from its body and you pick it up once it rolls towards you.";
+			}
+		}
+		if (scorpionHealth==0){
+		gunshotCheck();
+		document.getElementById("text").innerHTML=t;
+		x=124;
+		}
+	choices4 = Math.floor(Math.random()*2);
+	}
+if (x==124)
+	{
+	t="<code>The scorpion lets out an insectile cry, then collapses, dead at last.<br><br><b>VICTORY!</b><br><br>You recover the seven bullets from its soft, squishy abdomen.<br><br>+7 bullets</code>"
+	bullets = bullets + 7;
+	}
+if (x==125)
+	{
+	t="<code>Just to make sure of it, you shoot the scorpion's gut another time to ensure it is dead. Never hurts to be safe.</code>"
+	bullets = bullets - 1;
+	}
+if (x==126)
+	{
+	t="<code>Out of the corner of your eye, you spot a door along one of the walls. You climb up the scorpion's corpse and jump to the door, and proceed down the proceeding corridor as normal.</code>"
+	}
+if (x==127)
+	{
+	t="<code>Just to be REALLY sure, you shoot down the hallway. Can't hurt to check if there's another trap like that rolling boulder, now is there?</code>"
+	bullets = bullets - 1;
+	}
+if (x==128)
+	{
+    t="<code>You proceed down the hallway. The stench of this hallway is absolutely repulsive.</code>"
+	}
+if (x==129)
+    {
+    t="<code>You try shooting things to see if some hideous beast is the cause of this smell. Unfortunatey, nothing you do seems to work.</code>"
+    bullets = bullets - 1;
+    }
+if (x==130)
+    {
+    t="<code>You soon find an opening above your head as you venture through this foul-smelling dungeon. Light is filtering in from above.</code>"
+    }
+if (x==131)
+    {
+    t="<code>Hahaha, where do you think you're going, hotshot? It's a dead end.</code>"
+    }
+if (x==132)
+    {
+    t="<code>You put a bullet into the ceiling where the light is coming in from. It looks like there's a hatch of some sort.</code>"
+    bullets = bullets - 1;
+    }
+if (x==133)
+    {
+    t="<code>Because you lack the mental capability to solve even the simplest of puzzles, you run around in circles like an incapacitated chicken.</code>"
+    }
+if (x==134)
+    {
+    t="<code>You shoot at the opening again, and a manhole cover falls down. Hard to believe some crypt led you into a sewer.</code>"
+    bullets = bullets - 1;
+    }
+if (x==135)
+    {
+    t="<code>You shoot the fallen manhole cover, just for good measure.</code>"
+    bullets = bullets - 1;
+    }
+if (x==136)
+    {
+    t="<code>You climb up and out of the manhole, and you survey your surroundings. It seems you emerged on a dead end street, next to a crowded highway. There are a few stores on this small sidestreet.</code>"
+    }
+if (x==137)
+    {
+    bulletStorage = bullets - 1;
+    t="<code>As you are taking in your surroundings, a cop runs up to you. He informs you that you are presently carring " + bullets + " more bullets than is legal for someone lacking a gun license. He tries to confiscate all of your bullets, but you manage to hold onto one bullet.<br>-" + (bullets - 1) + " bullets</code>"
+    bullets = 1;
+    }
+if (x==138)
+    {
+    t="<code>As you put your plan to retrieve your bullets in motion, you fire your last bullet on accident. Alas, this game was fun while it lasted.</code>"
+    bullets = bullets - 1;
+    }
+if (x==139)
+    {
+    t="<code>You think for a moment, and then you run back and behind one of the stores, into an alleyway. At the end of the path, you think you see the cop who stole your bullets. He remains vigilant and on patrol, unaware of your presence.</code>"
+    }
+if (x==140)
+    {
+    t="<code>You creep up behind the police officer, gun at the ready...</code>"
+    }
+if (x==141)
+    {
+    t="<code>You fire your gun, killing the officer. As your frisk his corpse for bullets, you realize you shot the wrong officer. Another police officer, the one who took your bullets, shows up and beats you unconscious, then drags you to jail.</code>"
+    bullets = bullets - 1;
+    }
+if (x==142)
+    {
+    t="<code>...wait, no. This isn't the right officer. Instead, you run back through the alley and up the stairs into the backroom of a hunting supply store.</code>"
+    }
+if (x==143)
+    {
+    t="<code>Inside the store, you locate a box of bullets. You take as many as you need to compensate for your loss of bullets earler.<br>+" + (bulletStorage) + " bullets</code>"
+    bullets = bullets + bulletStorage;
+    bulletStorage = 0;
+    }
+if (x==144)
+	{
+	t="<code>You shoot your gun on accident. The owner of the hunting store is hearing grunting loudly. Better get out of here...</code>"
+	bullets = bullets - 1;
+	}
+if (x==145)
+	{
+	t="<code>You quickly get out of the hunting supply store before the growling owner is likely to find and then proceed to maul you. You find yourself back on the street.</code>"
+	copHealth = 3;
+	}
+if (x==146)
+	{
+	t="<code>You run down the steps and into the alleyway, where a cop waits to assault you! This time, it actually is the cop that took your bullets earlier.</code>"
+	}
+if (x==147)
+	{
+	t="<code>You shoot into the air randomly, and a cop runs up to fight you. It's the cop that took your bullets earlier.</code>"
+	bullets = bullets - 1;
+	}
+if (x==148)
+	{
+	chances = Math.floor(Math.random()*2)
+	if (chances!==1)
+		{
+		t="<code>The cop raises his gun and points it at you.<br>(Cop health: " + copHealth + "/3) </code>"
+		}
+	else
+		{
+		t="<code>The cop reloads his gun, lowering his arms.<br>(Cop health: " + copHealth + "/3) </code>"
+		}
+	copHealthCounter()
+	};
+if (x==149)
+	{
+	if (chances!==1)
+		{
+		t="<code>You nimbly dodge the cop's bullet!</code>"
+		}
+	else
+		{
+		t="<code>As you run, the cop finishes reloading and shoots you. The bullet grazes your arm, leaving a small scrape.</code>"
+		}
+	chances = Math.floor(Math.random()*2);
+	copHealthCounter();
+	};
+if (x==150)
+	{
+	if (chances!==1)
+		{
+		t="<code>The cop dodges the bullet with minimal effort. Best to wait until he's vulnerable...</code>"
+		bullets = bullets - 1;
+		}
+	else
+		{
+		t="<code>You successfully shoot the cop!</code>"
+		copHealth = copHealth - 1;
+		bullets = bullets - 1;
+		}
+	if (copHealth==0){x=151};
+	chances = Math.floor(Math.random()*2);
+	copHealthCounter();
+	};
+if (x==151)
+	{
+	t="<code>You shoot the cop and he falls over, dead.<br><br><b>VICTORY!</b><br><br>You loot six bullets off the cop's body.<br>+6 bullets</code>"
+	bullets = bullets + 6;
+	};
+if (x==152)
+	{
+	t="<code>You shoot the corpse of this officer in celebration. You've fought this boss twice, you deserve some sort of achievement.</code>"
+	bullets = bullets - 1;
+	}
+if (x==153)
+	{
+	t="<code>You walk out of the alleyway and find yourself surrounded by SWAT officers. Good luck thinking your way out of this one... oh wait you still have a gun.</code>"
+	}
+if (x==154)
+	{
+	t="<code>You try to look for a break in the crowd, but these SWAT officers are packed together tight.</code>"
+	}
+if (x==155)
+	{
+	t="<code>You fire to try and clear the way, but to no avail. It's like these police officers are wearing bulletproof vests!</code>"
+	bullets = bullets - 1;
+	}
+if (x==156)
+	{
+	t="<code>Still no way out of this crowd. If only you could find another means of escape...</code>"
+	}
+if (x==157)
+	{
+	t="<code>You look down at your feet and shoot at a manhole cover as the SWAT team closes in on you. Have you found a way to escape?</code>"
+	bullets = bullets - 1;
+	}
+if (x==158)
+	{
+	t="<code>No matter what you do, you can't fight these guys off with bullets. They laugh as they bounce off the riot shields. Get out of there now!!!</code>"
+	bullets = bullets - 1;
+	}
+if (x==159)
+	{
+	t="<code>You hastily jump into the sewer and close the manhole behind you. Even though they could just pry the lid off and chase you, you feel safe knowing these unintelligent game constructs will not chase you down through this absurdly spacious sewer tunnel.</code>"
+	}
+if (x==160)
+	{
+	t="<code>You take a shot around your newfound surroundings, and find there is no immediate danger. This place is safe... for now.</code>"
+	bullets = bullets - 1;
+	}
+if (x==161)
+	{
+	t="<code>You take a walk down this abnormally large sewer, breathing through your mouth as to avoid the putrid stench rising from below.</code>"
+	}
+if (x==162)
+	{
+	t="<code>Yet another accidental discharge from your makeshift gun occurs. This time, you inflict harm on an innocent sewer rat.</code>"
+	bullets = bullets - 1;
+	}
+if (x==163)
+	{
+	t="<code>You round a corner, watching your step in the dim light. A misstep into the murk below would certainly suck.</code>"
+	}
+if (x==164)
+	{
+	t="<code>Another innocent sewer rat meets its end at a bullet fired by a gun-toting imbecile who should've been arrested by now - yet somehow ends up mistakenly shooting everything that tries to stop him.</code>"
+	bullets = bullets - 1;
+	}
+if (x==165)
+	{
+	t="<code>A sewer rat comes charging at you!</code>"
+	}
+if (x==166)
+	{
+	t="<code>The rat runs right past your feet as you move aside.</code>"
+	}
+if (x==167)
+	{
+	t="<code>You quickly shoot the rat dead. It was harmless, of course.</code>"
+	bullets = bullets - 1;
+	}
+if (x==168)
+	{
+	t="<code>Shooting a dead rat is like beating a dead horse, you know. Accomplishes nothing. Stop that.</code>"
+	bullets = bullets - 1;
+	}
+if (x==169)
+	{
+	t="<code>You attempt to shoot the rat as it runs away, but that's absolutely futile as the rat has already rounded the corner and escaped your murderous wrath.</code>"
+	bullets = bullets - 1;
+	}
+if (x==170)
+	{
+	t="<code>You trek through the sewer, vowing to ignore any more useless sewer rats.</code>"
+	}
+if (x==171)
+	{
+	t="<code>There are no sewer rats in this area now. You can stop trying to kill all of them. I thought you made a vow to ignore them?</code>"
+	bullets = bullets - 1;
+	}
+if (x==172)
+	{
+	t="<code>Past another corner, you see a pile of eggs. You've seen weirder things in your lifetime.</code>"
+	}
+if (x==173)
+	{
+	if (easterEgg==4) {
+	t="<code>You shoot the fancy, painted easter egg in the pile of eggs. It explodes into confetti.</code>" }
+	else { t="<code>You shoot an egg. A weird yolk spills out. (???)</code>" }
+	easterEgg += 1;
+	bullets = bullets - 1;
+	}
+if (x==174)
+	{
+	t="<code>You run into another puzzle room. This time, you see the following four animals: an ELEPHANT, a LION, an ANT, and a DOG. You take a moment to reflect on these thoughtful animals, and how the greatest things come from humble beginnings. Perhaps it'd be best to start small...</code>"
+	}
+if (x==175)
+	{
+	t="<code>Slow down, hotshot. Read the puzzle clues, and then walk into the room.</code>"
+	}
+if (x==176)
+	{
+	if (elephantPlate==false) { elephantPlateText="The plate is not raised." } else { elephantPlateText="The plate is raised." }
+	t="<code>You presently stand in front of the ELEPHANT PLATE. " + elephantPlateText + "</code>"
+	}
+if (x==177)
+	{
+	if (lionPlate==false) { lionPlateText="The plate is not raised." } else { lionPlateText="The plate is raised." }
+	t="<code>You presently stand in front of the LION PLATE. " + lionPlateText + "</code>"
+	}
+if (x==178)
+	{
+	if (antPlate==false) { antPlateText="The plate is not raised." } else { antPlateText="The plate is raised." }
+	t="<code>You presently stand in front of the ANT PLATE. " + antPlateText + "</code>"
+	}
+if (x==179)
+	{
+	if (dogPlate==false) { dogPlateText="The plate is not raised." } else { dogPlateText="The plate is raised." }
+	t="<code>You presently stand in front of the DOG PLATE. " + dogPlateText + "</code>"
+	}
+if (x==180)
+	{
+	elephantPlate=!elephantPlate;
+	if (lionPlate==false) {
+		elephantPlate = false;
+		lionPlate = false;
+		antPlate = false;
+		dogPlate = false;
+		elephantPlateText="All of the plates reset to their starting position." }
+	else if (lionPlate==true) { elephantPlateText="The ELEPHANT PLATE rises up to the ceiling." }
+	t="<code>You shoot the ELEPHANT PLATE. " + elephantPlateText + "</code>"
+	if (elephantPlate==true && lionPlate==true && dogPlate==true && antPlate==true) { sewerPuzzlePhase = 1; }
+	bullets = bullets - 1;
+	}
+if (x==181)
+	{
+	lionPlate=!lionPlate;
+	if (dogPlate==false) {
+		elephantPlate = false;
+		lionPlate = false;
+		antPlate = false;
+		dogPlate = false;
+		lionPlateText="All of the plates reset to their starting position." }
+	else if (dogPlate==true) { lionPlateText="The LION PLATE rises up to the ceiling." }
+	t="<code>You shoot the LION PLATE. " + lionPlateText + "</code>"
+	if (elephantPlate==true && lionPlate==true && dogPlate==true && antPlate==true) { sewerPuzzlePhase = 1; }
+	bullets = bullets - 1;
+	}
+if (x==182)
+	{
+	antPlate=!antPlate;
+	if (antPlate==false) {
+		elephantPlate = false;
+		lionPlate = false;
+		antPlate = false;
+		dogPlate = false;
+		antPlateText="All of the plates reset to their starting position." }
+	else if (antPlate==true) { antPlateText="The ANT PLATE rises up to the ceiling." }
+	t="<code>You shoot the ANT PLATE. " + antPlateText + "</code>"
+	if (elephantPlate==true && lionPlate==true && dogPlate==true && antPlate==true) { sewerPuzzlePhase = 1; }
+	bullets = bullets - 1;
+	}
+if (x==183)
+	{
+	dogPlate=!dogPlate;
+	if (antPlate==false) {
+		elephantPlate = false;
+		lionPlate = false;
+		antPlate = false;
+		dogPlate = false;
+		dogPlateText="All of the plates reset to their starting position." }
+	else if (antPlate==true) { dogPlateText="The DOG PLATE rises up to the ceiling." }
+	t="<code>You shoot the DOG PLATE. " + dogPlateText + "</code>"
+	if (elephantPlate==true && lionPlate==true && dogPlate==true && antPlate==true) { sewerPuzzlePhase = 1; }
+	bullets = bullets - 1;
+	}
+if (x==184)
+	{
+	t="<code>Before you can react, the wall collapses and reveals passage further into the sewer. You will never fully understand these gaming machinations.</code>"
+	sewerPuzzlePhase = 0;
+	}
+if (x==185)
+	{
+	t="<code>Experimentally, you shoot one of the animal plates to see if it'll reset the puzzle. The plates appear to be locked in place, though. Nothing to do but move on.</code>"
+	bullets = bullets - 1;
+	}
+if (x==186)
+	{
+	t="<code>You march fearlessly through the newly revealed corridor, claiming your prize in the next room.<br>+15 bullets</code>"
+	bullets = bullets + 15;
+	}
+if (x==187)
+	{
+	t="<code>Another mistimed shot bounches off a linoleum tile, the sound echoing throughout the sewer.</code>"
+	bullets = bullets - 1;
+	}
+if (x==188)
+	{
+	t="<code>You round another corner, seeing a thin wooden plank as the only means of crossing over to the next portion of the sewer.</code>"
+	}
+if (x==189)
+	{
+	t="<code>You shoot a hole in the rickety plank. Like that'll make crossing it any safer...</code>"
+	bullets = bullets - 1;
+	}
+if (x==190)
+	{
+	t="<code>Carefully, you cross over the plank, afraid the bullet holes have made it unstable. You still manage to make it across without losing balance once. Disaster averted!</code>"
+	}
+if (x==191)
+	{
+	t="<code>You shoot the plank behind you. Nobody's gonna follow you now... if you had people that were following you. The SWAT team likely forgot about you.</code>"
+	bullets = bullets - 1;
+	}
+if (x==192)
+	{
+	t="<code>You make your way through the sewer tunnel. Nothing can stop you now that you got past the most dangerous passage in the game.</code>"
+	}
+if (x==193)
+	{
+	t="<code>You fire a victory bullet at the ceiling of the sewer. You're unstoppable by now.</code>"
+	bullets = bullets - 1;
+	}
+if (x==194)
+	{
+	t="<code>As you pass under a grate with light filtering through from above, you hear the sounds of thumping above...</code>"
+	}
+if (x==195)
+	{
+	t="<code>You run across the wooden plank, only to trip and fall face-first into the murky sewage.</code>"
+	}
+if (x==196)
+	{
+	t="<code>You fire your gun upwards, trying to avoid it from sinking into the filth and having it be rendered ineffective.</code>"
+	bullets = bullets - 1;
+	}
+if (x==197)
+	{
+	t="<code>You swim back and climb up onto dry floor. Alright, time to try this again...</code>"
+	}
+if (x==198)
+	{
+	t="<code>You fire a bullet up at the grate, trying to scare off whatever lurks above. The thumping continues...</code>"
+	bullets = bullets - 1;
+	}
+if (x==199)
+	{
+	t="<code>The grate falls, and an armed SWAT officer drops down following the loud <i>clang</i> of the grate.</code>"
+	}
+if (x==200)
+	{
+	t="<code>You shoot at the SWAT officer, but he aptly dodges it. Better get ready for a fight!</code>"
+	bullets = bullets - 1;
+	}
+if (x==201)
+	{
+	chances = Math.floor(Math.random()*2)
+	if (chances!==1)
+		{
+		t="<code>The SWAT officer aims a rather threatening assault rifle in your direction.<br>(SWAT officer health: " + trueSwatHealth + "/3) </code>"
+		}
+	else
+		{
+		t="<code>The SWAT officer's gun overheats, and he looks down to mess with it.<br>(SWAT officer health: " + trueSwatHealth + "/3) </code>"
+		}
+	};
+if (x==202)
+	{
+	if (chances!==1)
+		{
+		t="<code>You successfully escape a stream of very deadly bullets.</code>"
+		}
+	else
+		{
+		t="<code>The SWAT officer gets his gun in working order again while you run around like a headless chicken.</code>"
+		}
+	chances = Math.floor(Math.random()*2);
+	};
+if (x==203)
+	{
+	if (chances!==1)
+		{
+		t="<code>The SWAT officer steps aside, bullet whizzing past him. He responds with a stream of very deadly bullets, all of them somehow missing you.</code>"
+		bullets = bullets - 1;
+		}
+	else
+		{
+		t="<code>You shoot the SWAT officer square in the chest! His bulletproof vest takes the shot, however...</code>"
+		swatHealth = swatHealth - 1;
+		bullets = bullets - 1;
+		}
+	if (swatHealth==0){x=204};
+	chances = Math.floor(Math.random()*2);
+	};
+if (x==204)
+	{
+	t="<code>You fire a bullet, once again promptly bouncing off his bulletproof vest. This isn't working whatsoever. His bulletproof vest just soaks up your bullets. You need to find another way to deal with him!<br>(SWAT officer health: " + trueSwatHealth + "/3)</code>"
+	}
+if (x==205)
+	{
+	t="<code>No matter how much you shoot him from the front, that vest of his just isn't going to give in.<br>(SWAT officer health: " + trueSwatHealth + "/3)</code>"
+	bullets = bullets - 1;
+	}
+if (x==206)
+	{
+	t="<code>You prompty flee and run around some corners. The SWAT officer appears to have lost you.<br>(SWAT officer health: " + trueSwatHealth + "/3)</code>"
+	}
+if (x==207)
+	{
+	t="<code>You take a moment to catch your breath. You hear the SWAT officer pacing nearby...<br>(SWAT officer health: " + trueSwatHealth + "/3)</code>"
+	}
+if (x==208)
+	{
+	t="<code>You fire one round away from your position. The SWAT officer runs over to investigate. His back is turned, now's your chance!<br>(SWAT officer health: " + trueSwatHealth + "/3)</code>"
+	bullets = bullets - 1;
+	}
+if (x==209)
+	{
+	t="<code>You take a moment to align your shot. Gotta make this count...<br>(SWAT officer health: " + trueSwatHealth + "/3)</code>"
+	}
+if (x==210)
+	{
+	t="<code>You make sure the barrel is aimed directly at his neck. One kill shot should do this...<br>(SWAT officer health: " + trueSwatHealth + "/3)</code>"
+	}
+if (x==211)
+	{
+	t="<code>In the time you waste aligning your shot, the SWAT officer turns around and spots you! He readies his gun. Back to the fight...<br>(SWAT officer health: " + trueSwatHealth + "/3)</code>"
+	}
+if (x==212)
+	{
+	trueSwatHealth = trueSwatHealth - 1;
+	t="<code>You fire at him, the bullet hitting his defenseless back. The SWAT officer spins around, somewhat enraged.<br>(SWAT officer health: " + trueSwatHealth + "/3)</code>"
+	bullets = bullets - 1;
+	swatHealth = 3;
+	if (trueSwatHealth==0){x=213};
+	chances = Math.floor(Math.random()*2);
+	}
+if (x==213)
+	{
+	t="<code>The SWAT officer collapses at last, and you celebrate as his annoying bulletproof vest did not stop you from victory.<br><br><b>VICTORY!</b><br><br>You loot some of the bullets off his body.<br>+12 bullets</code>"
+	bullets = bullets + 12;
+	}
+if (x==214)
+	{
+	t="<code>You shoot the body of the SWAT officer for good measure. That boss fight gave you a lot of trouble and cost you, like, 15 bullets. Or more, who knows.</code>"
+	bullets = bullets - 1;
+	}
+if (x==215)
+	{
+	t="<code>You proceed, taking the SWAT officer's bulletproof vest as a trophy. You also try to jump out of the opening in the sewer the SWAT officer came in, but there's no easy way to get up there.</code>"
+	}
+if (x==216)
+	{
+	t="<code>You turn back briefly and shoot up the grate opening, trying to trigger any secret switches. There are none.</code>"
+	bullets = bullets - 1;
+	}
+if (x==217)
+	{
+	t="<code>These treks through the sewer are getting rather boring.</code>"
+	}
+if (x==218)
+	{
+	t="<code>Paranoid from your travels, you shoot to try and get a jump on any malevolent beings. Once again, no traps or hideous giant scorpions or SWAT officers here.</code>"
+	bullets = bullets - 1;
+	}
+if (x==219)
+	{
+	t="<code>You pass through a dim area, lit by one solitary light bulb.</code>"
+	}
+if (x==220)
+	{
+	t="<code><b>NO</b>. We are <i>NOT</i> revisiting the lights-out gimmick again.<code>"
+	bullets = bullets - 1;
+	}
+if (x==221)
+	{
+	t="<code>You shoot near the lightbulb to satisfy your filthy desire to cause another blackout without actually causing one.</code>"
+	bullets = bullets - 1;
+	}
+if (x==222)
+	{
+	t="<code>You pass into a more cavernous area, the walls slowly shifting to stone. You see a minecart resting peacefully on a brake, right before a gaping black void leading into the unknown depths of the cave.</code>"
+	}
+if (x==223)
+	{
+	t="<code>You run and leap into the minecart.</code>"
+	}
+if (x==224)
+	{
+	t="<code>In an ill-advised course of action, you shoot the brakes from a distance. The minecart goes careening into the darkness, never to return.</code>"
+	bullets = bullets - 1;
+	}
+if (x==225)
+	{
+	t="<code>Despite what you may think, shooting into the darkness will not bring the minecart back. It's gone.<br><br>Let it go. It's over, my friend. Move on.</code>"
+	bullets = bullets - 1;
+	}
+if (x==226)
+	{
+	t="<code>Unsure of what to do, you walk aimlessly through the dark. This descent is particularly unnerving.</code>"
+	changeBGC('#000000');
+	}
+if (x==227)
+	{
+	t="<code>You pick up the pieces of your life and trudge into the dark, unknowing future.<br><br><i>'Life can only be understood backwards, yet it must be lived forwards.'</i>.</code>"
+	changeBGC('#000000');
+	}
+if (x==228)
+	{
+	t="<code>You keep tripping over rocky outcroppings as you traverse the cave.</code>"
+	}
+if (x==229)
+	{
+	t="<code>You pump the darkness full of lead to verify no hidden dangers exist.</code>"
+	bullets = bullets - 1;
+	}
+if (x==230)
+	{
+	t="<code>You arrive at the bottom of the shaft. The minecart is totaled. Glad you didn't take the ride in hindsight.</code>"
+	changeBGC("#FFFFFF");
+	}
+if (x==231)
+	{
+	t="<code>Even I'm not sure what you intend to achieve running while sitting in a minecart.</code>"
+	}
+if (x==232)
+	{
+	t="<code>You shoot the brakes off the cart. The cart lurches forward, and then goes speeding into the darkness - taking you with it.</code>"
+	bullets = bullets - 1;
+	changeBGC("#000000");
+	}
+if (x==233)
+	{
+	t="<code>You can only scream as you are taken for a unwilling ride through a cave, wind whipping your face from every angle.</code>"
+	}
+if (x==234)
+	{
+	t="<code>You shoot panickedly through the cavern, unsure how to cope with the onset of fear.</code>"
+	bullets = bullets - 1;
+	}
+if (x==235)
+	{
+	t="<code>The minecart arrives at its destination, crashing and sending you vaulting to the ground. You get up and brush yourself off, looking at the wreckage in front of you.</code>"
+	changeBGC("#FFFFFF");
+	}
+if (x==236)
+	{
+	t="<code>You shoot the wreckage of the cart. Bastard transport vehicle.</code>"
+	bullets = bullets - 1;
+	}
+if (x==237)
+	{
+	t="<code>You walk forward, leaving the cart behind. You're over all of this.</code>"
+	}
+if (x==238)
+	{
+	t="<code>...Eh, not quite. You shoot the cart one last time, just to make sure. The double-tap rule, no more half measures, etc etc.</code>"
+	bullets = bullets - 1;
+	}
+if (x==239)
+	{
+	t="<code>You pass into another small, stone room. An entrance to another cavern is in front of you.</code>"
+	}
+if (x==240)
+	{
+	t="<code>You check the room for threats with bullets. All clear!</code>"
+	bullets = bullets - 1;
+	}
+if (x==241)
+	{
+	t="<code>You proceed down the cavern, feeling the air and ground get significantly warmer as you progress.</code>"
+	}
+if (x==242)
+	{
+	t="<code>You fire a round into the wall. The rock appears to sizzle a bit.</code>"
+	bullets = bullets - 1;
+	}
+if (x==243)
+	{
+	t="<code>The cavern rumbles slightly as you hastily navigate these twisting passages.</code>"
+	}
+if (x==244)
+	{
+	t="<code>You shoot into a few dark corners to check for monsters, like this was some kind of children's book.</code>"
+	bullets = bullets - 1;
+	}
+if (x==245)
+	{
+	t="<code>While you run, you stop and notice the ground in some of these caves is covered in a thin layer of hot, volcanic dust. Huh.</code>"
+	}
+if (x==246)
+	{
+	t="<code>You run into a wall of loose rubble.</code>"
+	}
+if (x==247)
+	{
+	t="<code>This might not be a cactus, but that doesn't mean you can pass through it.</code>"
+	}
+if (x==248)
+	{
+	t="<code>You shoot the wall and it crumbles.</code>"
+	bullets = bullets - 1;
+	}
+if (x==249)
+	{
+	t="<code>The wall's already down, shooting the pile of rubble will do absolutely nothing to help you.</code>"
+	bullets = bullets - 1;
+	}
+if (x==250)
+	{
+	t="<code>You walk over what was once a proud wall of rubble and continue on your merry way.</code>"
+	}
+if (x==251)
+	{
+	t="<code>Your propensity to accidentally discharge your homemade firearm pays off, as it knocks down a wall of loose rubble that would have otherwise impeded your progress.</code>"
+	bullets = bullets - 1;
+	}
+if (x==252)
+	{
+	t="<code>Marching onward, you remind yourself that not even inconvieniently placed walls of things that need to be shot down can stop you.</code>"
+	bullets = bullets - 1;
+	}
+if (x==253)
+	{
+	t="<code>You shoot towards a light in the distance that looks like the end of this bleak, sweltering cavern.</code>"
+	bullets = bullets - 1;
+	}
+if (x==254)
+	{
+	t="<code>You make haste towards a distant light, one that looks like an exit.</code>"
+	}
+if (x==255)
+	{
+	t="<code>You ahoot towards the light out of SHEER EXCITEMENT.</code>"
+	bullets = bullets - 1;
+	}
+if (x==256)
+	{
+	t="<code>You find yourself outside, alongside a rocky cliff that runs the perimeter of a volcanic cauldron. Hot magma churns below.</code>"
+	}
+if (x==257)
+	{
+	t="<code>You shoot into the magma to see what happens when you fire into the magma.</code>"
+	bullets = bullets - 1;
+	}
+if (x==258)
+	{
+	t="<code>You cirlce around the perimeter cliff, heading towards another opening.</code>"
+	}
+if (x==259)
+	{
+	t="<code>You shoot a bit of rock. A small piece of the cliff collapses into the lava. Be careful!</code>"
+	bullets = bullets - 1;
+	}
+if (x==260)
+	{
+	t="<code>This trek is getting kinda boring.</code>"
+	}
+if (x==261)
+	{
+	t="<code>You shoot the air to amuse yourself. This mysterious gun of yours makes funny noises.</code>"
+	bullets = bullets - 1;
+	}
+if (x==262)
+	{
+	t="<code>Okay, enough boring crap. This is a volcano, it's pretty cool. You resolve to enjoy the rest of your adventure from here on out.</code>"
+	}
+if (x==263)
+	{
+	t="<code>You put one bullet right through the monitor of that infernal slot machine.</code>"
+	bullets = bullets - 1;
+	}
+if (x==264)
+	{
+	t="<code>The ground rumbles as you proceed...</code>"
+	}
+if (x==265)
+	{
+	t="<code>You shoot more bullets into the lava to watch them disintegrate, completely oblivious to the fact the entire volcano's shaking.</code>"
+	bullets = bullets - 1;
+	}
+if (x==266)
+	{
+	t="<code>The magma below churns as you quickly flee through a side cavern.</code>"
+	}
+if (x==267)
+	{
+	t="<code>No matter how many times you fire your pathetic little gun, the volcano will not be scarred into submission and not erupt so you can escape safely.</code>"
+	bullets = bullets - 1;
+	}
+if (x==268)
+	{
+	t="<code>The small side path leads you to the outside of the volcano, where a lone snowboard rests overlooking a slide of volcanic ash. You know what to do.</code>"
+	}
+if (x==269)
+	{
+	t="<code>Quit being scared of a dangerous activity. You keep handling your gun with the safety off, this shouldn't terrify you.</code>"
+	bullets = bullets - 1;
+	}
+if (x==270)
+	{
+	t="<code>You step on and kick off of the ledge, starting your volcanoboarding adventure. The volcano erupts behind you as you begin your ride down the mountain.</code>"
+	}
+if (x==271)
+	{
+	t="<code>You shoot a round into the air as you descend down the volcano, escaping the incoming cloud of ash and murk so you like a total badass.</code>"
+	bullets = bullets - 1;
+	}
+if (x==272)
+	{
+	t="<code>Another stubborn law enforcement official follows you down the mountain, also riding on a snowboard. When the hell are they going to stop with this crap?</code>"
+	}
+if (x==273)
+	{
+	t="<code>You shoot at this guy to try and dispatch of him early, but the lousy guy just swerves on his snowboard and dodges the bullet. Looks like another fight.<br><br><i>sigh</i></code>"
+	bullets = bullets - 1;
+	}
+if (x==274)
+	{
+	chances = Math.floor(Math.random()*2)
+	if (chances!==1)
+		{
+		t="<code>The cop raises his gun and points it at you.<br>(Cop health: " + copHealth2 + "/6) </code>"
+		}
+	else
+		{
+		t="<code>The cop reloads his gun, lowering his arms.<br>(Cop health: " + copHealth2 + "/6) </code>"
+		}
+	};
+if (x==275)
+	{
+	if (chances!==1)
+		{
+		t="<code>You dodge the cop's bullet by swerving your snowboard to the side!</code>"
+		}
+	else
+		{
+		t="<code>As you manuveur away, the cop finishes reloading and shoots. The bullet hits your snowboard, and you briefly lose control.</code>"
+		}
+	chances = Math.floor(Math.random()*2);
+	};
+if (x==276)
+	{
+	if (chances!==1)
+		{
+		t="<code>The cop swerves his snowboard aside, effortlessly dodging your round.</code>"
+		bullets = bullets - 1;
+		}
+	else
+		{
+		t="<code>You successfully shoot the cop!</code>"
+		copHealth2 = copHealth2 - 1;
+		bullets = bullets - 1;
+		}
+	if (copHealth2==0){x=277};
+	chances = Math.floor(Math.random()*2);
+	};
+if (x==277)
+	{
+	t="<code>In time with your last shot, an upset from deep within the volcano causes the rock beneath the two of you to explode. The both of you land and roll into a forest clearing at the base of the volcano. As you slowly get up, you pick up some bullets dropped by the officer during your unplanned flight, and hide behind a tree.<br>+4 bullets</code>"
+	bullets = bullets + 4;
+	copHealth2 = 6;
+	};
+if (x==278)
+	{
+	t="<code>You take a shot at the officer and miss. Your aim evidently isn't steady enough yet.</code>"
+	bullets = bullets - 1;
+	}
+if (x==279)
+	{
+	copHide = Math.floor(Math.random()*3);
+	treeHide = treeHide + 1;
+	if (treeHide>3) { treeHide=0; }
+	if (copHide==treeHide) { treeDamage = 0; treeText = "The cop is looking in your general direction."; }
+	if ((treeHide==0 && (copHide==1 || copHide==3)) || (treeHide==1 && (copHide==0 || copHide==2)) || (treeHide==2 && (copHide==1 || copHide==3)) || (treeHide==3 && (copHide==0 || copHide==2))) { treeDamage = 0.5; treeText = "The cop is looking off to the side."; }
+	if ((treeHide==0 && copHide==2) || (treeHide==1 && copHide==3) || (treeHide==2 && copHide==0) || (treeHide==3 && copHide==1)) { treeDamage = 1; treeText = "The cop is facing in the complete opposite direction."; }
+	t="<code>You duck behind a tree while the cop searches for you. " + treeText + "<br>(Cop health: " + copHealth2 + "/6) </code>"
+	}
+if (x==280)
+	{
+	if (treeDamage==0) { treeText = "The cop sees you shoot and nimbly dodges the bullet."; }
+	if (treeDamage==0.5) { treeText = "The cop is somewhat caught off guard."; }
+	if (treeDamage==1) { treeText = "The cop is completely caught off guard!"; }
+	copHealth2 = copHealth2 - treeDamage;
+	if (copHealth2<1) { copHealth2=0; }
+	t="<code>You poke out from behind the tree and fire! " + treeText + "<br>(Cop health: " + copHealth2 + "/6) </code>"
+	bullets = bullets - 1;
+	if (copHealth2==0) {x=281};
+	}
+if (x==281)
+	{
+	t="<code>You shoot the cop. " + treeText + " He then slumps over, defeated.<br><br><b>VICTORY!</b><br><br>You loot some bullets off him.<br>+8 bullets</code>"
+	bullets = bullets + 8;
+	}
+if (x==282)
+	{
+	t="<code>You maintain your tradition of shooting the bodies of the fallen.</code>"
+	bullets = bullets - 1;
+	}
+if (x==283)
+	{
+	t="<code>You leave the thicket of trees and follow a path in the forest, your vision slowly starting to go black...</code>"
+	changeBGC('#AAAAAA');
+	}
+if (x==284)
+	{
+	t="<code>You shoot to try and jolt yourself awake, but you're slowly falling asleep on your feet.</code>"
+	bullets = bullets - 1;
+	}
+if (x==285)
+	{
+	t="<code>Exhausted from your injuries, you pass out in the middle of the forest path.</code>"
+	changeBGC('#000000');
+	}
+if (x==286)
+	{
+	t="<code>...</code>"
+	}
+if (x==287)
+	{
+	t="<code>......</code>"
+	}
+if (x==288)
+	{
+	t="<code>.........</code>"
+	}
+if (x==289)
+	{
+	t="<code>You awaken in a hospital bed, IVs coming out of your arms. It is a melancholy, gray day, according to the window.</code>"
+	changeBGC('#FFFFFF');
+	}
+if (x==290)
+	{
+	t="<code>You awaken from your dreams with an unpleasant jolt from your firearm, somehow having followed you into a hospital. You shoot a heart monitor and it promptly breaks, and medical staff panic as they suspect it's a flatlining patient.</code>"
+	changeBGC('#FFFFFF');
+	bullets = bullets - 1;
+	}
+if (x==291)
+	{
+	t="<code>You weakly lift your arm and shoot your IV bag, a leak springing from it. It's going to be a long way.</code>"
+	bullets = bullets - 1;
+	}
+if (x==292)
+	{
+	t="<code>You get up and start shambling through the hospital, slowly regaining your strength.</code>"
+	}
+if (x==293)
+	{
+	t="<code>You accidentally shoot another patient's heart monitor. The resounding 'eeeeeeeee' attracts nervous medical staff, oblivious to your presence.</code>"
+	bullets = bullets - 1;
+	}
+if (x==294)
+	{
+	t="<code>You tread the length of this unusually long hospital hallway.</code>"
+	}
+if (x==295)
+	{
+	t="<code>You shoot your gun, hoping the noise and recoil of the discharge will squelch your grim existential thoughts. All it succeeds in doing is puncturing an oxygen container, which promptly begins to hiss.</code>"
+	bullets = bullets - 1;
+	}
+if (x==296)
+	{
+	t="<code>You shamble past the nurses' desk and into the elevator. The elevator doors close.</code>"
+	}
+if (x==297) 
+	{
+	t="<code>You stand in the elevator, looking like a zombie.</code>"
+	}
+if (x==298)
+	{
+	t="<code>You shoot the button for the floor you wish to go to. The elevator quickly descends to the main lobby, and the door opens.</code>"
+	bullets = bullets - 1;
+	}
+if (x==299)
+	{
+	t="<code>You shoot at a plaque on the wall declaring the excellence of the hospital staff. Looks like there's a dent in their perfect track record. Ha ha I'm hilarious, laugh at this.</code>"
+	bullets = bullets - 1;
+	}
+if (x==300)
+	{
+	t="<code>You walk through the waiting room on the first floor, towards the exit.</code>"
+	}
+if (x==301)
+	{
+	t="<code>The receptionist ends up being your unintended target.</code>"
+	bullets = bullets - 1;
+	}
+if (x==302)
+	{
+	t="<code>Apparently utilizing the receptionist as target practice, you heard the terrified screams of the hospital clientelle as they rush for the emergency exits.</code>"
+	bullets = bullets - 1;
+	}
+if (x==303)
+	{
+	t="<code>You find yourself outside the hospital, on a busy city street.</code>"
+	}
+if (x==304)
+	{
+	t="<code>You shoot the P.O. boxes directly to your right. Letters to the hospital spill over the street.</code>"
+	bullets = bullets - 1;
+	}
+if (x==305)
+	{
+	t="<code>You shoot the empty P.O. boxes. This hospital will never receive mail again.</code>"
+	bullets = bullets - 1;
+	}
+if (x==306)
+	{
+	t="<code>You stroll down the city street, trying to figure out how you went from a forest to a city while unconscious.</code>"
+	}
+if (x==307)
+	{
+	t="<code>You shoot a local troublemaker. Although your reputation skyrockets, you are charged with assault and attempted murder, and your court date is set for tomorrow.</code>"
+	bullets = bullets - 1;
+	}
+if (x==308)
+	{
+	t="<code>You decide to take a stroll through the city's park.</code>"
+	}
+if (x==309)
+	{
+	t="<code>You fire a round at a tree. Obtained 1 Wood Chip.</code>"
+	bullets = bullets - 1;
+	}
+if (x==310)
+	{
+	t="<code>You round a couple of cornered paths, waiting for something exciting to happen.</code>"
+	}
+if (x==311)
+	{
+	t="<code>A cop appears. He's not amused with you deciding to check yourself out of the hospital.</code>"
+	copHealth = 3;
+	}
+if (x==312)
+	{
+	t="<code>The cop jumps out of the way, as you may have predicted.</code>"
+	bullets = bullets - 1;
+	}
+if (x==313)
+	{
+	chances = Math.floor(Math.random()*2)
+	if (chances!==1)
+		{
+		t="<code>The cop raises his gun and points it at you or something.<br>(Cop health: " + copHealth + "/3) </code>"
+		}
+	else
+		{
+		t="<code>The cop reloads his gun, lowering his arms or whatever cops do.<br>(Cop health: " + copHealth + "/3) </code>"
+		}
+	copHealthCounter()
+	};
+if (x==314)
+	{
+	if (chances!==1)
+		{
+		t="<code>You nimbly dodge the cop's bullet and whatnot. Woohoo.</code>"
+		}
+	else
+		{
+		t="<code>As you run, the cop finishes reloading and shoots you. The bullet grazes your arm, leedle leedle lee.</code>"
+		}
+	chances = Math.floor(Math.random()*2);
+	copHealthCounter();
+	};
+if (x==315)
+	{
+	if (chances!==1)
+		{
+		t="<code>The cop dodges the bullet with minimal effort. Best to wait until he's vulnerable yadda yadda yadda.</code>"
+		bullets = bullets - 1;
+		}
+	else
+		{
+		t="<code>You successfully shoot the cop yeah woo cheers all around do it again.</code>"
+		copHealth = copHealth - 1;
+		bullets = bullets - 1;
+		}
+	if (copHealth==1){x=316};
+	chances = Math.floor(Math.random()*2);
+	copHealthCounter();
+	};
+if (x==316)
+	{
+	t="<code>No, you know what, enough of these dumb fights. You've fought enough law enforcement officials. You just walk right past the cop, ignoring the rest of the fight.</code>"
+	bullets = bullets + 1;
+	};
+if (x==317)
+	{
+	t="<code>Just to be cool, you fire once in the air as you walk away.</code>"
+	bullets = bullets - 1;
+	}
+if (x==318)
+	{
+	t="<code>You walk through the park, ignoring the police officer's rant about sequence skipping and breaking and blah blah blah blah blah.</code>"
+	}
+if (x==319)
+	{
+	t="<code>A misplaced shot rips a hole in an umbrella over a poor hot dog vendor's stand. His head and property are no longer protected from the elements.</code>"
+	bullets = bullets - 1;
+	}
+if (x==320)
+	{
+	t="<code>You trip over a box full of bullets.<br>+7 bullets</code>"
+	bullets = bullets + 7;
+	}
+if (x==321)
+	{
+	t="<code>You shoot the box of bullets. Why? We'll never know.</code>"
+	bullets = bullets - 1;
+	}
+if (x==322)
+	{
+	t="<code>You walk to the outskirts of the park. There is a gym within view. Perhaps now is a good time to get buff.</code>"
+	}
+if (x==323)
+	{
+	t="<code>Why are you shooting. There is nothing to shoot.</code>"
+	bullets = bullets - 1;
+	}
+if (x==324)
+	{
+	t="<code>You walk down the... okay nevermind you're at the gym.</code>"
+	}
+if (x==325)
+	{
+	t="<code>Another one of your trademark misplaced shots startles a gym patron. He drops a heavy dumbell on his foot and runs out screaming.</code>"
+	bullets = bullets - 1;
+	}
+if (x==326)
+	{
+	t="<code>You run onto one of the many treadmills.</code>"
+	}
+if (x==327)
+	{
+	t="<code>You run on the treadmill. Feel those calories burn!</code>"
+	}
+if (x==328)
+	{
+	t="<code>You put a bullet through the treadmill. It is no longer moving.</code>"
+	bullets = bullets - 1;
+	}
+if (x==329)
+	{
+	t="<code>Your misadventures lead you into the locker room.</code>"
+	}
+if (x==330)
+	{
+	t="<code>Another shocking discharge causes an elderly patron to drop their towel. You make a conscious effort to not look in that direction.</code>"
+	bullets = bullets - 1;
+	}
+if (x==331)
+	{
+	t="<code>You trot over to one of the toilets.</code>"
+	}
+if (x==332)
+	{
+	t="<code>You try standing in the toilet and flushing it to see if it's a portal to the Ministry of Magic, but all you succeed in doing is making a soaking mess of your once fantstic shoes.</code>"
+	}
+if (x==333)
+	{
+	t="<code>A well-placed bullet causes the porcelain bowl to completely crumble. Disguisting poo water floods the locker room bathroom.</code>"
+	bullets = bullets - 1;
+	}
+if (x==334)
+	{
+	t="<code>Shooting the floor, weakened by water damage, you open a hole to the casino located beneath the gym somehow.</code>"
+	bullets = bullets - 1;
+	}
+if (x==335)
+	{
+	t="<code>You try to run, but find yourself transfixed by the floor breaking and revealing a hidden casino underneath.</code>"
+	}
+if (x==336)
+	{
+	t="<code>Additional bullets in the ground do not open up any other mysterious passages to gambling hubs.</code>"
+	bullets = bullets - 1;
+	}
+if (x==337)
+	{
+	t="<code>You walk down the fallen support beam into the lobby of the casino. A bewildered employee looks at you, never knowing a gym existed above.</code>"
+	}
+if (x==338)
+	{
+	t="<code>You politely greet the man by shooting him on accident.</code>"
+	bullets = bullets - 1;
+	}
+if (x==339)
+	{
+	t="<code>You walk through the casino, observing these degenerates waste their hard-earned money on gambling. What loons.</code>"
+	}
+if (x==340)
+	{
+	t="<code>A misplaced shot of yours (these should be trademarked by now) hits a lever on a slot machine, stopping it from rolling. Coins fly out everywhere.</code>"
+	bullets = bullets - 1;
+	}
+if (x==341)
+	{
+	t="<code>You hilariously slip on a deck of cards.</code>"
+	}
+if (x==342)
+	{
+	t="<code>A stray discharge shoots a rolling roulette ball. The ball shoots up and hits the poor gambler in the eye.</code>"
+	bullets = bullets - 1;
+	}
+if (x==343)
+	{
+	t="<code>You pass by an especially old slot machine, one that holds your interest. (Press 'Run' to continue, or 'Gun' to play it.)</code>"
+	}
+if (x==344)
+	{
+	if (slotMachineRun==1)
+		{
+		bullets = bullets - 1;
+		
+		choices6 = Math.floor(Math.random()*6) + 1;
+		if (choices6==1 || choices6==2 || choices6==3 ) { SM1=1; SMT1="R"; }
+		if (choices6==4 || choices6==5) { SM1=2; SMT1="G"; }
+		if (choices6==6) { SM1=3; SMT1="D"; }
+		choices6 = Math.floor(Math.random()*6) + 1;
+		if (choices6==1 || choices6==2 || choices6==3 ) { SM2=1; SMT2="R"; }
+		if (choices6==4 || choices6==5) { SM2=2; SMT2="G"; }
+		if (choices6==6) { SM2=3; SMT2="D"; }
+		choices6 = Math.floor(Math.random()*6) + 1;
+		if (choices6==1 || choices6==2 || choices6==3 ) { SM3=1; SMT3="R"; }
+		if (choices6==4 || choices6==5) { SM3=2; SMT3="G"; }
+		if (choices6==6) { SM3=3; SMT3="D"; }
+
+		
+		if (SM1==1 && SM2==1 && SM3==1) { SMO=3; }
+		if (SM1==2 && SM2==2 && SM3==2) { SMO=5; }
+		if (SM1==3 && SM2==3 && SM3==3) { SMO=7;
+			alert('ding ding ding');
+			}
+		if (SM1 != SM2 || SM2 != SM3 || SM1 != SM3) { SMO=0; }
+		
+		bullets = bullets + SMO;
+		}
+	else
+		{
+		slotMachineRun=1;
+		}
+	t="<code><b>~BULLET SLOT MACHINE~</b><br><br>Insert the payment of ONE (1) BULLET and pull the lever. Match the following to win these GREAT PRIZES:<br><br><table border=1 cellpadding=3><tr><td><center>3 <u>R</u>evolvers</center></td><td><center>+1 bullet</center></td></tr><tr><td><center>3 <u>G</u>locks</center></td><td><center>+3 bullets</center></td></tr><tr><td><center>3 <u>D</u>esert Eagles</center></td><td><center>+5 bullets</center></td></tr></table><br><br> | " + SMT1 + " | " + SMT2 + " | " + SMT3 + " |<br>Prize: +" + SMO + " bullet(s)<br><br>Press 'Gun' to insert a coin or 'Run' to move on with your life.</code>"
+	}
+if (x==345)
+	{
+	t="<code>You walk away from the slot machine and proceed with your adventure.</code>"
+	}
+	
+gunshotCounter();
+document.getElementById("text").innerHTML=t;
+}
+
+</script>
+
+</head>
+<body>
+<center>
+<h1>RUNGUN</h1>
+<p>by <b><a href="http://www.twitter.com/tehpilot/">@tehpilot</a></b><br>
+<i>Last updated: 9/22/14</i></p>
+<h2>Choose your destiny.</h2>
+<div id="two"><center>
+<p id="text"><code>Welcome to <b>RUNGUN</b>.<br><br>You are currently standing in your garage. You look down at the gun you have finished building. This gun will be your only defense as you venture into the hell known as OUTSIDE. After all, being locked in your basement all summer does make one afraid of light.<br><br>Click the <b>RUN</b> or <b>GUN</b> button to take decisive and swift action on your adventure.</code></p>
+<p id="ammo">Gunshots Remaining: 14</p>
+<font color=white><p id="copboss"></p></font></div><br>
+<button id="button" onclick="myRun()"><b>Run</b></button>
+<button id="button2" onclick="myGun()"><b>Gun</b></button>
+<br><br>
+<br>
+<a href="javascript:alert('To play this game, click the Run or Gun button - whichever is more appropriate for the situation - and try to reach the end without running out of bullets!')"><h6>How do I play this game?</a>
+</center>
+</body>
+</html>
