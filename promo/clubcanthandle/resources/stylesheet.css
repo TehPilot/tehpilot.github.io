@@ -49,3 +49,37 @@ section#main_body {
 p.main {
 	color: #fff;
 	}
+p.footer {
+	color: #fff;
+	text-align: center;
+	}
+	
+nav.sidebar {
+	text-align: center;
+	color: #fff;
+	}
+
+li.item {
+	display: inline;
+	list-style-type: none;
+	}
+	
+/* unvisited link */
+a:link {
+    color: #FFF;
+}
+
+/* visited link */
+a:visited {
+    color: #FFF;
+}
+
+/* mouse over link */
+a:hover {
+    color: #777;
+}
+
+/* selected link */
+a:active {
+    color: #FFF;
+}
