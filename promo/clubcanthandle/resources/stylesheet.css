@@ -63,6 +63,9 @@ li.item {
 	display: inline;
 	list-style-type: none;
 	}
+em {
+	font-size: 18px;
+	}
 	
 /* unvisited link */
 a:link {
