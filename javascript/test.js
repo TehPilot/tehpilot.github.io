@@ -1,5 +1,1 @@
-function main() {
-	alert('Hey hey!');
-	}
-	
-function();
+alert('Hey hey!');
