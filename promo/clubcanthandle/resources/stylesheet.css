@@ -21,7 +21,7 @@ img.center {
 h1 {
 	font-family: 'PixelMix','Courier New';
 	font-weight: normal;
-	font-size: 24px;
+	font-size: 2em;
 	text-align: center;
 	color: #fff;
 }
@@ -29,7 +29,7 @@ h1 {
 h2 {
 	font-family: 'PixelMix','Courier New';
 	font-weight: normal;
-	font-size: 16px;
+	font-size: 1em;
 	text-align: left;
 	color: #fff;
 }
@@ -37,9 +37,9 @@ h2 {
 section#main_body {
 	margin-left: auto;
 	margin-right: auto;
-    width: 480px;
-    padding: 25px;
-	border: 32px transparent;
+    width: 30em;
+    padding: 1.563em;
+	border: 2em transparent;
     -webkit-border-image: url(../resources/border.png) 32 32 repeat; /* Safari 3.1-5 */
     -o-border-image: url(../resources/border.png) 32 32 repeat; /* Opera 11-12.1 */
     border-image: url(../resources/border.png) 32 32 repeat;
