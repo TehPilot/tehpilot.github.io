@@ -1,6 +1,17 @@
+body {
+	background:
+	radial-gradient(black 15%, transparent 16%) 0 0,
+	radial-gradient(black 15%, transparent 16%) 0.5em 0.5em,
+	radial-gradient(rgba(255,255,255,.1) 15%, transparent 20%) 0 0.063em,
+	radial-gradient(rgba(255,255,255,.1) 15%, transparent 20%) 0.5em 0.563em;
+	background-color:#282828;
+	background-size:1em 1em;
+	}
 h1 {
-	color: red;
-	width: 70%;
+	color: white;
+	font-size:3em;
+	text-shadow: 0em 0em 0.7em gray;
+	width: 100%;
 	text-align: center;
 	margin-left: auto;
 	margin-right: auto;
