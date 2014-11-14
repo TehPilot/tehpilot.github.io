@@ -1,0 +1,101 @@
+<html>
+<head>
+<script type="text/javascript">
+var titlelist = new Array();
+titlelist[0] = "avant-garde humor at its finest";
+titlelist[1] = "way ahead of its time";
+titlelist[2] = "rated number one steak in the united states";
+titlelist[3] = "loved and respected by about seven people";
+titlelist[4] = "never jumps the shark";
+titlelist[5] = "one of these got like 17 notes on tumblr";
+titlelist[6] = "updates whenever";
+titlelist[7] = "they could be more offensive";
+titlelist[8] = "i thought it was funny okay";
+titlelist[9] = "i can't even draw";
+titlelist[10] = "last updated within the month holy shit";
+titlelist[11] = "";
+document.title="pilocomics: " + titlelist[Math.floor(Math.random()*titlelist.length)];
+
+var comicid=1;
+var maxcomic=59;
+var fileext='.png';
+
+document.getElementById("two").innerHTML=comicid + '/' + maxcomic;
+
+function advance()
+{
+comicid = comicid + 1;
+if (comicid > maxcomic)
+{
+comicid=maxcomic;
+}
+if (comicid < 1)
+{
+comicid=1;
+}
+update();
+}
+
+function ascend()
+{
+comicid = maxcomic;
+update();
+}
+
+function regress()
+{
+comicid = comicid - 1;
+if (comicid < 1)
+{
+comicid=1;
+}
+update();
+}
+
+function restart()
+{
+comicid = 1;
+update();
+}
+
+
+function update()
+{
+if (comicid==-111 || comicid==49) { fileext = '.gif'; } else { fileext = '.png'; }
+document.getElementById("bob").src='pcomics' + comicid + fileext;
+document.getElementById("two").innerHTML=comicid + '/' + maxcomic;
+}
+
+function select()
+{
+var faa
+faa=prompt("enter the number you wish to jump to","1");
+if (isNaN(faa)==true)
+{
+alert("i do NOT have time for your bullshit today, now give me a number");
+}
+else
+{
+comicid=faa;
+update();
+}
+}
+</script>
+
+</head>
+
+<body>
+<br><br><br><br><center>
+<img src="pcomics1.png" id="bob" alt=""><br>
+<button onclick="restart()">restart</button>
+<button onclick="regress()">regress</button>
+<button onclick="select()">select</button>
+<button onclick="advance()">advance</button>
+<button onclick="ascend()">ascend</button>
+<p id="two">1/59</p>
+<br>
+<h2>about pilocomics</h2>
+<p>Tell you the truth, I don't even know anymore.</p>
+</center>
+</body>
+</html>
