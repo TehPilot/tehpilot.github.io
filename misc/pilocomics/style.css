@@ -35,7 +35,21 @@ footer {
 	}
 	
 @media screen and ( max-width: 640px ) {
+	* {
+		font-size: 1.1em;
+		}
 	section {
+		position: relative;
+		top: 0;
+		transform: translateY(0%);
+		}
+	header {
+		display: none;
+		}
+	footer {
+		width: 100%;
+		border-style: solid none none none;
+		padding-top: 1em;
 		position: relative;
 		}
 	}
