@@ -8,14 +8,17 @@ section {
 	position: relative;
 	top: 50%;
 	transform: translateY(-55%);
+	z-index: 1;
 	}
 	
 header>img {
 	display: inline-block;
 	vertical-align: middle;
+	z-index: 1;
 	}
 
 header {
+	z-index: 2;
 	background-color: white;
 	position: fixed;
 	top: 0;
@@ -26,6 +29,7 @@ header {
 	}	
 
 footer {
+	z-index: 2;
 	background-color: white;
 	position: fixed;
 	bottom: 0;
