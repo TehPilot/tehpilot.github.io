@@ -1,7 +1,9 @@
 <html>
 <head>
 	<link rel="stylesheet" type="text/css" href="style.css" />
-	<script type="text/javascript">
+	<script>
+	console.info("you are an arse for looking at the console");
+	
 	var titlelist = new Array();
 	titlelist[0] = "avant-garde humor at its finest";
 	titlelist[1] = "way ahead of its time";
@@ -19,10 +21,10 @@
 	document.title="pilocomics: " + titlelist[Math.floor(Math.random()*titlelist.length)];
 
 	var comicid=1;
-	var maxcomic=62;
+	var maxcomic=63;
 	var fileext='.png';
 
-	document.getElementById("currentComic").innerHTML=comicid + '/' + maxcomic;
+	//document.getElementById("currentComic").innerHTML=comicid + '/' + maxcomic;
 
 	function advance() {
 		comicid = comicid + 1;
@@ -80,7 +82,7 @@
 	</script>
 </head>
 
-<body>
+<body onload="update();">
 	<header>
 		<img src="miniature.png" alt="main character" />
 	</header>
@@ -93,6 +95,6 @@
 		<button onclick="select()">select</button>
 		<button onclick="advance()">advance</button>
 		<button onclick="ascend()">ascend</button>
-		<p id="currentComic">1/62</p>
+		<p id="currentComic">please enable javascript user-senpai uwu</p>
 </body>
 </html>
