@@ -129,6 +129,10 @@
 					}
 					return false;
 				}
+				
+			function formSubmit() {
+				alert("Thank you! Your submission has been recieved. You will be sent an email when your phone is ready to be sent.");
+				}
 		</script>
 	</head>
     <body>
@@ -149,7 +153,7 @@
 			</article>
 		</section>
         <section>     	
-            <form method="get" name="myform">
+            <form method="get" name="myform" onsubmit="formSubmit(); return false;">
 			<h1>uPhone Order Form</h1>
                 <fieldset>
 					<article>

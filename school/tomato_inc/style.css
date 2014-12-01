@@ -115,6 +115,7 @@ div#colorRect {
 	height: 8em;
 	float: right;
 	background: red;
+	outline: 3px dash black;
  }
 
 header {
@@ -275,6 +276,8 @@ p#secret {
     #uPhone{
         display: none;
 	}
+	
+}
 	
 @media screen and ( max-width: 480px ) {
 
