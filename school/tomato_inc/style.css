@@ -115,7 +115,7 @@ div#colorRect {
 	height: 8em;
 	float: right;
 	background: red;
-	outline: 3px dash black;
+	outline: 2px;
  }
 
 header {
