@@ -22,7 +22,7 @@
 	document.title="pilocomics: " + titlelist[Math.floor(Math.random()*titlelist.length)];
 
 	var comicid=1;
-	var maxcomic=64;
+	var maxcomic=65;
 	var fileext='.png';
 
 	//document.getElementById("currentComic").innerHTML=comicid + '/' + maxcomic;
@@ -80,6 +80,13 @@
 			update();
 			}
 		}
+	
+	function easteregg() {
+		if (comicid == 65) {
+			document.getElementById("comicImage").src='pcomics65.gif';
+			}
+		}
+		
 	</script>
 </head>
 
@@ -88,7 +95,7 @@
 		<img src="miniature.png" alt="main character" />
 	</header>
 	<section>
-		<img src="pcomics1.png" id="comicImage" alt="">
+		<img src="pcomics1.png" id="comicImage" onclick="easteregg();" alt="">
 	</section>
 <footer>
 <button onclick="restart()">restart</button>
