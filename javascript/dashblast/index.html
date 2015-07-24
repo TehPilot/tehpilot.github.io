@@ -1,0 +1,129 @@
+<!--DashBlast, created by TehPilot-->
+
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+	<meta charset="utf-8" />
+	<title>DASHBLAST</title>
+	<style type="text/css">
+		//Basic CSS stuff.
+		//All IDs/properties organized alphabetically for easy reading/access.
+		#button-div
+			{
+			margin:				 auto;
+			text-align: 		 center;
+			width: 			 	 256px;
+			}
+		#info
+			{
+			text-align: 		 center;
+			}
+		#mainbody
+			{
+			background-color:	 #EEE;
+			border:          	 3px solid black;
+			font-size:       	 1.2em;
+			height: 			 256px;
+			margin: 		 	 auto;
+			margin-bottom: 	 	 20px;
+			overflow-y: 	 	 scroll;
+			padding: 		  	 1em;
+			text-align: 	 	 left;
+			width: 			 	 600px;
+			}
+		#tagline
+			{
+			font-size: 			 200%;
+			margin-bottom: 		 0%;
+			margin-top: 		 0%;
+			text-align: 		 center;
+			}
+		#title
+			{
+			font-size: 			 350%;
+			margin-bottom: 		 0px;
+			text-align: 		 center;
+			}
+	</style>
+	
+	<script type="text/javascript">
+	//defines the "state" of the game
+	var state = 0;
+	
+	//handles the display text for each "state" available in the game
+	var gameplayText = new Array();
+	
+	gameplayText[0] = "The sun rises on this glorious day in the United States.<br /><br />It is part of your morning routine to feel super thankful for the Founding Fathers and the Second Amemdment which they have penned. Thanks to their foresight and advancements in human rights, you are blessed with the ability to legally own a deadly firearm. Every night, you sleep soundly with your high-quality, gold-plated shotgun tucked comfortably underneath your bed.<br /><br />Today, you shall arm yourself in preparation for the long and dreadful walk to the annual Gun Show. The dangers of Suburban America are numerous and perilous, and you will need to rely on your trusty antique shotgun precursor to guide the way.<br /><br />What will you do? Choose your destiny below - <b>DASH</b> or <b>BLAST</b>.";
+	gameplayText[1] = "You welcome the morning sun by dragging your prized possession out from under the bed. You follow up with a celebratory shot, lodging another heavy shotgun round in your bedroom ceiling. The ceiling looks like swiss cheese, but that doesn't matter.";
+	gameplayText[2] = "Another round lodges itself in the ceiling. As much as you love the heavy sound of gunfire and its ability to cleanse your mind of adult responsibilities, doing this too much might invite a ceiling collapse. Best to play it safe and stop shooting at the buckling roof.";
+	gameplayText[3] = "You leap out of bed, pulling the shotgun out from under your mattress. You admire its reflective coat and shiny finish on the handle as you trot up to your bedroom door. '<i>Today's gonna be a great day!'</i>, you whisper to yourself.";
+	gameplayText[4] = "Satisfied with your warm-up, you hop out of bed and run up to your bedroom door. '<i>Today's gonna be a great day!'</i>, you whisper to yourself.";
+	gameplayText[5] = "You run headlong into the door. Ow.";
+	gameplayText[6] = "You effortlessly blast the door off its hinges, opening up passage to the main hallway.";
+	
+	/*
+	 * dash()			- void
+	 * Performs the state update whenever the player chooses the "Dash" command.
+	 */
+	function dash() {
+		switch (state) {
+			case 0: {state = 3; break;}
+			case 1: {state = 4; break;}
+			case 2: {state = 4; break;}
+			case 3: {state = 5; break;}
+			case 4: {state = 5; break;}
+			case 5: {state = 5; break;}
+			}
+		updateText();
+		}
+		
+	/*
+	 * blast()			- void
+	 * Performs the state update whenever the player chooses the "Blast" command.
+	 */
+	function blast() {
+		switch (state) {
+			case 0: {state = 1; break;}
+			case 1: {state = 2; break;}
+			case 2: {state = 2; break;}
+			case 3: {state = 6; break;}
+			case 4: {state = 6; break;}
+			case 5: {state = 6; break;}
+			}
+		updateText();
+		}
+		
+	/*
+	 * updateText()		- void
+	 * Changes the displayed text according to the game's current state.
+	 */
+	function updateText() {
+		document.getElementById("mainbody-message").innerHTML = gameplayText[state];
+		}
+	</script>
+</head>
+
+<!--Main body-->
+<body onload = "updateText()">
+	<!--Header (title and tagline, author information)-->
+	<header>
+		<h1 id="title">D A S H B L A S T</h1>
+		<p id="tagline">a rip-snorting text-adventure</p>
+		<p id="info">
+			interactive web experience delivered by <b><a href="http://www.twitter.com/tehpilot/">@tehpilot</a></b> | <i>Last updated: 9/22/14</i>
+		</p>
+	</header>
+	
+	<!--Main body (displayed text)-->
+	<section id="mainbody">
+		<code id="mainbody-message"></code>
+	</section>
+	
+	<!--Buttons-->
+	<div id="button-div" style="text-align: center;">
+		<button id="dashButton"  onclick="dash()">DASH</button>
+		<button id="blastbutton" onclick="blast()">BLAST</button>
+	</div>
+	
+</body>
+</html>
