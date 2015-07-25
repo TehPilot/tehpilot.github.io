@@ -4,45 +4,92 @@
 <html lang="en-us">
 <head>
 	<meta charset="utf-8" />
-	<title>DASHBLAST</title>
+	<title>DashBlast :: tehpilot.github.io</title>
+	
+	<!--In-document styling (bit easier to manage than external CSS for a document like this)-->
 	<style type="text/css">
-		//Basic CSS stuff.
-		//All IDs/properties organized alphabetically for easy reading/access.
-		#button-div
+		/* Basic CSS stuff for the page.
+		 * All IDs/properties organized alphabetically for easy reading/access.
+		 */
+
+		 /* Custom fonts */
+		 @font-face
+		 	{
+		 	font-family:		 header;
+		 	src:				 url('gunplay-3d.ttf');
+		 	}
+		 @font-face
+		 	{
+		 	font-family:		 tagline;
+		 	src:				 url('gunplay-rg.ttf');
+		 	}
+		 
+		/* * * * * * * * * * *
+		 * SPECIFIC ID/CLASS *
+		 * * * * * * * * * * */
+		/* Centers the buttons on the page */
+		#buttons
 			{
+			font-family: 		 tagline;
 			margin:				 auto;
 			text-align: 		 center;
 			width: 			 	 256px;
 			}
+		/* Centers the author link and update tracker on the page */
 		#info
 			{
 			text-align: 		 center;
 			}
+		/* Set the visual properties of the main playing textbox.
+		 * Fixed margins and sizes (in px) are used to clearly define the size.
+		 * overflow-y allows for scrolling, as the container is a fixed size
+		 * to avoid the height changing that plagued RunGun.
+		 */
 		#mainbody
 			{
 			background-color:	 #EEE;
 			border:          	 3px solid black;
-			font-size:       	 1.2em;
-			height: 			 256px;
+			font-size:       	 1.25em;
+			height: 			 192px;
 			margin: 		 	 auto;
-			margin-bottom: 	 	 20px;
+			margin-bottom: 	 	 25px;
+			margin-top:			 5%;
 			overflow-y: 	 	 scroll;
 			padding: 		  	 1em;
 			text-align: 	 	 left;
 			width: 			 	 600px;
 			}
+		/* Centering and font size adjustment for the tagline. */
 		#tagline
 			{
+			font-family:		 tagline;
 			font-size: 			 200%;
 			margin-bottom: 		 0%;
 			margin-top: 		 0%;
 			text-align: 		 center;
 			}
+		/* Centering and font size adjustment for the title. */
 		#title
 			{
+			font-family:		 header;
 			font-size: 			 350%;
 			margin-bottom: 		 0px;
 			text-align: 		 center;
+			}
+
+		.fancyButton
+			{
+			border:				 3px solid black;
+			font-family:		 tagline;
+			}
+
+		/* * * * * * * * *
+		 * STANDARD TAGS *
+		 * * * * * * * * */
+		button
+			{
+			font-size: 			 150%;
+			margin: 			 0.5em;
 			}
 	</style>
 	
@@ -55,11 +102,20 @@
 	
 	gameplayText[0] = "The sun rises on this glorious day in the United States.<br /><br />It is part of your morning routine to feel super thankful for the Founding Fathers and the Second Amemdment which they have penned. Thanks to their foresight and advancements in human rights, you are blessed with the ability to legally own a deadly firearm. Every night, you sleep soundly with your high-quality, gold-plated shotgun tucked comfortably underneath your bed.<br /><br />Today, you shall arm yourself in preparation for the long and dreadful walk to the annual Gun Show. The dangers of Suburban America are numerous and perilous, and you will need to rely on your trusty antique shotgun precursor to guide the way.<br /><br />What will you do? Choose your destiny below - <b>DASH</b> or <b>BLAST</b>.";
 	gameplayText[1] = "You welcome the morning sun by dragging your prized possession out from under the bed. You follow up with a celebratory shot, lodging another heavy shotgun round in your bedroom ceiling. The ceiling looks like swiss cheese, but that doesn't matter.";
-	gameplayText[2] = "Another round lodges itself in the ceiling. As much as you love the heavy sound of gunfire and its ability to cleanse your mind of adult responsibilities, doing this too much might invite a ceiling collapse. Best to play it safe and stop shooting at the buckling roof.";
+	gameplayText[2] = "Another round lodges itself in the ceiling. As much as you love the heavy sound of gunfire and its ability to cleanse your mind of intrusive thoughts, doing this too much might invite a ceiling collapse. Best to play it safe and stop shooting at the buckling roof.";
 	gameplayText[3] = "You leap out of bed, pulling the shotgun out from under your mattress. You admire its reflective coat and shiny finish on the handle as you trot up to your bedroom door. '<i>Today's gonna be a great day!'</i>, you whisper to yourself.";
 	gameplayText[4] = "Satisfied with your warm-up, you hop out of bed and run up to your bedroom door. '<i>Today's gonna be a great day!'</i>, you whisper to yourself.";
 	gameplayText[5] = "You run headlong into the door. Ow.";
 	gameplayText[6] = "You effortlessly blast the door off its hinges, opening up passage to the main hallway.";
+	gameplayText[7] = "Squeezing the trigger again, you revel in the glorious sound of gunpower exploding. The chandelier in your center hallway sways side to side, one of its lights smoldering and broken.";
+	gameplayText[8] = "You run into your main foyer, standing at the top of the stairs. The carpet-runner covered stairs lead directly to your front door.<br /><br />If you're going to stand any chance of making it to the gun show, you'll probably need to go out that door.";
+	gameplayText[9] = "You fire again at your chandelier. The fancy lighting fixture snaps from its chain and crahses into the floor, creating a massive hole in the floor at the base of the stairs. It leads into your unkempt and dark basement.";
+	gameplayText[10] = "A shotgun round flies into the depths of your basement. That'll scare the rats away.";
+	gameplayText[11] = "You begin dashing down the stairs, swinging your arms and legs in comical fashion.";
+	gameplayText[12] = "As you run down the stairs and hit the first floor's tiling, the floor gives way and drops you into the basement. It's dark, smells pretty terrible, and in all honesty you really wish this hadn't happened.";
+	gameplayText[13] = "You try and make a leap across the chasm in your floor, but you fall short and plummet into the depths of your basement. You land softly on some musty mattress conveniently placed where you'd fall.";
+	gameplayText[14] = "A shotgun shell to your ceiling isn't going to help you get out of this predicament.";
+	gameplayText[15] = "You trudge onwards, into the depths of your basement. With your gun at your side, absolutely nothing can terrify or stop you.";
 	
 	/*
 	 * dash()			- void
@@ -73,6 +129,15 @@
 			case 3: {state = 5; break;}
 			case 4: {state = 5; break;}
 			case 5: {state = 5; break;}
+			case 6: {state = 8; break;}
+			case 7: {state = 8; break;}
+			case 8: {state = 11; break;}
+			case 9: {state = 13; break;}
+			case 10: {state = 13; break;}
+			case 11: {state = 12; break;}
+			case 12: {state = 15; break;}
+			case 13: {state = 15; break;}
+			case 14: {state = 15; break;}
 			}
 		updateText();
 		}
@@ -89,6 +154,15 @@
 			case 3: {state = 6; break;}
 			case 4: {state = 6; break;}
 			case 5: {state = 6; break;}
+			case 6: {state = 7; break;}
+			case 7: {state = 7; break;}
+			case 8: {state = 9; break;}
+			case 9: {state = 10; break;}
+			case 10: {state = 10; break;}
+			case 11: {state = 9; break;}
+			case 12: {state = 14; break;}
+			case 13: {state = 14; break;}
+			case 14: {state = 14; break;}
 			}
 		updateText();
 		}
@@ -108,9 +182,9 @@
 	<!--Header (title and tagline, author information)-->
 	<header>
 		<h1 id="title">D A S H B L A S T</h1>
-		<p id="tagline">a rip-snorting text-adventure</p>
+		<p id="tagline">AN EXPLOSIVE TEXT ADVENTURE</p>
 		<p id="info">
-			interactive web experience delivered by <b><a href="http://www.twitter.com/tehpilot/">@tehpilot</a></b> | <i>Last updated: 9/22/14</i>
+			interactive web experience delivered by <b><a href="http://www.twitter.com/tehpilot/">@tehpilot</a></b> | <i>Last updated: 25 June 15</i>
 		</p>
 	</header>
 	
@@ -120,9 +194,9 @@
 	</section>
 	
 	<!--Buttons-->
-	<div id="button-div" style="text-align: center;">
-		<button id="dashButton"  onclick="dash()">DASH</button>
-		<button id="blastbutton" onclick="blast()">BLAST</button>
+	<div id="buttons">
+		<button id="dashButton"  class="fancyButton" onclick="dash()">DASH</button>
+		<button id="blastbutton" class="fancyButton" onclick="blast()">BLAST</button>
 	</div>
 	
 </body>
