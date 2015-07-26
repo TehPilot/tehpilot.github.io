@@ -33,7 +33,7 @@
 			font-family: 		 tagline;
 			margin:				 auto;
 			text-align: 		 center;
-			width: 			 	 256px;
+			width: 			 	 33%;
 			}
 		/* Centers the author link and update tracker on the page */
 		#info
@@ -53,11 +53,18 @@
 			height: 			 192px;
 			margin: 		 	 auto;
 			margin-bottom: 	 	 25px;
-			margin-top:			 5%;
 			overflow-y: 	 	 scroll;
 			padding: 		  	 1em;
 			text-align: 	 	 left;
 			width: 			 	 600px;
+			}
+		#stats-display
+			{
+			font-family: 		 tagline;
+			font-size:			 125%;
+			margin:				 auto;
+			text-align:			 center;
+			width:				 128px;
 			}
 		/* Centering and font size adjustment for the tagline. */
 		#tagline
@@ -77,19 +84,25 @@
 			text-align: 		 center;
 			}
 
-		.fancyButton
-			{
-			border:				 3px solid black;
-			font-family:		 tagline;
-			}
-
 		/* * * * * * * * *
 		 * STANDARD TAGS *
 		 * * * * * * * * */
 		button
 			{
+			border:				 3px solid black;
+			font-family:		 tagline;
 			font-size: 			 150%;
 			margin: 			 0.5em;
+			width:				 96px;
+			}
+		button:active
+			{
+			background-color:	 #333;
+			color:				 #fff;
+			}
+		button:hover
+			{
+			border:				 3px solid #333;
 			}
 	</style>
 	
@@ -361,7 +374,7 @@
 				break;
 				}
 			case 31: {
-				state = 32;
+				state = 31;
 				break;
 				}
 			}
@@ -375,6 +388,11 @@
 	function updateText() {
 		updateGameText();
 		document.getElementById("mainbody-message").innerHTML = gameplayText[state];
+		updateStatsText();
+		}
+
+	function updateStatsText() {
+		document.getElementById("stats").innerHTML = "\u2665 " + maximumPlayerHealth + " \u2694 " + playerDamage;
 		}
 	</script>
 </head>
@@ -390,13 +408,15 @@
 		</p>
 	</header>
 	
+	<!--Player stats-->
+	<section id="stats-display">
+		<p id="stats">asdasdasd</p>
+	</section>
+
 	<!--Main body (displayed text)-->
 	<section id="mainbody">
 		<code id="mainbody-message"></code>
 	</section>
-	<!--<caption>
-		<p id="stats">asdasdasd</p>
-	</caption>-->
 	
 	<!--Buttons-->
 	<div id="buttons">
