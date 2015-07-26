@@ -96,26 +96,53 @@
 	<script type="text/javascript">
 	//defines the "state" of the game
 	var state = 0;
+
+	//define and set the player's health and shotgun strength (used for boss fights)
+	var maximumPlayerHealth = 3;
+	var currentPlayerHealth = maximumPlayerHealth;
+	var playerDamage = 1;
+
+	//catchall variable for boss health
+	var bossHealth = 3;
 	
 	//handles the display text for each "state" available in the game
 	var gameplayText = new Array();
 	
-	gameplayText[0] = "The sun rises on this glorious day in the United States.<br /><br />It is part of your morning routine to feel super thankful for the Founding Fathers and the Second Amemdment which they have penned. Thanks to their foresight and advancements in human rights, you are blessed with the ability to legally own a deadly firearm. Every night, you sleep soundly with your high-quality, gold-plated shotgun tucked comfortably underneath your bed.<br /><br />Today, you shall arm yourself in preparation for the long and dreadful walk to the annual Gun Show. The dangers of Suburban America are numerous and perilous, and you will need to rely on your trusty antique shotgun precursor to guide the way.<br /><br />What will you do? Choose your destiny below - <b>DASH</b> or <b>BLAST</b>.";
-	gameplayText[1] = "You welcome the morning sun by dragging your prized possession out from under the bed. You follow up with a celebratory shot, lodging another heavy shotgun round in your bedroom ceiling. The ceiling looks like swiss cheese, but that doesn't matter.";
-	gameplayText[2] = "Another round lodges itself in the ceiling. As much as you love the heavy sound of gunfire and its ability to cleanse your mind of intrusive thoughts, doing this too much might invite a ceiling collapse. Best to play it safe and stop shooting at the buckling roof.";
-	gameplayText[3] = "You leap out of bed, pulling the shotgun out from under your mattress. You admire its reflective coat and shiny finish on the handle as you trot up to your bedroom door. '<i>Today's gonna be a great day!'</i>, you whisper to yourself.";
-	gameplayText[4] = "Satisfied with your warm-up, you hop out of bed and run up to your bedroom door. '<i>Today's gonna be a great day!'</i>, you whisper to yourself.";
-	gameplayText[5] = "You run headlong into the door. Ow.";
-	gameplayText[6] = "You effortlessly blast the door off its hinges, opening up passage to the main hallway.";
-	gameplayText[7] = "Squeezing the trigger again, you revel in the glorious sound of gunpower exploding. The chandelier in your center hallway sways side to side, one of its lights smoldering and broken.";
-	gameplayText[8] = "You run into your main foyer, standing at the top of the stairs. The carpet-runner covered stairs lead directly to your front door.<br /><br />If you're going to stand any chance of making it to the gun show, you'll probably need to go out that door.";
-	gameplayText[9] = "You fire again at your chandelier. The fancy lighting fixture snaps from its chain and crahses into the floor, creating a massive hole in the floor at the base of the stairs. It leads into your unkempt and dark basement.";
-	gameplayText[10] = "A shotgun round flies into the depths of your basement. That'll scare the rats away.";
-	gameplayText[11] = "You begin dashing down the stairs, swinging your arms and legs in comical fashion.";
-	gameplayText[12] = "As you run down the stairs and hit the first floor's tiling, the floor gives way and drops you into the basement. It's dark, smells pretty terrible, and in all honesty you really wish this hadn't happened.";
-	gameplayText[13] = "You try and make a leap across the chasm in your floor, but you fall short and plummet into the depths of your basement. You land softly on some musty mattress conveniently placed where you'd fall.";
-	gameplayText[14] = "A shotgun shell to your ceiling isn't going to help you get out of this predicament.";
-	gameplayText[15] = "You trudge onwards, into the depths of your basement. With your gun at your side, absolutely nothing can terrify or stop you.";
+	function updateGameText() {
+		gameplayText[0] = "The sun rises on this glorious day in the United States.<br /><br />It is part of your morning routine to feel super thankful for the Founding Fathers and the Second Amemdment which they have penned. Thanks to their foresight and advancements in human rights, you are blessed with the ability to legally own a deadly firearm. Every night, you sleep soundly with your high-quality, gold-plated shotgun tucked comfortably underneath your bed.<br /><br />Today, you shall arm yourself in preparation for the long and dreadful walk to the annual Gun Show. The dangers of Suburban America are numerous and perilous, and you will need to rely on your trusty antique shotgun precursor to guide the way.<br /><br />What will you do? Choose your destiny below - <b>DASH</b> or <b>BLAST</b>.";
+		gameplayText[1] = "You welcome the morning sun by dragging your prized possession out from under the bed. You follow up with a celebratory shot, lodging another heavy shotgun round in your bedroom ceiling. The ceiling looks like swiss cheese, but that doesn't matter.";
+		gameplayText[2] = "Another round lodges itself in the ceiling. As much as you love the heavy sound of gunfire and its ability to cleanse your mind of intrusive thoughts, doing this too much might invite a ceiling collapse. Best to play it safe and stop shooting at the buckling roof.";
+		gameplayText[3] = "You leap out of bed, pulling the shotgun out from under your mattress. You admire its reflective coat and shiny finish on the handle as you trot up to your bedroom door. '<i>Today's gonna be a great day!'</i>, you whisper to yourself.";
+		gameplayText[4] = "Satisfied with your warm-up, you hop out of bed and run up to your bedroom door. '<i>Today's gonna be a great day!'</i>, you whisper to yourself.";
+		gameplayText[5] = "You run headlong into the door. Ow.";
+		gameplayText[6] = "You effortlessly blast the door off its hinges, opening up passage to the main hallway.";
+		gameplayText[7] = "Squeezing the trigger again, you revel in the glorious sound of gunpower exploding. The chandelier in your center hallway sways side to side, one of its lights smoldering and broken.";
+		gameplayText[8] = "You run into your main foyer, standing at the top of the stairs. The carpet-runner covered stairs lead directly to your front door.<br /><br />If you're going to stand any chance of making it to the gun show, you'll probably need to go out that door.";
+		gameplayText[9] = "You fire again at your chandelier. The fancy lighting fixture snaps from its chain and crahses into the floor, creating a massive hole in the floor at the base of the stairs. It leads into your unkempt and dark basement.";
+		gameplayText[10] = "A shotgun round flies into the depths of your basement. That'll scare the rats away.";
+		gameplayText[11] = "You begin dashing down the stairs, swinging your arms and legs in comical fashion.";
+		gameplayText[12] = "As you run down the stairs and hit the first floor's tiling, the floor gives way and drops you into the basement. It's dark, smells pretty terrible, and in all honesty you really wish this hadn't happened.";
+		gameplayText[13] = "You try and make a leap across the chasm in your floor, but you fall short and plummet into the depths of your basement. You land softly on some musty mattress conveniently placed where you'd fall.";
+		gameplayText[14] = "A shotgun shell to your ceiling isn't going to help you get out of this predicament.";
+		gameplayText[15] = "You trudge onwards, into the depths of your basement. With your gun at your side, absolutely nothing can terrify or stop you.";
+		gameplayText[16] = "A rat scurries past your feet. You shoot it.<br /><br />That'll teach the rodent to nest in <i>your</i> basement.";
+		gameplayText[17] = "It's really dark down here. As you run through the basement, you step in puddles of water formed on your carpet. Someday you'll need to invest money into fixing the faulty plumbing, and not purchasing more fancy firearms.";
+		gameplayText[18] = "You shoot into the darkness. A loud squeak and scratching noise follows.<br /><br />A giant rat runs up and attacks you!";
+		gameplayText[19] = "As you round the next corner, a loud squeak and scratching echoes throughout the basement. Through the dim lighting, you see a giant rat charge at you!";
+		gameplayText[20] = "BOSS HEALTH: " + bossHealth + "/3<br />YOUR HEALTH: " + currentPlayerHealth + "/" + maximumPlayerHealth + "<br /><br />Reacting quickly, you put a round through the giant rat. It reels back and roars in agony, ready to fight.";
+		gameplayText[21] = "BOSS HEALTH: " + bossHealth + "/3<br />YOUR HEALTH: " + currentPlayerHealth + "/" + maximumPlayerHealth + "<br /><br />You and the rat run in circles around each other, with the rat poised to attack.";
+		gameplayText[22] = "BOSS HEALTH: " + bossHealth + "/3<br />YOUR HEALTH: " + currentPlayerHealth + "/" + maximumPlayerHealth + "<br /><br />You run around, creating distance as the rat pauses to catch its breath.";
+		gameplayText[23] = "BOSS HEALTH: " + bossHealth + "/3<br />YOUR HEALTH: " + currentPlayerHealth + "/" + maximumPlayerHealth + "<br /><br />You leap out of the way as the rat charges by you!";
+		gameplayText[24] = "BOSS HEALTH: " + bossHealth + "/3<br />YOUR HEALTH: " + currentPlayerHealth + "/" + maximumPlayerHealth + "<br /><br />You load up your gun to shoot, only to be mauled by the rat. You should wait until the beast is vulnerable before loading and firing.";
+		gameplayText[25] = "BOSS HEALTH: " + bossHealth + "/3<br />YOUR HEALTH: " + currentPlayerHealth + "/" + maximumPlayerHealth + "<br /><br />You shoot the rat! It reels back and roars in agony, ready to strike again.";
+		gameplayText[26] = "BOSS HEALTH: " + bossHealth + "/3<br />YOUR HEALTH: " + currentPlayerHealth + "/" + maximumPlayerHealth + "<br /><br />The rat charges up and pins you to the musty, damp floor. Before you can reach for your gun to slay the monster, you are quickly and violently eviscerated by its claws. Looks like you won't be showing up to the gun show today. Or any time, really.<br /><br /><b>You have died. Press any button to restart your adventure.</b>";
+		gameplayText[27] = "BOSS HEALTH: " + bossHealth + "/3<br />YOUR HEALTH: " + currentPlayerHealth + "/" + maximumPlayerHealth + "<br /><br />With one last buckshot, the mighty rat falls silent and collapses to the ground. As its tail twitches for the last time, you take the time to patch yourself up and re-assess the situation. A giant rat slain is good news for the pest control company you'll call when you get home tonight, and an excellent story for your friends at the gun show.<br /><br /><b>You have defeated a boss! You will be given the option to upgrade one of your stats following a boss battle. You can either increase your maximum Health, or increase the damage dealt by your shotgun shell rounds. Select 'Dash' for the Health upgrade, or 'Blast' for the damage upgrade.";
+		gameplayText[28] = "You shoot a bullet up into the air to signify your victory.<br /><br />+1 Damage.";
+		gameplayText[29] = "Okay stop that you're just wasting bullets now.";
+		gameplayText[30] = "You limber up before dashing further into your basement. <i>Today's gonna be a good day.</i><br /><br />+2 Health.";
+		gameplayText[31] = "You permit yourself to fire another victory shot, because why not.";
+		gameplayText[32] = "You round another corner before seeing some light coming from above. You've found the stairs, and the way out of this hellhole you call a basement.";
+	}
 	
 	/*
 	 * dash()			- void
@@ -138,6 +165,79 @@
 			case 12: {state = 15; break;}
 			case 13: {state = 15; break;}
 			case 14: {state = 15; break;}
+			case 15: {state = 17; break;}
+			case 16: {state = 17; break;}
+			case 17: {state = 19; break;}
+			case 18: {state = 19; break;}
+			case 19: {
+				if (Math.floor(Math.random()*2) != 1) {
+					state = 21;
+					}
+				else {
+					state = 22;
+					}
+				break;
+				}
+			case 20: {
+				if (Math.floor(Math.random()*2) != 1) {
+					state = 21;
+					}
+				else {
+					state = 22;
+					}
+				break;
+				}
+			case 21: {state = 23; break;}
+			case 22: {
+				if (Math.floor(Math.random()*2) != 1) {
+					state = 21;
+					}
+				else {
+					state = 22;
+					}
+				break;
+				}
+			case 23: {
+				if (Math.floor(Math.random()*2) != 1) {
+					state = 21;
+					}
+				else {
+					state = 22;
+					}
+				break;
+				}
+			case 24: {
+				if (Math.floor(Math.random()*2) != 1) {
+					state = 21;
+					}
+				else {
+					state = 22;
+					}
+				break;
+				}
+			case 25: {
+				if (Math.floor(Math.random()*2) != 1) {
+					state = 21;
+					}
+				else {
+					state = 22;
+					}
+				break;
+				}
+			case 26: {
+				location.reload();
+				break;
+				}
+			case 27: {
+				maximumPlayerHealth += 2;
+				currentPlayerHealth = maximumPlayerHealth;
+				state = 30;
+				break;
+				}
+			case 28: {state = 32; break;}
+			case 29: {state = 32; break;}
+			case 30: {state = 32; break;}
+			case 31: {state = 32; break;}
 			}
 		updateText();
 		}
@@ -163,6 +263,107 @@
 			case 12: {state = 14; break;}
 			case 13: {state = 14; break;}
 			case 14: {state = 14; break;}
+			case 15: {state = 16; break;}
+			case 16: {state = 16; break;}
+			case 17: {state = 18; break;}
+			case 18: {
+				bossHealth -= playerDamage;
+				if (bossHealth <= 0) {
+					state = 27;
+					break;
+				}
+				state = 20;
+				break;
+				}
+			case 19: {
+				bossHealth -= playerDamage;
+				if (bossHealth <= 0) {
+					state = 27;
+					break;
+				}
+				state = 20;
+				break;
+				}
+			case 20: {
+				currentPlayerHealth--;
+				if (currentPlayerHealth == 0) {
+					state = 26;
+					break;
+				}
+				state = 24;
+				break;
+				}
+			case 21: {
+				currentPlayerHealth--;
+				if (currentPlayerHealth == 0) {
+					state = 26;
+					break;
+				}
+				state = 24;
+				break;
+				}
+			case 22: {
+				bossHealth -= playerDamage;
+				if (bossHealth <= 0) {
+					state = 27;
+					break;
+				}
+				state = 25;
+				break;
+				}
+			case 23: {
+				currentPlayerHealth--;
+				if (currentPlayerHealth == 0) {
+					state = 26;
+					break;
+				}
+				state = 24;
+				break;
+				}
+			case 24: {
+				currentPlayerHealth--;
+				if (currentPlayerHealth == 0) {
+					state = 26;
+					break;
+				}
+				state = 24;
+				break;
+				}
+			case 25: {
+				currentPlayerHealth--;
+				if (currentPlayerHealth == 0) {
+					state = 26;
+					break;
+				}
+				state = 24;
+				break;
+				}
+			case 26: {
+				location.reload();
+				break;
+				}
+			case 27: {
+				playerDamage += 1;
+				currentPlayerHealth = maximumPlayerHealth;
+				state = 28;
+				break;
+				}
+			case 28: {
+				state = 29;
+				break;
+				}
+			case 29: {
+				state = 29;
+				break;
+				}
+			case 30: {
+				state = 31;
+				break;
+				}
+			case 31: {
+				state = 32;
+				break;
+				}
 			}
 		updateText();
 		}
@@ -172,6 +373,7 @@
 	 * Changes the displayed text according to the game's current state.
 	 */
 	function updateText() {
+		updateGameText();
 		document.getElementById("mainbody-message").innerHTML = gameplayText[state];
 		}
 	</script>
@@ -192,6 +394,9 @@
 	<section id="mainbody">
 		<code id="mainbody-message"></code>
 	</section>
+	<caption>
+		<p id="stats">asdasdasd</p>
+	</caption>
 	
 	<!--Buttons-->
 	<div id="buttons">
