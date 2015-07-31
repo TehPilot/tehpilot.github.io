@@ -155,6 +155,23 @@
 		gameplayText[30] = "You limber up before dashing further into your basement. <i>Today's gonna be a good day.</i><br /><br />+2 Health.";
 		gameplayText[31] = "You permit yourself to fire another victory shot, because why not.";
 		gameplayText[32] = "You round another corner before seeing some light coming from above. You've found the stairs, and the way out of this hellhole you call a basement.";
+		gameplayText[33] = "You are SO EAGER to get on with your adventure you shoot the door open from a great distance.";
+		gameplayText[34] = "You dash up to the door, staring at the light seeping through the seams along its sides.";
+		gameplayText[35] = "You run headlong into the door.<br /><br />Friendly reminder that running into doors increases the likelihood of a concussion! (\u25D5\u203F\u25D5\u273F)";
+		gameplayText[36] = "You shoot the door off its hinges! If only you knew a better way to safely unlock doors.";
+		gameplayText[37] = "The door's already on the floor with a massive hole in the center. You may want to reconsider shooting the poor hunk of wood like that.";
+		gameplayText[38] = "You run out of the basement and end up in your kitchen. Sprawled across your countertop is a collection of ingredients and tools, as well as a hastily scribbled guide to making a delicious bacon-and-egg breakfast sandwich. Looks like someone else in the house suspected you'd wake up late for the gun show, and left a sustenance creation kit out for you.";
+		gameplayText[39] = "You take your shotgun and shoot the counter. Flour, egg yolks, and raw bacon splatter on the walls as your cracked countertop collapses. What a way to make breakfast.";
+		gameplayText[40] = "You try to use your shotgun to clean up the mess you've made, but it looks like the bullets only come out one way each time.";
+		gameplayText[41] = "You dash over to your garage door. Who needs breakfast anyway?";
+		gameplayText[42] = "The shotgun shell you fire lodges itself firmly in your garage door. It's way heavier than any other entrance protector in your house, and you'll need to resort to special strategies to knock it down...";
+		gameplayText[43] = "This time, you carefully open the door with the doorknob and close it behind you. The door remains outstandingly intact. The rest of your house... not so much.<br /><br />You are now standing in your <b>GARAGE</b>.";
+		gameplayText[44] = "You fire your shotgun at the ceiling lamp, causing the room to go dark!";
+		gameplayText[45] = "You walk up to the door to the outside world. Are you ready for this?";
+		gameplayText[46] = "You stumble around aimlessly in the dark, stubbing your toe in the process.<br /><br />This is definitely not the first time you've mistakenly destroyed the lights and had trouble navigating the area.";
+		gameplayText[47] = "Another shot echoes through your garage. The brief explosion at the front of the gun provides no light, and puts you no closer to finding the exit.";
+		gameplayText[48] = "You calmly exit your house, gun holstered at your side.";
+		gameplayText[49] = "You stumble through a door and end up outside. Looks like you've finally escaped your house.";
 	}
 	
 	/*
@@ -251,6 +268,30 @@
 			case 29: {state = 32; break;}
 			case 30: {state = 32; break;}
 			case 31: {state = 32; break;}
+			case 32: {state = 34; break;}
+			case 33: {state = 38; break;}
+			case 34: {state = 35; break;}
+			case 35: {state = 35; break;}
+			case 36: {state = 38; break;}
+			case 37: {state = 38; break;}
+			case 38: {state = 41; break;}
+			case 39: {state = 41; break;}
+			case 40: {state = 41; break;}
+			case 41: {state = 43; break;}
+			case 42: {state = 43; break;}
+			case 43: {state = 45; break;}
+			case 44: {state = 46; break;}
+			case 45: {
+				document.body.style.backgroundColor = "#FFF";
+				state = 48;
+				break;
+				}
+			case 46: {
+				document.body.style.backgroundColor = "#FFF";
+				state = 49;
+				break;
+				}
+			case 47: {state = 46; break;}
 			}
 		updateText();
 		}
@@ -377,6 +418,30 @@
 				state = 31;
 				break;
 				}
+			case 32: {state = 33; break;}
+			case 33: {state = 37; break;}
+			case 34: {state = 36; break;}
+			case 35: {state = 36; break;}
+			case 36: {state = 37; break;}
+			case 37: {state = 37; break;}
+			case 38: {state = 39; break;}
+			case 39: {state = 40; break;}
+			case 40: {state = 40; break;}
+			case 41: {state = 42; break;}
+			case 42: {state = 42; break;}
+			case 43: {
+				document.body.style.backgroundColor = "#000";
+				state = 44;
+				break;
+				}
+			case 44: {state = 47; break;}
+			case 45: {
+				document.body.style.backgroundColor = "#000";
+				state = 44;
+				break;
+				}
+			case 46: {state = 47; break;}
+			case 47: {state = 47; break;}
 			}
 		updateText();
 		}
