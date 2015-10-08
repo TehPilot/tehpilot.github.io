@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang = "en-us">
+	<head>
+		<title>CS392 Inquiry Generator</title>
+		<script type="text/javascript">
+		var modifier = ["null", "dereferenced", "long", "pointer", "linked", "doubly linked", "one-line"];
+		var item = ["pointer", "int", "char", "string", "elem", "variable", "seg fault", "list", "array"];
+		var pronoun = ["I", "we"];
+		var multipronoun = ["my", "our"];
+		var personalpronoun = ["me", "us"];
+		var question = ["How", "Where", "Why", "When"];
+		var locati0n = ["function", "header", "makefile", "test main", "my_alpha", "my_atoi", "my_char", "my_digits", "my_find", "my_int", "my_num_base", "my_revstr", "my_rfind", "my_str", "my_str2vect", "my_strcat", "my_strcmp", "my_strcpy", "my_strdup", "my_strindex", "my_strlen", "my_strncmp", "my_strconcat", "my_strncpy", "my_strrindex", "my_vect2str", "add_elem", "add_node", "add_node_at", "append", "count_s_nodes", "debug_char", "debug_string", "elem_at", "empty_list", "new_node", "node_at", "print_char", "print_int", "print_string", "remove_last", "remove_node", "remove_node_at", "traverse_char", "traverse_int", "traverse_string"];
+		var verb = ["declare", "define", "comment out", "implement", "set", "initialize", "debug", "assert", "traverse", "cast"];
+		var people = ["Pfeffer", "Josh", "the CAs", "the graders", "Pfeffer", "Josh", "the CAs", "the graders", "Pfeffer", "Josh", "the CAs", "the graders", "Gabarro"];
+		var pretense = ["Will", "Should"];
+		var scoring = ["fail", "yell at", "be disappointed in"];
+		var conditional = ["if we", "if I", "when we", "when I"];
+		var bool = ["don't", "accidentally", "fail to", "neglect to"];
+		
+		function generate()
+		{
+			switch (Math.floor(Math.random() * 2)) {
+				case 0:
+					document.getElementById("text").innerHTML = randword(question) + " do " + randword(pronoun) + " " + randword(verb) + " a " + randword(modifier) + " " + randword(item) + " in " + randword(multipronoun) + " " + randword(locati0n) + "?"; 
+					break;
+				case 1:
+					document.getElementById("text").innerHTML = randword(pretense) + " " + randword(people) + " " + randword(scoring) + " " + randword(personalpronoun) + " " + randword(conditional) + " " + randword(bool) + " " + randword(verb) + " " + randword(multipronoun) + " " + randword(locati0n) + "?";
+					break;
+				case 2:
+					document.getElementById("text").innerHTML = randword(question) + " do " + randword(pronoun) + " " + randword(verb) + " a " + randword(modifier) + " " + randword(item) + " in " + randword(multipronoun) + " " + randword(locati0n) + "?"; 
+					break;
+				default:
+					break;
+			}
+			document.getElementById("text").innerHTML += '<br /><button onclick="generate();">Post reply</button>';
+		}
+		
+		function randword(arr)
+		{
+			return arr[Math.floor(Math.random() * arr.length)];
+		}
+		</script>
+		
+		<style>
+			p 
+			{
+				text-align: center;
+			}
+			
+			#text
+			{
+				font-weight: bold;
+				font-size: 1.5em;
+				width: 100%;
+				margin-left: auto;
+				margin-right: auto;
+				height: 200px;
+				color: #95002A;
+				font-variant: normal;
+			}
+			#main
+			{
+				position: absolute;
+				top: 50%;
+				margin-top: -100px;/* half of #content height*/
+				left: 0;
+				width: 100%;
+				font-variant: small-caps;
+				text-align: center;
+				font-size: 1.25em;
+				font-weight: bold;
+			}
+			button
+			{
+				color: white;
+				background-color: #0096DB;
+				border: 1px solid gray;
+				border-radius: 4px;
+				padding: 8px;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="main">
+			<p>A new discussion thread on Canvas says:</p>
+			<div id="text">
+				Please post questions for the assignment in this thread.
+				<br /><button onclick="generate();">Post reply</button>
+			</div>
+		</div>
+		
+		<div id="top">
+		<b>obnoxious cs392 inquiry generator</b>
+		<br />by <a href="http://twitter.com/tehpilot">@tehpilot</a> | <a href="http://tehpilot.github.io/">tehpilot.github.io</a>
+		</div>
+	</body>
+</html>
