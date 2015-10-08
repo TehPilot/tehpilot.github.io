@@ -3,31 +3,35 @@
 	<head>
 		<title>CS392 Inquiry Generator</title>
 		<script type="text/javascript">
-		var modifier = ["null", "dereferenced", "long", "pointer", "linked", "doubly linked", "one-line"];
+		var modifier = ["null", "dereferenced", "long", "pointer", "linked", "doubly linked", "one-line", ""];
 		var item = ["pointer", "int", "char", "string", "elem", "variable", "seg fault", "list", "array"];
 		var pronoun = ["I", "we"];
-		var multipronoun = ["my", "our"];
+		var multipronoun = ["my", "our", ""];
 		var personalpronoun = ["me", "us"];
 		var question = ["How", "Where", "Why", "When"];
-		var locati0n = ["function", "header", "makefile", "test main", "my_alpha", "my_atoi", "my_char", "my_digits", "my_find", "my_int", "my_num_base", "my_revstr", "my_rfind", "my_str", "my_str2vect", "my_strcat", "my_strcmp", "my_strcpy", "my_strdup", "my_strindex", "my_strlen", "my_strncmp", "my_strconcat", "my_strncpy", "my_strrindex", "my_vect2str", "add_elem", "add_node", "add_node_at", "append", "count_s_nodes", "debug_char", "debug_string", "elem_at", "empty_list", "new_node", "node_at", "print_char", "print_int", "print_string", "remove_last", "remove_node", "remove_node_at", "traverse_char", "traverse_int", "traverse_string"];
-		var verb = ["declare", "define", "comment out", "implement", "set", "initialize", "debug", "assert", "traverse", "cast"];
-		var people = ["Pfeffer", "Josh", "the CAs", "the graders", "Pfeffer", "Josh", "the CAs", "the graders", "Pfeffer", "Josh", "the CAs", "the graders", "Gabarro"];
-		var pretense = ["Will", "Should"];
+		var locati0n = ["function", "header", "makefile", "test main", "<code>my_alpha</code>", "<code>my_atoi</code>", "<code>my_char</code>", "<code>my_digits</code>", "<code>my_find</code>", "<code>my_int</code>", "<code>my_num_base</code>", "<code>my_revstr</code>", "<code>my_rfind</code>", "<code>my_str</code>", "<code>my_str2vect</code>", "<code>my_strcat</code>", "<code>my_strcmp</code>", "<code>my_strcpy</code>", "<code>my_strdup</code>", "<code>my_strindex</code>", "<code>my_strlen</code>", "<code>my_strncmp</code>", "<code>my_strconcat</code>", "<code>my_strncpy</code>", "<code>my_strrindex</code>", "<code>my_vect2str</code>", "<code>add_elem</code>", "<code>add_node</code>", "<code>add_node_at</code>", "<code>append</code>", "<code>count_s_nodes</code>", "<code>debug_char</code>", "<code>debug_string</code>", "<code>elem_at</code>", "<code>empty_list</code>", "<code>new_node</code>", "<code>node_at</code>", "<code>print_char</code>", "<code>print_int</code>", "<code>print_string</code>", "<code>remove_last</code>", "<code>remove_node</code>", "<code>remove_node_at</code>", "<code>traverse_char</code>", "<code>traverse_int</code>", "<code>traverse_string</code>"];
+		var functions = ["<code>main</code>", "<code>my_alpha</code>", "<code>my_atoi</code>", "<code>my_char</code>", "<code>my_digits</code>", "<code>my_find</code>", "<code>my_int</code>", "<code>my_num_base</code>", "<code>my_revstr</code>", "<code>my_rfind</code>", "<code>my_str</code>", "<code>my_str2vect</code>", "<code>my_strcat</code>", "<code>my_strcmp</code>", "<code>my_strcpy</code>", "<code>my_strdup</code>", "<code>my_strindex</code>", "<code>my_strlen</code>", "<code>my_strncmp</code>", "<code>my_strconcat</code>", "<code>my_strncpy</code>", "<code>my_strrindex</code>", "<code>my_vect2str</code>", "<code>add_elem</code>", "<code>add_node</code>", "<code>add_node_at</code>", "<code>append</code>", "<code>count_s_nodes</code>", "<code>debug_char</code>", "<code>debug_string</code>", "<code>elem_at</code>", "<code>empty_list</code>", "<code>new_node</code>", "<code>node_at</code>", "<code>print_char</code>", "<code>print_int</code>", "<code>print_string</code>", "<code>remove_last</code>", "<code>remove_node</code>", "<code>remove_node_at</code>", "<code>traverse_char</code>", "<code>traverse_int</code>", "<code>traverse_string</code>"];
+		var verb = ["declare", "define", "comment out", "implement", "set", "initialize", "debug", "assert", "traverse", "cast", "destroy"];
+		var people = ["Pfeffer", "Josh", "the CAs", "the graders", "Pfeffer", "Josh", "the CAs", "the graders", "Pfeffer", "Josh", "the CAs", "the graders", "Gabarro", "Pfeffer", "Josh", "the CAs", "the graders", "Pfeffer", "Josh", "the CAs", "the graders", "Pfeffer", "Josh", "the CAs", "the graders", "Nicolosi"];
+		var pretense = ["Will", "Should", "Can"];
 		var scoring = ["fail", "yell at", "be disappointed in"];
 		var conditional = ["if we", "if I", "when we", "when I"];
-		var bool = ["don't", "accidentally", "fail to", "neglect to"];
+		var bool = ["don't", "accidentally", "fail to", "neglect to", "forget to"];
+		var question2 = ["Does", "Can", "Will"];
+		var theorems = ["accept", "reject", "allow", "require", "permit"];
+		var func_arguments = ["n argument", " parameter", " return type", "n input"];
 		
 		function generate()
 		{
-			switch (Math.floor(Math.random() * 2)) {
+			switch (Math.floor(Math.random() * 3)) {
 				case 0:
-					document.getElementById("text").innerHTML = randword(question) + " do " + randword(pronoun) + " " + randword(verb) + " a " + randword(modifier) + " " + randword(item) + " in " + randword(multipronoun) + " " + randword(locati0n) + "?"; 
+					document.getElementById("text").innerHTML = randword(question) + "do " + randword(pronoun) + randword(verb) + "a " + randword(modifier) + randword(item) + "in " + randword_end(multipronoun) + " " + randword_end(locati0n) + "?"; 
 					break;
 				case 1:
-					document.getElementById("text").innerHTML = randword(pretense) + " " + randword(people) + " " + randword(scoring) + " " + randword(personalpronoun) + " " + randword(conditional) + " " + randword(bool) + " " + randword(verb) + " " + randword(multipronoun) + " " + randword(locati0n) + "?";
+					document.getElementById("text").innerHTML = randword(pretense) + randword(people) + randword(scoring) + randword(personalpronoun) + randword(conditional) + randword(bool) + randword(verb) + randword_end(multipronoun) + " " + randword_end(locati0n) + "?";
 					break;
 				case 2:
-					document.getElementById("text").innerHTML = randword(question) + " do " + randword(pronoun) + " " + randword(verb) + " a " + randword(modifier) + " " + randword(item) + " in " + randword(multipronoun) + " " + randword(locati0n) + "?"; 
+					document.getElementById("text").innerHTML = randword(question2) + randword(functions) + randword(theorems) + "'" + randword_end(item) + "' as a" + randword_end(func_arguments) + "?";
 					break;
 				default:
 					break;
@@ -36,6 +40,11 @@
 		}
 		
 		function randword(arr)
+		{
+			return arr[Math.floor(Math.random() * arr.length)] + " ";
+		}
+		
+		function randword_end(arr)
 		{
 			return arr[Math.floor(Math.random() * arr.length)];
 		}
