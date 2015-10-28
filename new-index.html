@@ -1,0 +1,193 @@
+<html lang="en-us">
+	<head>
+		<title>tehpilot</title>
+		<meta charset="UTF-8">
+		<style>
+			.preview {
+				width: 120px;
+				height: 120px;
+				overflow: hidden;
+				position: relative;
+				border: 1px solid black;
+				transition: width 0.5s;
+				background-color: black;
+			}
+			.preview:hover {
+				width: 600px;
+			}
+			.preview img {
+				position: absolute;
+				top: 0px;
+				left: 0px;
+				z-index: 2;
+			}
+			.preview .name {
+				position: absolute;
+				text-align: center;
+				font-weight: bold;
+				width: 480px;
+				text-shadow: black;
+				background-color: rgba(0, 0, 0, 0.5);
+				color: white;
+				transition: opacity 0.5s;
+				height: 1em;
+				top: -0.5em;
+				left: 0px;
+				opacity: 0;
+				z-index: 3;
+			}
+			.preview:hover .name {
+				opacity: 1;
+			}
+			
+			.preview .awards {
+				position: absolute;
+				text-align: center;
+				right: 0px;
+				color: white;
+				opacity: 0;
+				transition: opacity 1s;
+				width: 120px;
+				z-index: 1;
+			}
+			
+			.preview .awards em.second {
+				color: #c0c0c0;
+				font-style: normal;
+			}
+			
+			.preview:hover .awards {
+				opacity: 1;
+			}
+			
+			.preview .event {
+				position: absolute;
+				text-align: center;
+				right: 0px;
+				bottom: 0px;
+				opacity: 0;
+				transition: opacity 1s;
+				width: 120px;
+				z-index: 1;
+			}
+			.preview:hover .event {
+				opacity: 1;
+			}
+			.preview .event a:link {
+				color: #00FF22;
+				font-weight: bold;
+				text-decoration: none;
+			}
+			.preview .event a:hover {
+				color: #00FF22;
+				font-weight: bold;
+				text-decoration: underline;
+			}
+			.preview .event a:active {
+				color: #00FF22;
+				font-weight: bold;
+				text-decoration: none;
+			}
+			.preview .event a:visited {
+				color: #00FF22;
+				font-weight: bold;
+				text-decoration: none;
+			}
+			
+			.preview .description {
+				position: absolute;
+				text-align: center;
+				width: 480px;
+				overflow: hidden;
+				top: 1em;
+				background-color: rgba(0, 0, 0, 0.5);
+				color: white;
+				opacity: 0;
+				transition: opacity 0s;
+				opacity: 0;
+				z-index: 3;
+			}
+			.preview:hover .description {
+				transition: opacity 1s 3s;
+				opacity: 1;
+			}
+			
+			.preview .downloads {
+				position: absolute;
+				text-align: center;
+				width: 480px;
+				text-shadow: black;
+				background-color: rgba(0, 0, 0, 0.5);
+				color: white;
+				transition: opacity 0s;
+				height: 1em;
+				bottom: -0.5em;
+				left: 0px;
+				opacity: 0;
+				z-index: 3;
+			}
+			.preview:hover .downloads {
+				transition: opacity 1s 3s;
+				opacity: 1;
+			}
+			.preview .downloads a:link {
+				color: #00FF22;
+				font-weight: bold;
+				text-decoration: none;
+			}
+			.preview .downloads a:hover {
+				color: #00FF22;
+				font-weight: bold;
+				text-decoration: underline;
+			}
+			.preview .downloads a:active {
+				color: #00FF22;
+				font-weight: bold;
+				text-decoration: none;
+			}
+			.preview .downloads a:visited {
+				color: #00FF22;
+				font-weight: bold;
+				text-decoration: none;
+			}
+		</style>
+		
+		<script type="text/javascript">
+			var item_number = 4;
+			
+			function init() {
+				document.getElementById("navbar-item-0").style.width = 240;
+			}
+		
+			function expand(item_id) {
+				for (var i = 0; i < item_number; i++) {
+					document.getElementById("navbar-item-" + i.toString()).style.width = 120;
+					}
+				document.getElementById("navbar-item-" + item_id.toString()).style.width = 240;
+			}
+		</script>
+	</head>
+	
+	<body>
+		<div class="preview" id="navbar-item-0">
+			<p class="name">Trials of Hell</p>
+			<img src="trials-banner.png" alt="test" />
+			<p class="description">Edward Brown's latest and greatest TV show, <em>Trials of Hell</em>, is under attack by network executives - and it's up to you to save the show by assigning new directives to actors mid-broadcast.</p>
+			<p class="downloads"><a href="https://dl.dropboxusercontent.com/u/36650520/tehpilot/jam11/TrialsofHell-v1_5.exe">Download (v1.5)</a> | <a href="https://dl.dropboxusercontent.com/u/36650520/tehpilot/jam11/TrialsofHell-v1_4.exe">Download (v1.4)</a></p>
+			<p class="awards">GMC Jam #11<br /><em class="second">2<sup>nd</sup> (Tie)</em></p>
+			<p class="event"><a href="http://gmc.yoyogames.com/index.php?showtopic=587812">Event link</a></p>
+		</div>
+		<div class="preview" id="navbar-item-1">
+			<p class="name">Item number 2</p>
+			<img src="https://placeholdit.imgix.net/~text?txtsize=23&txt=240%C3%97120&w=720&h=120" alt="test" />
+		</div>
+		<div class="preview" id="navbar-item-2">
+			<p class="name">Item number 3</p>
+			<img src="https://placeholdit.imgix.net/~text?txtsize=23&txt=240%C3%97120&w=720&h=120" alt="test" />
+		</div>
+		<div class="preview" id="navbar-item-3">
+			<p class="name">Item number 4</p>
+			<img src="https://placeholdit.imgix.net/~text?txtsize=23&txt=240%C3%97120&w=720&h=120" alt="test" />
+		</div>
+	</body>
+</html>

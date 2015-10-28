@@ -3,12 +3,6 @@ a:visited {color:#9999FF;} /* visited link */
 a:hover {color:#FFFFFF;}   /* mouse over link */
 a:active {color:#FFFFFF;}  /* selected link */
 
-@font-face
-{
-font-family: pixel;
-src: url(pixelmix.ttf);
-}
-
 div.header
 {
 width:1;
@@ -61,8 +55,6 @@ background-color:black;
 
 body
 {
-background-image:url('background.png');
-background-repeat: both;
 background-color:black;
 color:white;
 }
