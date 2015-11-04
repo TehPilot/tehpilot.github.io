@@ -72,7 +72,7 @@ nav {
 	border: 2px solid #6C6E70;
 	position: relative;
 	background-color: #2D3033;
-	transition: opacity 0.5s 1.25s, width 0.5s;
+	transition: opacity 0.5s 0.75s, width 0.5s;
 	margin: auto;
 }
 
@@ -91,8 +91,8 @@ nav {
 }
 
 .preview:hover img {
-	opacity: 0.5;
-	transition: opacity 0.5s 1.25s;
+	opacity: 0.25;
+	transition: opacity 0.5s 0.75s;
 	-webkit-filter: grayscale(0%);
 	left: 0px;
 }
@@ -203,7 +203,7 @@ nav {
 	z-index: 3;
 }
 .preview:hover .description {
-	transition: opacity 1s 1.25s;
+	transition: opacity 1s 0.75s;
 	opacity: 1;
 }
 
@@ -221,7 +221,7 @@ nav {
 	z-index: 3;
 }
 .preview:hover .downloads {
-	transition: opacity 1s 1.25s;
+	transition: opacity 1s 0.75s;
 	opacity: 1;
 }
 .preview .downloads a:link {
@@ -245,7 +245,7 @@ nav {
 	text-decoration: none;
 }
 
-#gmc-jam-games {
+#games {
 	width: 600px;
 	padding: 24px;
 	padding: 24px;
