@@ -1,0 +1,44 @@
+PILOCOMPUTER USER MANUAL
+[ last updated: 11/11/15 ]
+
+TABLE OF CONTENTS
+--------------------------
+[1.1]    Welcome!
+
+[2.1]    Commands Overview
+[2.2]    platform-move
+
+
+[1.1] Welcome!
+--------------------------
+Here at TEHPILOT INDUSTRIES, we are super excited for you to have purchased our industrial computing solutions. Each terminal utilizes our own custom shell to manage warehouse and office equipment. Eight lines of custom code, encapsulated by the pre-built initiators and terminators, can be provided at a time. One-button compilation prepares and executes your instructions on a whim.
+
+[2.1] Commands Overview
+--------------------------
+Due to the incredibly limited processing power of the first-edition TEHPILOT INDUSTRIES (TM) computer, the typical command structure of most computer shells does not apply. Command flags must be specified in order, and on separate lines. Each line only permits up to 15 characters to be entered.
+
+An example entry would entail the following hierarchy:
+
+command1
+argument1
+argument2
+command2
+argument1
+argument2
+etc.
+
+Eight lines of any commands can be used, provided all the arguments are provided in proper order.
+
+[2.2] platform-move
+--------------------------
+This default command is designed primarily for military-grade industrial lifts, and other smaller hydraulic platforms. Each lift is to be installed on a state-of-the-art Smart Track, denoting varying height positions from 0 to n (inclusive). 0 should be marked for the highest height, and n for the lowest. The number of subdivisons is recommended to be 2 meters (or 16 TehPilot Industries Extended Purpose Units, aka px) for most industrial applications. A rounding switch is located within the chassis of the computer to allow for more precise movements. By default, this switch is ENABLED.
+
+Each platform should be inscribed with an easy-to-remember ID code. The manufacturer serial number is recommended, although they can be hard to recall at times. Proper execution of the command is as follows:
+
+  n | platform-move
+n+1 | <height>
+n+2 | <manufacturer-id>
+
+<height> is the value from 0 to n inclusive, which indicates the notch you wish to travel to. If the rounding switch inside the machine is enabled, this value will always round to the nearest integer value. For common use (or in the event the notch values are unknown), the shorthand instructions "top", and "bottom" can be used to jump to positions 0 and n respectively.
+
+<manufacturer-id> is the digital ID of the platform, which it is recommended to be visible on the platform for general users, or stored safely in another medium if control is to be left to an overseer or administrative user.
