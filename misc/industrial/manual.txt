@@ -13,6 +13,8 @@ TABLE OF CONTENTS
 --------------------------
 Here at TEHPILOT INDUSTRIES, we are super excited for you to have purchased our industrial computing solutions. Each terminal utilizes our own custom shell to manage warehouse and office equipment. Eight lines of custom code, encapsulated by the pre-built initiators and terminators, can be provided at a time. One-button compilation prepares and executes your instructions on a whim.
 
+We hope you can extract plenty of use from our framework, and that you can extract understanding of our system through this instruction manual.
+
 [2.1] Commands Overview
 --------------------------
 Due to the incredibly limited processing power of the first-edition TEHPILOT INDUSTRIES (TM) computer, the typical command structure of most computer shells does not apply. Command flags must be specified in order, and on separate lines. Each line only permits up to 15 characters to be entered.
@@ -39,6 +41,6 @@ Each platform should be inscribed with an easy-to-remember ID code. The manufact
 n+1 | <height>
 n+2 | <manufacturer-id>
 
-<height> is the value from 0 to n inclusive, which indicates the notch you wish to travel to. If the rounding switch inside the machine is enabled, this value will always round to the nearest integer value. For common use (or in the event the notch values are unknown), the shorthand instructions "top", and "bottom" can be used to jump to positions 0 and n respectively.
+<height> is the value from 0 to n inclusive, which indicates the notch you wish to travel to. If the rounding switch inside the machine is enabled, this value will always round to the nearest integer value. For common use (or in the event the notch values are unknown), the shorthand instructions "top" and "bottom" can be used to jump to positions 0 and n respectively.
 
 <manufacturer-id> is the digital ID of the platform, which it is recommended to be visible on the platform for general users, or stored safely in another medium if control is to be left to an overseer or administrative user.
