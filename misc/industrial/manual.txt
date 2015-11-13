@@ -7,6 +7,8 @@ TABLE OF CONTENTS
 
 [2.1]    Commands Overview
 [2.2]    platform-move
+[2.3]    camera-on
+[2.4]    camera-off
 
 
 [1.1] Welcome!
@@ -44,3 +46,18 @@ n+2 | <manufacturer-id>
 <height> is the value from 0 to n inclusive, which indicates the notch you wish to travel to. If the rounding switch inside the machine is enabled, this value will always round to the nearest integer value. For common use (or in the event the notch values are unknown), the shorthand instructions "top" and "bottom" can be used to jump to positions 0 and n respectively.
 
 <manufacturer-id> is the digital ID of the platform, which it is recommended to be visible on the platform for general users, or stored safely in another medium if control is to be left to an overseer or administrative user.
+
+[2.3] camera-on
+--------------------------
+This command enables the security system. Takes no other parameters.
+
+[2.4] camera-off
+--------------------------
+This command disables the attached security system. It accepts one additional argument, as specified:
+
+  n | camera-off
+n+1 | <time>
+
+If left unspecified, <time> is assumed to be infinite (and thus entails a total shutdown, until reactivated). If specified, <time> is the delay in seconds until the security system re-initializes.
+
+The system administrator can place an override in that will stop command execution and alert the system administrator if the camera system is disabled for too long. Please notify your administrator in advance if disabling the camera system for a software reboot or routine maintenance, so overrides can be disaled and other security measures put in place.
