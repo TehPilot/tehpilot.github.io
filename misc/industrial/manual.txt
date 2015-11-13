@@ -61,3 +61,6 @@ n+1 | <time>
 If left unspecified, <time> is assumed to be infinite (and thus entails a total shutdown, until reactivated). If specified, <time> is the delay in seconds until the security system re-initializes.
 
 The system administrator can place an override in that will stop command execution and alert the system administrator if the camera system is disabled for too long. Please notify your administrator in advance if disabling the camera system for a software reboot or routine maintenance, so overrides can be disaled and other security measures put in place.
+
+[[ The rest of the document has coffee spilled all over it. ]]
+[[ How does coffee gets on a digital document?  ...no idea. ]]
