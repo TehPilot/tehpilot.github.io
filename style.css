@@ -271,18 +271,138 @@ h1.header {
 	margin-bottom: 0.5em;
 }
 
-/*div.latest-release {
+h1.latest-release {
 	color: #C9DF8A;
 	text-align: center;
 	background-image: url('images/stealth-2-banner.png');
-	width: 120px;
+	width: 100%;
 	height: 120px;
-	float: right;
 	z-index: 1;
 	border: 2px solid #36802D;
-	font-size: 0.75em;
-	margin-top: -2.5em;
-}*/
+	font-size: 2em;
+}
+
+.article-preview {
+	width: 296px;
+	height: 120px;
+	overflow: hidden;
+	border: 2px solid #36802D;
+	position: relative;
+	background-color: #2D3033;
+	margin: auto;
+	display: inline-block;
+}
+
+.article-preview img {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	opacity: 1;
+	transition: opacity 0.5s;
+	-webkit-filter: grayscale(100%);
+	z-index: 2;
+}
+
+.article-preview:hover img {
+	opacity: 0.25;
+	transition: opacity 0.5s 0.75s;
+	-webkit-filter: grayscale(0%);
+	left: 0px;
+}
+
+.article-preview .little-name {
+	position: relative;
+	font-family: Verdana;
+	text-align: right;
+	font-weight: bold;
+	font-size: 16;
+	text-shadow: black;
+	color: #f0f7da;
+	transition: opacity 0.25s;
+	right: 4px;
+	bottom: -84px;
+	opacity: 1 0.25s;
+	z-index: 3;
+}
+
+.article-preview:hover .little-name {
+	opacity: 0;
+	transition: opacity 0.25s 0s;
+}
+
+.article-preview .article-name {
+	position: absolute;
+	text-align: center;
+	font-weight: bold;
+	width: 296px;
+	text-shadow: black;
+	color: #E5E4D7;
+	transition: opacity 0.25s 0s;
+	height: 1em;
+	top: -0.5em;
+	left: 0px;
+	opacity: 0;
+	z-index: 3;
+}
+.article-preview:hover .article-name {
+	opacity: 1;
+	transition: opacity 0.25s;
+}
+
+.article-preview .article-description {
+	position: absolute;
+	text-align: center;
+	width: 296px;
+	overflow: hidden;
+	top: 1em;
+	color: #f0f7da;
+	opacity: 0;
+	transition: opacity 0.25s;
+	opacity: 0;
+	z-index: 3;
+}
+.article-preview:hover .article-description {
+	transition: opacity 1s 0.75s;
+	opacity: 1;
+}
+
+.article-preview .link {
+	position: absolute;
+	text-align: center;
+	width: 296px;
+	text-shadow: black;
+	color: #E5E4D7;
+	transition: opacity 0s;
+	height: 1em;
+	bottom: -0.5em;
+	left: 0px;
+	opacity: 0;
+	z-index: 3;
+}
+.article-preview:hover .link {
+	transition: opacity 1s 0.75s;
+	opacity: 1;
+}
+.article-preview .link a:link {
+	color: #77ab59;
+	font-weight: bold;
+	text-decoration: underline;
+}
+.article-preview .link a:hover {
+	color: #77ab59;
+	font-weight: bold;
+	text-decoration: none;
+}
+.article-preview .link a:active {
+	color: #77ab59;
+	font-weight: bold;
+	text-decoration: underline;
+}
+.article-preview .link a:visited {
+	color: #77ab59;
+	font-weight: bold;
+	text-decoration: underline;
+}
 
 footer {
 	text-align: center;

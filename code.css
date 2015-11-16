@@ -23,7 +23,7 @@
 	text-align: left;
 	color: rgb(192, 192, 192);
 	margin: 0.5em;
-	margin-top: -0.75em;
+	/*margin-top: -0.75em;*/
 	white-space: pre-wrap;
 }
 
