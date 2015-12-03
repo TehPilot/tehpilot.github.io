@@ -65,7 +65,7 @@ nav {
 }
 
 .preview {
-	width: 480px;
+	width: 476px;
 	height: 120px;
 	overflow: hidden;
 	border: 2px solid #36802D;
@@ -76,7 +76,7 @@ nav {
 }
 
 .preview:hover {
-	width: 600px;
+	width: 596px;
 }
 
 .preview img {
@@ -100,7 +100,7 @@ nav {
 	position: absolute;
 	text-align: center;
 	font-weight: bold;
-	width: 480px;
+	width: 476px;
 	text-shadow: black;
 	color: #E5E4D7;
 	transition: opacity 0.5s;
@@ -120,7 +120,7 @@ nav {
 	text-align: right;
 	font-weight: bold;
 	font-size: 24;
-	width: 480px;
+	width: 476px;
 	text-shadow: black;
 	color: #f0f7da;
 	transition: opacity 1s;
@@ -196,7 +196,7 @@ nav {
 .preview .description {
 	position: absolute;
 	text-align: center;
-	width: 480px;
+	width: 476px;
 	overflow: hidden;
 	top: 1em;
 	color: #f0f7da;
