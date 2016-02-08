@@ -142,8 +142,8 @@ nav {
 	font-weight: bold;
 	font-size: 24;
 	width: 476px;
-	text-shadow: black;
-	color: #f0f7da;
+	text-shadow: 1px 1px black, -1px 1px black, 1px -1px black, -1px -1px black;
+	color: #E5E4D7;
 	transition: opacity 1s;
 	right: 4px;
 	bottom: -66px;
@@ -337,7 +337,7 @@ h1.latest-release {
 	text-align: right;
 	font-weight: bold;
 	font-size: 16;
-	text-shadow: black;
+	text-shadow: 1px 1px black, -1px 1px black, 1px -1px black, -1px -1px black;
 	color: #f0f7da;
 	transition: opacity 0.25s;
 	right: 4px;
