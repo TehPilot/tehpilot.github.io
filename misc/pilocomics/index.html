@@ -19,10 +19,14 @@
 	titlelist[11] = "trigger warning: poorly designed web comics";
 	titlelist[12] = "how do you like me now, tristana";
 	titlelist[13] = "your problematic favorite";
+	titlelist[14] = "a true christmas classic";
+	titlelist[15] = "a joke gone on too long";
+	titlelist[16] = "dedicated to myself 'cause I'm dead on the inside";
+	titlelist[17] = "by losers, for losers";
 	document.title="pilocomics: " + titlelist[Math.floor(Math.random()*titlelist.length)];
 
 	var comicid=1;
-	var maxcomic=68;
+	var maxcomic=70;
 	var fileext='.png';
 
 	//document.getElementById("currentComic").innerHTML=comicid + '/' + maxcomic;
@@ -65,7 +69,7 @@
 			fileext = '.png';
 			}
 		document.getElementById("comicImage").src='pcomics' + comicid + fileext;
-		document.getElementById("comicImage").alt='alt text jokes coming soon for comic number ' + comicid;
+		document.getElementById("comicImage").alt='this is comic ' + comicid + '\'s alt text';
 		document.getElementById("currentComic").innerHTML=comicid + '/' + maxcomic;
 		}
 

@@ -1,0 +1,42 @@
+<html lang="en-us">
+	<head>
+		<title>tehpilot</title>
+		<meta charset="UTF-8">
+		<link rel="stylesheet" type="text/css" href="style.css" />
+		<link rel="stylesheet" type="text/css" href="code.css" />
+		<link rel="stylesheet" type="text/css" href="video.css" />
+	</head>
+	
+	<body>
+	<video autoplay muted loop>
+		<source src="video/duplication-test.mp4" type="video/mp4">
+	</video>
+	<img src="images/self.png" id="self-portrait" alt="Self-portrait" />
+	<nav>
+		<p id="navbar-links"><a href="">HOME</a> | <a href="">NEWS</a> | <a href="http://tehpilot.github.io/games">PROJECTS</a> | <a href="">MISC</a> | <a href="">CONTACT</a></p>
+	</nav>
+	<section id="body-container">
+		<div id="content">
+			<div class="code-block">
+				<!--<p id="code-block-title">Triggering Message Boxes</p>-->
+<pre class="code"><em class="keyword"><em class="comment">/* Creates a textbox that shows one message, and specifies that message's contents. */</em>
+
+with</em>(<em class="keyword">instance_create</em>(<em class="value">x</em>, <em class="value">y</em>, <em class="value">objText</em>)) {
+	size = <em class="value">1</em>;
+	
+	<em class="comment">//'#' denotes a line break</em>
+	message_full[<em class="value">0</em>,<em class="value">0</em>] = <em class="value">"See? Totally harmless. It's not like the upper atmosphere#is nonconducive to human life or anything, either!"</em>;
+	message_full[<em class="value">0</em>,<em class="value">1</em>] = <em class="value">0</em>;
+	message_full[<em class="value">0</em>,<em class="value">2</em>] = <em class="value">1</em>;
+	message_full[<em class="value">0</em>,<em class="value">3</em>] = <em class="value">sprNatashaPortrait</em>;
+	message_full[<em class="value">0</em>,<em class="value">4</em>] = <em class="value">"NATASHA"</em>;
+	}</pre>
+			</div>
+		</div>
+	</section>
+	
+	<footer>
+		<p>Website layout and content all created by TehPilot. (2012-15)<br />Credits/contributors for all content noted when appropriate.</p>
+	</footer>
+	</body>
+</html>
