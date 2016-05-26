@@ -60,6 +60,11 @@
 		update();
 		}
 
+	function random() {
+		comicid = Math.floor(Math.random() * maxcomic) + 1;
+		update();
+	}
+
 
 	function update() {
 		if (comicid==-111 || comicid==49) {
@@ -107,6 +112,6 @@
 		<button onclick="select()">select</button>
 		<button onclick="advance()">advance</button>
 		<button onclick="ascend()">ascend</button>
-		<p id="currentComic">please enable javascript user-senpai uwu</p>
+		<p id="currentComic" onclick="random();">please enable javascript user-senpai uwu</p>
 </body>
 </html>
