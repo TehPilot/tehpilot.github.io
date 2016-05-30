@@ -23,6 +23,7 @@
 	titlelist[15] = "a joke gone on too long";
 	titlelist[16] = "dedicated to myself 'cause I'm dead on the inside";
 	titlelist[17] = "by losers, for losers";
+	titlelist[18] = "what's gonna work?";
 	document.title="pilocomics: " + titlelist[Math.floor(Math.random()*titlelist.length)];
 
 	var comicid=1;
@@ -84,6 +85,9 @@
 		if (isNaN(getNumber)==true) {
 			alert("i do NOT have time for your bullshit today, now give me a number");
 			}
+		else if (getNumber != -111 && (getNumber < 1 || getNumber > maxcomic)) {
+			alert("that's not even in RANGE you chumpis");
+		}
 		else {
 			comicid=getNumber;
 			update();

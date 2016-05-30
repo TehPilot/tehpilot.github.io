@@ -34,6 +34,13 @@ a:visited {
 	margin-right: auto;
 }
 
+#self-header {
+	display: block;
+	margin-left: 5%;
+	margin-top: -10%;
+	float: left;
+}
+
 #titlename {
 	position: absolute;
 	font-family: 'verdana', serif;
