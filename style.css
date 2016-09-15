@@ -32,12 +32,13 @@ a:visited {
 	display: block;
 	margin-left: 80%;
 	margin-right: auto;
+	margin-top: 24px;
 }
 
 #self-header {
 	display: block;
 	margin-left: 5%;
-	margin-top: -12%;
+	margin-top: -72px;
 	float: left;
 }
 
@@ -103,6 +104,13 @@ nav {
 
 .category-description {
 	color: #E5E4D7;
+}
+
+.slideshow-window {
+	background-image: url('images/slideshow-8s.png');
+	background-position: center;
+	width: 568px;
+	height: 333px;
 }
 
 .preview {
