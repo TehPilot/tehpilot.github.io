@@ -9,14 +9,14 @@
 		<script type="text/javascript">
 		function fetchNewsArticles() {
 			var supplyString = "";
-			for (var i = 0; i < 1; i++) {
-    			supplyString += "<div class=\"news-entry\"><a href=\"" + tumblr_api_read.posts[i]['url'] + "\"><b>" + tumblr_api_read.posts[i]['regular-title'] + "</b></a><br />" + tumblr_api_read.posts[i]['regular-body'].substring(0, 90);
-				if (tumblr_api_read.posts[i]['regular-body'].length > 90) {
+			for (var i = 0; i < 2 && i < tumblr_api_read.posts.length; i++) {
+    			supplyString += "<div class=\"news-entry\"><a href=\"" + tumblr_api_read.posts[i]['url'] + "\"><b>" + tumblr_api_read.posts[i]['regular-title'] + "</b></a>" + tumblr_api_read.posts[i]['regular-body'].substring(0, 75);
+				if (tumblr_api_read.posts[i]['regular-body'].length > 75) {
 					supplyString += "..."
 				}
 				supplyString += "</div>"
 			}
-			document.getElementById('tumblr-feed').innerHTML = "<p class=\"news-header\">Latest News</p><p class=\"news-link\"><a href=\"http://tehpilot.tumblr.com/\">More Articles</a></p>" + supplyString;
+			document.getElementById('tumblr-feed').innerHTML = "<p class=\"news-header\">Latest News</p>" + supplyString + "<p class=\"news-link\"><a href=\"http://tehpilot.tumblr.com/\">More News</a></p>";
 		}
 		</script>
 	</head>
@@ -59,7 +59,12 @@
 				<p class="article-description">A basic puzzle platformer about cloning yourself and moving said clones safely (or unsafely) between elevators.</p>
 				<p class="link"><a href="http://tehpilot.com/games">This + More Projects</a></p>
 			</div><div class="news-feed" id="tumblr-feed">
-				
+			</div><div class="article-preview">
+				<img src="images/duplication-banner.png" alt="Article screenshot banner" />
+				<p class="little-name">Project Spotlight</p>
+				<p class="article-name">düplication</p>
+				<p class="article-description">A basic puzzle platformer about cloning yourself and moving said clones safely (or unsafely) between elevators.</p>
+				<p class="link"><a href="http://tehpilot.com/games">This + More Projects</a></p>
 			</div>
 
 		</div>

@@ -4,7 +4,26 @@
 		<meta charset="UTF-8">
 		<link rel="stylesheet" type="text/css" href="../style.css" />
 		<script type="text/javascript">
-			//empty... for now. dun dun duuuuun
+			function test() {
+				var input = document.getElementById("game-search").value;
+				var games = document.getElementsByClassName("preview");
+				var headings = document.getElementsByClassName("category-description");
+
+				
+				for (var i = 0; i < headings.length; i++)
+					headings[i].style.display = "none";
+				for (var i = 0; i < games.length; i++) {
+					if (!games[i].childNodes[5].innerHTML.toLowerCase().includes(input.toLowerCase()))
+						games[i].style.display = "none";
+					else
+						games[i].style.display = "inline-block";
+					}
+
+				if (input == "") {
+					for (var i = 0; i < headings.length; i++)
+						headings[i].style.display = "block";
+					}
+				}
 		</script>
 	</head>
 	
@@ -19,6 +38,8 @@
 		<div id="content">
 			<h1 class="header">Projects</h1>
 			<p class="category-description">A complete directory of my game design works. The projects listed on this page are made in varying engines and languages of choice. Unless otherwise specified, all downloads are meant for Windows platforms only.</p>
+
+			<input type="text" id="game-search" placeholder="Search..." oninput="test()"/>
 
 			<div class="preview">
 				<!--Main content-->
