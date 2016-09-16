@@ -5,10 +5,23 @@
 		<meta name="description" content="Independent game developer." />
 		<meta name="keywords" content="tehpilot,gamemaker,indie,gamedev" />
 		<link rel="stylesheet" type="text/css" href="style.css" />
-		<script type="text/javascript" src="https://tehpilot.tumblr.com/api/read/json?number=1&type=regular" /></script>
+		<script type="text/javascript" src="https://tehpilot.tumblr.com/api/read/json?number=0&type=regular"></script>
+		<script type="text/javascript">
+		function fetchNewsArticles() {
+			var supplyString = "";
+			for (var i = 0; i < 1; i++) {
+    			supplyString += "<div class=\"news-entry\"><a href=\"" + tumblr_api_read.posts[i]['url'] + "\"><b>" + tumblr_api_read.posts[i]['regular-title'] + "</b></a><br />" + tumblr_api_read.posts[i]['regular-body'].substring(0, 90);
+				if (tumblr_api_read.posts[i]['regular-body'].length > 90) {
+					supplyString += "..."
+				}
+				supplyString += "</div>"
+			}
+			document.getElementById('tumblr-feed').innerHTML = "<p class=\"news-header\">Latest News</p><p class=\"news-link\"><a href=\"http://tehpilot.tumblr.com/\">More Articles</a></p>" + supplyString;
+		}
+		</script>
 	</head>
 	
-	<body>
+	<body onload="fetchNewsArticles();">
 	<img src="images/self.png" id="self-portrait" alt="Self-portrait" />
 	<img src="images/headertext.png" id="self-header" alt="tehpilot" />
 	<nav>
@@ -40,17 +53,13 @@
 				<p class="event"><a href="http://tehpilot.com/games">More Projects</a></p>
 			</div>
 			<div class="article-preview">
-				<img src="images/8s-banner.png" alt="Article screenshot banner" />
-				<p class="little-name">Project Spotlight</p>
-				<p class="article-name">Eight Seconds</p>
-				<p class="article-description">Recover from the most disastrous laboratory mistake imaginable, eight seconds at a time.</p>
-				<p class="link"><a href="http://tehpilot.com/games">This + More Projects</a></p>
-			</div><div class="article-preview">
 				<img src="images/duplication-banner.png" alt="Article screenshot banner" />
 				<p class="little-name">Project Spotlight</p>
 				<p class="article-name">düplication</p>
 				<p class="article-description">A basic puzzle platformer about cloning yourself and moving said clones safely (or unsafely) between elevators.</p>
 				<p class="link"><a href="http://tehpilot.com/games">This + More Projects</a></p>
+			</div><div class="news-feed" id="tumblr-feed">
+				
 			</div>
 
 		</div>
