@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Melee Tier List Generator</title>
+
+  <style type="text/css">
+  td, th {
+  	height: 43px;
+  	width: 49px;
+  	text-align: center;
+  	font-weight: bold;
+  	font-family: 'Arial';
+	padding: 0px;
+  }
+  
+  th {
+	border: 2px solid gray;
+	}
+  
+  td img {
+	margin-top: 3px;
+  }
+  
+  .center {
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
+	width: 75%;
+  }
+  
+  img {
+
+  }
+
+  #tierhead0 {
+  	background-color: #fea3aa;
+  }
+  #tierhead1 {
+  	background-color: #f8b88b;
+  }
+  #tierhead2 {
+  	background-color: #faf884;
+  }
+  #tierhead3 {
+  	background-color: #baed91;
+  }
+  #tierhead4 {
+  	background-color: #b2cefe;
+  }
+  #tierhead5 {
+  	background-color: #f2a2e8;
+  }
+  #tierhead6 {
+  	background-color: lightgray;
+  }
+  </style>
+
+  <script type="text/javascript">
+
+  var tiers = ['S', 'A', 'B', 'C', 'D', 'E', 'F'];
+  var characters = ['bayonetta', 'bowser', 'bowserjr', 'charizard', 'cloud', 'corrin', 'darkpit', 'dedede', 'diddy', 'dk', 'drmario', 'duckhunt', 'falco', 'falcon', 'fox', 'ganondorf', 'gnw', 'greninja', 'ike', 'jigglypuff', 'kirby', 'link', 'littlemac', 'lucario', 'lucas', 'lucina', 'luigi', 'mario', 'marth', 'megaman', 'meta', 'mewtwo', 'miib', 'miig', 'miis', 'ness', 'olimar', 'pacman', 'palutena', 'peach', 'pikachu', 'pit', 'rob', 'robin', 'rosalina', 'roy', 'ryu', 'samus', 'sheik', 'shulk', 'sonic', 'tlink', 'villager', 'wario', 'wft', 'yoshi', 'zelda', 'zss'];
+  
+  function rand() {
+		var rand = 0;
+		var amount = 2;
+
+  for (var i = 0; i < amount; i ++) {
+    rand += Math.random();
+  }
+
+  return rand / amount;
+	}
+
+  function createTiers() {
+      document.getElementById("tierlistinner").innerHTML = "";
+      var i;
+      for (i = 0; i < tiers.length; i++) {
+        document.getElementById("tierlistinner").innerHTML += "<tr id='tier" + i + "'><th id='tierhead" + i + "'>" + tiers[i] + "</th></tr>";
+		}
+
+      for (i = 0; i < characters.length; i++) {
+        var random_tier = Math.floor((rand() * tiers.length))
+        document.getElementById("tier" + random_tier).innerHTML += "<td><img src='./images/sm4sh/" + characters[i] + ".png'></td>";
+      }
+	 
+	  for (i = 0; i < tiers.length; i++) {
+	  console.log(document.getElementById("tier" + i).innerHTML);
+		if (document.getElementById("tier" + i).innerHTML == "<th id=\"tierhead" + i + "\">" + tiers[i] + "</th>") {
+			document.getElementById("tierlistinner").removeChild(document.getElementById("tier" + i));
+		}
+	  }
+  }
+
+  </script>
+</head>
+<body onload="createTiers();">
+  <h1>sm4sh tier list </h1>
+  <h2 id="footer">tier list for the current sm4sh meta</h2>
+  <br />
+  <button onclick="createTiers();">new meta</button>
+  <br />
+  <br />
+  <div class="center">
+  <table id="tierlist">
+    <tbody id="tierlistinner">
+    </tbody>
+  </table>
+  </div>
+</body>
+</html>

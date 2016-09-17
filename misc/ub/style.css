@@ -1,0 +1,98 @@
+body {
+	//background-image: url("images/background.jpg");
+	background-position: center top;
+	background-size: cover;
+    background-attachment: fixed;
+	background-color: gray;
+}
+
+#champion-name {
+	color: white;
+	font-size: 2em;
+	text-align: center;
+}
+
+#champion-name em {
+	font-style: normal;
+	font-variant: small-caps;
+	font-size: 2em;
+}
+
+#summoners {
+	text-align: center;
+	margin: 0px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 128px;
+	margin-top: -32px;
+}
+
+#inventory {
+	margin: 0px;
+	padding: 4px;
+	border-collapse: collapse;
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.inventory-cell, #summoner-1, #summoner-2, #champion-p, th {
+	height: 64px;
+	float: left;
+	margin: 0px;
+	border: 0px;
+	padding: 4px;
+}
+
+#summoner-1 img, #summoner-2 img, #champion-p img {
+	padding: 40px;
+	width: 128px;
+	height: 128px;
+}
+
+tr {
+	margin: 0px;
+	border: 0px;
+	padding: 0px;
+}
+
+#info {
+	text-align: center;
+	color: white;
+	font-size: 1.5em;
+	font-variant: small-caps;
+}
+
+.skill, .ferocity, .cunning, .resolve {
+	font-style: normal;
+	font-weight: bold;
+}
+
+.skill {
+	color: orange;
+}
+
+.ferocity {
+	color: maroon;
+}
+
+.cunning {
+	color: blue;
+}
+
+.resolve {
+	color: green;
+}
+
+#extra {
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#extra button {
+	margin: 4px;
+	border: 2px solid black;
+	margin-top: 0px;
+	font-size: 2em;
+}

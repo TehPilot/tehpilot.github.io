@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en-us">
+	<head>
+		<title>ULTIMATE BRAVERY</title>
+		<link rel="stylesheet" type="text/css" href="style.css">
+		<script src="values.js"></script>
+		<script type="text/javascript">
+		function update() {
+
+			setExtraInfo();
+
+			var random_modifier = randomToken(adjectives);
+			var random_champion = randomToken(champions);
+			document.getElementById("champion-name").innerHTML = "<em>" + random_modifier + "</em><br />" + random_champion;
+
+			var random_summoner_1 = randomToken(summoners);
+			document.getElementById("summoner-1").innerHTML = "<img src=" + getSpellImage(random_summoner_1) + " />";
+
+			document.getElementById("champion-p").innerHTML = "<img src='http://ddragon.leagueoflegends.com/cdn/6.5.1/img/champion/" + championEdgeCases(capitalizeFirstLetter((random_champion.replace(/[ ,'']/g, '')).toLowerCase())) + ".png'/>";
+
+			var random_summoner_2 = randomToken(summoners);
+			while (random_summoner_2 == random_summoner_1)
+				random_summoner_2 = randomToken(summoners);
+			document.getElementById("summoner-2").innerHTML = "<img src=" + getSpellImage(random_summoner_2) + " />";
+
+			var inventory = ["", "", "", "", ""];
+			for (var i = 0; i < item_slots.length; i++) {
+				if (i > 0) {
+					var loop = true;
+					var random_item = "";
+					while (loop) {
+						loop = false;
+						if (document.getElementById("summoner-1").innerHTML == '<img src="images/Smite.png">' || document.getElementById("summoner-2").innerHTML == '<img src="images/Smite.png">') {
+							random_item = getItemImage(randomToken(item_slot_types[i]), item_slots[i], random_champion);
+						}
+						else {
+							random_item = getItemImage(randomToken(items), item_slots[i], random_champion);
+						}
+						for (var j = 4; j > -1; j--) {
+							if (inventory[j] == random_item) {
+								loop = true;
+							}
+						}
+					}
+					inventory[i - 1] = random_item;
+					document.getElementById(item_slots[i]).innerHTML = '<img src="images/' + random_item + '"/>';
+				}
+				else {
+					document.getElementById(item_slots[i]).innerHTML = '<img src="images/' + getItemImage(randomToken(item_slot_types[i]), item_slots[i], random_champion) + '"/>';
+				}
+			}
+		}
+		</script>
+	</head>
+
+	<body onload='update();'>
+		<!--<header>
+			<h1>ULTIMATE BRAVERY</h1>
+			<h2>HOW TO ESCAPE ELO HELL</h2>
+		</header>-->
+
+		<section id="random-gen">
+			<p id="champion-name">ERROR</p>
+			<table id="summoners">
+				<tr>
+					<td id="summoner-1">Flash</td>
+					<td id="champion-p">Aatrox</td>
+					<td id="summoner-2">Ghost</td>
+				</tr>
+			</table>
+
+			<table id="inventory">
+				<tr>
+					<td id="boot-slot" class="inventory-cell"></td>
+					<td id="jung-slot" class="inventory-cell"></td>
+					<td id="itm1-slot" class="inventory-cell"></td>
+					<td id="itm2-slot" class="inventory-cell"></td>
+					<td id="itm3-slot" class="inventory-cell"></td>
+					<td id="itm4-slot" class="inventory-cell"></td>
+				</tr>
+			</table>
+		</section>
+
+		<p id="info">Max <em class="skill">W</em> with masteries <em class="ferocity">18</em>/<em class="cunning">12</em>/<em class="resolve">0</em></p>
+
+		<section id="extra">
+			<button onclick='update();'>LET'S GO</button>
+		</section>
+
+	</body>
+</html>

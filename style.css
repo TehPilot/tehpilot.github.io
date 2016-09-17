@@ -81,40 +81,27 @@ nav {
 	border-bottom: none;
 	padding: 0.5em;
 }
-#navbar-links a:link {
-	color: #77ab59;
-	font-weight: bold;
-	text-decoration: underline;
-}
-#navbar-links a:hover {
-	color: #c9df8a;
-	font-weight: bold;
-	text-decoration: none;
-}
-#navbar-links a:active {
-	color: #c9df8a;
-	font-weight: bold;
-	text-decoration: none;
-}
-#navbar-links a:visited {
-	color: #77ab59;
-	font-weight: bold;
-	text-decoration: none;
-}
 
 .category-description {
 	color: #E5E4D7;
 }
 
 .slideshow-window {
-	background-image: url('images/slideshow-8s.png');
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
+	background-image: url('images/egth-gif.gif');
 	background-position: center;
 	width: 568px;
-	height: 333px;
+	height: 320px;
 }
 
+/* * * * * * * * *
+ * GAME PREVIEWS *
+ * * * * * * * * */
+
 .preview {
-	width: 476px;
+	width: 596px;
 	height: 120px;
 	overflow: hidden;
 	border: 2px solid #36802D;
@@ -122,10 +109,6 @@ nav {
 	background-color: #2D3033;
 	transition: opacity 0.5s 0.75s, width 0.5s;
 	margin: auto;
-}
-
-.preview:hover {
-	width: 596px;
 }
 
 .preview img {
@@ -186,7 +169,7 @@ nav {
 .preview .awards {
 	position: absolute;
 	text-align: center;
-	top: -0.5em;
+	top: -0.75em;
 	right: 0px;
 	color: #f0f7da;
 	opacity: 1;
@@ -209,37 +192,6 @@ nav {
 .preview .awards em.third {
 	color: #8C7853;
 	font-style: normal;
-}
-
-.preview .event {
-	position: absolute;
-	text-align: center;
-	right: 0px;
-	bottom: -0.5em;
-	opacity: 1;
-	width: 120px;
-	z-index: 1;
-}
-
-.preview .event a:link {
-	color: #77ab59;
-	font-weight: bold;
-	text-decoration: underline;
-}
-.preview .event a:hover {
-	color: #77ab59;
-	font-weight: bold;
-	text-decoration: none;
-}
-.preview .event a:active {
-	color: #77ab59;
-	font-weight: bold;
-	text-decoration: underline;
-}
-.preview .event a:visited {
-	color: #77ab59;
-	font-weight: bold;
-	text-decoration: underline;
 }
 
 .preview .description {
@@ -276,26 +228,139 @@ nav {
 	transition: opacity 1s 0.75s;
 	opacity: 1;
 }
-.preview .downloads a:link {
-	color: #77ab59;
-	font-weight: bold;
-	text-decoration: underline;
+
+
+/* * * * * * * * *
+ * SMALL PREVIEWS*
+ * * * * * * * * */
+
+.preview-small {
+	width: 596px;
+	height: 28px;
+	overflow: hidden;
+	border: 2px solid #36802D;
+	position: relative;
+	background-color: #2D3033;
+	transition: opacity 0.5s 0.75s, width 0.5s, height 0.5s;
+	margin: auto;
 }
-.preview .downloads a:hover {
-	color: #77ab59;
-	font-weight: bold;
-	text-decoration: none;
+
+.preview-small:hover {
+	height: 120px;
 }
-.preview .downloads a:active {
-	color: #77ab59;
-	font-weight: bold;
-	text-decoration: underline;
+
+.preview-small img {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	opacity: 1;
+	transition: opacity 0.5s 0s;
+	-webkit-filter: grayscale(100%);
+	z-index: 2;
 }
-.preview .downloads a:visited {
-	color: #77ab59;
-	font-weight: bold;
-	text-decoration: underline;
+
+.preview-small:hover img {
+	opacity: 0.25;
+	transition: opacity 0.5s 0.75s;
+	-webkit-filter: grayscale(0%);
+	left: 0px;
 }
+
+.preview-small .name {
+	position: absolute;
+	text-align: center;
+	font-weight: bold;
+	width: 476px;
+	text-shadow: black;
+	color: #E5E4D7;
+	transition: opacity 0.5s;
+	height: 1em;
+	top: -0.5em;
+	left: 0px;
+	opacity: 0;
+	z-index: 3;
+}
+.preview-small:hover .name {
+	opacity: 1;
+}
+
+.preview-small .big-name {
+	position: relative;
+	font-family: Verdana;
+	text-align: left;
+	font-weight: bold;
+	font-size: 14;
+	width: 476px;
+	text-shadow: 1px 1px black, -1px 1px black, 1px -1px black, -1px -1px black;
+	color: #E5E4D7;
+	transition: opacity 1s;
+	left: 8px;
+	bottom: 8px;
+	opacity: 1;
+	z-index: 3;
+}
+.preview-small:hover .big-name {
+	opacity: 0;
+	transition: opacity 0.25s;
+}
+
+.preview-small .awards {
+	position: absolute;
+	text-align: center;
+	top: -11px;
+	right: 0px;
+	color: #f0f7da;
+	opacity: 1;
+	width: 120px;
+	z-index: 1;
+}
+
+.preview-small .awards em sup {
+	vertical-align: baseline;
+	position: relative;
+	top: -0.15em;
+}
+
+.preview-small .description {
+	position: absolute;
+	text-align: center;
+	width: 476px;
+	overflow: hidden;
+	top: 1em;
+	color: #f0f7da;
+	opacity: 0;
+	transition: opacity 0s;
+	opacity: 0;
+	z-index: 3;
+}
+.preview-small:hover .description {
+	transition: opacity 1s 0.75s;
+	opacity: 1;
+}
+
+.preview-small .downloads {
+	position: absolute;
+	text-align: center;
+	width: 480px;
+	text-shadow: black;
+	color: #E5E4D7;
+	transition: opacity 0s;
+	height: 1em;
+	bottom: -0.5em;
+	left: 0px;
+	opacity: 0;
+	z-index: 3;
+}
+.preview-small:hover .downloads {
+	transition: opacity 1s 0.75s;
+	opacity: 1;
+}
+
+
+ /* * * * * * * *
+  * OTHER STUFF *
+  * * * * * * * */
+
 
 #content {
 	width: 600px;
@@ -476,26 +541,6 @@ h1.latest-release {
 .article-preview:hover .link {
 	transition: opacity 1s 0.75s;
 	opacity: 1;
-}
-.article-preview .link a:link {
-	color: #77ab59;
-	font-weight: bold;
-	text-decoration: underline;
-}
-.article-preview .link a:hover {
-	color: #77ab59;
-	font-weight: bold;
-	text-decoration: none;
-}
-.article-preview .link a:active {
-	color: #77ab59;
-	font-weight: bold;
-	text-decoration: underline;
-}
-.article-preview .link a:visited {
-	color: #77ab59;
-	font-weight: bold;
-	text-decoration: underline;
 }
 
 footer {
