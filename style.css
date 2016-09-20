@@ -417,15 +417,13 @@ h1.latest-release {
 	font-size: 16;
 	text-shadow: 1px 1px black, -1px 1px black, 1px -1px black, -1px -1px black;
 	color: #f0f7da;
-	right: 4px;
 	z-index: 3;
 }
 
 .news-feed .news-entry {
-	width: 256px;
+	width: 240px;
 	height: 96px;
-	margin-left: 16px;
-	text-align: left;
+	text-align: center;
 	color: white;
 }
 
@@ -436,7 +434,7 @@ h1.latest-release {
 	text-shadow: black;
 	color: #E5E4D7;
 	height: 1em;
-	bottom: -0.5em;
+	bottom: 0.5em;
 	left: 0px;
 	z-index: 3;
 }
