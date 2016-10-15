@@ -4,9 +4,10 @@
 		<meta charset="UTF-8">
 		<link rel="stylesheet" type="text/css" href="../style.css" />
 		<script type="text/javascript">
-			function test() {
+			function updateResults() {
 				var input = document.getElementById("game-search").value;
 				var games = document.getElementsByClassName("preview");
+				var games_small = document.getElementsByClassName("preview-small");
 				var headings = document.getElementsByClassName("category-description");
 
 				
@@ -17,7 +18,13 @@
 						games[i].style.display = "none";
 					else
 						games[i].style.display = "inline-block";
-					}
+				}
+				for (var i = 0; i < games_small.length; i++) {
+					if (!games_small[i].childNodes[5].innerHTML.toLowerCase().includes(input.toLowerCase()))
+						games_small[i].style.display = "none";
+					else
+						games_small[i].style.display = "inline-block";
+				}
 
 				if (input == "") {
 					for (var i = 0; i < headings.length; i++)
@@ -39,7 +46,7 @@
 			<h1 class="header">Projects</h1>
 			<p class="category-description">A complete directory of my game design works. The projects listed on this page are made in varying engines and languages of choice. Unless otherwise specified, all downloads are meant for Windows platforms only.</p>
 
-			<input type="text" id="game-search" placeholder="Search..." oninput="test()"/>
+			<input type="text" id="game-search" placeholder="Search..." oninput="updateResults()"/>
 
 			<div class="preview">
 				<!--Main content-->
@@ -53,7 +60,7 @@
 				<p class="event"></p>
 			</div>
 
-			<h2 class="header">Games++</h2>
+			<h2 class="header">games++</h2>
 			<p class="category-description">Games++ is an annual game jam hosted in both Hoboken, NJ and Omaha, NE. Participants are given roughly ten hours to create a game based on a secret theme, and entries are voted on a number of descriptive categories. This section is dedicated to games created for this event.</p>
 			<div class="preview-small">
 				<!--Main content-->
@@ -136,7 +143,7 @@
 				<!--Sidebox-->
 				<p class="awards">#21<br /><em class="placement">4<sup>th</sup></em><br /></p>
 			</div>
-			<h2 class="header">SGDC Works</h2>
+			<h2 class="header">SGDC</h2>
 			<p class="category-description">These projects were all made alongside the Stevens Game Development Club (SGDC). These were either made for an in-house game jam, a local event, or with input and guidance from the fantastic folk within the club.</p>
 			<div class="preview">
 				<!--Main content-->
@@ -144,7 +151,7 @@
 				<p class="big-name">pakij</p>
 				<p class="name">pakij</p>
 				<p class="description">Take control of a QC-rejected box, escaping through a procedurally-generated factory full of hazards.</p>
-				<p class="downloads"><a href="">Download (v1.3)</a></p>
+				<p class="downloads"><a href="http://tehpilot.com/games/sgdc9/pakij.zip">Download (v1.3)</a></p>
 				<!--Sidebox-->
 				<p class="awards">Jam IX<br /><em class="first">1<sup>st</sup></em></p>
 			</div>
