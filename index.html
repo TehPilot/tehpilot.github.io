@@ -4,6 +4,7 @@
 		<meta charset="UTF-8">
 		<meta name="description" content="Independent game developer." />
 		<meta name="keywords" content="tehpilot,gamemaker,indie,gamedev" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<link rel="stylesheet" type="text/css" href="style.css" />
 		<script type="text/javascript" src="https://tehpilot.tumblr.com/api/read/json?number=0&type=regular"></script>
 		<script type="text/javascript">
@@ -28,6 +29,11 @@
 				slideshow_index = 0;
 			document.getElementsByClassName("slideshow-window")[0].style.backgroundImage = "url('" + slideshow_images[slideshow_index] + "')"
 		}
+
+		window.onresize = function() {
+			var winWidth = window.innerWidth;
+			console.log(winWidth);
+		}
 		</script>
 	</head>
 	
@@ -38,9 +44,10 @@
 		<p id="navbar-links"><a href="http://tehpilot.com/">HOME</a> <!--| <a href="">NEWS</a> -->| <a href="http://tehpilot.com/games">PROJECTS</a> | <a href="http://tehpilot.com/misc">MISC</a><!-- | <a href="">CONTACT</a>--></p>
 	</nav>
 	<section id="body-container">
+		<p id="navbar-links-mobile"><a href="http://tehpilot.com/">HOME</a><br /><a href="http://tehpilot.com/games">PROJECTS</a><br /><a href="http://tehpilot.com/misc">MISC</a></p>
 		<div id="content">
 			<h1 class="header">Home</h1>
-			<div width="592" height="333" style="border: 4px solid #36802D;" class="slideshow-window" onclick="advanceSlideshow()">
+			<div width="592" height="333" class="slideshow-window" onclick="advanceSlideshow()">
 				<span class="slideshow-icon empty" onclick="changeImage(1);"></span>
 			</div>
 
