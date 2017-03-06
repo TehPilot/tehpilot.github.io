@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>an experience</title>
+		<link rel="stylesheet" type="text/css" href="style.css" />
+		<script type="text/javascript">
+			var panel_line = new Array();
+			var current_line = 0;
+
+			panel_line[0] = "in the beginning, there was nothing";
+			panel_line[1] = "seriously, a lot of nothing";
+			panel_line[2] = "it kinda sucked";
+
+			function advance() {
+				if (panel_line[current_line + 1] != null)
+					document.getElementById("panel-text").innerHTML = panel_line[++current_line];
+			}
+
+		</script>
+	</head>
+	<body>
+		<div class="image-window">
+		</div>
+		<h1 id="panel-text">in the beginning, there was nothing</h1>
+		<div class="center-wrapper">
+			<button onclick="advance()">advance</button>
+		</div>
+	</body>
+</html>
