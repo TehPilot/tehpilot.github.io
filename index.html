@@ -30,6 +30,13 @@
 			document.getElementsByClassName("slideshow-window")[0].style.backgroundImage = "url('" + slideshow_images[slideshow_index] + "')"
 		}
 
+		function regressSlideshow() {
+			slideshow_index--;
+			if (slideshow_index < 0)
+				slideshow_index = slideshow_images.length - 1;
+			document.getElementsByClassName("slideshow-window")[0].style.backgroundImage = "url('" + slideshow_images[slideshow_index] + "')"
+		}
+
 		window.onresize = function() {
 			var winWidth = window.innerWidth;
 			console.log(winWidth);
@@ -47,8 +54,18 @@
 		<p id="navbar-links-mobile"><a href="http://tehpilot.com/">HOME</a><br /><a href="http://tehpilot.com/games">PROJECTS</a><br /><a href="http://tehpilot.com/misc">MISC</a></p>
 		<div id="content">
 			<h1 class="header">Home</h1>
-			<div width="592" height="333" class="slideshow-window" onclick="advanceSlideshow()">
-				<span class="slideshow-icon empty" onclick="changeImage(1);"></span>
+			<div width="592" height="333" class="slideshow-window">
+				<div style="text-align: right; margin-top: 274px; margin-right: 8px;">
+					<button class="nomobile slideshow-button" onclick="advanceSlideshow();"><<</button>
+					<button class="nomobile slideshow-button">?</button>
+					<button class="nomobile slideshow-button" onclick="regressSlideshow();">>></button>
+				</div>
+
+				<!--<div style="position: absolute; width: 568px; text-align: right; margin-top: 274px; color: white; font-family: monospace; font-weight: bold;">
+					<p>1/3</p>
+				</div>-->
+
+				<!--<span class="slideshow-icon empty" onclick="changeImage(1);"></span>-->
 			</div>
 
 			<p class="category-description" style="text-align: left;">I'm a Computer Science major at Stevens Institute of Technology. I make games, small pieces of software, and one-off experiements for the sake of it.<br /><br />I primarily use GameMaker: Studio, Unity, and JavaScript. I do some teaching, a lot of competing, and have a lot of fun doing it.</p>

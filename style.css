@@ -101,6 +101,28 @@ nav {
 	border: 4px solid #36802D;
 }
 
+.slideshow-button {
+	font-family: monospace;
+	width: 32px;
+	height: 32px;
+	padding: 0px;
+	margin-top: 0.5em;
+	border: 2px solid #C9DF8A;
+	color: #C9DF8A;
+	font-weight: bold;
+	background-color: #234D20;
+	outline: none;
+}
+
+.slideshow-button:hover {
+	background-color: #C9DF8A;
+	color: #234D20;
+}
+
+.slideshow-button:active {
+	background-color: white;
+}
+
 /* * * * * * * * *
  * GAME PREVIEWS *
  * * * * * * * * */
@@ -112,8 +134,19 @@ nav {
 	border: 2px solid #36802D;
 	position: relative;
 	background-color: #2D3033;
-	transition: opacity 0.5s 0.75s, width 0.5s;
 	margin: auto;
+}
+
+@media only screen and (max-width: 768px) {
+	.preview {
+		width: 100%;
+		height: auto;
+		overflow: hidden;
+		border: 2px solid #36802D;
+		position: relative;
+		background-color: #2D3033;
+		margin: auto;
+	}
 }
 
 .preview img {
@@ -122,14 +155,14 @@ nav {
 	left: 0px;
 	opacity: 1;
 	transition: opacity 0.5s 0s;
-	-webkit-filter: grayscale(100%);
+	/* -webkit-filter: grayscale(100%); */
 	z-index: 2;
 }
 
 .preview:hover img {
 	opacity: 0.25;
 	transition: opacity 0.5s 0.75s;
-	-webkit-filter: grayscale(0%);
+	/* -webkit-filter: grayscale(0%); */
 	left: 0px;
 }
 
@@ -461,14 +494,14 @@ h1.latest-release {
 	left: 0px;
 	opacity: 1;
 	transition: opacity 0.5s;
-	-webkit-filter: grayscale(100%);
+	/* -webkit-filter: grayscale(100%); */
 	z-index: 2;
 }
 
 .article-preview:hover img {
 	opacity: 0.25;
 	transition: opacity 0.5s 0.75s;
-	-webkit-filter: grayscale(0%);
+	/* -webkit-filter: grayscale(0%); */
 	left: 0px;
 }
 
@@ -584,14 +617,14 @@ footer {
 	}
 
 	#self-header {
-		display: block;
+		display: none;
 		float: right;
 		margin-right: 12.5%;
 	}
 
 	#self-portrait {
 		display: hidden;
-		margin-left: 0%;
+		margin-left: auto;
 	}
 
 	#navbar-links {
@@ -622,19 +655,24 @@ footer {
 		border-right: none;
 		font-size: 2em;
 		margin-top: 0em;
-		margin-bottom: -0.6em;
 	}
 
 	.slideshow-window {
+		position: absolute;
 		background-size: 100%;
 		background-repeat: no-repeat;
 		background-position: center center;
 		width: 100%;
 		border: none;
-		margin-bottom: -2em;
+		top: -10%;
+		z-index: -1;
 	}
 
 	.category-description {
 		padding: 1em;
+	}
+
+	#nomobile {
+		display: none;
 	}
 }
