@@ -107,6 +107,19 @@ nav {
 	height: 32px;
 	padding: 0px;
 	margin-top: 0.5em;
+	border: 2px solid gray;
+	color: gray;
+	font-weight: bold;
+	background-color: lightgray;
+	outline: none;
+}
+
+.slideshow-name {
+	font-family: monospace;
+	height: 32px;
+	padding-left: 8px;
+	padding-right: 8px;
+	margin-top: 0.5em;
 	border: 2px solid #C9DF8A;
 	color: #C9DF8A;
 	font-weight: bold;
@@ -114,13 +127,17 @@ nav {
 	outline: none;
 }
 
+.slideshow-name:hover {
+	text-decoration: underline;
+}
+
 .slideshow-button:hover {
-	background-color: #C9DF8A;
+	background-color: white;
 	color: #234D20;
 }
 
 .slideshow-button:active {
-	background-color: white;
+	background-color: gainsboro;
 }
 
 /* * * * * * * * *

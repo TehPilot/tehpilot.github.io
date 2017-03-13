@@ -7,44 +7,11 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<link rel="stylesheet" type="text/css" href="style.css" />
 		<script type="text/javascript" src="https://tehpilot.tumblr.com/api/read/json?number=0&type=regular"></script>
-		<script type="text/javascript">
-		function fetchNewsArticles() {
-			var supplyString = "";
-			for (var i = 0; i < 2 && i < tumblr_api_read.posts.length; i++) {
-    			supplyString += "<span class=\"news-entry\"><a href=\"" + tumblr_api_read.posts[i]['url'] + "\"><b>" + tumblr_api_read.posts[i]['regular-title'] + "</b></a><br />" + tumblr_api_read.posts[i]['regular-body'].substring(3, 75);
-				if (tumblr_api_read.posts[i]['regular-body'].length > 75) {
-					supplyString += "..."
-				}
-				supplyString += "</span><br /><br />";
-			}
-			document.getElementById('tumblr-feed').innerHTML = "<p class=\"news-header\">Latest News</p>" + supplyString + "<span class=\"news-link\"><a href=\"http://tehpilot.tumblr.com/\">More News</a></span></p>";
-		}
-
-		var slideshow_images = ['images/egth-gif.gif', 'images/8s-gif.gif', 'images/slipstream-gif.gif'];
-		var slideshow_index = Math.floor(Math.random() * 3);
-
-		function advanceSlideshow() {
-			slideshow_index++;
-			if (slideshow_index > slideshow_images.length - 1)
-				slideshow_index = 0;
-			document.getElementsByClassName("slideshow-window")[0].style.backgroundImage = "url('" + slideshow_images[slideshow_index] + "')"
-		}
-
-		function regressSlideshow() {
-			slideshow_index--;
-			if (slideshow_index < 0)
-				slideshow_index = slideshow_images.length - 1;
-			document.getElementsByClassName("slideshow-window")[0].style.backgroundImage = "url('" + slideshow_images[slideshow_index] + "')"
-		}
-
-		window.onresize = function() {
-			var winWidth = window.innerWidth;
-			console.log(winWidth);
-		}
+		<script type="text/javascript" src="index.js">
 		</script>
 	</head>
 	
-	<body onload="fetchNewsArticles(); advanceSlideshow();">
+	<body onload="loadPageContent();">
 	<img src="images/self.png" id="self-portrait" alt="Self-portrait" />
 	<img src="images/headertext.png" id="self-header" alt="tehpilot" />
 	<nav>
@@ -55,10 +22,13 @@
 		<div id="content">
 			<h1 class="header">Home</h1>
 			<div width="592" height="333" class="slideshow-window">
-				<div style="text-align: right; margin-top: 274px; margin-right: 8px;">
-					<button class="nomobile slideshow-button" onclick="advanceSlideshow();"><<</button>
+				<div style="position: absolute; text-align: right; margin-top: 274px; margin-left: 454px;">
+					<button class="nomobile slideshow-button" onclick="regressSlideshow();"><<</button>
 					<button class="nomobile slideshow-button">?</button>
-					<button class="nomobile slideshow-button" onclick="regressSlideshow();">>></button>
+					<button class="nomobile slideshow-button" onclick="advanceSlideshow();">>></button>
+				</div>
+				<div style="position: absolute; text-align: right; margin-top: 274px; margin-left: 8px;">
+					<button class="nomobile slideshow-name" id="slideshow-item-name">[1/0] ...</button>
 				</div>
 
 				<!--<div style="position: absolute; width: 568px; text-align: right; margin-top: 274px; color: white; font-family: monospace; font-weight: bold;">
