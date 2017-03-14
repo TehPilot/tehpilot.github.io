@@ -4,6 +4,7 @@ var slideshow_index = 0;
 
 function loadPageContent() {
 	updateName();
+	updateImage();
 	fetchNewsArticles();
 }
 
@@ -23,7 +24,7 @@ function advanceSlideshow() {
 	slideshow_index++;
 	if (slideshow_index > slideshow_images.length - 1)
 		slideshow_index = 0;
-	document.getElementsByClassName("slideshow-window")[0].style.backgroundImage = "url('" + slideshow_images[slideshow_index] + "')";
+	updateImage();
 	updateName();
 }
 
@@ -31,8 +32,12 @@ function regressSlideshow() {
 	slideshow_index--;
 	if (slideshow_index < 0)
 		slideshow_index = slideshow_images.length - 1;
-	document.getElementsByClassName("slideshow-window")[0].style.backgroundImage = "url('" + slideshow_images[slideshow_index] + "')";
+	updateImage();
 	updateName();
+}
+
+function updateImage() {
+	document.getElementsByClassName("slideshow-window")[0].style.backgroundImage = "url('" + slideshow_images[slideshow_index] + "')";
 }
 
 function updateName() {

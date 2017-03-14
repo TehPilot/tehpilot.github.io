@@ -30,14 +30,14 @@ a:visited {
 
 #self-portrait {
 	display: block;
-	margin-left: 80%;
-	margin-right: auto;
+	margin-right: 80%;
+	margin-left: auto;
 	margin-top: 24px;
 }
 
 #self-header {
 	display: block;
-	margin-left: 5%;
+	margin-left: 60%;
 	margin-top: -72px;
 	float: left;
 }
@@ -94,11 +94,25 @@ nav {
 	text-align: center;
 	margin-left: auto;
 	margin-right: auto;
-	background-image: url('images/egth-gif.gif');
+	/* background-image: url('images/egth-gif.gif'); */
 	background-position: center;
 	width: 568px;
 	height: 320px;
 	border: 4px solid #36802D;
+}
+
+.slideshow-buttons-left {
+	position: absolute;
+	text-align: left;
+	margin-top: 274px;
+	margin-left: 8px;
+}
+
+.slideshow-buttons-right {
+	position: absolute;
+	text-align: right;
+	margin-top: 274px;
+	margin-left: 492px;
 }
 
 .slideshow-button {
@@ -617,6 +631,50 @@ footer {
 	outline: none;
 	text-align: left;
 }
+
+.game-download {
+	text-align: left;
+	margin-left: auto;
+	margin-right: auto;
+	width: 576px;
+	overflow: hidden;
+	white-space: nowrap;
+}
+
+.game-download-button {
+	height: 32px;
+	padding-left: 8px;
+	padding-right: 8px;
+	margin-top: 0.5em;
+	border: 2px solid #C9DF8A;
+	color: #C9DF8A;
+	font-weight: bold;
+	background-color: #234D20;
+	outline: none;
+}
+
+.game-download-button:hover {
+	background-color: #36802d;
+}
+
+.game-download-options {
+	height: 32px;
+	width: 470px;
+	text-align: left;
+	padding-left: 8px;
+	padding-right: 8px;
+	margin-right: 1px;
+	margin-top: 0.5em;
+	border: 2px solid gray;
+	color: black;
+	font-weight: bold;
+	background-color: lightgray;
+	outline: none;
+}
+
+/* MISC */
+
+
 
 /* RESPONSIVE SECTION */
 
