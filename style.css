@@ -672,6 +672,28 @@ footer {
 	outline: none;
 }
 
+.game-details {
+	border: 2px solid #C9DF8A;
+	background-color: #122510;
+	padding-left: 1em;
+	padding-right: 1em;
+	/*height: 4em;*/
+	overflow: hidden;
+	transition: height 0s linear 0.5s;
+}
+
+.game-details #header {
+	position: absolute;
+	text-align: left;
+	color: #C9DF8A;
+}
+
+.game-details #arrow {
+	position: relative;
+	text-align: right;
+	color: #C9DF8A;
+}
+
 /* MISC */
 
 
