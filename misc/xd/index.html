@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>xd</title>
+		<style type="text/css">
+			/**
+			 * Demo Styles
+			 */
+
+			html {
+			  height: 100%;
+			  box-sizing: border-box;
+			}
+
+			*,
+			*:before,
+			*:after {
+			  box-sizing: inherit;
+			}
+
+			body {
+			  position: relative;
+			  margin: 0;
+			  padding-bottom: 6rem;
+			  min-height: 100%;
+			  font-family: "Helvetica Neue", Arial, sans-serif;
+			}
+
+			.main {
+			  margin: 0 auto;
+			  padding-top: 64px;
+			  max-width: 640px;
+			  width: 94%;
+			}
+
+			.main h1 {
+			  margin-top: 0;
+			}
+			
+			#game-field {
+			  font-family: 'Comic Sans MS';
+			}
+
+			/**
+			 * Footer Styles
+			 */
+
+			.footer {
+			  position: absolute;
+			  right: 0;
+			  bottom: 0;
+			  left: 0;
+			  padding: 1rem;
+			  background-color: #efefef;
+			  text-align: center;
+			}
+		</style>
+		<script type="text/javascript">
+			var game_state = 0;		//0 - nothing, 1 - x, 2 - dddd
+			var timer;
+			var game_string = "";
+			var highscore = 0;
+
+			document.onkeyup = function (event) {
+				console.log(event);
+
+				var key = event.keyCode;
+
+				switch (game_state) {
+					case 0:
+						if (key === 88) {
+							updateGame("x");
+							game_state = 1;
+						}
+						break;
+					case 1:
+						if (key === 68) {
+							updateGame("d");
+							timer = setTimeout(endGame, 5000);
+							game_state = 2;
+						}
+						break;
+					case 2:
+						if (key === 68) {
+							updateGame("d");
+						}
+						break;
+					}
+				}
+
+			function updateGame(input) {
+				game_string += input;
+				document.getElementById("game-field").innerHTML = game_string;
+			}
+			
+			function endGame() {
+				var score = game_string.length - 1;
+				alert('Your final score is ' + score + '! xD');
+				game_state = 0;
+				game_string = "";
+				
+				if (score > highscore) {
+					highscore = score;
+					updateHighScore();
+				}
+				
+				document.getElementById("game-field").innerHTML = game_string;
+			}
+			
+			function updateHighScore() {
+				document.getElementById("highscore").innerHTML = "This session's highest score: " + highscore;
+			}
+		</script>
+	</head>
+	<body>
+		<div class="main">
+			<h1>xd: the game</h1>
+			<p>type as long of an 'xd' as you can in 5 seconds</p>
+			<h2 id="game-field" onkeydown="getInput(event);"></h2>
+			<p id="highscore">This session's highest score: 0</p>
+		</div>
+		<div class="footer">
+			<p>by <a href="http://twitter.com/tehpilot">@tehpilot</a> | more cheap javascript and not javascript games at <a href="http://tehpilot.com">tehpilot.com</a> | i used <a href="https://codepen.io/cbracco/pen/zekgx">this</a> formatting</p>
+		</div>
+	</body>
+</html>
