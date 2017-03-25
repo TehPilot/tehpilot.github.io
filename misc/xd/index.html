@@ -60,6 +60,7 @@
 			var timer;
 			var game_string = "";
 			var highscore = 0;
+			var top_player = "No one!";
 
 			document.onkeyup = function (event) {
 				console.log(event);
@@ -101,6 +102,7 @@
 				
 				if (score > highscore) {
 					highscore = score;
+					top_player = prompt("You're the best xD'er this session! Please enter your name.", "");
 					updateHighScore();
 				}
 				
@@ -108,7 +110,7 @@
 			}
 			
 			function updateHighScore() {
-				document.getElementById("highscore").innerHTML = "This session's highest score: " + highscore;
+				document.getElementById("highscore").innerHTML = "This session's highest score: " + highscore + "<br />This session's top player: " + top_player;
 			}
 		</script>
 	</head>
