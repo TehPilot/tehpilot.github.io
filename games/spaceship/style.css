@@ -44,6 +44,7 @@ nav a:active {
 	color: white;
 	font-size: 1.25em;
 	padding: 1em;
+	padding-top: 0em;
 }
 
 #content em {
@@ -52,10 +53,8 @@ nav a:active {
 	color: aqua;
 }
 
-#warning {
-	text-decoration: none;
-	font-weight: bold;
-	color: yellow;
+#content img {
+	border: 2px solid aqua;
 }
 
 
