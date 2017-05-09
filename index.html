@@ -13,13 +13,13 @@
 		function fetchNewsArticles() {
 			var supplyString = "";
 			for (var i = 0; i < 2 && i < tumblr_api_read.posts.length; i++) {
-    			supplyString += "<span class=\"news-entry\"><a href=\"" + tumblr_api_read.posts[i]['url'] + "\"><b>" + tumblr_api_read.posts[i]['regular-title'] + "</b></a><br />" + tumblr_api_read.posts[i]['regular-body'].substring(3, 75);
+    			supplyString += "<div class=\"news-entry\"><a href=\"" + tumblr_api_read.posts[i]['url'] + "\"><b>" + tumblr_api_read.posts[i]['regular-title'] + "</b></a><br />" + tumblr_api_read.posts[i]['regular-body'].substring(3, 75);
 				if (tumblr_api_read.posts[i]['regular-body'].length > 75) {
 					supplyString += "..."
 				}
-				supplyString += "</span><br /><br />";
+				supplyString += "</div>";
 			}
-			document.getElementById('tumblr-feed').innerHTML = "<p class=\"news-header\">Latest News</p>" + supplyString + "<span class=\"news-link\"><a href=\"http://tehpilot.tumblr.com/\">More News</a></span></p>";
+			document.getElementById('tumblr-feed').innerHTML = "<p class=\"news-header\">Latest News</p>" + supplyString + "<div class=\"news-link\"><a href=\"http://tehpilot.tumblr.com/\">More News</a></div></p>";
 		}
 
 		var slideshow_images = ['images/egth-gif.gif', 'images/8s-gif.gif', 'images/slipstream-gif.gif'];
@@ -53,8 +53,8 @@
 		<p id="navbar-links"><a href="http://tehpilot.com/">HOME</a> | <a href="http://tehpilot.tumblr.com">NEWS</a> | <a href="http://tehpilot.com/games">GAMES</a> | <a href="http://tehpilot.com/contact/">CONTACT</a></p>
 	</nav>
 	<section id="body-container">
-		<p id="navbar-links-mobile" style="max-height: none;">
-			<button id="hide-button" onclick="toggleMobileNav();">&#x2227;</button>
+		<p id="navbar-links-mobile" style="max-height: 42px;">
+			<button id="hide-button" onclick="toggleMobileNav();">&#8801;</button>
 			<a class="mobile-nav-link" href="http://tehpilot.com/">HOME</a><br />
 			<a class="mobile-nav-link" href="http://tehpilot.tumblr.com/">NEWS</a><br />
 			<a class="mobile-nav-link" href="http://tehpilot.com/games/">GAMES</a><br />
@@ -68,24 +68,17 @@
 					<button class="nomobile slideshow-button">?</button>
 					<button class="nomobile slideshow-button" onclick="regressSlideshow();">>></button>
 				</div>
-
-				<!--<div style="position: absolute; width: 568px; text-align: right; margin-top: 274px; color: white; font-family: monospace; font-weight: bold;">
-					<p>1/3</p>
-				</div>-->
-
-				<!--<span class="slideshow-icon empty" onclick="changeImage(1);"></span>-->
 			</div>
 
 			<p class="category-description" style="text-align: left;">I'm a Computer Science major at Stevens Institute of Technology, and I make games. GameMaker: Studio, Unity, and JavaScript are my preferred tools.<br /></p>
 
 			<h1 class="header">Recent</h1>
-
 			<div class="preview">
 				<!--Main content-->
 				<img src="images/ohpu-banner.png" alt="Game screenshot banner" />
 				<p class="big-name">Latest Release</p>
 				<p class="name">A One Hit Point Uprising</p>
-				<p class="description">Frustrated with their rude overload's iron-fisted leadership, a litany of weak peasants fight back against evil with their only strength: a significant advantage in numbers.</p>
+				<p class="description">Frustrated with their rude overlord's iron-fisted leadership, a litany of weak peasants fight back against evil with their only strength: a significant advantage in numbers.</p>
 				<p class="downloads"><a href="https://dl.dropboxusercontent.com/u/36650520/tehpilot/njam1/egth_v1.3p2.exe">More Details</a></p>
 				<!--Sidebox-->
 				<p class="awards">New GMC Jam #2<br /><em class="fourth">4<sup>th</sup></em></p>
