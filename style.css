@@ -929,6 +929,14 @@ footer {
 		z-index: -1;
 	}
 
+	.slideshow-buttons-left {
+		display: none;
+	}
+
+	.slideshow-buttons-right {
+		display: none;
+	}
+
 	.category-description {
 		padding: 1em;
 	}
