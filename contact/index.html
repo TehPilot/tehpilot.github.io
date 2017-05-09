@@ -7,15 +7,22 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<link rel="stylesheet" type="text/css" href="../style.css" />
 		<link rel="stylesheet" type="text/css" href="../awards.css" />
+		<script type="text/javascript" src="../../mobile.js"></script>
 	</head>
 	
 	<img src="../images/self.png" id="self-portrait" alt="Self-portrait" />
 	<img src="../images/headertext.png" id="self-header" alt="tehpilot" />
 	<nav>
-		<p id="navbar-links"><a href="http://tehpilot.com/">HOME</a> | <a href="http://tehpilot.tumblr.com">NEWS</a> | <a href="http://tehpilot.com/games">GAMES</a> | <!--<a href="http://tehpilot.com/misc">MISC</a> | --><a href="http://tehpilot.com/contact">CONTACT</a></p>
+		<p id="navbar-links"><a href="http://tehpilot.com/">HOME</a> | <a href="http://tehpilot.tumblr.com">NEWS</a> | <a href="http://tehpilot.com/games">GAMES</a> | <a href="http://tehpilot.com/contact/">CONTACT</a></p>
 	</nav>
 	<section id="body-container">
-		<p id="navbar-links-mobile"><a href="http://tehpilot.com/">HOME</a><br /><a href="http://tehpilot.com/games/">GAMES</a><br /><a href="http://tehpilot.com/contact/">CONTACT</a></p>
+		<p id="navbar-links-mobile" style="max-height: none;">
+			<button id="hide-button" onclick="toggleMobileNav();">&#x2227;</button>
+			<a class="mobile-nav-link" href="http://tehpilot.com/">HOME</a><br />
+			<a class="mobile-nav-link" href="http://tehpilot.tumblr.com/">NEWS</a><br />
+			<a class="mobile-nav-link" href="http://tehpilot.com/games/">GAMES</a><br />
+			<a class="mobile-nav-link" href="http://tehpilot.com/contact/">CONTACT</a>
+		</p>
 		<div id="content">
 			<h1 class="header">Contact Me</h1>
 			<p class="category-description" style="text-align: left;"><b><a href="https://forum.yoyogames.com/index.php?members/tehpilot.80/">GameMaker Community Profile</a></b> (TehPilot)<br />for GameMaker developers looking to get in touch<p>

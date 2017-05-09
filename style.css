@@ -735,9 +735,35 @@ footer {
 
 	#navbar-links-mobile {
 		display: block;
-		margin-left: 1em;
 		text-align: left;
+		margin: 0.5em;
+		margin-left: 1em;
+	}
+
+	.mobile-nav-link {
 		font-size: 2em;
+		padding: 0em;
+	}
+
+	#navbar-links-mobile #hide-button {
+		font-family: relative;
+		font-size: 1.75em;
+		position: absolute;
+		text-align: center;
+		right: 1em;
+		height: 1.5em;
+		width: 1.5em;
+		border: 2px solid #C9DF8A;
+		color: #C9DF8A;
+		font-weight: bold;
+		background-color: #234D20;
+		outline: none;
+		line-height: 100%;
+		vertical-align: middle;
+	}
+
+	#navbar-links-mobile #hide-button:hover {
+		background-color: #36802d;
 	}
 
 	#content {
