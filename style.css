@@ -172,11 +172,6 @@ nav {
 	.preview {
 		width: 100%;
 		max-height: 120px;
-		overflow: hidden;
-		border: 2px solid #36802D;
-		position: relative;
-		background-color: #2D3033;
-		margin: auto;
 	}
 }
 
@@ -192,14 +187,9 @@ nav {
 
 @media only screen and (max-width: 768px) {
 	.preview img {
-		position: absolute;
-		top: 0px;
-		left: 0px;
-		opacity: 1;
 		transition: opacity 0.5s;
-		/* -webkit-filter: grayscale(100%); */
-		z-index: 2;
 		width: 100%;
+		min-width: 480px;
 	}
 }
 
@@ -479,6 +469,12 @@ nav {
 	white-space: nowrap;
 }
 
+@media only screen and (max-width: 768px) {
+	.game-download {
+		display: none;
+	}
+}
+
 .game-download-button {
 	height: 32px;
 	padding-left: 8px;
@@ -520,6 +516,15 @@ nav {
 	margin-top: 0.5em;
 }
 
+@media only screen and (max-width: 768px) {
+	.game-details {
+		width: 100%;
+		border-left: none;
+		border-right: none;
+		font-size: 1.5em;
+	}
+}
+
 .game-changelog {
 	width: 542px;
 	margin-left: auto;
@@ -535,6 +540,19 @@ nav {
 
 .game-changelog h1 {
 	margin-top: 0em;
+}
+
+@media only screen and (max-width: 768px) {
+	.game-changelog {
+		width: 100%;
+		border-left: none;
+		border-right: none;
+		font-size: 1.5em;
+	}
+
+	.game-changelog h1 {
+		text-align: center;
+	}
 }
 
 
@@ -679,7 +697,7 @@ h1.header {
 @media only screen and (max-width: 768px) {
 	.article-preview img {
 		width: 100%;
-		max-height: 120px;
+		min-width: 480px;
 	}
 
 	.article-preview:hover img {
