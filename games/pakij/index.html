@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en-us">
+	<head>
+		<title>tehpilot</title>
+		<meta charset="UTF-8">
+		<meta name="description" content="Independent game developer." />
+		<meta name="keywords" content="tehpilot,gamemaker,indie,gamedev" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" type="text/css" href="../../style.css" />
+		<link rel="stylesheet" type="text/css" href="../../awards.css" />
+		<script type="text/javascript" src="game.js"></script>
+		<script type="text/javascript" src="../../mobile.js"></script>
+		<script>
+			(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+			(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+			m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+			})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+			ga('create', 'UA-100202482-1', 'auto');
+			ga('send', 'pageview');
+		</script>
+	</head>
+	
+	<body onload="loadGameContent();">
+	<img src="../../images/self.png" id="self-portrait" alt="Self-portrait" />
+	<img src="../../images/headertext.png" id="self-header" alt="tehpilot" />
+	<nav>
+		<p id="navbar-links"><a href="http://tehpilot.com/">HOME</a> | <a href="http://tehpilot.tumblr.com">NEWS</a> | <a href="http://tehpilot.com/games">GAMES</a> | <a href="http://tehpilot.com/contact/">CONTACT</a></p>
+	</nav>
+	<section id="body-container">
+		<p id="navbar-links-mobile" style="max-height: 42px;">
+			<button id="hide-button" onclick="toggleMobileNav();">&#8801;</button>
+			<a class="mobile-nav-link" href="http://tehpilot.com/">HOME</a><br />
+			<a class="mobile-nav-link" href="http://tehpilot.tumblr.com/">NEWS</a><br />
+			<a class="mobile-nav-link" href="http://tehpilot.com/games/">GAMES</a><br />
+			<a class="mobile-nav-link" href="http://tehpilot.com/contact/">CONTACT</a>
+		</p>
+		<div id="content">
+			<img src="../../images/pakij_logo.png" />
+			<div width="592" height="333" class="slideshow-window">
+				<div class="slideshow-buttons-right">
+					<button class="slideshow-button" onclick="regressSlideshow();"><<</button>
+					<button class="slideshow-button" onclick="advanceSlideshow();">>></button>
+				</div>
+				<div class="slideshow-buttons-left">
+					<button class="slideshow-name" id="slideshow-item-name">[1/0]</button>
+				</div>
+			</div>
+			<div class="game-download">
+				<select class="game-download-options">
+					<option value="0">[Windows] v1.6a2</option>
+					<option value="1">[Mac/OSX] v1.6a2</option>
+					<option value="2">[Windows] v1.3</option>
+				</select>
+				<button class="game-download-button" onclick="downloadGame();">DOWNLOAD</button>
+			</div>
+			<div class="game-details">
+				<p class="category-description" style="text-align: left;"><strong>pakij</strong> is a procedurally-generated physics game where you play as a QC-rejected box. Navigate an increasingly dangerous factory and uncover hidden areas and secrets as you try to escape.</p>
+
+				<p class="category-description" style="text-align: left;">pakij was originally conceived for Game Jam IX at <a href="https://www.stevens.edu/"><strong>Stevens Institute of Technology</strong></a>, where it won First Place. This current version of the game is a modernization and content update aimed at expanding it beyond a five-minute experience, and will experience regular updates going forward.</p>
+
+				<p class="category-description" style="text-align: left;">Made with Unity, and includes contributions by <a href="https://github.com/bblease">Ben Blease</a> and <a href="http://alexmassenzio.com/">Alex Massenzio</a>.</p>
+
+				<a href="https://tehpilot.itch.io/pakij">Mirror (itch.io)</a>
+			</div>
+			<div class="game-changelog">
+				<h1>Changelog</h1>
+				<p><u>v1.6a2</u>
+					<ul>
+						<li>Available on <a href="https://tehpilot.itch.io/pakij/devlog/19321/v16a2">itch.io</a></li>
+					</ul>
+
+					<u>v1.6a1</u>
+					<ul>
+						<li>Available on <a href="https://tehpilot.itch.io/pakij/devlog/19216/v16a1">itch.io</a></li>
+					</ul>
+
+					<u>v1.3</u>
+					<ul>
+						<li>Post-game jam release version</li>
+					</ul>
+				</p>
+			</div>		
+		</div>
+	</section>
+	
+	<footer>
+		<p>Website layout and content all created by TehPilot. (2012-16)<br />Credits/contributors for all content noted when appropriate.</p>
+	</footer>
+	</body>
+</html>

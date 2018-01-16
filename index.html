@@ -57,62 +57,95 @@
 	</head>
 	
 	<body onload="fetchNewsArticles(); advanceSlideshow();">
-	<img src="images/self.png" id="self-portrait" alt="Self-portrait" />
-	<img src="images/headertext.png" id="self-header" alt="tehpilot" />
-	<nav>
-		<p id="navbar-links"><a href="http://tehpilot.com/">HOME</a> | <a href="http://tehpilot.tumblr.com">NEWS</a> | <a href="http://tehpilot.com/games">GAMES</a> | <a href="http://tehpilot.com/contact/">CONTACT</a></p>
-	</nav>
-	<section id="body-container">
-		<p id="navbar-links-mobile" style="max-height: 42px;">
-			<button id="hide-button" onclick="toggleMobileNav();">&#8801;</button>
-			<a class="mobile-nav-link" href="http://tehpilot.com/">HOME</a><br />
-			<a class="mobile-nav-link" href="http://tehpilot.tumblr.com/">NEWS</a><br />
-			<a class="mobile-nav-link" href="http://tehpilot.com/games/">GAMES</a><br />
-			<a class="mobile-nav-link" href="http://tehpilot.com/contact/">CONTACT</a>
-		</p>
-		<div id="content">
-			<h1 class="header">Home</h1>
-			<div width="592" height="333" class="slideshow-window">
-				<div style="text-align: right; margin-top: 274px; margin-right: 8px;">
-					<button class="nomobile slideshow-button" onclick="advanceSlideshow();"><<</button>
-					<button class="nomobile slideshow-button">?</button>
-					<button class="nomobile slideshow-button" onclick="regressSlideshow();">>></button>
+		<img src="images/self.png" id="self-portrait" alt="Self-portrait" />
+		<img src="images/headertext.png" id="self-header" alt="tehpilot" />
+		<nav>
+			<p id="navbar-links"><a href="http://tehpilot.com/">HOME</a> | <a href="http://tehpilot.tumblr.com">NEWS</a> | <a href="http://tehpilot.com/games">GAMES</a> | <a href="http://tehpilot.com/contact/">CONTACT</a></p>
+		</nav>
+		<section id="body-container">
+			<p id="navbar-links-mobile" style="max-height: 42px;">
+				<button id="hide-button" onclick="toggleMobileNav();">&#8801;</button>
+				<a class="mobile-nav-link" href="http://tehpilot.com/">HOME</a><br />
+				<a class="mobile-nav-link" href="http://tehpilot.tumblr.com/">NEWS</a><br />
+				<a class="mobile-nav-link" href="http://tehpilot.com/games/">GAMES</a><br />
+				<a class="mobile-nav-link" href="http://tehpilot.com/contact/">CONTACT</a>
+			</p>
+			<div id="content">
+
+				<div class="preview">
+					<!--Main content-->
+					<img src="images/penitentiary-banner.png" alt="Penitentiary banner" />
+					<!--<p class="big-name">Penitentiary</p>-->
+					<p class="name">Penitentiary</p>
+					<p class="description">Mage prison is inescapable, save for one design flaw - and the Warden's gift to you enables your reality-bending, daring jailbreak from the inescapable.</p>
+					<p class="downloads"><a href="http://tehpilot.com/games/penitentiary/">More Details</a></p>
+					<!--Sidebox-->
+					<p class="awards"><em class="first">1<sup>st</sup></em><br />GMC Jam #5</p>
+				</div>
+
+				<div class="news-feed" id="tumblr-feed"></div>
+
+				<div class="article-preview">
+					<img src="images/up-banner.png" alt="Unwelcome Passenger banner" />
+					<!--<p class="little-name" style="text-align: left; right: -4px">Slipstream</p>-->
+					<p class="article-name">Unwelcome Passenger</p>
+					<p class="article-description">Follow Ricardo in his perilous ocean exploration, fueled by a fundamental misunderstanding of what "rocketships" are.</p>
+					<p class="link"><a href="https://forum.yoyogames.com/index.php?threads/the-stellar-gmc-jam-4-games-topic.27399/#post-171766">Thread Link</a></p>
+				</div>
+
+				<div class="article-preview">
+					<img src="images/8s-banner.png" alt="Article screenshot banner" />
+					<!--<p class="little-name">Eight Seconds</p>-->
+					<p class="article-name">Eight Seconds</p>
+					<p class="article-description">Race against the ever-expanding Void in a fast-paced puzzler with time travel and self-management challenges.</p>
+					<p class="link"><a href="http://tehpilot.com/games/">This + More Projects</a></p>
+				</div>
+
+				<div class="preview">
+					<!--Main content-->
+					<img src="images/pakij-banner.png" />
+					<!--<p class="big-name">Penitentiary</p>-->
+					<p class="name">pakij</p>
+					<p class="description">Take control of a QC-rejected box and navigate through a procedurally generated factory, through intriguing rooms and past box-destroying hazards of all kinds.</p>
+					<p class="downloads"><a href="http://tehpilot.com/games/pakij/">More Details</a></p>
+					<!--Sidebox-->
+					<p class="awards"><em class="first">1<sup>st</sup></em><br />SGDC Jam IX</p>
+				</div>
+
+				<div class="news-feed" style="float: left;"><a class="twitter-timeline" data-width="296" data-height="244" data-theme="dark" data-link-color="#77ab59" href="https://twitter.com/tehpilot?ref_src=twsrc%5Etfw">Tweets by tehpilot</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+				</div>
+
+				<div class="article-preview">
+					<img src="images/ohpu-banner.png" alt="Article screenshot banner" />
+					<!--<p class="little-name" style="text-align: left; right: -4px">Slipstream</p>-->
+					<p class="article-name">A One Hit Point Uprising</p>
+					<p class="article-description">Lead the peasant revolution against the Evil Overlord, one soft-bodied individual after another, and another, and another...</p>
+					<p class="link"><a href="http://tehpilot.com/games/ohpu/">More Details</a></p>
+				</div>
+
+				<div class="article-preview">
+					<img src="images/slipstream-banner.png" alt="Article screenshot banner" />
+					<!--<p class="little-name" style="text-align: left; right: -4px">Slipstream</p>-->
+					<p class="article-name">Slipstream</p>
+					<p class="article-description">Fight off waves of increasingly strong enemies, with random adjustments, spawns, and upgrades along the way.</p>
+					<p class="link"><a href="http://tehpilot.com/games/">This + More Projects</a></p>
+				</div>
+
+				<div class="preview">
+					<!--Main content-->
+					<img src="images/egth-banner.png" alt="Game screenshot banner" />
+					<!--<p class="big-name">Penitentiary</p>-->
+					<p class="name">Everything's Gone to Hell!</p>
+					<p class="description">The sudden coming of the apocalypse has Heaven and Hell backed up beyond belief - and you're in just the right position to help sort things out.</p>
+					<p class="downloads"><a href="http://tehpilot.com/games/">This + More Projects</a></p>
+					<!--Sidebox-->
+					<p class="awards"><em class="first">1<sup>st</sup></em><br />GMC Jam #1</p>
 				</div>
 			</div>
-
-			<p class="category-description" style="text-align: left;">I'm a Computer Science major at Stevens Institute of Technology, and I make games. GameMaker: Studio, Unity, and JavaScript are my preferred tools.<br /></p>
-
-			<h1 class="header">Recent</h1>
-			<div class="preview">
-				<!--Main content-->
-				<img src="images/penitentiary-banner.png" alt="Game screenshot banner" />
-				<p class="big-name">Latest Release</p>
-				<p class="name">Penitentiary</p>
-				<p class="description">Mage prison is inescapable, save for one design flaw - and the Warden's gift to you enables your reality-bending, daring jailbreak from the inescapable.</p>
-				<p class="downloads"><a href="http://tehpilot.com/games/penitentiary/">More Details</a></p>
-				<!--Sidebox-->
-				<p class="awards">New GMC Jam #5<br /><em class="first">1<sup>st</sup></em></p>
-			</div>
-			<div class="article-preview">
-				<img src="images/slipstream-banner.png" alt="Article screenshot banner" />
-				<p class="little-name" style="text-align: left; right: -4px">Slipstream</p>
-				<p class="article-name">Slipstream</p>
-				<p class="article-description">Fight off waves of increasingly strong enemies, with random adjustments, spawns, and upgrades along the way.</p>
-				<p class="link"><a href="http://tehpilot.com/games/">This + More Projects</a></p>
-			</div><div class="news-feed" id="tumblr-feed">
-			</div><div class="article-preview">
-				<img src="images/8s-banner.png" alt="Article screenshot banner" />
-				<p class="little-name">Eight Seconds</p>
-				<p class="article-name">Eight Seconds</p>
-				<p class="article-description">Race against the ever-expanding Void in a fast-paced puzzler with time travel and self-management challenges.</p>
-				<p class="link"><a href="http://tehpilot.com/games/">This + More Projects</a></p>
-			</div>
-
-		</div>
-	</section>
-	
-	<footer>
-		<p>Website layout and content all created by TehPilot. (2012-17)<br />Credits/contributors for all content noted when appropriate.</p>
-	</footer>
+		</section>
+		
+		<footer>
+			<p>Website layout and content all created by TehPilot. (2012-18)<br />Credits/contributors for all content noted when appropriate.</p>
+		</footer>
 	</body>
 </html>
