@@ -18,23 +18,40 @@
 			function updateResults() {
 				var input = document.getElementById("game-search").value;
 				var games = document.getElementsByClassName("preview");
+				var games_2 = document.getElementsByClassName("preview-nohover");
 				var games_small = document.getElementsByClassName("preview-small");
+				var games_small_2 = document.getElementsByClassName("preview-small-nohover");
 				var headings = document.getElementsByClassName("category-description");
 
 				
 				for (var i = 0; i < headings.length; i++)
 					headings[i].style.display = "none";
+
 				for (var i = 0; i < games.length; i++) {
 					if (!games[i].childNodes[5].innerHTML.toLowerCase().includes(input.toLowerCase()))
 						games[i].style.display = "none";
 					else
 						games[i].style.display = "inline-block";
 				}
+				for (var i = 0; i < games_2.length; i++) {
+					if (!games_2[i].childNodes[5].innerHTML.toLowerCase().includes(input.toLowerCase()))
+						games_2[i].style.display = "none";
+					else
+						games_2[i].style.display = "inline-block";
+				}
+
 				for (var i = 0; i < games_small.length; i++) {
 					if (!games_small[i].childNodes[5].innerHTML.toLowerCase().includes(input.toLowerCase()))
 						games_small[i].style.display = "none";
 					else
 						games_small[i].style.display = "inline-block";
+				}
+
+				for (var i = 0; i < games_small_2.length; i++) {
+					if (!games_small_2[i].childNodes[5].innerHTML.toLowerCase().includes(input.toLowerCase()))
+						games_small_2[i].style.display = "none";
+					else
+						games_small_2[i].style.display = "inline-block";
 				}
 
 				if (input == "") {
@@ -62,30 +79,36 @@
 		</p>
 		<div id="content">
 			<h1 class="header">Projects</h1>
-			<p class="category-description" style="text-align: left;">A complete directory of my game design works. The projects listed on this page are made in varying engines and languages of choice. Unless otherwise specified, all downloads are meant for Windows platforms only.
+			<p class="category-description" style="text-align: left;">A complete directory of finished projects, sorted by primary origin or event. Information pages and text blurbs denote which platforms / operating systems are supported for each project.
 
-			<br /><br />Smaller projects will have direct download links; more significant works will have dedicated game pages. If you are looking for a specific game, type in the <i>Search</i> box below. Results are filtered by name.</p>
+			<br /><br />Smaller projects will have direct download links or be bundled together in single archives; more significant works will have dedicated game pages. If you are looking for a specific game, type in the <i>Search</i> box below. Results are filtered by name (string comparison).</p>
 
-			<input type="text" id="game-search" placeholder="Search..." oninput="updateResults()"/>
+			<br />
+			<input type="text" id="game-search" oninput="updateResults()"/>
 
 			<h2 class="header">games++</h2>
-			<p class="category-description">Games++ is an annual game jam hosted in both Hoboken, NJ and Omaha, NE. Participants are given roughly ten hours to create a game based on a secret theme, and entries are voted on a number of descriptive categories. This section is dedicated to games created for this event.</p>
-			<div class="preview-small">
+			<p class="category-description"><em>games++</em> was an annual game jam hosted in both Hoboken, NJ and Omaha, NE. Each event was a ten-hour game jam with opening and closing ceremonies based on a secret theme, and entries were nominated for number of descriptive categories. This section is dedicated to the two games created for this event prior to its discontinuation.</p>
+
+			<div class="preview-nohover">
+				<img src="../images/gpp-combo-banner.png" alt="Game screenshot banner" />
+				<p class="big-name">g++ Archive</p>
+				<p class="description">A single archive containing Windows executable files for both games++ entries.</p>
+				<p class="awards"><a href="google.com">Download</a></p>
+			</div>
+			<div class="preview-small-nohover">
 				<!--Main content-->
 				<img src="../images/ricochet-banner.png" alt="Game screenshot banner" />
 				<p class="big-name">Ricochet</p>
 				<p class="name">Ricochet</p>
 				<p class="description">DARPA's latest advances in particle manipulation are absolutely incredible - and you're invited to give it a try! Capture the particle within a number of specially-designed, challenging puzzle boards.</p>
-				<p class="downloads"><a href="ricochet/bin/ricochet_v1.2.zip">Download (v1.2)</a> | <a href="ricochet/bin/ricochet_v1.0.zip">Download (v1.0)</a></p>
 				<!--Sidebox-->
 				<p class="awards">2015<br /><em class="first">Hardest<br />Gameplay</em></p>
-			</div><div class="preview-small">
+			</div><div class="preview-small-nohover">
 				<!--Main content-->
 				<img src="../images/duplication-banner.png" alt="Game screenshot banner" />
 				<p class="big-name">düplication</p>
 				<p class="name">düplication</p>
 				<p class="description">A basic puzzle platformer about cloning yourself and moving said clones safely (or unsafely) between elevators.</p>
-				<p class="downloads"><a href="duplication/bin/duplication_v1.4.zip">Download (v1.4)</a> | <a href="duplication/bin/duplication_v1.3.zip">Download (v1.3)</a></p>
 				<!--Sidebox-->
 				<p class="awards">2016<br /><em class="first">Hardest<br />Gameplay</em></p>
 			</div>
@@ -123,55 +146,40 @@
 				<!--Sidebox-->
 				<p class="awards">#1 (New)<br /><em class="first">1<sup>st</sup><br />Best Use of Theme</em><br /></p>
 			</div>
-			<div class="preview-small">
+			<div class="preview-small-nohover">
 				<!--Main content-->
 				<img src="../images/trials-banner.png" alt="Game screenshot banner" />
 				<p class="big-name">Trials of Hell</p>
-				<p class="name">Trials of Hell</p>
-				<p class="description">Edward Brown's latest and greatest TV show, <em>Trials of Hell</em>, is under attack by network executives - and it's up to you to save the show by assigning new directives to your actors mid-broadcast.</p>
-				<p class="downloads"><a href="trials/bin/trials_v1.5.zip">Download (v1.5)</a> | <a href="trials/bin/trials_v1.4.zip">Download (v1.4)</a></p>
 				<!--Sidebox-->
-				<p class="awards">#11<br /><em class="second">2<sup>nd</sup> (Tie)</em></p>
+				<p class="awards">#11</p>
 			</div>
-			<div class="preview-small">
+			<div class="preview-small-nohover">
 				<!--Main content-->
 				<img src="../images/crafty-banner.png" alt="Game screenshot banner" />
 				<p class="big-name">A Crafty Escape</p>
-				<p class="name">A Crafty Escape</p>
-				<p class="description">Island prisons are notorious for their apparent inescapability. When the power goes out, however, it's anyone's game. Darkness and hackjob engineering skills may help you avoid execution on death row.</p>
-				<p class="downloads"><a href="craftyescape/bin/craftyescape_v1.0.zip">Download (v1.0)</a></p>
 				<!--Sidebox-->
-				<p class="awards">#15<br /><em class="placement">19<sup>th</sup></em><br /><em class="first">Best Presentation (Tie)</em></p>
+				<p class="awards">#15</p>
 			</div>
-			<div class="preview-small">
+			<div class="preview-small-nohover">
 				<!--Main content-->
 				<img src="../images/soul-banner.png" alt="Game screenshot banner" />
 				<p class="big-name">Soul Synch</p>
-				<p class="name">Soul Synch</p>
-				<p class="description">The Academy warned you about cursed artifacts - especially ones that tear your soul asunder, cursing you to a painful, immortal existence. Traverse the afterlife(s) as you recover your fragmented humanity.</p>
-				<p class="downloads"><a href="soulsynch/bin/soulsynch_v1.0.zip">Download (v1.0)</a> (warning: poorly functioning build)</p>
 				<!--Sidebox-->
-				<p class="awards">#17<br /><em class="placement">21<sup>st</sup></em><br /></p>
+				<p class="awards">#17</p>
 			</div>
-			<div class="preview-small">
+			<div class="preview-small-nohover">
 				<!--Main content-->
 				<img src="../images/echo-banner.png" alt="Game screenshot banner" />
 				<p class="big-name">Echolotrate</p>
-				<p class="name">Echolotrate</p>
-				<p class="description">Global tensions run high in the midst of the Cold War, and you're not waiting for the Soviets to make the first strike. So what if you're blind - you will destroy a key Soviet compound and turn the tide of war.</p>
-				<p class="downloads"><a href="echo/bin/echolotrate_v1.2.zip">Download (v1.2)</a></p>
 				<!--Sidebox-->
-				<p class="awards">#18<br /><em class="placement">5<sup>th</sup></em><br /></p>
+				<p class="awards">#18</p>
 			</div>
-			<div class="preview-small">
+			<div class="preview-small-nohover">
 				<!--Main content-->
 				<img src="../images/vacation-banner.png" alt="Game screenshot banner" />
 				<p class="big-name">One Killer Vacation</p>
-				<p class="name">One Killer Vacation</p>
-				<p class="description">Gregory has worked without recompense for twenty-five years at a factory to provide for his family. Left with nothing but a deadened sense of humor, a deity offers him a dream vacation... at a price.</p>
-				<p class="downloads"><a href="okv/bin/okv_v1.4.zip">Download (v1.4)</a></p>
 				<!--Sidebox-->
-				<p class="awards">#21<br /><em class="placement">4<sup>th</sup></em><br /></p>
+				<p class="awards">#21</p>
 			</div>
 			<h2 class="header">SGDC</h2>
 			<p class="category-description">These projects were all made alongside the Stevens Game Development Club (SGDC). These were either made for an in-house game jam, a local event, or with input and guidance from the fantastic folk within the club.</p>

@@ -263,14 +263,14 @@ nav {
 .preview .awards {
 	position: absolute;
 	text-align: center;
-	top: 1.25em;
+	top: 50%;
+	margin: 0;
 	right: 0px;
 	color: #f0f7da;
 	opacity: 1;
 	width: 120px;
 	z-index: 3;
-	display: inline-block;
-	vertical-align: middle;
+	transform: translate(0, -50%);
 }
 
 @media only screen and (max-width: 768px) {
@@ -352,6 +352,69 @@ nav {
 		*/
 	}
 }
+
+
+
+.preview-nohover {
+	width: 596px;
+	height: 120px;
+	overflow: hidden;
+	border: 2px solid #77ab59;
+	position: relative;
+	background-color: #2D3033;
+	margin: auto;
+}
+
+.preview-nohover img {
+	position: absolute;
+	display: table-cell;
+	vertical-align: middle;
+	top: 0px;
+	left: 0px;
+	opacity: 1;
+	z-index: 2;
+}
+
+.preview-nohover .big-name {
+	position: relative;
+	font-family: Verdana;
+	text-align: right;
+	font-weight: bold;
+	font-size: 24;
+	width: 476px;
+	text-shadow: 1px 1px black, -1px 1px black, 1px -1px black, -1px -1px black;
+	color: #E5E4D7;
+	right: 4px;
+	bottom: -66px;
+	opacity: 1;
+	z-index: 3;
+}
+
+.preview-nohover .awards {
+	position: absolute;
+	text-align: center;
+	top: 50%;
+	margin: 0;
+	right: 0px;
+	color: #f0f7da;
+	opacity: 1;
+	width: 120px;
+	z-index: 3;
+	transform: translate(0, -50%);
+}
+
+.preview-nohover .description {
+	position: absolute;
+	text-align: center;
+	width: 448px;
+	margin: 0;
+	top: 50%;
+	transform: translate(0, -50%);
+	color: #f0f7da;
+	opacity: 1;
+	z-index: 3;
+}
+
 
 
 /* * * * * * * * *
@@ -496,6 +559,60 @@ nav {
 	transition: opacity 1s 0.75s;
 	*/
 	opacity: 1;
+}
+
+.preview-small-nohover {
+	width: 596px;
+	height: 28px;
+	overflow: hidden;
+	border: 2px solid #77ab59;
+	position: relative;
+	background-color: #2D3033;
+	margin: auto;
+}
+
+.preview-small-nohover img {
+	position: absolute;
+	top: -32px;
+	left: 0px;
+	opacity: 1;
+	z-index: 2;
+}
+
+.preview-small-nohover .name {
+	display: none;
+}
+
+.preview-small-nohover .big-name {
+	position: relative;
+	font-family: Verdana;
+	text-align: left;
+	font-weight: bold;
+	font-size: 14;
+	width: 476px;
+	text-shadow: 1px 1px black, -1px 1px black, 1px -1px black, -1px -1px black;
+	color: #E5E4D7;
+	left: 8px;
+	bottom: 8px;
+	opacity: 1;
+	z-index: 3;
+}
+
+.preview-small-nohover .awards {
+	position: absolute;
+	text-align: center;
+	top: -11px;
+	right: 0px;
+	color: #f0f7da;
+	opacity: 1;
+	width: 120px;
+	z-index: 1;
+}
+
+.preview-small-nohover .awards em sup {
+	vertical-align: baseline;
+	position: relative;
+	top: -0.15em;
 }
 
 .game-download {

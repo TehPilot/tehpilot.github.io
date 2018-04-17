@@ -4,20 +4,13 @@ html {
 
 body {
 	font-family: 'Gill Sans MT', serif;
-	background: url('images/stars1.png'), linear-gradient(black, #401030) fixed, #401030;
+	background: url('../images/stars1.png'), linear-gradient(black, #401030) fixed, #401030;
 }
 
 nav {
 	color: white;
-	margin-top: -1.5em;
 	text-align: center;
-	font-size: 150%;
-	margin-bottom: -1.5em;
-}
-
-nav ul {
-	list-style-type: none;
-	padding: 1em;
+	font-size: 125%;
 }
 
 nav a:link {
@@ -29,22 +22,17 @@ nav a:visited {
 }
 
 nav a:hover {
-	color: cyan;
+	color: lightgray;
 }
 
 nav a:active {
 	color: white;
 }
 
-nav a:link .current {
-	color: red;
-}
-
 #logo {
-	width: 600px;
+	width: 400px;
 	margin-left: auto;
 	margin-right: auto;
-	margin-top: 0em;
 	text-align: center;
 	padding: 1em;
 }
@@ -53,20 +41,15 @@ nav a:link .current {
 	margin-left: auto;
 	margin-right: auto;
 	width: 600px;
-	border: 4px solid aqua;
-	/* background: url('images/content_background.png'); */
-	background-color: rgba(0, 0, 0, 0.5);
+	border: 4px solid gray;
+	background: url('../images/content_background2.png');
+	background-color: #333;
 	text-align: center;
 	color: white;
 	font-size: 1.25em;
 	padding: 1em;
 	padding-top: 0em;
-	margin-bottom: 7rem;
-	margin-top: 1em;
-}
-
-#content h1 {
-	color: aqua;
+	margin-bottom: 6rem;
 }
 
 #content em {
@@ -94,66 +77,6 @@ nav a:link .current {
 
 #content a:active {
 	color: white;
-}
-
-#content a#current {
-	background-color: aqua;
-}
-
-.homepage-detail-left {
-	background-color: black;
-	border-radius: 2em;
-	text-align: left;
-	position: relative;
-	border: 2px solid #401030;
-}
-
-.homepage-detail-left p {
-	width: 100%;
-	text-align: center;
-	position: absolute;
-	top: 0;
-	bottom: auto;
-}
-
-.homepage-detail-left p em {
-	font-size: 100%;
-}
-
-.homepage-detail-left .homepage-detail-icon {
-	height: 64px;
-	border-radius: 2em;
-	margin-left: 0.5em;
-	margin-top: 0.5em;
-	margin-bottom: 0.25em;
-}
-
-.homepage-detail-right {
-	background-color: black;
-	border-radius: 2em;
-	text-align: right;
-	position: relative;
-	border: 2px solid #401030;
-}
-
-.homepage-detail-right p {
-	width: 100%;
-	text-align: center;
-	position: absolute;
-	top: 0;
-	bottom: auto;
-}
-
-.homepage-detail-right p em {
-	font-size: 100%;
-}
-
-.homepage-detail-right .homepage-detail-icon {
-	height: 64px;
-	border-radius: 2em;
-	margin-right: 0.5em;
-	margin-top: 0.5em;
-	margin-bottom: 0.25em;
 }
 
 footer {
@@ -192,7 +115,7 @@ h1, h2 {
 	color: aqua;
 }
 
-@media screen and (max-width: 1280px) {
+@media screen and (max-width: 768px) {
 	#content {
 		width: 80%;
 		margin-bottom: 8rem;
@@ -206,21 +129,16 @@ h1, h2 {
 	}
 
 	#content p {
-		padding-left: 1em;
-		padding-right: 1em;
-		/* padding: 1em;
-		/* */
+		padding: 1em;
 	}
 
 	#logo {
 		width: 80%;
 		padding: none;
-		float: none;
 	}
 
 	#logo img {
 		width: 100%;
-		display: none;
 	}
 
 	footer {
