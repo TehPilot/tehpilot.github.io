@@ -192,7 +192,121 @@ h1, h2 {
 	color: aqua;
 }
 
-@media screen and (max-width: 1280px) {
+.ship-banner {
+	width: 80%;
+	margin-left: auto;
+	margin-right: auto;
+	line-height: 0.75em;
+	text-align: left;
+	border: 0px;
+	position: relative;
+}
+
+.ship-banner-text {
+	height: 90%;
+}
+
+.ship-name {
+	color: #ff80ff;
+	font-size: 1.5em;
+	font-variant: small-caps;
+}
+
+.ship-name-small {
+	font-size: 0.65em;
+	display: inline-block;
+	line-height: 1.5em;
+	text-indent: 0.25em;
+}
+
+#content .ship-sprite {
+	border: 0;
+}
+
+.ship-sprite {
+	left: calc(100% - 64px);
+	top: calc(50% - 32px);
+	display: block;
+	position: absolute;
+}
+
+#stats, #abilities {
+	position: relative;
+	display: block;
+	width: 100%;
+}
+
+.ship-info {
+	border: 2px solid darkgray;
+	padding: 0.5em;
+	margin: 0.5em;
+	background-image: url('images/content_background2.png');
+	width: 80%;
+	margin-left: auto;
+	margin-right: auto;
+
+	text-align: left;
+	font-family: 'Verdana', monospace;
+	font-size: 14px;
+}
+
+.ship-info a {
+	font-family: 'Courier New', monospace;
+}
+
+.ship-info-double {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	border: 2px solid transparent;
+	padding: 0.5em;
+	margin: 0.5em;
+	width: 80%;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 0em;
+
+	text-align: right;
+	font-family: 'Verdana', monospace;
+	font-size: 14px;
+}
+
+.ship-info-green {
+	color: lime;
+}
+
+.ship-info-yellow {
+	color: yellow;
+}
+
+.ship-info-blue {
+	color: cyan;
+}
+
+.ship-info-purple {
+	color: #ff80ff;
+}
+
+.stat {
+	color: orange;
+}
+
+.val {
+	color: yellow;
+}
+
+.prop {
+	color: #ff80ff;
+}
+
+.ship-ability {
+	color: orange;
+	font-style: italic;
+}
+
+@media screen and (max-width: 950px) {
 	#content {
 		width: 80%;
 		margin-bottom: 8rem;
@@ -243,5 +357,29 @@ h1, h2 {
 
 	.mobile-only {
 		display: block;
+	}
+
+	.ship-banner {
+		text-align: center;
+	}
+
+	.ship-sprite {
+		display: block;
+		position: relative;
+		left: calc(50% - 32px);
+		top: 0px;
+	}
+
+	.ship-name-small {
+		text-align: center;
+		text-indent: none;
+	}
+
+	.ship-name {
+		font-size: 100%;
+	}
+
+	#content .ship-sprite {
+		width: 64px;
 	}
 }
