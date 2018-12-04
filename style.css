@@ -1,45 +1,75 @@
 /* @import url(https://fonts.googleapis.com/css?family=Press+Start+2P); */
 
+/*
+
+	#61892F ACCENT DARK
+	#86C232 ACCENT LIGHT
+	#222629 BACKGROUND
+	#474B4F DARK TEXT
+	#6B6E70 LIGHT TEXT
+
+*/
+
 body {
 	font-family: 'Gill Sans MT', serif;
-	background-color: black;
-	width: 720px;
-	margin: 0 auto;
+	background-color: #222629;
 }
 
 a:link {
-	color: #77ab59;
-	font-weight: bold;
+	color: #f0f7da;
+	text-decoration: underline;
+}
+a:visited {
+	color: #f0f7da;
 	text-decoration: underline;
 }
 a:hover {
-	color: #c9df8a;
-	font-weight: bold;
+	color: #86C232;
 	text-decoration: none;
 }
 a:active {
-	color: #c9df8a;
-	font-weight: bold;
+	color: #86C232;
 	text-decoration: none;
 }
-a:visited {
-	color: #77ab59;
-	font-weight: bold;
-	text-decoration: none;
+
+#header-banner {
+	display: block;
+	position: sticky;
+	width: 720px;
+	height: 104px;
+	padding: 0;
+	padding-top: 0px;
+	margin: 0 auto;
+	margin-bottom: 0;
+	top: 0;
+	z-index: 9;
+	background-color: #222629;
+	border-bottom: 4px solid #86C232;
 }
 
 #self-portrait {
 	display: block;
-	margin-right: 80%;
-	margin-left: auto;
-	margin-top: 24px;
+	position: absolute;
+	height: 96px;
+	margin-left: 24px;
+	bottom: 0;
+	z-index: -1;
+}
+
+#self-portrait img {
+	margin: 0;
 }
 
 #self-header {
 	display: block;
-	margin-left: 60%;
-	margin-top: -72px;
-	float: left;
+	position: absolute;
+	height: 55px;
+	margin-left: 460px;
+	bottom: 16px;
+}
+
+#self-header img {
+	margin: 0;
 }
 
 #titlename {
@@ -54,25 +84,32 @@ a:visited {
 }
 
 #body-container {
+	width: 680px;
+	margin: 0 auto;
 	background-color: #234D20;
 	border: 4px solid #36802D;
-	border-top: none;
 	padding: 1em;
-	margin-top: 0em;
-}
-
-nav {
-	text-align: center;
-	color: #6C6E70;
-}
-
-#navbar-links {
-	margin-top: 0px;
-	margin-bottom: -2em;
-	background-color: #234D20;
-	border: 4px solid #36802D;
+	border-top: none;
 	border-bottom: none;
-	padding: 0.5em;
+}
+
+#navbar {
+	text-align: center;
+	display: block;
+	position: absolute;
+	color: #86C232;
+	bottom: 32px;
+	right: 160px;
+	width: 540px;
+}
+
+#navbar p {
+	margin: 0;
+	padding: 0;
+}
+
+#navbar p a {
+	margin: 0;
 }
 
 #navbar-links-mobile {
@@ -210,10 +247,8 @@ nav {
 	font-weight: bold;
 	width: 476px;
 	text-shadow: black;
-	color: #E5E4D7;
-	/*
-	transition: opacity 0.5s;
-	*/
+	color: gold;
+	text-shadow: 1px 1px black, -1px 1px black, 1px -1px black, -1px -1px black;
 	height: 1em;
 	top: -0.5em;
 	left: 0px;
@@ -300,13 +335,13 @@ nav {
 	position: absolute;
 	text-align: center;
 	width: 476px;
+	margin: 0;
 	overflow: hidden;
-	top: 1em;
+	padding: 0;
+	top: 41px;
 	color: #f0f7da;
 	opacity: 0;
-	/*
-	transition: opacity 0s;
-	*/
+	text-shadow: 1px 1px black, -1px 1px black, 1px -1px black, -1px -1px black;
 	opacity: 0;
 	z-index: 3;
 }
@@ -725,18 +760,25 @@ nav {
 
 .header {
 	color: #C9DF8A;
-	background-color: #36802d;
 	font-family: Verdana;
 	z-index: 1;
-	border: 2px solid #77ab59;
 	padding: 0.2em;
 }
 
 h1.header {
-	border: 4px solid #77ab59;
 	font-size: 2em;
 	margin-top: 0em;
 	margin-bottom: 0.5em;
+}
+
+h1.header, h2.header {
+	border-bottom: 2px solid #77ab59;
+}
+
+h2.header {
+	width: 480px;
+	margin-left: auto;
+	margin-right: auto;
 }
 
 .news-feed {
@@ -749,6 +791,116 @@ h1.header {
 	background-color: #2D3033;
 	margin: auto;
 	float: right;
+}
+
+.news-feed .name {
+	position: absolute;
+	text-align: center;
+	font-weight: bold;
+	width: 296px;
+	text-shadow: black;
+	color: gold;
+	text-shadow: 1px 1px black, -1px 1px black, 1px -1px black, -1px -1px black;
+	height: 1em;
+	top: -0.5em;
+	left: 0px;
+	opacity: 0;
+	z-index: 3;
+}
+.news-feed:hover .name {
+	opacity: 1;
+}
+
+.news-feed .description {
+	position: absolute;
+	text-align: center;
+	width: 296px;
+	margin: 0;
+	overflow: hidden;
+	padding: 0;
+	top: 80px;
+	color: #f0f7da;
+	opacity: 0;
+	text-shadow: 1px 1px black, -1px 1px black, 1px -1px black, -1px -1px black;
+	opacity: 0;
+	z-index: 3;
+}
+.news-feed:hover .description {
+	/*
+	transition: opacity 1s 0.75s;
+	*/
+	opacity: 1;
+}
+
+.news-feed .awards-place {
+	position: absolute;
+	text-align: left;
+	top: 212px;
+	margin: 0;
+	left: 24px;
+	color: #f0f7da;
+	opacity: 1;
+	width: 120px;
+	z-index: 3;
+	transform: translate(0, -50%);
+}
+
+.news-feed .awards-place em.first {
+	color: #ffd700;
+	font-style: normal;
+	z-index: 3;
+}
+
+.news-feed .awards-event {
+	position: absolute;
+	text-align: right;
+	top: 212px;
+	margin: 0;
+	right: 24px;
+	color: #f0f7da;
+	opacity: 1;
+	width: 120px;
+	z-index: 3;
+	transform: translate(0, -50%);
+}
+
+.news-feed .downloads {
+	position: absolute;
+	text-align: center;
+	width: 296px;
+	text-shadow: black;
+	color: #E5E4D7;
+	/*
+	transition: opacity 0s;
+	*/
+	height: 1em;
+	top: 140px;
+	left: 0px;
+	opacity: 0;
+	z-index: 3;
+}
+.news-feed:hover .downloads {
+	/*
+	transition: opacity 1s 0.75s;
+	*/
+	opacity: 1;
+}
+
+.news-feed img {
+	position: absolute;
+	display: table-cell;
+	vertical-align: middle;
+	object-fit: cover;
+	top: 0px;
+	left: 0px;
+	height: 180px;
+	width: 296px;
+	opacity: 1;
+	z-index: 2;
+}
+
+.news-feed:hover img {
+	opacity: 0.25;
 }
 
 .news-feed .news-header {
@@ -819,7 +971,7 @@ h1.header {
 	overflow: hidden;
 	border: 2px solid #77ab59;
 	position: relative;
-	background-color: #234D20;
+	background-color: #2D3033;
 	margin: auto;
 }
 
@@ -843,7 +995,7 @@ h1.header {
 }
 
 .article-preview:hover img {
-	opacity: 0;
+	opacity: 0.25;
 	/*
 	transition: opacity 0.5s 0.75s;
 	*/
@@ -900,7 +1052,7 @@ h1.header {
 	font-weight: bold;
 	width: 296px;
 	text-shadow: black;
-	color: #E5E4D7;
+	color: gold;
 	/*
 	transition: opacity 0.25s 0s;
 	*/
@@ -912,9 +1064,7 @@ h1.header {
 }
 .article-preview:hover .article-name {
 	opacity: 1;
-	/*
-	transition: opacity 0.25s;
-	*/
+	text-shadow: 1px 1px black, -1px 1px black, 1px -1px black, -1px -1px black;
 }
 
 @media only screen and (max-width: 768px) {
@@ -928,12 +1078,11 @@ h1.header {
 	text-align: center;
 	width: 296px;
 	overflow: hidden;
-	top: 1em;
+	margin: 0;
+	top: 41px;
 	color: #f0f7da;
 	opacity: 0;
-	/*
-	transition: opacity 0.25s;
-	*/
+	text-shadow: 1px 1px black, -1px 1px black, 1px -1px black, -1px -1px black;
 	opacity: 0;
 	z-index: 3;
 }
@@ -997,9 +1146,17 @@ h1.header {
 }
 
 footer {
+	position: sticky;
+	bottom: 0;
 	text-align: center;
+	margin: 0 auto;
 	color: #f0f7da;
-	}
+	padding: 0.25em;
+	z-index: 9;
+	background-color: #222629;
+	border-top: 4px solid #86C232;
+	width: 712px;
+}
 
 #game-search {
 	width: 320px;
@@ -1044,7 +1201,7 @@ footer {
 		margin-left: auto;
 	}
 
-	#navbar-links {
+	#header-banner {
 		display: none;
 	}
 

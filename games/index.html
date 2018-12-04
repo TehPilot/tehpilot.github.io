@@ -64,18 +64,18 @@
 	
 	<body>
 	
-	<img src="../images/self.png" id="self-portrait" alt="Self-portrait" />
-	<img src="../images/headertext.png" id="self-header" alt="tehpilot" />
-	<nav>
-		<p id="navbar-links"><a href="http://tehpilot.com/">HOME</a> | <a href="http://tehpilot.tumblr.com">NEWS</a> | <a href="http://tehpilot.com/games">GAMES</a> | <a href="http://tehpilot.com/contact/">CONTACT</a></p>
-	</nav>
+		<div id="header-banner">
+			<img src="../images/self.png" id="self-portrait" alt="Self-portrait" />
+			<img src="../images/headertext.png" id="self-header" alt="tehpilot" />
+			<nav id="navbar"><p><a href="http://tehpilot.com/">HOME</a> &#9672; <a href="http://tehpilot.com/games">GAMES</a> &#9672; <a href="http://tehpilot.com/contact/">ABOUT</a></p></nav>
+		</div>
+
 	<section id="body-container">
 		<p id="navbar-links-mobile" style="max-height: 42px;">
 			<button id="hide-button" onclick="toggleMobileNav();">&#8801;</button>
 			<a class="mobile-nav-link" href="http://tehpilot.com/">HOME</a><br />
-			<a class="mobile-nav-link" href="http://tehpilot.tumblr.com/">NEWS</a><br />
 			<a class="mobile-nav-link" href="http://tehpilot.com/games/">GAMES</a><br />
-			<a class="mobile-nav-link" href="http://tehpilot.com/contact/">CONTACT</a>
+			<a class="mobile-nav-link" href="http://tehpilot.com/contact/">ABOUT</a>
 		</p>
 		<div id="content">
 			<h1 class="header">Projects</h1>
@@ -86,43 +86,39 @@
 			<br />
 			<input type="text" id="game-search" oninput="updateResults()"/>
 
-			<h2 class="header">games++</h2>
-			<p class="category-description"><em>games++</em> was an annual game jam hosted in both Hoboken, NJ and Omaha, NE. Each event was a ten-hour game jam with opening and closing ceremonies based on a secret theme, and entries were nominated for number of descriptive categories. This section is dedicated to the two games created for this event prior to its discontinuation.</p>
-
-			<div class="preview-nohover">
-				<img src="../images/gpp-combo-banner.png" alt="Game screenshot banner" />
-				<p class="big-name">g++ Archive</p>
-				<p class="description">A single archive containing Windows executable files for both games++ entries.</p>
-				<p class="awards"><a href="google.com">Download</a></p>
-			</div>
-			<div class="preview-small-nohover">
-				<!--Main content-->
-				<img src="../images/ricochet-banner.png" alt="Game screenshot banner" />
-				<p class="big-name">Ricochet</p>
-				<p class="name">Ricochet</p>
-				<p class="description">DARPA's latest advances in particle manipulation are absolutely incredible - and you're invited to give it a try! Capture the particle within a number of specially-designed, challenging puzzle boards.</p>
-				<!--Sidebox-->
-				<p class="awards">2015<br /><em class="first">Hardest<br />Gameplay</em></p>
-			</div><div class="preview-small-nohover">
-				<!--Main content-->
-				<img src="../images/duplication-banner.png" alt="Game screenshot banner" />
-				<p class="big-name">düplication</p>
-				<p class="name">düplication</p>
-				<p class="description">A basic puzzle platformer about cloning yourself and moving said clones safely (or unsafely) between elevators.</p>
-				<!--Sidebox-->
-				<p class="awards">2016<br /><em class="first">Hardest<br />Gameplay</em></p>
-			</div>
 			<h2 class="header">GMC Jam</h2>
-			<p class="category-description">The Game Maker Community (GMC) Jam is a quarterly 72-hour development competition specifically for GameMaker users. Each event presents the user with a theme to base the game around, and a handicap to pose an interesting question or handicap that developers must account for.<br /><br />These are my entries for all the GMC Jam competitions I have successfully completed an entry for.</p>
+			<p class="category-description">The Game Maker Community (GMC) Jam is a quarterly 72-hour development competition specifically for GameMaker users. Each event presents the user with one or more themes to base the game around.<br /><br />These are my final products for every GMC Jam I have successfully completed an entry for.</p>
+			<div class="preview">
+				<!--Main content-->
+				<img src="../images/screens-banner.png" alt="Game screenshot banner" />
+				<p class="big-name">Screens</p>
+				<p class="name">Screens</p>
+				<p class="description">Turn the lights back on by playing through a series of small, interconnected games.</p>
+				<p class="downloads"><a href="screens/bin/screens_v1.1.zip">Download</a></p>
+				<!--Sidebox-->
+				<p class="awards">August 2018<br /><em class="first">1<sup>st</sup> Place<br />Best Concept</em></p>
+				<p class="event"></p>
+			</div>
 			<div class="preview">
 				<!--Main content-->
 				<img src="../images/penitentiary-banner.png" alt="Game screenshot banner" />
 				<p class="big-name">Penitentiary</p>
 				<p class="name">Penitentiary</p>
-				<p class="description">Mage prison is inescapable, save for one design flaw - and the Warden's gift to you enables your reality-bending, daring jailbreak from the inescapable.</p>
-				<p class="downloads"><a href="http://tehpilot.com/games/penitentiary/">More Details</a></p>
+				<p class="description">A short puzzle platformer about traversing light and dark in a bid to escape your imprisonment.</p>
+				<p class="downloads"><a href="penitentiary/index.html">More Details</a></p>
 				<!--Sidebox-->
 				<p class="awards">August 2017<br /><em class="first">1<sup>st</sup> Place</em></p>
+				<p class="event"></p>
+			</div>
+			<div class="preview">
+				<!--Main content-->
+				<img src="../images/up-banner.png" alt="Game screenshot banner" />
+				<p class="big-name">Unwelcome Passenger</p>
+				<p class="name">Unwelcome Passenger</p>
+				<p class="description">A sea-faring journey stemming from a dubious misunderstanding of the phrase "rocketship".</p>
+				<p class="downloads"><a href="passenger/bin/unwelcome_v1.1.zip">Download</a></p>
+				<!--Sidebox-->
+				<p class="awards">May 2017<br /><em class="fourth">8<sup>th</sup> Place</em></p>
 				<p class="event"></p>
 			</div>
 			<div class="preview">
@@ -130,8 +126,8 @@
 				<img src="../images/ohpu-banner.png" alt="Game screenshot banner" />
 				<p class="big-name">A One Hit Point Uprising</p>
 				<p class="name">A One Hit Point Uprising</p>
-				<p class="description">Frustrated with their rude overload's iron-fisted leadership, a litany of weak peasants fight back against evil with their only strength: a significant advantage in numbers.</p>
-				<p class="downloads"><a href="http://tehpilot.com/games/ohpu/">More Details</a></p>
+				<p class="description">An adventure about peasantry who leverage their greatest asset: sheer numbers.</p>
+				<p class="downloads"><a href="games/ohpu/index.html">More Details</a></p>
 				<!--Sidebox-->
 				<p class="awards">October 2016<br /><em class="fourth">4<sup>th</sup> Place</em></p>
 				<p class="event"></p>
@@ -139,50 +135,55 @@
 			<div class="preview">
 				<!--Main content-->
 				<img src="../images/egth-banner.png" alt="Game screenshot banner" />
-				<p class="big-name">Everything's Gone to Hell</p>
-				<p class="name">Everything's Gone to Hell</p>
-				<p class="description">The sudden coming of the apocalypse has Heaven and Hell backed up beyond belief - and you're in just the right position to help sort things out.</p>
-				<p class="downloads"><a href="egth/bin/egth_v1.3p2.zip">Download (v1.4)</a></p>
+				<p class="big-name">Everything's Gone to Hell!</p>
+				<p class="name">Everything's Gone to Hell!</p>
+				<p class="description">A commentary about the hellishness of bureaucracy, especially when it catches the mightiest beings off guard.</p>
+				<p class="downloads"><a href="egth/bin/egth_v1.3p2.zip">Download</a></p>
 				<!--Sidebox-->
-				<p class="awards">#1 (New)<br /><em class="first">1<sup>st</sup><br />Best Use of Theme</em><br /></p>
+				<p class="awards">August 2016<br /><em class="first">1<sup>st</sup><br />Best Use of Theme</em><br /></p>
 			</div>
+
+			<br /><br />
+			<p class="category-description">The following entries are from older GMC Jam competitions:</p>
+
 			<div class="preview-small-nohover">
 				<!--Main content-->
 				<img src="../images/trials-banner.png" alt="Game screenshot banner" />
 				<p class="big-name">Trials of Hell</p>
 				<!--Sidebox-->
-				<p class="awards">#11</p>
+				<p class="awards"><a href="trials/bin/trials_v1.5.zip">Download</a></p>
 			</div>
 			<div class="preview-small-nohover">
 				<!--Main content-->
 				<img src="../images/crafty-banner.png" alt="Game screenshot banner" />
 				<p class="big-name">A Crafty Escape</p>
 				<!--Sidebox-->
-				<p class="awards">#15</p>
+				<p class="awards"><a href="craftyescape/bin/craftyescape_v1.0.zip">Download</a></p>
 			</div>
 			<div class="preview-small-nohover">
 				<!--Main content-->
 				<img src="../images/soul-banner.png" alt="Game screenshot banner" />
 				<p class="big-name">Soul Synch</p>
 				<!--Sidebox-->
-				<p class="awards">#17</p>
+				<p class="awards"><a href="soulsynch/bin/soulsync_v1.0.zip">Download</a></p>
 			</div>
 			<div class="preview-small-nohover">
 				<!--Main content-->
 				<img src="../images/echo-banner.png" alt="Game screenshot banner" />
 				<p class="big-name">Echolotrate</p>
 				<!--Sidebox-->
-				<p class="awards">#18</p>
+				<p class="awards"><a href="echo/bin/echolotrate_v1.2.zip">Download</a></p>
 			</div>
 			<div class="preview-small-nohover">
 				<!--Main content-->
 				<img src="../images/vacation-banner.png" alt="Game screenshot banner" />
 				<p class="big-name">One Killer Vacation</p>
 				<!--Sidebox-->
-				<p class="awards">#21</p>
+				<p class="awards"><a href="okv/bin/okv_v1.4.zip">Download</a></p>
 			</div>
+	
 			<h2 class="header">SGDC</h2>
-			<p class="category-description">These projects were all made alongside the Stevens Game Development Club (SGDC). These were either made for an in-house game jam, a local event, or with input and guidance from the fantastic folk within the club.</p>
+			<p class="category-description">These projects were all made during my tenure with the <a href="https://stevens.gamedevelopment.club/">Stevens Game Development Club</a> (SGDC). These were either made for university game jams or campus events, and encompass a full four years of development while at Stevens.</p>
 			<div class="preview">
 				<!--Main content-->
 				<img src="../images/pakij-banner.png" alt="Game screenshot banner" />
@@ -193,84 +194,99 @@
 				<!--Sidebox-->
 				<p class="awards">Jam IX<br /><em class="first">1<sup>st</sup></em></p>
 			</div>
-			<div class="preview-small">
+			<div class="preview-small-nohover">
 				<!--Main content-->
 				<img src="../images/elemental-banner.png" alt="Game screenshot banner" />
 				<p class="big-name">Elemental Affinity</p>
-				<p class="name">Elemental Affinity</p>
-				<p class="description">Deep underground, a magical power beyond comprehension lies in wait for a brave adventurer to claim it. Nobody has survived the depths of the treacherous cave that protects it... until now.</p>
-				<p class="downloads"><a href="elemental/bin/elemental_v1.3.zip">Download (v1.3)</a></p>
+				<p class="downloads"></p>
 				<!--Sidebox-->
-				<p class="awards">Jam I<br /><em class="first">1<sup>st</sup></em></p>
+				<p class="awards"><a href="elemental/bin/elemental_v1.3.zip">Download</a></p>
 			</div>
-			<div class="preview-small">
+			<div class="preview-small-nohover">
 				<!--Main content-->
 				<img src="../images/containment-banner.png" alt="Game screenshot banner" />
 				<p class="big-name">Containment</p>
-				<p class="name">Containment</p>
-				<p class="description">A simple arcade-style game meant for an on-campus competition. The scoreboard features were never implemented, but the game remains playable (and the concept was later reworked partially into Ricochet).</p>
-				<p class="downloads"><a href="http://tehpilot.github.io/games/containment">Play Online</a></p>
+				<p class="downloads"></p>
 				<!--Sidebox-->
-				<p class="awards">2014<br />R.A.G.E Contribution</p>
+				<p class="awards"><a href="containment/index.html">Play Online</a></p>
 			</div>
-			<div class="preview-small">
+			<div class="preview-small-nohover">
 				<!--Main content-->
 				<img src="../images/stealth-banner.png" alt="Game screenshot banner" />
 				<p class="big-name">Stealth Game</p>
-				<p class="name">Stealth Game</p>
-				<p class="description">The Society of Genuinely Depraved Criminals possesses intel desperately needed by your agency. Staying hidden while breaking and entering? Easier said than done. Very, very unfinished - likely to see changes.</p>
-				<p class="downloads"><a href="stealthgame/bin/stealthgame1_v1.0.zip">Download (v1.0)</a></p>
+				<p class="downloads"></p>
 				<!--Sidebox-->
-				<p class="awards">Jam IV<br /><em class="third">3<sup>rd</sup> (Tie)</em></p>
+				<p class="awards"><a href="stealthgame/bin/stealthgame1_v1.0.zip">Download</a></p>
 			</div>
-			<div class="preview-small">
+			<div class="preview-small-nohover">
 				<!--Main content-->
 				<img src="../images/adrift-banner.png" alt="Game screenshot banner" />
 				<p class="big-name">Adrift</p>
-				<p class="name">Adrift</p>
-				<p class="description">Drift about space, collect batteries for your spaceship, and use the powers of warpstars to navigate the deadly floating maze. Made for a minor summer competition.</p>
-				<p class="downloads"><a href="http://tehpilot.github.io/games/adrift/">Play Online</a> | <a href="adrift/bin/adrift_v1.0.zip">Download (v1.0)</a></p>
 				<!--Sidebox-->
-				<p class="awards">Summer Jam 2<br /><em class="first">1<sup>st</sup><br />Most Original</em></p>
+				<p class="awards"><a href="adrift/index.html">Play Online</a></p>
 			</div>
-			<div class="preview-small">
+			<div class="preview-small-nohover">
 				<!--Main content-->
 				<img src="../images/stealth-2-banner.png" alt="Game screenshot banner" />
 				<p class="big-name">Stealth Game 2</p>
-				<p class="name">Stealth Game 2</p>
-				<p class="description">An evil organization's plans are set in motion, and only you can halt their efforts. Get inside their headquarters and extract everything that can help undo their diabolical contrivances - from packages to enemy agents.</p>
-				<p class="downloads"><a href="stealthgame/bin/stealthgame2_v1.3.zip">Download (v1.3)</a></p>
 				<!--Sidebox-->
-				<p class="awards">Jam VI<br /><em class="first">1<sup>st</sup></em></p>
+				<p class="awards"><a href="stealthgame/bin/stealthgame2_v1.3.zip">Download</a></p>
 			</div>
-			<div class="preview-small">
+			<div class="preview-small-nohover">
 				<!--Main content-->
 				<img src="../images/slipspace-banner.png" alt="Game screenshot banner" />
 				<p class="big-name">Slipspace Cartographer</p>
-				<p class="name">Slipspace Cartographer</p>
-				<p class="description">Scientific experimentation has found unexplored dimensions weaved in the fabric of numerous parallel universes, and a brave explorer is needed to map out the uncharted, seemingly infinite territory of the beyond.</p>
-				<p class="downloads"><a href="slipspace/bin/slipspace_v1.2.zip">Download (v1.2)</a></p>
 				<!--Sidebox-->
-				<p class="awards">Jam VII<br /><em class="second">2<sup>nd</sup></em><em class="first"><br />Best Sound<br />(unofficial)</em></p>
+				<p class="awards"><a href="slipspace/bin/slipspace_v1.2.zip">Download</a></p>
 			</div>
-			<div class="preview-small">
+			<div class="preview-small-nohover">
 				<!--Main content-->
 				<img src="../images/8s-banner.png" alt="Game screenshot banner" />
 				<p class="big-name">Eight Seconds</p>
-				<p class="name">Eight Seconds Until The Void Consumes You</p>
-				<p class="description">Underground experiments run by mad scientists are always promising until they run amok. Thankfully, the powers of limited time travel can save bright minds from impending demise.</p>
-				<p class="downloads"><a href="8s/bin/8s_v1.3.zip">Download (v1.3)</a></p>
 				<!--Sidebox-->
-				<p class="awards">Jam VIII<br /><em class="first">1<sup>st</sup></em></p>
+				<p class="awards"><a href="8s/bin/8s_v1.3.zip">Download</a></p>
 			</div>
+			<div class="preview-small-nohover">
+				<!--Main content-->
+				<img src="../images/raven-banner.png" alt="Game screenshot banner" />
+				<p class="big-name">Raven</p>
+				<!--Sidebox-->
+				<p class="awards"><a href="raven/bin/raven_v1.0.zip">Download</a></p>
+			</div>
+
+			<h2 class="header">games++</h2>
+			<p class="category-description"><em>games++</em> was an annual game jam hosted in both Hoboken, NJ and Omaha, NE. Each event was a ten-hour game jam with opening and closing ceremonies based on a secret theme, and entries were nominated for number of descriptive categories. This section is dedicated to the two games created for this event prior to its discontinuation.</p>
+
+			<div class="preview">
+				<img src="../images/gpp-combo-banner.png" alt="Game screenshot banner" />
+				<p class="big-name">g++ Archive</p>
+				<p class="name">g++ Archive</p>
+				<p class="description">A single archive containing Windows executable files for both games++ entries.</p>
+				<p class="downloads"><a href="gpp/bin/gpp.zip">Download</a></p>
+				<p class="awards">2015 - 2016</p>
+			</div>
+			<div class="preview-small-nohover">
+				<!--Main content-->
+				<img src="../images/ricochet-banner.png" alt="Game screenshot banner" />
+				<p class="big-name">Ricochet</p>
+				<!--Sidebox-->
+				<p class="awards"><a href="ricochet/bin/ricochet_v1.2.zip">Download</a></em></p>
+			</div><div class="preview-small-nohover">
+				<!--Main content-->
+				<img src="../images/duplication-banner.png" alt="Game screenshot banner" />
+				<p class="big-name">düplication</p>
+				<!--Sidebox-->
+				<p class="awards"><a href="ricochet/bin/duplication_v1.4.zip">Download</a></p>
+			</div>
+
 			<h2 class="header">Miscellaneous / Other</h2>
-			<p class="category-description">Games made not for any specific event or with any organization in mind - just projects of my own volition.</p>
+			<p class="category-description">Games made not for or with any specific event or organization.</p>
 			<div class="preview">
 				<!--Main content-->
 				<img src="../images/slipstream-banner.png" alt="Game screenshot banner" />
 				<p class="big-name">Slipstream</p>
 				<p class="name">Slipstream</p>
-				<p class="description">With nothing but a front gun, a warp drive, and a whole lot of ammunition, outlast increasingly difficult and randomly selected foes seeking your destruction.</p>
+				<p class="description">A simple, arcade-inspired shooter.<br />Aim for a high score!</p>
 				<p class="downloads"><a href="http://tehpilot.com/games/slipstream/">Play Online</a></p>
 				<!--Sidebox-->
 				<p class="awards">May 2016<br /><em class="first"></em></p>
@@ -280,7 +296,7 @@
 	</section>
 	
 	<footer>
-		<p>Website layout and content all created by TehPilot. (2012-17)<br />Credits/contributors for all content noted when appropriate.</p>
+		<p>Website layout and content all created by TehPilot. (2012-19)<br />Credits/contributors for all content noted when appropriate.</p>
 	</footer>
 	
 	</body>
