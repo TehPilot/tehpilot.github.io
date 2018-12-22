@@ -13,6 +13,8 @@
 body {
 	font-family: 'Gill Sans MT', serif;
 	background-color: #222629;
+	margin-top: 0;
+	margin-bottom: 0;
 }
 
 a:link {

@@ -7,44 +7,29 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<link rel="stylesheet" type="text/css" href="style.css" />
 		<link rel="stylesheet" type="text/css" href="awards.css" />
-		<script type="text/javascript" src="https://tehpilot.tumblr.com/api/read/json?number=0&type=regular"></script>
 		<script type="text/javascript" src="mobile.js"></script>
 		<script type="text/javascript">
-		/*
-		function fetchNewsArticles() {
-			var supplyString = "";
-			for (var i = 0; i < 2 && i < tumblr_api_read.posts.length; i++) {
-    			supplyString += "<div class=\"news-entry\"><a href=\"" + tumblr_api_read.posts[i]['url'] + "\"><b>" + tumblr_api_read.posts[i]['regular-title'] + "</b></a><br />" + tumblr_api_read.posts[i]['regular-body'].substring(3, 75);
-				if (tumblr_api_read.posts[i]['regular-body'].length > 75) {
-					supplyString += "..."
-				}
-				supplyString += "</div>";
+			var slideshow_images = ['images/egth-gif.gif', 'images/8s-gif.gif', 'images/slipstream-gif.gif'];
+			var slideshow_index = Math.floor(Math.random() * 3);
+
+			function advanceSlideshow() {
+				slideshow_index++;
+				if (slideshow_index > slideshow_images.length - 1)
+					slideshow_index = 0;
+				document.getElementsByClassName("slideshow-window")[0].style.backgroundImage = "url('" + slideshow_images[slideshow_index] + "')"
 			}
-			document.getElementById('tumblr-feed').innerHTML = "<p class=\"news-header\">Latest News</p>" + supplyString + "<div class=\"news-link\"><a href=\"http://tehpilot.tumblr.com/\">More News</a></div></p>";
-		}
-		*/
 
-		var slideshow_images = ['images/egth-gif.gif', 'images/8s-gif.gif', 'images/slipstream-gif.gif'];
-		var slideshow_index = Math.floor(Math.random() * 3);
+			function regressSlideshow() {
+				slideshow_index--;
+				if (slideshow_index < 0)
+					slideshow_index = slideshow_images.length - 1;
+				document.getElementsByClassName("slideshow-window")[0].style.backgroundImage = "url('" + slideshow_images[slideshow_index] + "')"
+			}
 
-		function advanceSlideshow() {
-			slideshow_index++;
-			if (slideshow_index > slideshow_images.length - 1)
-				slideshow_index = 0;
-			document.getElementsByClassName("slideshow-window")[0].style.backgroundImage = "url('" + slideshow_images[slideshow_index] + "')"
-		}
-
-		function regressSlideshow() {
-			slideshow_index--;
-			if (slideshow_index < 0)
-				slideshow_index = slideshow_images.length - 1;
-			document.getElementsByClassName("slideshow-window")[0].style.backgroundImage = "url('" + slideshow_images[slideshow_index] + "')"
-		}
-
-		window.onresize = function() {
-			var winWidth = window.innerWidth;
-			console.log(winWidth);
-		}
+			window.onresize = function() {
+				var winWidth = window.innerWidth;
+				console.log(winWidth);
+			}
 		</script>
 		<script>
   			(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -54,7 +39,6 @@
 
   			ga('create', 'UA-100202482-1', 'auto');
   			ga('send', 'pageview');
-
 		</script>
 	</head>
 	
@@ -75,8 +59,8 @@
 			</p>
 			<div id="content">
 				<h1 class="header">Hello.</h1>
-				<p class="category-description">I make video games and other interactive entertainment.</p>
-				<div class="preview">
+				<p class="content-p">I make video games and other interactive entertainment.</p>
+				<div class="item-wide">
 					<!--Main content-->
 					<img src="images/penitentiary-banner.png" alt="Penitentiary banner" />
 					<!--<p class="big-name">Penitentiary</p>-->
