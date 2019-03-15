@@ -6,24 +6,34 @@
 		<meta name="keywords" content="tehpilot,gamemaker,indie,gamedev" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<link rel="stylesheet" type="text/css" href="style.css" />
+		<link rel="stylesheet" type="text/css" href="slideshow.css" />
+		<link rel="stylesheet" type="text/css" href="item_wide.css" />
+		<link rel="stylesheet" type="text/css" href="item_square.css" />
+		<link rel="stylesheet" type="text/css" href="item_small.css" />
 		<link rel="stylesheet" type="text/css" href="awards.css" />
 		<script type="text/javascript" src="mobile.js"></script>
 		<script type="text/javascript">
-			var slideshow_images = ['images/egth-gif.gif', 'images/8s-gif.gif', 'images/slipstream-gif.gif'];
-			var slideshow_index = Math.floor(Math.random() * 3);
+			
+			var slideshow_images = ['images/8s-gif.gif', 'images/thalamus-gif.gif', 'images/pakij-gif.gif', 'images/penitentiary-gif.gif', 'images/raven-gif.gif'];
+			var slideshow_names = ['Eight Seconds (Until the Void Consumes You)', 'Thalamus', 'Pakij', 'Penitentiary', 'Raven'];
+			var slideshow_index = Math.floor(Math.random() * slideshow_images.length);
+
+			var slideshow_bg_front = "url('images/back_gradient.png'), linear-gradient(180deg, rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25) 400px, #234D20 400px), ";
 
 			function advanceSlideshow() {
 				slideshow_index++;
 				if (slideshow_index > slideshow_images.length - 1)
 					slideshow_index = 0;
-				document.getElementsByClassName("slideshow-window")[0].style.backgroundImage = "url('" + slideshow_images[slideshow_index] + "')"
+				document.getElementById("body-container-homepage").style.backgroundImage = slideshow_bg_front + "url('" + slideshow_images[slideshow_index] + "')"
+				document.getElementById("slideshow-name").innerHTML = slideshow_names[slideshow_index];
 			}
 
 			function regressSlideshow() {
 				slideshow_index--;
 				if (slideshow_index < 0)
 					slideshow_index = slideshow_images.length - 1;
-				document.getElementsByClassName("slideshow-window")[0].style.backgroundImage = "url('" + slideshow_images[slideshow_index] + "')"
+				document.getElementById("body-container-homepage").style.backgroundImage = slideshow_bg_front + "url('" + slideshow_images[slideshow_index] + "')"
+				document.getElementById("slideshow-name").innerHTML = slideshow_names[slideshow_index];
 			}
 
 			window.onresize = function() {
@@ -50,7 +60,7 @@
 		</div>
 		
 		
-		<section id="body-container">
+		<section id="body-container-homepage" style="">
 			<p id="navbar-links-mobile" style="max-height: 42px;">
 				<button id="hide-button" onclick="toggleMobileNav();">&#8801;</button>
 				<a class="mobile-nav-link" href="http://tehpilot.com/">HOME</a><br />
@@ -58,83 +68,45 @@
 				<a class="mobile-nav-link" href="http://tehpilot.com/contact/">ABOUT</a>
 			</p>
 			<div id="content">
-				<h1 class="header">Hello.</h1>
-				<p class="category-description">I make video games and other interactive entertainment.</p>
-				<div class="preview">
-					<!--Main content-->
-					<img src="images/penitentiary-banner.png" alt="Penitentiary banner" />
-					<!--<p class="big-name">Penitentiary</p>-->
-					<p class="name">Penitentiary</p>
-					<p class="description">A short puzzle platformer about traversing light and dark in a bid to escape your imprisonment.</p>
-					<p class="downloads"><a href="http://tehpilot.com/games/penitentiary/">More Details</a></p>
-					<!--Sidebox-->
-					<p class="awards"><em class="first">1<sup>st</sup></em><br />GMC Jam #5</p>
+
+				<div class="slideshow-window">
+					<div class="slideshow-buttons-left">
+						<button class="slideshow-name" id="slideshow-name">Loading...</button>
+					</div>
+					<div class="slideshow-buttons-right">
+						<button class="slideshow-button" onclick="regressSlideshow();"><<</button>
+						<button class="slideshow-button" onclick="advanceSlideshow();">>></button>
+					</div>
 				</div>
 
-				<div class="news-feed" id="tumblr-feed">
-					<img src="images/screens-block.png" />
-					<p class="name">Screens</p>
-					<p class="description">Turn the lights back on by playing through a series of small, interconnected games.</p>
-					<p class="downloads"><a href="">link</a></p>
-					<p class="awards-place"><em class="first">1st</em></p>
-					<p class="awards-event">GMC Jam #30</p>
-				</div>
-
-				<div class="article-preview">
-					<img src="images/up-banner.png" alt="Unwelcome Passenger banner" />
-					<!--<p class="little-name" style="text-align: left; right: -4px">Slipstream</p>-->
-					<p class="article-name">Unwelcome Passenger</p>
-					<p class="article-description">A sea-faring journey stemming from a dubious misunderstanding.</p>
-					<p class="link"><a href="https://forum.yoyogames.com/index.php?threads/the-stellar-gmc-jam-4-games-topic.27399/#post-171766">Thread Link</a></p>
-				</div>
-
-				<div class="article-preview">
-					<img src="images/8s-banner.png" alt="Article screenshot banner" />
-					<!--<p class="little-name">Eight Seconds</p>-->
-					<p class="article-name">Eight Seconds</p>
-					<p class="article-description">A scientist resolves a catastrophic, time-sensitive problem by helping himself.</p>
-					<p class="link"><a href="http://tehpilot.com/games/">This + More Projects</a></p>
-				</div>
-
-				<div class="preview">
-					<!--Main content-->
-					<img src="images/pakij-banner.png" />
-					<!--<p class="big-name">Penitentiary</p>-->
-					<p class="name">pakij</p>
-					<p class="description">Take control of a box rejected by the quality control department, and navigate through a seemingly infinite warehouse.</p>
-					<p class="downloads"><a href="http://tehpilot.com/games/pakij/">More Details</a></p>
-					<!--Sidebox-->
-					<p class="awards"><em class="first">1<sup>st</sup></em><br />SGDC Jam IX</p>
-				</div>
-
-				<div class="news-feed" style="float: left;"><a class="twitter-timeline" data-width="296" data-height="244" data-theme="dark" data-link-color="#77ab59" href="https://twitter.com/tehpilot?ref_src=twsrc%5Etfw">Tweets by tehpilot</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-				</div>
-
-				<div class="article-preview">
-					<img src="images/ohpu-banner.png" alt="Article screenshot banner" />
-					<!--<p class="little-name" style="text-align: left; right: -4px">Slipstream</p>-->
-					<p class="article-name">A One Hit Point Uprising</p>
-					<p class="article-description">An adventure about peasantry who leverage their greatest asset: sheer numbers.</p>
-					<p class="link"><a href="http://tehpilot.com/games/ohpu/">More Details</a></p>
-				</div>
-
-				<div class="article-preview">
-					<img src="images/slipstream-banner.png" alt="Article screenshot banner" />
-					<!--<p class="little-name" style="text-align: left; right: -4px">Slipstream</p>-->
-					<p class="article-name">Slipstream</p>
-					<p class="article-description">A simple, arcade-inspired shooter.<br />Aim for a high score!</p>
-					<p class="link"><a href="http://tehpilot.com/games/">This + More Projects</a></p>
-				</div>
-
-				<div class="preview">
-					<!--Main content-->
-					<img src="images/egth-banner.png" alt="Game screenshot banner" />
-					<!--<p class="big-name">Penitentiary</p>-->
-					<p class="name">Everything's Gone to Hell!</p>
-					<p class="description">A commentary about the hellishness of bureaucracy, especially when it catches the mightiest beings off guard.</p>
-					<p class="downloads"><a href="http://tehpilot.com/games/">This + More Projects</a></p>
-					<!--Sidebox-->
-					<p class="awards"><em class="first">1<sup>st</sup></em><br />GMC Jam #1</p>
+				<h1 class="header">&nbsp;</h1>
+				<p class="content-p">Welcome! I make video games. I have been developing in GameMaker: Studio, Unity, and other platforms as a hobby for over 10 years.<br /><br />You can view and download them from this website, and you can learn about upcoming releases and work in progress projects by subscribing to my social media feeds.</p>
+				<div class="content-games">
+					<div class="item-wide">
+						<img src="images/screens-banner.png" alt="Penitentiary banner" style="opacity: 0.25;"/>
+						<p class="name" style="opacity: 1;">Screens</p>
+						<p class="description" style="opacity: 1;">Escape from your confinement by flipping between the two sides of a coin: light and dark.</p>
+						<p class="downloads" style="opacity: 1;"><a href="http://tehpilot.com/games/penitentiary/">About</a></p>
+						<p class="awards"><b>Latest<br />Release</b></p>
+					</div>
+					<a href="games/index.html" />
+						<div class="item-square" id="noopacity" style="float: left;">
+							<img src="images/raven-block.png" style="height: 244px;"/>
+							<p class="name-big">Games</p>
+						</div>
+					</a>
+					<a href="contact/index.html" />
+						<div class="item-small" id="noopacity">
+							<img src="images/skyland-banner.png" />
+							<p class="name-big">About</p>
+						</div>
+					</a>
+					<div class="item-small" id="noopacity">
+						<div class="socials-nav">
+							<a href="https://twitter.com/tehpilot"><img src="images/twitter_logo.png" /></a>
+							<a href="https://tehpilot.itch.io/"><img src="images/itch_logo.png" /></a>
+						</div>
+					</div>
 				</div>
 			</div>
 		</section>

@@ -1,0 +1,211 @@
+/*** CONTENT BLOCKS ***/
+
+/* wide content blocks */
+.item-square {
+
+	/* Positioning and display */
+	width: 294px;
+	height: 244px;
+	position: relative;
+
+	margin: auto;
+
+	float: right;
+
+	/* Appearance */
+	background-color: #2D3033;
+	border: 2px solid #77ab59;
+}
+
+.item-square img {		/* wide content block images */
+	/* Positioning and display */
+	width: 294px;
+	height: 180px;
+	position: absolute;
+	display: table-cell;
+	top: 0px;
+	left: 0px;
+
+	object-fit: cover;
+
+	z-index: 1;		/* place behind other content */
+}
+
+.item-square .name 		/* game name */
+{
+	/* Positioning and display */
+	width: 294px;
+	height: 1em;
+	position: absolute;
+	top: -0.5em;
+	left: 0px;
+
+	/* Appearance */
+	text-align: center;
+	font-weight: bold;
+	color: gold;
+	text-shadow: 1px 1px black, -1px 1px black, 1px -1px black, -1px -1px black;
+	opacity: 0;
+	
+	/* This should be rendered above the bg image and some other items */
+	z-index: 3;
+}
+
+.item-square .name-big {
+	/* Positioning and display */
+	width: 294px;
+	height: 244px;
+	position: absolute;
+	line-height: calc(244px - 2em);
+	left: 0px;
+
+	/* Appearance */
+	text-align: center;
+	font-weight: bold;
+	font-size: 2em;
+	color: #f0f7da;
+	text-shadow: 1px 1px black, -1px 1px black, 1px -1px black, -1px -1px black;
+	text-decoration: underline;
+	
+	z-index: 3;
+}
+
+.item-square .awards-event {	/* awards / side panel information */
+
+	/* Positioning and display */
+	width: 120px;
+	position: absolute;
+
+	top: 204px;
+	right: 24px;
+	margin: 0;
+	
+	/* Appearance */
+	color: #f0f7da;
+	opacity: 1;
+	text-align: right;
+
+	z-index: 3;
+}
+
+.item-square .awards-place {
+
+	/* Positioning and display */
+	width: 120px;
+	position: absolute;
+
+	top: 204px;
+	left: 24px;
+	margin: 0;
+	
+	/* Appearance */
+	color: #f0f7da;
+	opacity: 1;
+	text-align: left;
+
+	z-index: 3;
+}
+
+.item-square .awards em.placement {	/* awards formatting */
+	color: #E5E4D7;
+	font-style: normal;
+}
+.item-square .awards em.first {
+	color: #ffd700;
+	font-style: normal;
+}
+.item-square .awards em.second {
+	color: #C0C0C0;
+	font-style: normal;
+}
+.item-square .awards em.third {
+	color: #8C7853;
+	font-style: normal;
+}
+
+/* descriptive text */
+.item-square .description {
+
+	/* Positioning and display */
+	width: 278px;
+	position: relative;
+	text-align: center;
+	top: 80px;
+
+	margin: 0;
+	padding-left: 8px;
+	padding-right: 8px;
+	
+	/* Appearance */
+	color: #f0f7da;
+	text-shadow: 1px 1px black, -1px 1px black, 1px -1px black, -1px -1px black;
+	overflow: hidden;
+	opacity: 0;
+
+	z-index: 3;
+}
+
+/* download / "More Info" link */
+.item-square .downloads {
+
+	width: 294px;
+	height: 1em;
+	position: absolute;
+	text-align: center;
+	
+	text-shadow: black;
+	color: #E5E4D7;
+	
+	bottom: -8px;
+	left: 0px;
+	
+	opacity: 0;
+	z-index: 3;
+}
+
+.item-square .downloads a {
+	font-weight: bold;
+}
+
+.item-square .downloads-big {
+	width: 294px;
+	height: 1em;
+	position: absolute;
+	text-align: center;
+	text-decoration: underline;
+	
+	font-weight: bold;
+	text-shadow: 1px
+	color: #E5E4D7;
+	
+	top: 188px;
+	left: 0px;
+	
+	z-index: 3;
+}
+
+/* fade effects for wide items */
+.item-square:hover img {
+	opacity: 0.25;
+}
+
+.item-square:hover .name {
+	opacity: 1;
+}
+
+.item-square:hover .description {
+	opacity: 1;
+}
+
+.item-square:hover .downloads {
+	opacity: 1;
+}
+
+.item-square:hover .name-big {
+	color: #86C232;
+	text-decoration: none;
+}
+
+#noopacity:hover img {
+	opacity: 1;
+}

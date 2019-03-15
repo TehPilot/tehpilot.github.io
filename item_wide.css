@@ -1,0 +1,142 @@
+/*** CONTENT BLOCKS ***/
+
+/* wide content blocks */
+.item-wide {
+
+	/* Positioning and display */
+	width: 592px;
+	height: 120px;
+	display: inline-block;
+	position: relative;
+
+	margin: auto;
+	overflow: none;	/* don't let anything overflow out of these */
+
+	/* Appearance */
+	background-color: #2D3033;
+	border: 2px solid #77ab59;
+}
+
+.item-wide img {		/* wide content block images */
+	/* Positioning and display */
+	width: 480px;
+	position: absolute;
+	top: 0;
+	left: 0;
+	
+	z-index: 2;		/* place behind other content */
+}
+
+.item-wide .name 		/* game name */
+{
+	/* Positioning and display */
+	width: 476px;
+	height: 1em;
+	position: absolute;
+	top: -0.5em;
+	left: 0px;
+
+	/* Appearance */
+	text-align: center;
+	font-weight: bold;
+	color: gold;
+	text-shadow: 1px 1px black, -1px 1px black, 1px -1px black, -1px -1px black;
+	opacity: 0;
+	
+	/* This should be rendered above the bg image and some other items */
+	z-index: 3;
+}
+
+.item-wide .awards {	/* awards / side panel information */
+
+	/* Positioning and display */
+	width: 120px;
+	position: absolute;
+	transform: translate(0, -50%);
+
+	top: 50%;
+	right: 0px;
+	margin: 0;
+	
+	/* Appearance */
+	color: #f0f7da;
+	opacity: 1;
+	text-align: center;
+}
+
+.item-wide .awards em.placement {	/* awards formatting */
+	color: #E5E4D7;
+	font-style: normal;
+}
+.item-wide .awards em.first {
+	color: #ffd700;
+	font-style: normal;
+}
+.item-wide .awards em.second {
+	color: #C0C0C0;
+	font-style: normal;
+}
+.item-wide .awards em.third {
+	color: #8C7853;
+	font-style: normal;
+}
+
+/* descriptive text */
+.item-wide .description {
+
+	/* Positioning and display */
+	width: 476px;
+	position: absolute;
+	text-align: center;
+	top: 41px;
+
+	margin: 0;
+	padding: 0;
+	
+	/* Appearance */
+	color: #f0f7da;
+	text-shadow: 1px 1px black, -1px 1px black, 1px -1px black, -1px -1px black;
+	overflow: hidden;
+	opacity: 0;
+
+	z-index: 3;
+}
+
+/* download / "More Info" link */
+.item-wide .downloads {
+
+	width: 480px;
+	height: 1em;
+	position: absolute;
+	text-align: center;
+	
+	text-shadow: black;
+	color: #E5E4D7;
+	
+	left: 0px;
+	bottom: -0.5em;
+	
+	opacity: 0;
+	z-index: 3;
+}
+
+.item-wide .downloads a {
+	font-weight: bold;
+}
+
+/* fade effects for wide items */
+.item-wide:hover img {
+	opacity: 0.25;
+}
+
+.item-wide:hover .name {
+	opacity: 1;
+}
+
+.item-wide:hover .description {
+	opacity: 1;
+}
+
+.item-wide:hover .downloads {
+	opacity: 1;
+}

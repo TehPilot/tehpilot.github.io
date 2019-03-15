@@ -1,0 +1,62 @@
+.slideshow-window {
+	height: 244px;
+}
+
+.slideshow-buttons-left {
+	position: relative;
+	display: block;
+	text-align: left;
+	top: 0px;
+	right: 0px;
+	z-index: 4;
+	float: left;
+}
+
+.slideshow-buttons-right {
+	position: relative;
+	display: block;
+	text-align: right;
+	top: 0px;
+	right: 0px;
+	z-index: 4;
+}
+
+.slideshow-button {
+	font-family: monospace;
+	width: 32px;
+	height: 32px;
+	padding: 0px;
+	border: 2px solid gray;
+	color: gray;
+	font-weight: bold;
+	background-color: lightgray;
+	outline: none;
+}
+
+.slideshow-name {
+	font-family: monospace;
+	position: relative;
+	height: 32px;
+	left: 0px;
+	top: 0px;
+	margin-right: auto;
+	border: 2px solid #C9DF8A;
+	color: #C9DF8A;
+	font-weight: bold;
+	background-color: #234D20;
+	outline: none;
+	z-index: 5;
+}
+
+.slideshow-name:hover {
+	text-decoration: underline;
+}
+
+.slideshow-button:hover {
+	background-color: white;
+	color: #234D20;
+}
+
+.slideshow-button:active {
+	background-color: gainsboro;
+}

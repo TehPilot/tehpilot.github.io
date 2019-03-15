@@ -1,0 +1,185 @@
+/*** CONTENT BLOCKS ***/
+
+/* wide content blocks */
+.item-small {
+
+	/* Positioning and display */
+	width: 294px;
+	height: 120px;
+	position: relative;
+	display: inline-block;
+
+	margin: 0;
+	overflow: hidden;	/* don't let anything overflow out of these */
+
+	/* Appearance */
+	background-color: #2D3033;
+	border: 2px solid #77ab59;
+}
+
+.item-small img {		/* wide content block images */
+	/* Positioning and display */
+	position: absolute;
+	top: 0;
+	left: 0;
+	margin: 0;
+
+	z-index: 2;		/* place behind other content */
+}
+
+.item-small .name 		/* game name */
+{
+	/* Positioning and display */
+	width: 294px;
+	height: 1em;
+	position: absolute;
+	top: -0.5em;
+	left: 0px;
+
+	/* Appearance */
+	text-align: center;
+	font-weight: bold;
+	color: gold;
+	text-shadow: 1px 1px black, -1px 1px black, 1px -1px black, -1px -1px black;
+	opacity: 0;
+	
+	/* This should be rendered above the bg image and some other items */
+	z-index: 3;
+}
+
+.item-small .name-big 		/* game name */
+{
+	/* Positioning and display */
+	width: 294px;
+	height: 120px;
+	position: absolute;
+	line-height: calc(120px - 2em);
+	left: 0px;
+
+	/* Appearance */
+	text-align: center;
+	font-weight: bold;
+	font-size: 2em;
+	color: #f0f7da;
+	text-shadow: 1px 1px black, -1px 1px black, 1px -1px black, -1px -1px black;
+	text-decoration: underline;
+	
+	z-index: 3;
+}
+
+.item-small .awards {	/* awards / side panel information */
+
+	/* Positioning and display */
+	width: 120px;
+	position: absolute;
+	transform: translate(0, -50%);
+
+	top: 50%;
+	right: 0px;
+	margin: 0;
+	
+	/* Appearance */
+	color: #f0f7da;
+	opacity: 1;
+	text-align: center;
+}
+
+.item-small .awards em.placement {	/* awards formatting */
+	color: #E5E4D7;
+	font-style: normal;
+}
+.item-small .awards em.first {
+	color: #ffd700;
+	font-style: normal;
+}
+.item-small .awards em.second {
+	color: #C0C0C0;
+	font-style: normal;
+}
+.item-small .awards em.third {
+	color: #8C7853;
+	font-style: normal;
+}
+
+/* descriptive text */
+.item-small .description {
+
+	/* Positioning and display */
+	width: 294px;
+	position: absolute;
+	text-align: center;
+	top: 41px;
+
+	margin: 0;
+	padding: 0;
+	
+	/* Appearance */
+	color: #f0f7da;
+	text-shadow: 1px 1px black, -1px 1px black, 1px -1px black, -1px -1px black;
+	overflow: hidden;
+	opacity: 0;
+
+	z-index: 3;
+}
+
+/* download / "More Info" link */
+.item-small .downloads {
+
+	width: 294px;
+	height: 1em;
+	position: absolute;
+	text-align: center;
+	
+	text-shadow: black;
+	color: #E5E4D7;
+	
+	left: 0px;
+	bottom: -0.5em;
+	
+	opacity: 0;
+	z-index: 3;
+}
+
+.item-small .downloads a {
+	font-weight: bold;
+}
+
+/* fade effects for wide items */
+.item-small:hover img {
+	opacity: 0.25;
+}
+
+.item-small:hover .name {
+	opacity: 1;
+}
+
+.item-small:hover .name-big {
+	color: #86C232;
+	text-decoration: none;
+}
+
+.item-small:hover .description {
+	opacity: 1;
+}
+
+.item-small:hover .downloads {
+	opacity: 1;
+}
+
+#noopacity:hover img {
+	opacity: 1;
+}
+
+.socials-nav {
+	position: relative;
+	height: 48px;
+	margin: auto;
+	top: calc(50% - 24px);
+}
+
+.socials-nav img {
+	width: 48px;
+	height: 48px;
+	display: inline-block;
+	position: relative;
+}

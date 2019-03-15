@@ -3,8 +3,11 @@
 		<title>tehpilot</title>
 		<meta charset="UTF-8">
 		<link rel="stylesheet" type="text/css" href="../style.css" />
+		<link rel="stylesheet" type="text/css" href="../item_wide.css" />
+		<link rel="stylesheet" type="text/css" href="../item_square.css" />
+		<link rel="stylesheet" type="text/css" href="../item_small.css" />
 		<link rel="stylesheet" type="text/css" href="../awards.css" />
-		<script type="text/javascript" src="../mobile.js"></script>
+		<!--<script type="text/javascript" src="../mobile.js"></script>-->
 		<script>
 			(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
 			(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -15,50 +18,56 @@
 			ga('send', 'pageview');
 		</script>
 		<script type="text/javascript">
-			function updateResults() {
-				var input = document.getElementById("game-search").value;
-				var games = document.getElementsByClassName("preview");
-				var games_2 = document.getElementsByClassName("preview-nohover");
-				var games_small = document.getElementsByClassName("preview-small");
-				var games_small_2 = document.getElementsByClassName("preview-small-nohover");
-				var headings = document.getElementsByClassName("category-description");
 
-				
+		function updateResults() {
+			var input = document.getElementById("game-search").value;
+			var games = document.getElementsByClassName("item-wide");
+			var games_2 = document.getElementsByClassName("item-square");
+			var games_small = document.getElementsByClassName("item-small");
+			var headings = document.getElementsByClassName("content-p");
+
+			/*
+			for (var i = 0; i < headings.length; i++)
+				headings[i].style.display = "none";
+			*/
+
+			for (var i = 0; i < games.length; i++) {
+				if (!games[i].childNodes[1].alt.toLowerCase().includes(input.toLowerCase()))
+					games[i].style.opacity = "0";
+				else
+					games[i].style.opacity = "1";
+			}
+			for (var i = 0; i < games_2.length; i++) {
+				if (!games_2[i].childNodes[1].alt.toLowerCase().includes(input.toLowerCase()))
+					games_2[i].style.opacity = "0";
+				else
+					games_2[i].style.opacity = "1";
+			}
+
+			for (var i = 0; i < games_small.length; i++) {
+				if (!games_small[i].childNodes[1].alt.toLowerCase().includes(input.toLowerCase()))
+					games_small[i].style.opacity = "0";
+				else
+					games_small[i].style.opacity = "1";
+			}
+
+			/*
+			for (var i = 0; i < games_small_2.length; i++) {
+				if (!games_small_2[i].childNodes[5].innerHTML.toLowerCase().includes(input.toLowerCase()))
+					games_small_2[i].style.display = "none";
+				else
+					games_small_2[i].style.display = "inline-block";
+			}
+			*/
+
+			/*
+			if (input == "") {
 				for (var i = 0; i < headings.length; i++)
-					headings[i].style.display = "none";
-
-				for (var i = 0; i < games.length; i++) {
-					if (!games[i].childNodes[5].innerHTML.toLowerCase().includes(input.toLowerCase()))
-						games[i].style.display = "none";
-					else
-						games[i].style.display = "inline-block";
+					headings[i].style.display = "block";
 				}
-				for (var i = 0; i < games_2.length; i++) {
-					if (!games_2[i].childNodes[5].innerHTML.toLowerCase().includes(input.toLowerCase()))
-						games_2[i].style.display = "none";
-					else
-						games_2[i].style.display = "inline-block";
-				}
-
-				for (var i = 0; i < games_small.length; i++) {
-					if (!games_small[i].childNodes[5].innerHTML.toLowerCase().includes(input.toLowerCase()))
-						games_small[i].style.display = "none";
-					else
-						games_small[i].style.display = "inline-block";
-				}
-
-				for (var i = 0; i < games_small_2.length; i++) {
-					if (!games_small_2[i].childNodes[5].innerHTML.toLowerCase().includes(input.toLowerCase()))
-						games_small_2[i].style.display = "none";
-					else
-						games_small_2[i].style.display = "inline-block";
-				}
-
-				if (input == "") {
-					for (var i = 0; i < headings.length; i++)
-						headings[i].style.display = "block";
-					}
-				}
+			}
+			*/
+		}
 		</script>
 	</head>
 	
@@ -79,218 +88,228 @@
 		</p>
 		<div id="content">
 			<h1 class="header">Projects</h1>
-			<p class="category-description" style="text-align: left;">A complete directory of finished projects, sorted by primary origin or event. Information pages and text blurbs denote which platforms / operating systems are supported for each project.
+			<p class="content-p" style="text-align: left;">A complete directory of finished projects, categorized by their primary origin or initiative they were created under. Hover over a game's tile to see a brief overview, and click on "More Details" within a tile to visit that game's dedicated information and download page.
 
-			<br /><br />Smaller projects will have direct download links or be bundled together in single archives; more significant works will have dedicated game pages. If you are looking for a specific game, type in the <i>Search</i> box below. Results are filtered by name (string comparison).</p>
+			<br /><br />Use the controls below to filter the list of games.</p>
 
 			<br />
 			<input type="text" id="game-search" oninput="updateResults()"/>
 
+			<h2 class="header"></h2>
+
+			<div class="content-games">
+			</div>
+
 			<h2 class="header">GMC Jam</h2>
-			<p class="category-description">The Game Maker Community (GMC) Jam is a quarterly 72-hour development competition specifically for GameMaker users. Each event presents the user with one or more themes to base the game around.<br /><br />These are my final products for every GMC Jam I have successfully completed an entry for.</p>
-			<div class="preview">
-				<!--Main content-->
-				<img src="../images/screens-banner.png" alt="Game screenshot banner" />
-				<p class="big-name">Screens</p>
-				<p class="name">Screens</p>
-				<p class="description">Turn the lights back on by playing through a series of small, interconnected games.</p>
-				<p class="downloads"><a href="screens/bin/screens_v1.1.zip">Download</a></p>
-				<!--Sidebox-->
-				<p class="awards">August 2018<br /><em class="first">1<sup>st</sup> Place<br />Best Concept</em></p>
-				<p class="event"></p>
-			</div>
-			<div class="preview">
-				<!--Main content-->
-				<img src="../images/penitentiary-banner.png" alt="Game screenshot banner" />
-				<p class="big-name">Penitentiary</p>
-				<p class="name">Penitentiary</p>
-				<p class="description">A short puzzle platformer about traversing light and dark in a bid to escape your imprisonment.</p>
-				<p class="downloads"><a href="penitentiary/index.html">More Details</a></p>
-				<!--Sidebox-->
-				<p class="awards">August 2017<br /><em class="first">1<sup>st</sup> Place</em></p>
-				<p class="event"></p>
-			</div>
-			<div class="preview">
-				<!--Main content-->
-				<img src="../images/up-banner.png" alt="Game screenshot banner" />
-				<p class="big-name">Unwelcome Passenger</p>
-				<p class="name">Unwelcome Passenger</p>
-				<p class="description">A sea-faring journey stemming from a dubious misunderstanding of the phrase "rocketship".</p>
-				<p class="downloads"><a href="passenger/bin/unwelcome_v1.1.zip">Download</a></p>
-				<!--Sidebox-->
-				<p class="awards">May 2017<br /><em class="fourth">8<sup>th</sup> Place</em></p>
-				<p class="event"></p>
-			</div>
-			<div class="preview">
-				<!--Main content-->
-				<img src="../images/ohpu-banner.png" alt="Game screenshot banner" />
-				<p class="big-name">A One Hit Point Uprising</p>
-				<p class="name">A One Hit Point Uprising</p>
-				<p class="description">An adventure about peasantry who leverage their greatest asset: sheer numbers.</p>
-				<p class="downloads"><a href="games/ohpu/index.html">More Details</a></p>
-				<!--Sidebox-->
-				<p class="awards">October 2016<br /><em class="fourth">4<sup>th</sup> Place</em></p>
-				<p class="event"></p>
-			</div>
-			<div class="preview">
-				<!--Main content-->
-				<img src="../images/egth-banner.png" alt="Game screenshot banner" />
-				<p class="big-name">Everything's Gone to Hell!</p>
-				<p class="name">Everything's Gone to Hell!</p>
-				<p class="description">A commentary about the hellishness of bureaucracy, especially when it catches the mightiest beings off guard.</p>
-				<p class="downloads"><a href="egth/bin/egth_v1.3p2.zip">Download</a></p>
-				<!--Sidebox-->
-				<p class="awards">August 2016<br /><em class="first">1<sup>st</sup><br />Best Use of Theme</em><br /></p>
+
+			<p class="content-p">The Game Maker Community (GMC) Jam is a quarterly 72-hour development competition specifically for GameMaker users. Each event presents the user with one or more themes to base the game around.<br /><br />These are notable entries I have produced for the GMC Jam.</p>
+
+			<div class="content-games">
+
+				<!--GMC Jam (new)-->
+				<div class="item-wide">
+					<img src="../images/screens-banner.png" alt="Screens" />
+					<p class="name">Screens</p>
+					<p class="description">Turn the lights back on by playing through a series of small, interconnected games.</p>
+					<p class="downloads"><a href="screens/bin/screens_v1.1.zip">Download</a></p>
+					<p class="awards">&#9672;</p>
+				</div>
+
+				<div class="item-square" style="float: left;">
+					<img src="../images/egth-block.png" style="height: 244px;" alt="Everything's Gone To Hell" />
+					<p class="name">Everything's Gone to Hell!</p>
+					<p class="description">In the wake of an unexpected apocalypse, all souls wind up in the wrong place. Push through literal bureaucratic hell in a bid to reach the afterlife you deserve.</p>
+					<p class="downloads"><a href="screens/bin/trials_v1.5.zip">Download</a></p>
+				</div>
+
+				<div class="item-small">
+					<img src="../images/ohpu-banner.png" alt="A One Hit Point Uprising" />
+					<p class="name">A One Hit Point Uprising</p>
+					<p class="description">Take up arms against an evil overlord leveraging your sole strength: numbers.</p>
+					<p class="downloads"><a href="ohpu/index.html">About</a></p>
+				</div>
+				
+				<div class="item-small">
+					<img src="../images/up-banner.png" alt="Unwelcome Passenger" />
+					<p class="name">Unwelcome Passenger</p>
+					<p class="description">A sea-faring journey stemming from a dubious misunderstanding of  "rocketship".</p>
+					<p class="downloads"><a href="passenger/bin/unwelcome_v1.1.zip">Download</a></p>
+				</div>
+
+				<div class="item-wide">
+					<img src="../images/penitentiary-banner.png" alt="Penitentiary" />
+					<p class="name">Penitentiary</p>
+					<p class="description">Escape from your confinement by flipping between the two sides of a coin: light and dark.</p>
+					<p class="downloads"><a href="penitentiary/bin/penitentiary_v1.3.zip">Download</a></p>
+					<p class="awards">&#9672;</p>
+				</div>
+
 			</div>
 
-			<br /><br />
-			<p class="category-description">The following entries are from older GMC Jam competitions:</p>
+			<h3 class="header">GMC Jam (Old)</h3>
+			<p class="content-p">GMC Jam entries from older competitions (Jam #21 or earlier).</p>
 
-			<div class="preview-small-nohover">
-				<!--Main content-->
-				<img src="../images/trials-banner.png" alt="Game screenshot banner" />
-				<p class="big-name">Trials of Hell</p>
-				<!--Sidebox-->
-				<p class="awards"><a href="trials/bin/trials_v1.5.zip">Download</a></p>
+			<div class="content-games">
+
+				<!--GMC Jam (old)-->
+				<div class="item-wide">
+					<img src="../images/trials-banner.png" alt="Trials of Hell" />
+					<p class="name">Trials of Hell</p>
+					<p class="description">Direct your actors away from safety and the script to save your show from a hellish executive decision.</p>
+					<p class="downloads"><a href="screens/bin/trials_v1.5.zip">Download</a></p>
+				</div>
+
+				<div class="item-square" style="float: right;">
+					<img src="../images/crafty-block.png" style="height: 244px;" alt="A Crafty Escape"/>
+					<p class="name">A Crafty Escape</p>
+					<p class="description">A convenient power outage helps you escape from prison guards - and now the debris and tools lying throughout the facility will help you escape from prison itself.</p>
+					<p class="downloads"><a href="craftyescape/bin/craftyescape_v1.0.zip">Download</a></p>
+				</div>
+
+				<div class="item-small">
+					<img src="../images/vacation-banner.png" alt="One Killer Vacation" />
+					<p class="name">One Killer Vacation</p>
+					<p class="description">A voice in your head tells you to take a break from work...</p>
+					<p class="downloads"><a href="okv/bin/okv_v1.4.zip">Download</a></p>
+				</div>
+
+				<div class="item-small">
+					<img src="../images/soul-banner.png" alt="Soul Synch" />
+					<p class="name">Soul Synch</p>
+					<p class="description">Traverse through two afterlives to piece together your shattered soul.</p>
+					<p class="downloads"><a href="soulsynch/bin/soulsynch_v1.0.zip">Download</a></p>
+				</div>
+
+				<div class="item-wide">
+					<img src="../images/echo-banner.png" alt="Echolotrate" />
+					<p class="name">Echolotrate</p>
+					<p class="description">At the height of the Cold War, a powerful asset is deployed to infiltrate an enemy bunker: a completely blind agent.</p>
+					<p class="downloads"><a href="echo/bin/echolotrate_v1.2.zip">Download</a></p>
+				</div>
+
 			</div>
-			<div class="preview-small-nohover">
-				<!--Main content-->
-				<img src="../images/crafty-banner.png" alt="Game screenshot banner" />
-				<p class="big-name">A Crafty Escape</p>
-				<!--Sidebox-->
-				<p class="awards"><a href="craftyescape/bin/craftyescape_v1.0.zip">Download</a></p>
+
+			<h2 class="header">Stevens Game Development Club</h2>
+
+			<p class="content-p">These projects were all made during my tenure with the Stevens Game Development Club (SGDC). These were either made for university game jams or campus events, and encompass a full four years of development while at Stevens.</p>
+
+			<div class="content-games">
+
+				<div class="item-wide">
+					<img src="../images/8s-banner.png" alt="Eight Seconds Until The Void Consumes You" />
+					<p class="name">Eight Seconds (Until the Void Consumes You)</p>
+					<p class="description">A secret experiment gone awry leaves a scientist with eight seconds before disaster, a time travel device, and only help from himself.</p>
+					<p class="downloads"><a href="8s/bin/8s_v1.3.zip">Download</a></p>
+				</div>
+
+				<div class="item-square" style="float: left;">
+					<img src="pakij/screenshots/2.png" style="height: 244px;" alt="Pakij"/>
+					<p class="name">Pakij</p>
+					<p class="description">Take control of a rejected box and traverse a lengthy, procedurally generated warehouse; one full of hazardous objects and materials that will instantly destroy you.</p>
+					<p class="downloads"><a href="pakij/index.html">About</a></p>
+				</div>
+
+				<div class="item-small">
+					<img src="../images/slipspace-banner.png" alt="Slipspace Cartographer" />
+					<p class="name">Slipspace Cartographer</p>
+					<p class="description">Leap between multiverses to explore a strange plane of existence.</p>
+					<p class="downloads"><a href="slipspace/bin/slipspace_v1.2.zip">Download</a></p>
+				</div>
+
+				<div class="item-small" style="float: right;">
+					<img src="../images/stealth-2-banner.png" alt="Stealth Game 2"/>
+					<p class="name">Stealth Game 2</p>
+					<p class="description">A completely serious, high-stakes quest to infiltrate and research an evil corporation.</p>
+					<p class="downloads"><a href="stealthgame/bin/stealthgame2_v1.3.zip">Download</a></p>
+				</div>
+
+				<div class="item-wide">
+					<img src="../images/elemental-banner.png" alt="Elemental Affininity" />
+					<p class="name">Elemental Affinity</p>
+					<p class="description">Descend to the bottom of a dangerous cavern with the help of the elements and their associated powers.</p>
+					<p class="downloads"><a href="elemental/bin/elemental_v1.3.zip">Download</a></p>
+				</div>
+
 			</div>
-			<div class="preview-small-nohover">
-				<!--Main content-->
-				<img src="../images/soul-banner.png" alt="Game screenshot banner" />
-				<p class="big-name">Soul Synch</p>
-				<!--Sidebox-->
-				<p class="awards"><a href="soulsynch/bin/soulsync_v1.0.zip">Download</a></p>
-			</div>
-			<div class="preview-small-nohover">
-				<!--Main content-->
-				<img src="../images/echo-banner.png" alt="Game screenshot banner" />
-				<p class="big-name">Echolotrate</p>
-				<!--Sidebox-->
-				<p class="awards"><a href="echo/bin/echolotrate_v1.2.zip">Download</a></p>
-			</div>
-			<div class="preview-small-nohover">
-				<!--Main content-->
-				<img src="../images/vacation-banner.png" alt="Game screenshot banner" />
-				<p class="big-name">One Killer Vacation</p>
-				<!--Sidebox-->
-				<p class="awards"><a href="okv/bin/okv_v1.4.zip">Download</a></p>
-			</div>
-	
-			<h2 class="header">SGDC</h2>
-			<p class="category-description">These projects were all made during my tenure with the <a href="https://stevens.gamedevelopment.club/">Stevens Game Development Club</a> (SGDC). These were either made for university game jams or campus events, and encompass a full four years of development while at Stevens.</p>
-			<div class="preview">
-				<!--Main content-->
-				<img src="../images/pakij-banner.png" alt="Game screenshot banner" />
-				<p class="big-name">pakij</p>
-				<p class="name">pakij</p>
-				<p class="description">Take control of a QC-rejected box, escaping through a procedurally-generated factory full of hazards.</p>
-				<p class="downloads"><a href="http://tehpilot.com/games/pakij/">More Details</a></p>
-				<!--Sidebox-->
-				<p class="awards">Jam IX<br /><em class="first">1<sup>st</sup></em></p>
-			</div>
-			<div class="preview-small-nohover">
-				<!--Main content-->
-				<img src="../images/elemental-banner.png" alt="Game screenshot banner" />
-				<p class="big-name">Elemental Affinity</p>
-				<p class="downloads"></p>
-				<!--Sidebox-->
-				<p class="awards"><a href="elemental/bin/elemental_v1.3.zip">Download</a></p>
-			</div>
-			<div class="preview-small-nohover">
-				<!--Main content-->
-				<img src="../images/containment-banner.png" alt="Game screenshot banner" />
-				<p class="big-name">Containment</p>
-				<p class="downloads"></p>
-				<!--Sidebox-->
-				<p class="awards"><a href="containment/index.html">Play Online</a></p>
-			</div>
-			<div class="preview-small-nohover">
-				<!--Main content-->
-				<img src="../images/stealth-banner.png" alt="Game screenshot banner" />
-				<p class="big-name">Stealth Game</p>
-				<p class="downloads"></p>
-				<!--Sidebox-->
-				<p class="awards"><a href="stealthgame/bin/stealthgame1_v1.0.zip">Download</a></p>
-			</div>
-			<div class="preview-small-nohover">
-				<!--Main content-->
-				<img src="../images/adrift-banner.png" alt="Game screenshot banner" />
-				<p class="big-name">Adrift</p>
-				<!--Sidebox-->
-				<p class="awards"><a href="adrift/index.html">Play Online</a></p>
-			</div>
-			<div class="preview-small-nohover">
-				<!--Main content-->
-				<img src="../images/stealth-2-banner.png" alt="Game screenshot banner" />
-				<p class="big-name">Stealth Game 2</p>
-				<!--Sidebox-->
-				<p class="awards"><a href="stealthgame/bin/stealthgame2_v1.3.zip">Download</a></p>
-			</div>
-			<div class="preview-small-nohover">
-				<!--Main content-->
-				<img src="../images/slipspace-banner.png" alt="Game screenshot banner" />
-				<p class="big-name">Slipspace Cartographer</p>
-				<!--Sidebox-->
-				<p class="awards"><a href="slipspace/bin/slipspace_v1.2.zip">Download</a></p>
-			</div>
-			<div class="preview-small-nohover">
-				<!--Main content-->
-				<img src="../images/8s-banner.png" alt="Game screenshot banner" />
-				<p class="big-name">Eight Seconds</p>
-				<!--Sidebox-->
-				<p class="awards"><a href="8s/bin/8s_v1.3.zip">Download</a></p>
-			</div>
-			<div class="preview-small-nohover">
-				<!--Main content-->
-				<img src="../images/raven-banner.png" alt="Game screenshot banner" />
-				<p class="big-name">Raven</p>
-				<!--Sidebox-->
-				<p class="awards"><a href="raven/bin/raven_v1.0.zip">Download</a></p>
+
+			<h3 class="header">SGDC Extras</h3>
+			<p class="content-p">These games were also created as part of SGDC initiatives. These are less polished creations than the above selection, but showcase interesting technical explorations and concepts in places.</p>
+				
+			<div class="content-games">
+
+				<div class="item-wide">
+					<img src="../images/skyland-banner.png" alt="Skyland!" />
+					<p class="name">Skyland!</p>
+					<p class="description">A semi off-the-rails runner game, set on an artificial floating island attracting the most daring adventurers.</p>
+					<p class="downloads">Not available</p>
+				</div>
+
+				<div class="item-square" style="float: right;">
+					<img src="../images/raven-block.png" style="height: 244px;" alt="Raven" />
+					<p class="name">Raven</p>
+					<p class="description">A short demonstration of different visual effects, where a small bird accompanies you in your climb up an icy tower.</p>
+					<p class="downloads"><a href="raven/bin/raven_v1.0.zip"></p>
+				</div>
+
+				<div class="item-small">
+					<img src="../images/thalamus-small.png" alt="Thalamus" />
+					<p class="name">Thalamus</p>
+					<p class="description">The beginnings of an adventure about finding purpose and what your soul can possess.</p>
+					<p class="downloads">Not available</p>
+				</div>
+
+				<div class="item-square" style="float: left;">
+					<img src="../images/adrift-block.png" style="height: 244px;" alt="Adrift" />
+					<p class="name">Adrift</p>
+					<p class="description">Go on a spacewalk and return to your shuttle. A quick, simplistic browser game.</p>
+					<p class="downloads"><a href="adrift/index.html">Play Online</a></p>
+				</div>
+
+				<div class="item-small">
+					<img src="../images/facility-small.png" alt="Sneaky Facility" />
+					<p class="name">Sneaky Facility</p>
+					<p class="description">Direct your underlings to secure the facility and block the hero's progression.</p>
+					<p class="downloads">Not available</p>
+				</div>
+				
+				<div class="item-wide">
+					<img src="../images/containment-banner.png" alt="Containment" />
+					<p class="name">Containment</p>
+					<p class="description">Keep the ball in bounds in this simple, proof-of-concept browser game created for a campus-wide celebration of student activities.</p>
+					<p class="downloads"><a href="containment/index.html">Play Online</a></p>
+				</div>
 			</div>
 
 			<h2 class="header">games++</h2>
-			<p class="category-description"><em>games++</em> was an annual game jam hosted in both Hoboken, NJ and Omaha, NE. Each event was a ten-hour game jam with opening and closing ceremonies based on a secret theme, and entries were nominated for number of descriptive categories. This section is dedicated to the two games created for this event prior to its discontinuation.</p>
 
-			<div class="preview">
-				<img src="../images/gpp-combo-banner.png" alt="Game screenshot banner" />
-				<p class="big-name">g++ Archive</p>
-				<p class="name">g++ Archive</p>
-				<p class="description">A single archive containing Windows executable files for both games++ entries.</p>
-				<p class="downloads"><a href="gpp/bin/gpp.zip">Download</a></p>
-				<p class="awards">2015 - 2016</p>
-			</div>
-			<div class="preview-small-nohover">
-				<!--Main content-->
-				<img src="../images/ricochet-banner.png" alt="Game screenshot banner" />
-				<p class="big-name">Ricochet</p>
-				<!--Sidebox-->
-				<p class="awards"><a href="ricochet/bin/ricochet_v1.2.zip">Download</a></em></p>
-			</div><div class="preview-small-nohover">
-				<!--Main content-->
-				<img src="../images/duplication-banner.png" alt="Game screenshot banner" />
-				<p class="big-name">düplication</p>
-				<!--Sidebox-->
-				<p class="awards"><a href="ricochet/bin/duplication_v1.4.zip">Download</a></p>
+			<p class="content-p">games++ was an annual game jam hosted in both Hoboken, NJ and Omaha, NE. Each event was a ten-hour game jam with opening and closing ceremonies based on a secret theme, and entries were nominated for number of descriptive categories. This section is dedicated to the two games created for this event prior to its discontinuation.</p>
+
+			<div class="content-games">				
+				<div class="item-small">
+					<img src="../images/duplication-banner.png" alt="Duplication" />
+					<p class="name">Duplication</p>
+					<p class="description">Get yourself (or one of your numerous clones) to the area's exit.</p>
+					<p class="downloads"><a href="duplication/bin/duplication_v1.4.zip">Download</a></p>
+				</div><div class="item-small">
+					<img src="../images/ricochet-banner.png" alt="Ricochet" />
+					<p class="name">Ricochet</p>
+					<p class="description">Launch a fast-moving particle on the game board and trap it in a corner.</p>
+					<p class="downloads"><a href="ricochet/bin/ricochet_v1.2.zip">Download</a></p>
+				</div>
 			</div>
 
-			<h2 class="header">Miscellaneous / Other</h2>
-			<p class="category-description">Games made not for or with any specific event or organization.</p>
-			<div class="preview">
-				<!--Main content-->
-				<img src="../images/slipstream-banner.png" alt="Game screenshot banner" />
-				<p class="big-name">Slipstream</p>
-				<p class="name">Slipstream</p>
-				<p class="description">A simple, arcade-inspired shooter.<br />Aim for a high score!</p>
-				<p class="downloads"><a href="http://tehpilot.com/games/slipstream/">Play Online</a></p>
-				<!--Sidebox-->
-				<p class="awards">May 2016<br /><em class="first"></em></p>
-				<p class="event"></p>
+				
+			<h2 class="header">Miscellaneous</h2>
+
+			<div class="content-games">
+				<div class="item-wide">
+					<img src="../images/slipstream-banner.png" alt="Slipstream" />
+					<p class="name">Slipstream</p>
+					<p class="description">A simple, arcade-inspired shooter.<br />Aim for a high score!</p>
+					<p class="downloads"><a href="slipstream/index.html">Play Online</a></p>
+				</div>
+			</div>
+				
 			</div>
 		</div>
 	</section>
