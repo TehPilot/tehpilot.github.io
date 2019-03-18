@@ -209,3 +209,132 @@
 #noopacity:hover img {
 	opacity: 1;
 }
+
+@media only screen and (max-width: 600px) {
+	.item-square {
+		width: calc(100%);
+		height: 120px;
+		border-left: none;
+		border-right: none;
+	}
+
+	.item-square img {
+		width: 100%;
+		max-height: 120px;
+		overflow: hidden;
+	}
+
+	.item-square .name 		/* game name */
+	{
+		/* Positioning and display */
+		width: 476px;
+		height: 1em;
+		position: absolute;
+		top: -0.5em;
+		left: 0px;
+
+		/* Appearance */
+		text-align: center;
+		font-weight: bold;
+		color: gold;
+		text-shadow: 1px 1px black, -1px 1px black, 1px -1px black, -1px -1px black;
+		opacity: 0;
+		
+		/* This should be rendered above the bg image and some other items */
+		z-index: 3;
+	}
+
+	.item-square .awards {	/* awards / side panel information */
+
+		/* Positioning and display */
+		width: 120px;
+		position: absolute;
+		transform: translate(0, -50%);
+
+		top: 50%;
+		right: 0px;
+		margin: 0;
+		
+		/* Appearance */
+		color: #f0f7da;
+		opacity: 1;
+		text-align: center;
+	}
+
+	.item-square .awards em.placement {	/* awards formatting */
+		color: #E5E4D7;
+		font-style: normal;
+	}
+	.item-square .awards em.first {
+		color: #ffd700;
+		font-style: normal;
+	}
+	.item-square .awards em.second {
+		color: #C0C0C0;
+		font-style: normal;
+	}
+	.item-square .awards em.third {
+		color: #8C7853;
+		font-style: normal;
+	}
+
+	/* descriptive text */
+	.item-square .description {
+
+		/* Positioning and display */
+		width: 476px;
+		position: absolute;
+		text-align: center;
+		top: 41px;
+
+		margin: 0;
+		padding: 0;
+		
+		/* Appearance */
+		color: #f0f7da;
+		text-shadow: 1px 1px black, -1px 1px black, 1px -1px black, -1px -1px black;
+		overflow: hidden;
+		opacity: 0;
+
+		z-index: 3;
+	}
+
+	/* download / "More Info" link */
+	.item-square .downloads {
+
+		width: 480px;
+		height: 1em;
+		position: absolute;
+		text-align: center;
+		
+		text-shadow: black;
+		color: #E5E4D7;
+		
+		left: 0px;
+		bottom: -0.5em;
+		
+		opacity: 0;
+		z-index: 3;
+	}
+
+	.item-square .downloads a {
+		font-weight: bold;
+	}
+
+	/* fade effects for wide items */
+	.item-square:hover img {
+		opacity: 0.25;
+	}
+
+	.item-square:hover .name {
+		opacity: 1;
+	}
+
+	.item-square:hover .description {
+		opacity: 1;
+	}
+
+	.item-square:hover .downloads {
+		opacity: 1;
+	}
+}

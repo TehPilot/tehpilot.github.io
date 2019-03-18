@@ -1209,6 +1209,7 @@ footer {
 
 	#navbar-links-mobile {
 		display: block;
+		position: absolute;
 		text-align: left;
 		margin: 0.5em;
 		margin-left: 1em;
