@@ -1,0 +1,6876 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>stepchartle [test]</title>
+        <link rel="stylesheet" href="style.css" />
+        <script type="text/javascript">
+            
+            const songData = {
+                "S1-DSP": {
+	name: "†渚の小悪魔ラヴリィ～レイディオ†",
+	diff: "DSP",
+	level: 11,
+	str: 69,
+	vol: 63,
+	air: 23,
+	fre: 63,
+	cha: 18,
+	mix: "2013"
+},
+"S2-ESP": {
+	name: "†渚の小悪魔ラヴリィ～レイディオ†",
+	diff: "ESP",
+	level: 16,
+	str: 109,
+	vol: 113,
+	air: 54,
+	fre: 27,
+	cha: 86,
+	mix: "2013"
+},
+"S3-CSP": {
+	name: "†渚の小悪魔ラヴリィ～レイディオ†",
+	diff: "CSP",
+	level: 9,
+	str: 56,
+	vol: 55,
+	air: 96,
+	fre: 49,
+	cha: 10,
+	mix: "2013"
+},
+"S4-DSP": {
+	name: "888",
+	diff: "DSP",
+	level: 13,
+	str: 90,
+	vol: 83,
+	air: 36,
+	fre: 53,
+	cha: 38,
+	mix: "X2"
+},
+"S5-ESP": {
+	name: "888",
+	diff: "ESP",
+	level: 14,
+	str: 109,
+	vol: 102,
+	air: 23,
+	fre: 43,
+	cha: 55,
+	mix: "X2"
+},
+"S6-CSP": {
+	name: "888",
+	diff: "CSP",
+	level: 18,
+	str: 200,
+	vol: 117,
+	air: 25,
+	fre: 22,
+	cha: 110,
+	mix: "X2"
+},
+"S7-DSP": {
+	name: "A Brighter Day",
+	diff: "DSP",
+	level: 7,
+	str: 39,
+	vol: 38,
+	air: 10,
+	fre: 52,
+	cha: 3,
+	mix: "X2"
+},
+"S8-ESP": {
+	name: "A Brighter Day",
+	diff: "ESP",
+	level: 9,
+	str: 46,
+	vol: 38,
+	air: 16,
+	fre: 70,
+	cha: 9,
+	mix: "X2"
+},
+"S9-CSP": {
+	name: "A Brighter Day",
+	diff: "CSP",
+	level: 12,
+	str: 64,
+	vol: 70,
+	air: 10,
+	fre: 27,
+	cha: 33,
+	mix: "X2"
+},
+"S10-DSP": {
+	name: "ACE FOR ACES",
+	diff: "DSP",
+	level: 13,
+	str: 76,
+	vol: 80,
+	air: 27,
+	fre: 31,
+	cha: 79,
+	mix: "A"
+},
+"S11-ESP": {
+	name: "ACE FOR ACES",
+	diff: "ESP",
+	level: 15,
+	str: 113,
+	vol: 159,
+	air: 36,
+	fre: 19,
+	cha: 106,
+	mix: "A"
+},
+"S12-CSP": {
+	name: "ACE FOR ACES",
+	diff: "CSP",
+	level: 18,
+	str: 172,
+	vol: 260,
+	air: 80,
+	fre: 28,
+	cha: 175,
+	mix: "A"
+},
+"S13-CSP": {
+	name: "ACROSS WORLD",
+	diff: "CSP",
+	level: 14,
+	str: 82,
+	vol: 111,
+	air: 81,
+	fre: 52,
+	cha: 70,
+	mix: "2013"
+},
+"S14-DSP": {
+	name: "Adularia",
+	diff: "DSP",
+	level: 10,
+	str: 50,
+	vol: 60,
+	air: 32,
+	fre: 41,
+	cha: 11,
+	mix: "2014"
+},
+"S15-ESP": {
+	name: "Adularia",
+	diff: "ESP",
+	level: 14,
+	str: 73,
+	vol: 82,
+	air: 20,
+	fre: 51,
+	cha: 52,
+	mix: "2014"
+},
+"S16-DSP": {
+	name: "ÆTHER",
+	diff: "DSP",
+	level: 14,
+	str: 92,
+	vol: 104,
+	air: 56,
+	fre: 23,
+	cha: 15,
+	mix: "2014"
+},
+"S17-ESP": {
+	name: "ÆTHER",
+	diff: "ESP",
+	level: 17,
+	str: 132,
+	vol: 111,
+	air: 87,
+	fre: 13,
+	cha: 45,
+	mix: "2014"
+},
+"S18-ESP": {
+	name: "AFRONOVA",
+	diff: "ESP",
+	level: 13,
+	str: 89,
+	vol: 66,
+	air: 78,
+	fre: 0,
+	cha: 31,
+	mix: "3rd"
+},
+"S19-ESP": {
+	name: "AFRONOVA PRIMEVAL",
+	diff: "ESP",
+	level: 12,
+	str: 85,
+	vol: 66,
+	air: 56,
+	fre: 0,
+	cha: 28,
+	mix: "5th"
+},
+"S20-ESP": {
+	name: "Ah La La La",
+	diff: "ESP",
+	level: 12,
+	str: 69,
+	vol: 48,
+	air: 10,
+	fre: 20,
+	cha: 49,
+	mix: "2013"
+},
+"S21-DSP": {
+	name: "AI",
+	diff: "DSP",
+	level: 12,
+	str: 75,
+	vol: 63,
+	air: 47,
+	fre: 40,
+	cha: 22,
+	mix: "A20+"
+},
+"S22-ESP": {
+	name: "AI",
+	diff: "ESP",
+	level: 16,
+	str: 99,
+	vol: 101,
+	air: 80,
+	fre: 58,
+	cha: 84,
+	mix: "A20+"
+},
+"S23-DSP": {
+	name: "Air Heroes",
+	diff: "DSP",
+	level: 11,
+	str: 65,
+	vol: 51,
+	air: 21,
+	fre: 58,
+	cha: 20,
+	mix: "2013"
+},
+"S24-ESP": {
+	name: "Air Heroes",
+	diff: "ESP",
+	level: 15,
+	str: 103,
+	vol: 108,
+	air: 25,
+	fre: 36,
+	cha: 100,
+	mix: "2013"
+},
+"S25-CSP": {
+	name: "Air Heroes",
+	diff: "CSP",
+	level: 18,
+	str: 162,
+	vol: 108,
+	air: 29,
+	fre: 56,
+	cha: 111,
+	mix: "2013"
+},
+"S26-DSP": {
+	name: "ALGORITHM",
+	diff: "DSP",
+	level: 11,
+	str: 57,
+	vol: 43,
+	air: 29,
+	fre: 9,
+	cha: 24,
+	mix: "A"
+},
+"S27-ESP": {
+	name: "ALGORITHM",
+	diff: "ESP",
+	level: 13,
+	str: 76,
+	vol: 86,
+	air: 41,
+	fre: 33,
+	cha: 102,
+	mix: "A"
+},
+"S28-DSP": {
+	name: "Another Phase",
+	diff: "DSP",
+	level: 11,
+	str: 65,
+	vol: 52,
+	air: 14,
+	fre: 11,
+	cha: 40,
+	mix: "2013"
+},
+"S29-ESP": {
+	name: "Another Phase",
+	diff: "ESP",
+	level: 15,
+	str: 122,
+	vol: 102,
+	air: 30,
+	fre: 11,
+	cha: 109,
+	mix: "2013"
+},
+"S30-CSP": {
+	name: "Another Phase",
+	diff: "CSP",
+	level: 16,
+	str: 126,
+	vol: 102,
+	air: 60,
+	fre: 11,
+	cha: 110,
+	mix: "2013"
+},
+"S31-DSP": {
+	name: "ANTI ANTHEM",
+	diff: "DSP",
+	level: 13,
+	str: 64,
+	vol: 77,
+	air: 29,
+	fre: 30,
+	cha: 132,
+	mix: "A20+"
+},
+"S32-ESP": {
+	name: "ANTI ANTHEM",
+	diff: "ESP",
+	level: 15,
+	str: 95,
+	vol: 101,
+	air: 23,
+	fre: 22,
+	cha: 199,
+	mix: "A20+"
+},
+"S33-DSP": {
+	name: "Anti-Matter",
+	diff: "DSP",
+	level: 14,
+	str: 90,
+	vol: 102,
+	air: 10,
+	fre: 42,
+	cha: 15,
+	mix: "X2"
+},
+"S34-ESP": {
+	name: "Anti-Matter",
+	diff: "ESP",
+	level: 17,
+	str: 140,
+	vol: 129,
+	air: 23,
+	fre: 27,
+	cha: 83,
+	mix: "X2"
+},
+"S35-CSP": {
+	name: "Anti-Matter",
+	diff: "CSP",
+	level: 18,
+	str: 178,
+	vol: 136,
+	air: 23,
+	fre: 20,
+	cha: 103,
+	mix: "X2"
+},
+"S36-DSP": {
+	name: "Arrabbiata",
+	diff: "DSP",
+	level: 13,
+	str: 76,
+	vol: 56,
+	air: 106,
+	fre: 2,
+	cha: 10,
+	mix: "SN2"
+},
+"S37-ESP": {
+	name: "Arrabbiata",
+	diff: "ESP",
+	level: 15,
+	str: 92,
+	vol: 75,
+	air: 96,
+	fre: 2,
+	cha: 26,
+	mix: "SN2"
+},
+"S38-ESP": {
+	name: "Astrogazer",
+	diff: "ESP",
+	level: 15,
+	str: 118,
+	vol: 95,
+	air: 20,
+	fre: 13,
+	cha: 112,
+	mix: "A"
+},
+"S39-CSP": {
+	name: "Astrogazer",
+	diff: "CSP",
+	level: 18,
+	str: 162,
+	vol: 110,
+	air: 32,
+	fre: 35,
+	cha: 123,
+	mix: "A"
+},
+"S40-DSP": {
+	name: "Avenger",
+	diff: "DSP",
+	level: 14,
+	str: 84,
+	vol: 109,
+	air: 49,
+	fre: 1,
+	cha: 41,
+	mix: "A20"
+},
+"S41-ESP": {
+	name: "Avenger",
+	diff: "ESP",
+	level: 17,
+	str: 134,
+	vol: 123,
+	air: 36,
+	fre: 17,
+	cha: 102,
+	mix: "A20"
+},
+"S42-CSP": {
+	name: "B4U (\"VOLTAGE\" Special)",
+	diff: "CSP",
+	level: 14,
+	str: 79,
+	vol: 101,
+	air: 85,
+	fre: 0,
+	cha: 77,
+	mix: "SN2"
+},
+"S43-ESP": {
+	name: "Back In Your Arms",
+	diff: "ESP",
+	level: 10,
+	str: 59,
+	vol: 44,
+	air: 12,
+	fre: 42,
+	cha: 29,
+	mix: "2013"
+},
+"S44-ESP": {
+	name: "bag",
+	diff: "ESP",
+	level: 13,
+	str: 83,
+	vol: 51,
+	air: 0,
+	fre: 0,
+	cha: 118,
+	mix: "EXTR"
+},
+"S45-CSP": {
+	name: "bag",
+	diff: "CSP",
+	level: 13,
+	str: 83,
+	vol: 51,
+	air: 0,
+	fre: 0,
+	cha: 119,
+	mix: "EXTR"
+},
+"S46-ESP": {
+	name: "Baile Le Samba",
+	diff: "ESP",
+	level: 11,
+	str: 51,
+	vol: 38,
+	air: 61,
+	fre: 53,
+	cha: 100,
+	mix: "SN"
+},
+"S47-ESP": {
+	name: "BALLAD FOR YOU～想いの雨～",
+	diff: "ESP",
+	level: 11,
+	str: 40,
+	vol: 32,
+	air: 0,
+	fre: 65,
+	cha: 86,
+	mix: "SN"
+},
+"S48-DSP": {
+	name: "BALLAD THE FEATHERS",
+	diff: "DSP",
+	level: 7,
+	str: 40,
+	vol: 27,
+	air: 9,
+	fre: 0,
+	cha: 5,
+	mix: "X2"
+},
+"S49-ESP": {
+	name: "BALLAD THE FEATHERS",
+	diff: "ESP",
+	level: 10,
+	str: 55,
+	vol: 44,
+	air: 10,
+	fre: 0,
+	cha: 27,
+	mix: "X2"
+},
+"S50-CSP": {
+	name: "BALLAD THE FEATHERS",
+	diff: "CSP",
+	level: 8,
+	str: 40,
+	vol: 27,
+	air: 29,
+	fre: 0,
+	cha: 4,
+	mix: "X2"
+},
+"S51-DSP": {
+	name: "Bang Pad(Werk Mix)",
+	diff: "DSP",
+	level: 9,
+	str: 59,
+	vol: 46,
+	air: 25,
+	fre: 41,
+	cha: 35,
+	mix: "A20+"
+},
+"S52-ESP": {
+	name: "Bang Pad(Werk Mix)",
+	diff: "ESP",
+	level: 13,
+	str: 92,
+	vol: 80,
+	air: 41,
+	fre: 19,
+	cha: 102,
+	mix: "A20+"
+},
+"S53-DSP": {
+	name: "Beautiful Dream",
+	diff: "DSP",
+	level: 9,
+	str: 51,
+	vol: 53,
+	air: 23,
+	fre: 28,
+	cha: 9,
+	mix: "2013"
+},
+"S54-ESP": {
+	name: "Beautiful Dream",
+	diff: "ESP",
+	level: 12,
+	str: 69,
+	vol: 60,
+	air: 45,
+	fre: 42,
+	cha: 22,
+	mix: "2013"
+},
+"S55-CSP": {
+	name: "Beautiful Dream",
+	diff: "CSP",
+	level: 15,
+	str: 96,
+	vol: 110,
+	air: 56,
+	fre: 64,
+	cha: 98,
+	mix: "2013"
+},
+"S56-DSP": {
+	name: "Blew My Mind",
+	diff: "DSP",
+	level: 12,
+	str: 83,
+	vol: 115,
+	air: 29,
+	fre: 19,
+	cha: 24,
+	mix: "2013"
+},
+"S57-ESP": {
+	name: "Blew My Mind",
+	diff: "ESP",
+	level: 16,
+	str: 131,
+	vol: 141,
+	air: 81,
+	fre: 11,
+	cha: 83,
+	mix: "2013"
+},
+"S58-CSP": {
+	name: "Blew My Mind",
+	diff: "CSP",
+	level: 18,
+	str: 162,
+	vol: 200,
+	air: 98,
+	fre: 23,
+	cha: 103,
+	mix: "2013"
+},
+"S59-ESP": {
+	name: "Bombay Bomb",
+	diff: "ESP",
+	level: 12,
+	str: 81,
+	vol: 54,
+	air: 0,
+	fre: 0,
+	cha: 43,
+	mix: "2013"
+},
+"S60-DSP": {
+	name: "Boom Boom Dollar (Red Monster Mix)",
+	diff: "DSP",
+	level: 7,
+	str: 45,
+	vol: 39,
+	air: 5,
+	fre: 0,
+	cha: 7,
+	mix: "2nd"
+},
+"S61-ESP": {
+	name: "Boom Boom Dollar (Red Monster Mix)",
+	diff: "ESP",
+	level: 9,
+	str: 60,
+	vol: 45,
+	air: 14,
+	fre: 0,
+	cha: 21,
+	mix: "2nd"
+},
+"S62-CSP": {
+	name: "Boom Boom Dollar (Red Monster Mix)",
+	diff: "CSP",
+	level: 11,
+	str: 67,
+	vol: 50,
+	air: 104,
+	fre: 21,
+	cha: 59,
+	mix: "2nd"
+},
+"S63-CSP": {
+	name: "BRILLIANT 2U (\"STREAM\" Special)",
+	diff: "CSP",
+	level: 13,
+	str: 90,
+	vol: 62,
+	air: 20,
+	fre: 11,
+	cha: 91,
+	mix: "SN2"
+},
+"S64-ESP": {
+	name: "BRILLIANT 2U (AKBK MIX)",
+	diff: "ESP",
+	level: 15,
+	str: 118,
+	vol: 104,
+	air: 63,
+	fre: 26,
+	cha: 105,
+	mix: "X3"
+},
+"S65-ESP": {
+	name: "CaptivAte～誓い～",
+	diff: "ESP",
+	level: 13,
+	str: 83,
+	vol: 66,
+	air: 32,
+	fre: 36,
+	cha: 70,
+	mix: "SN2"
+},
+"S66-ESP": {
+	name: "CG Project",
+	diff: "ESP",
+	level: 12,
+	str: 80,
+	vol: 66,
+	air: 58,
+	fre: 30,
+	cha: 26,
+	mix: "X2"
+},
+"S67-DSP": {
+	name: "CHAOS",
+	diff: "DSP",
+	level: 12,
+	str: 55,
+	vol: 45,
+	air: 7,
+	fre: 7,
+	cha: 134,
+	mix: "SN"
+},
+"S68-ESP": {
+	name: "CHAOS",
+	diff: "ESP",
+	level: 14,
+	str: 73,
+	vol: 60,
+	air: 21,
+	fre: 12,
+	cha: 164,
+	mix: "SN"
+},
+"S69-CSP": {
+	name: "CHAOS",
+	diff: "CSP",
+	level: 16,
+	str: 92,
+	vol: 81,
+	air: 30,
+	fre: 14,
+	cha: 200,
+	mix: "SN"
+},
+"S70-ESP": {
+	name: "chaos eater",
+	diff: "ESP",
+	level: 16,
+	str: 109,
+	vol: 107,
+	air: 52,
+	fre: 15,
+	cha: 102,
+	mix: "2014"
+},
+"S71-CSP": {
+	name: "CHAOS Terror-Tech Mix",
+	diff: "CSP",
+	level: 17,
+	str: 111,
+	vol: 98,
+	air: 61,
+	fre: 18,
+	cha: 169,
+	mix: "A"
+},
+"S72-ESP": {
+	name: "Children of the Beat",
+	diff: "ESP",
+	level: 11,
+	str: 60,
+	vol: 53,
+	air: 81,
+	fre: 44,
+	cha: 13,
+	mix: "2013"
+},
+"S73-CSP": {
+	name: "Children of the Beat",
+	diff: "CSP",
+	level: 12,
+	str: 72,
+	vol: 53,
+	air: 72,
+	fre: 24,
+	cha: 23,
+	mix: "2013"
+},
+"S74-ESP": {
+	name: "Chinese Snowy Dance",
+	diff: "ESP",
+	level: 16,
+	str: 128,
+	vol: 108,
+	air: 5,
+	fre: 58,
+	cha: 105,
+	mix: "2013"
+},
+"S75-ESP": {
+	name: "Chronos",
+	diff: "ESP",
+	level: 12,
+	str: 64,
+	vol: 58,
+	air: 65,
+	fre: 35,
+	cha: 58,
+	mix: "X3"
+},
+"S76-CSP": {
+	name: "Chronos",
+	diff: "CSP",
+	level: 15,
+	str: 94,
+	vol: 85,
+	air: 80,
+	fre: 36,
+	cha: 105,
+	mix: "X3"
+},
+"S77-ESP": {
+	name: "Cleopatrysm",
+	diff: "ESP",
+	level: 15,
+	str: 95,
+	vol: 95,
+	air: 20,
+	fre: 19,
+	cha: 82,
+	mix: "2014"
+},
+"S78-DSP": {
+	name: "Come Back To Me",
+	diff: "DSP",
+	level: 11,
+	str: 58,
+	vol: 57,
+	air: 16,
+	fre: 31,
+	cha: 17,
+	mix: "A20+"
+},
+"S79-ESP": {
+	name: "Come Back To Me",
+	diff: "ESP",
+	level: 14,
+	str: 82,
+	vol: 100,
+	air: 21,
+	fre: 19,
+	cha: 70,
+	mix: "A20+"
+},
+"S80-ESP": {
+	name: "Come to Life",
+	diff: "ESP",
+	level: 16,
+	str: 99,
+	vol: 105,
+	air: 30,
+	fre: 46,
+	cha: 103,
+	mix: "A"
+},
+"S81-CSP": {
+	name: "Come to Life",
+	diff: "CSP",
+	level: 18,
+	str: 135,
+	vol: 105,
+	air: 50,
+	fre: 48,
+	cha: 110,
+	mix: "A"
+},
+"S82-DSP": {
+	name: "Condor",
+	diff: "DSP",
+	level: 9,
+	str: 50,
+	vol: 41,
+	air: 25,
+	fre: 48,
+	cha: 17,
+	mix: "2013"
+},
+"S83-ESP": {
+	name: "Condor",
+	diff: "ESP",
+	level: 13,
+	str: 72,
+	vol: 71,
+	air: 10,
+	fre: 27,
+	cha: 70,
+	mix: "2013"
+},
+"S84-CSP": {
+	name: "Condor",
+	diff: "CSP",
+	level: 15,
+	str: 96,
+	vol: 94,
+	air: 32,
+	fre: 70,
+	cha: 104,
+	mix: "2013"
+},
+"S85-ESP": {
+	name: "Confession",
+	diff: "ESP",
+	level: 12,
+	str: 58,
+	vol: 50,
+	air: 47,
+	fre: 74,
+	cha: 30,
+	mix: "2013"
+},
+"S86-CSP": {
+	name: "Confession",
+	diff: "CSP",
+	level: 14,
+	str: 89,
+	vol: 87,
+	air: 52,
+	fre: 40,
+	cha: 101,
+	mix: "2013"
+},
+"S87-CSP": {
+	name: "Cosmic Hurricane",
+	diff: "CSP",
+	level: 15,
+	str: 97,
+	vol: 104,
+	air: 36,
+	fre: 82,
+	cha: 100,
+	mix: "X3"
+},
+"S88-DSP": {
+	name: "Cosy Catastrophe",
+	diff: "DSP",
+	level: 13,
+	str: 77,
+	vol: 103,
+	air: 27,
+	fre: 37,
+	cha: 26,
+	mix: "A"
+},
+"S89-ESP": {
+	name: "Cosy Catastrophe",
+	diff: "ESP",
+	level: 16,
+	str: 100,
+	vol: 135,
+	air: 69,
+	fre: 28,
+	cha: 90,
+	mix: "A"
+},
+"S90-CSP": {
+	name: "Cosy Catastrophe",
+	diff: "CSP",
+	level: 18,
+	str: 147,
+	vol: 188,
+	air: 67,
+	fre: 37,
+	cha: 112,
+	mix: "A"
+},
+"S91-ESP": {
+	name: "Crazy Control",
+	diff: "ESP",
+	level: 9,
+	str: 50,
+	vol: 61,
+	air: 30,
+	fre: 0,
+	cha: 52,
+	mix: "X2"
+},
+"S92-CSP": {
+	name: "Crazy Control",
+	diff: "CSP",
+	level: 12,
+	str: 57,
+	vol: 61,
+	air: 36,
+	fre: 0,
+	cha: 75,
+	mix: "X2"
+},
+"S93-ESP": {
+	name: "CRAZY♥LOVE",
+	diff: "ESP",
+	level: 15,
+	str: 95,
+	vol: 101,
+	air: 87,
+	fre: 57,
+	cha: 100,
+	mix: "X3"
+},
+"S94-CSP": {
+	name: "D2R (\"FREEZE\" Special)",
+	diff: "CSP",
+	level: 12,
+	str: 37,
+	vol: 60,
+	air: 12,
+	fre: 200,
+	cha: 13,
+	mix: "SN2"
+},
+"S95-ESP": {
+	name: "Daily Lunch Special",
+	diff: "ESP",
+	level: 14,
+	str: 88,
+	vol: 85,
+	air: 50,
+	fre: 73,
+	cha: 51,
+	mix: "2014"
+},
+"S96-DSP": {
+	name: "DAM DARIRAM",
+	diff: "DSP",
+	level: 8,
+	str: 47,
+	vol: 41,
+	air: 41,
+	fre: 24,
+	cha: 11,
+	mix: "X2"
+},
+"S97-ESP": {
+	name: "DAM DARIRAM",
+	diff: "ESP",
+	level: 11,
+	str: 68,
+	vol: 59,
+	air: 18,
+	fre: 25,
+	cha: 57,
+	mix: "X2"
+},
+"S98-CSP": {
+	name: "DAM DARIRAM",
+	diff: "CSP",
+	level: 5,
+	str: 29,
+	vol: 23,
+	air: 41,
+	fre: 46,
+	cha: 0,
+	mix: "X2"
+},
+"S99-DSP": {
+	name: "DAM DARIRAM",
+	diff: "DSP",
+	level: 8,
+	str: 47,
+	vol: 41,
+	air: 41,
+	fre: 24,
+	cha: 11,
+	mix: "X2"
+},
+"S100-ESP": {
+	name: "DAM DARIRAM",
+	diff: "ESP",
+	level: 11,
+	str: 68,
+	vol: 59,
+	air: 18,
+	fre: 25,
+	cha: 57,
+	mix: "X2"
+},
+"S101-CSP": {
+	name: "DAM DARIRAM",
+	diff: "CSP",
+	level: 5,
+	str: 29,
+	vol: 23,
+	air: 41,
+	fre: 46,
+	cha: 0,
+	mix: "X2"
+},
+"S102-DSP": {
+	name: "Dance Dance Revolution",
+	diff: "DSP",
+	level: 8,
+	str: 51,
+	vol: 37,
+	air: 107,
+	fre: 4,
+	cha: 10,
+	mix: "EXTR"
+},
+"S103-ESP": {
+	name: "Dance Dance Revolution",
+	diff: "ESP",
+	level: 12,
+	str: 74,
+	vol: 62,
+	air: 52,
+	fre: 0,
+	cha: 49,
+	mix: "EXTR"
+},
+"S104-CSP": {
+	name: "Dance Dance Revolution",
+	diff: "CSP",
+	level: 12,
+	str: 78,
+	vol: 62,
+	air: 12,
+	fre: 0,
+	cha: 42,
+	mix: "EXTR"
+},
+"S105-DSP": {
+	name: "DDR TAGMIX -LAST DanceR-",
+	diff: "DSP",
+	level: 14,
+	str: 86,
+	vol: 138,
+	air: 69,
+	fre: 51,
+	cha: 107,
+	mix: "A20+"
+},
+"S106-ESP": {
+	name: "DDR TAGMIX -LAST DanceR-",
+	diff: "ESP",
+	level: 16,
+	str: 124,
+	vol: 138,
+	air: 65,
+	fre: 31,
+	cha: 122,
+	mix: "A20+"
+},
+"S107-ESP": {
+	name: "DEAD END",
+	diff: "ESP",
+	level: 12,
+	str: 88,
+	vol: 63,
+	air: 45,
+	fre: 0,
+	cha: 38,
+	mix: "3rd"
+},
+"S108-CSP": {
+	name: "DEAD END (\"GROOVE RADAR\" Special)",
+	diff: "CSP",
+	level: 18,
+	str: 95,
+	vol: 103,
+	air: 100,
+	fre: 100,
+	cha: 116,
+	mix: "SN2"
+},
+"S109-DSP": {
+	name: "Decade",
+	diff: "DSP",
+	level: 8,
+	str: 43,
+	vol: 37,
+	air: 23,
+	fre: 87,
+	cha: 5,
+	mix: "X2"
+},
+"S110-ESP": {
+	name: "Decade",
+	diff: "ESP",
+	level: 11,
+	str: 53,
+	vol: 49,
+	air: 9,
+	fre: 93,
+	cha: 18,
+	mix: "X2"
+},
+"S111-ESP": {
+	name: "Desert Journey",
+	diff: "ESP",
+	level: 12,
+	str: 68,
+	vol: 58,
+	air: 16,
+	fre: 40,
+	cha: 46,
+	mix: "2013"
+},
+"S112-CSP": {
+	name: "Desert Journey",
+	diff: "CSP",
+	level: 15,
+	str: 93,
+	vol: 87,
+	air: 58,
+	fre: 26,
+	cha: 103,
+	mix: "2013"
+},
+"S113-ESP": {
+	name: "Destination",
+	diff: "ESP",
+	level: 15,
+	str: 91,
+	vol: 107,
+	air: 27,
+	fre: 61,
+	cha: 111,
+	mix: "2014"
+},
+"S114-ESP": {
+	name: "Determination",
+	diff: "ESP",
+	level: 14,
+	str: 75,
+	vol: 76,
+	air: 49,
+	fre: 52,
+	cha: 28,
+	mix: "A"
+},
+"S115-CSP": {
+	name: "Diamond Dust",
+	diff: "CSP",
+	level: 13,
+	str: 63,
+	vol: 61,
+	air: 96,
+	fre: 41,
+	cha: 64,
+	mix: "X3"
+},
+"S116-ESP": {
+	name: "Diamond Night",
+	diff: "ESP",
+	level: 12,
+	str: 60,
+	vol: 50,
+	air: 1,
+	fre: 43,
+	cha: 64,
+	mix: "2013"
+},
+"S117-CSP": {
+	name: "Diamond Night",
+	diff: "CSP",
+	level: 14,
+	str: 78,
+	vol: 73,
+	air: 14,
+	fre: 43,
+	cha: 100,
+	mix: "2013"
+},
+"S118-DSP": {
+	name: "Din Don Dan",
+	diff: "DSP",
+	level: 7,
+	str: 45,
+	vol: 40,
+	air: 40,
+	fre: 16,
+	cha: 7,
+	mix: "2014"
+},
+"S119-ESP": {
+	name: "Din Don Dan",
+	diff: "ESP",
+	level: 10,
+	str: 63,
+	vol: 52,
+	air: 25,
+	fre: 20,
+	cha: 43,
+	mix: "2014"
+},
+"S120-CSP": {
+	name: "Din Don Dan",
+	diff: "CSP",
+	level: 12,
+	str: 73,
+	vol: 58,
+	air: 29,
+	fre: 16,
+	cha: 53,
+	mix: "2014"
+},
+"S121-ESP": {
+	name: "dirty digital",
+	diff: "ESP",
+	level: 11,
+	str: 58,
+	vol: 70,
+	air: 25,
+	fre: 14,
+	cha: 39,
+	mix: "X2"
+},
+"S122-CSP": {
+	name: "dirty digital",
+	diff: "CSP",
+	level: 13,
+	str: 71,
+	vol: 93,
+	air: 23,
+	fre: 5,
+	cha: 85,
+	mix: "X2"
+},
+"S123-ESP": {
+	name: "Dispersion Star",
+	diff: "ESP",
+	level: 13,
+	str: 75,
+	vol: 90,
+	air: 10,
+	fre: 51,
+	cha: 55,
+	mix: "2014"
+},
+"S124-ESP": {
+	name: "Dream Machine",
+	diff: "ESP",
+	level: 11,
+	str: 68,
+	vol: 46,
+	air: 18,
+	fre: 26,
+	cha: 55,
+	mix: "X"
+},
+"S125-DSP": {
+	name: "DYNAMITE RAVE",
+	diff: "DSP",
+	level: 10,
+	str: 58,
+	vol: 50,
+	air: 45,
+	fre: 0,
+	cha: 20,
+	mix: "3rd"
+},
+"S126-ESP": {
+	name: "DYNAMITE RAVE",
+	diff: "ESP",
+	level: 12,
+	str: 87,
+	vol: 56,
+	air: 21,
+	fre: 0,
+	cha: 72,
+	mix: "3rd"
+},
+"S127-CSP": {
+	name: "DYNAMITE RAVE",
+	diff: "CSP",
+	level: 12,
+	str: 79,
+	vol: 68,
+	air: 49,
+	fre: 10,
+	cha: 64,
+	mix: "3rd"
+},
+"S128-CSP": {
+	name: "DYNAMITE RAVE (\"AIR\" Special)",
+	diff: "CSP",
+	level: 8,
+	str: 47,
+	vol: 37,
+	air: 159,
+	fre: 0,
+	cha: 1,
+	mix: "SN2"
+},
+"S129-DSP": {
+	name: "ECSTASY",
+	diff: "DSP",
+	level: 8,
+	str: 45,
+	vol: 38,
+	air: 14,
+	fre: 0,
+	cha: 12,
+	mix: "5th"
+},
+"S130-ESP": {
+	name: "ECSTASY",
+	diff: "ESP",
+	level: 10,
+	str: 53,
+	vol: 44,
+	air: 21,
+	fre: 0,
+	cha: 22,
+	mix: "5th"
+},
+"S131-CSP": {
+	name: "ECSTASY (midnight blue mix)",
+	diff: "CSP",
+	level: 11,
+	str: 59,
+	vol: 48,
+	air: 30,
+	fre: 30,
+	cha: 28,
+	mix: "MAX2"
+},
+"S132-DSP": {
+	name: "EGOISM 440",
+	diff: "DSP",
+	level: 13,
+	str: 88,
+	vol: 106,
+	air: 10,
+	fre: 15,
+	cha: 40,
+	mix: "2014"
+},
+"S133-ESP": {
+	name: "EGOISM 440",
+	diff: "ESP",
+	level: 18,
+	str: 152,
+	vol: 135,
+	air: 10,
+	fre: 21,
+	cha: 120,
+	mix: "2014"
+},
+"S134-CSP": {
+	name: "EGOISM 440",
+	diff: "CSP",
+	level: 19,
+	str: 226,
+	vol: 142,
+	air: 18,
+	fre: 5,
+	cha: 140,
+	mix: "2014"
+},
+"S135-DSP": {
+	name: "Elemental Creation",
+	diff: "DSP",
+	level: 14,
+	str: 96,
+	vol: 131,
+	air: 14,
+	fre: 29,
+	cha: 24,
+	mix: "2013"
+},
+"S136-ESP": {
+	name: "Elemental Creation",
+	diff: "ESP",
+	level: 17,
+	str: 145,
+	vol: 145,
+	air: 47,
+	fre: 23,
+	cha: 70,
+	mix: "2013"
+},
+"S137-CSP": {
+	name: "Elemental Creation",
+	diff: "CSP",
+	level: 18,
+	str: 165,
+	vol: 152,
+	air: 49,
+	fre: 23,
+	cha: 96,
+	mix: "2013"
+},
+"S138-ESP": {
+	name: "Elysium",
+	diff: "ESP",
+	level: 11,
+	str: 58,
+	vol: 54,
+	air: 10,
+	fre: 93,
+	cha: 25,
+	mix: "2014"
+},
+"S139-DSP": {
+	name: "ENDYMION",
+	diff: "DSP",
+	level: 15,
+	str: 97,
+	vol: 110,
+	air: 54,
+	fre: 52,
+	cha: 65,
+	mix: "A"
+},
+"S140-ESP": {
+	name: "ENDYMION",
+	diff: "ESP",
+	level: 18,
+	str: 154,
+	vol: 154,
+	air: 81,
+	fre: 52,
+	cha: 105,
+	mix: "A"
+},
+"S141-CSP": {
+	name: "ENDYMION",
+	diff: "CSP",
+	level: 19,
+	str: 198,
+	vol: 158,
+	air: 106,
+	fre: 43,
+	cha: 115,
+	mix: "A"
+},
+"S142-ESP": {
+	name: "Engraved Mark",
+	diff: "ESP",
+	level: 15,
+	str: 101,
+	vol: 112,
+	air: 16,
+	fre: 21,
+	cha: 102,
+	mix: "2014"
+},
+"S143-DSP": {
+	name: "escape",
+	diff: "DSP",
+	level: 8,
+	str: 46,
+	vol: 35,
+	air: 38,
+	fre: 19,
+	cha: 8,
+	mix: "2013"
+},
+"S144-ESP": {
+	name: "escape",
+	diff: "ESP",
+	level: 10,
+	str: 59,
+	vol: 46,
+	air: 49,
+	fre: 19,
+	cha: 20,
+	mix: "2013"
+},
+"S145-CSP": {
+	name: "escape",
+	diff: "CSP",
+	level: 13,
+	str: 82,
+	vol: 52,
+	air: 109,
+	fre: 25,
+	cha: 76,
+	mix: "2013"
+},
+"S146-ESP": {
+	name: "esrev:eR",
+	diff: "ESP",
+	level: 13,
+	str: 81,
+	vol: 64,
+	air: 20,
+	fre: 60,
+	cha: 74,
+	mix: "2014"
+},
+"S147-DSP": {
+	name: "Evans",
+	diff: "DSP",
+	level: 14,
+	str: 91,
+	vol: 85,
+	air: 36,
+	fre: 27,
+	cha: 100,
+	mix: "A20+"
+},
+"S148-ESP": {
+	name: "Evans",
+	diff: "ESP",
+	level: 17,
+	str: 139,
+	vol: 111,
+	air: 58,
+	fre: 25,
+	cha: 111,
+	mix: "A20+"
+},
+"S149-DSP": {
+	name: "Everything I Need",
+	diff: "DSP",
+	level: 6,
+	str: 31,
+	vol: 27,
+	air: 7,
+	fre: 113,
+	cha: 7,
+	mix: "2013"
+},
+"S150-ESP": {
+	name: "Everything I Need",
+	diff: "ESP",
+	level: 9,
+	str: 42,
+	vol: 35,
+	air: 1,
+	fre: 89,
+	cha: 25,
+	mix: "2013"
+},
+"S151-ESP": {
+	name: "exotic ethnic",
+	diff: "ESP",
+	level: 13,
+	str: 93,
+	vol: 63,
+	air: 34,
+	fre: 24,
+	cha: 44,
+	mix: "MAX"
+},
+"S152-DSP": {
+	name: "Fascination ～eternal love mix～",
+	diff: "DSP",
+	level: 13,
+	str: 81,
+	vol: 98,
+	air: 98,
+	fre: 0,
+	cha: 29,
+	mix: "SN"
+},
+"S153-ESP": {
+	name: "Fascination ～eternal love mix～",
+	diff: "ESP",
+	level: 16,
+	str: 137,
+	vol: 129,
+	air: 20,
+	fre: 3,
+	cha: 102,
+	mix: "SN"
+},
+"S154-CSP": {
+	name: "Fascination ～eternal love mix～",
+	diff: "CSP",
+	level: 18,
+	str: 132,
+	vol: 135,
+	air: 110,
+	fre: 12,
+	cha: 95,
+	mix: "SN"
+},
+"S155-DSP": {
+	name: "Fascination MAXX",
+	diff: "DSP",
+	level: 13,
+	str: 78,
+	vol: 94,
+	air: 43,
+	fre: 7,
+	cha: 102,
+	mix: "SN"
+},
+"S156-ESP": {
+	name: "Fascination MAXX",
+	diff: "ESP",
+	level: 17,
+	str: 149,
+	vol: 149,
+	air: 16,
+	fre: 4,
+	cha: 137,
+	mix: "SN"
+},
+"S157-CSP": {
+	name: "Fascination MAXX",
+	diff: "CSP",
+	level: 18,
+	str: 160,
+	vol: 149,
+	air: 18,
+	fre: 12,
+	cha: 138,
+	mix: "SN"
+},
+"S158-DSP": {
+	name: "Feel Good Inc.",
+	diff: "DSP",
+	level: 6,
+	str: 30,
+	vol: 34,
+	air: 10,
+	fre: 8,
+	cha: 5,
+	mix: "X2"
+},
+"S159-ESP": {
+	name: "Feel Good Inc.",
+	diff: "ESP",
+	level: 8,
+	str: 44,
+	vol: 46,
+	air: 9,
+	fre: 10,
+	cha: 14,
+	mix: "X2"
+},
+"S160-ESP": {
+	name: "Find The Way",
+	diff: "ESP",
+	level: 12,
+	str: 76,
+	vol: 96,
+	air: 30,
+	fre: 34,
+	cha: 42,
+	mix: "2013"
+},
+"S161-ESP": {
+	name: "FIRE FIRE",
+	diff: "ESP",
+	level: 14,
+	str: 90,
+	vol: 87,
+	air: 23,
+	fre: 14,
+	cha: 92,
+	mix: "X2"
+},
+"S162-DSP": {
+	name: "Firestorm",
+	diff: "DSP",
+	level: 13,
+	str: 67,
+	vol: 73,
+	air: 49,
+	fre: 52,
+	cha: 48,
+	mix: "A20"
+},
+"S163-ESP": {
+	name: "Firestorm",
+	diff: "ESP",
+	level: 16,
+	str: 83,
+	vol: 95,
+	air: 87,
+	fre: 86,
+	cha: 100,
+	mix: "A20"
+},
+"S164-CSP": {
+	name: "Firestorm",
+	diff: "CSP",
+	level: 16,
+	str: 93,
+	vol: 88,
+	air: 162,
+	fre: 27,
+	cha: 102,
+	mix: "A20"
+},
+"S165-DSP": {
+	name: "FLOWER",
+	diff: "DSP",
+	level: 10,
+	str: 59,
+	vol: 50,
+	air: 16,
+	fre: 16,
+	cha: 16,
+	mix: "X3"
+},
+"S166-ESP": {
+	name: "FLOWER",
+	diff: "ESP",
+	level: 13,
+	str: 72,
+	vol: 57,
+	air: 50,
+	fre: 17,
+	cha: 40,
+	mix: "X3"
+},
+"S167-CSP": {
+	name: "FLOWER",
+	diff: "CSP",
+	level: 15,
+	str: 97,
+	vol: 93,
+	air: 69,
+	fre: 25,
+	cha: 103,
+	mix: "X3"
+},
+"S168-DSP": {
+	name: "GAIA",
+	diff: "DSP",
+	level: 13,
+	str: 78,
+	vol: 74,
+	air: 27,
+	fre: 24,
+	cha: 45,
+	mix: "2013"
+},
+"S169-ESP": {
+	name: "GAIA",
+	diff: "ESP",
+	level: 16,
+	str: 117,
+	vol: 109,
+	air: 0,
+	fre: 0,
+	cha: 107,
+	mix: "2013"
+},
+"S170-ESP": {
+	name: "Get Back Up!",
+	diff: "ESP",
+	level: 12,
+	str: 63,
+	vol: 58,
+	air: 32,
+	fre: 32,
+	cha: 42,
+	mix: "X3"
+},
+"S171-DSP": {
+	name: "Go For The Top",
+	diff: "DSP",
+	level: 12,
+	str: 74,
+	vol: 66,
+	air: 30,
+	fre: 27,
+	cha: 57,
+	mix: "X3"
+},
+"S172-ESP": {
+	name: "Go For The Top",
+	diff: "ESP",
+	level: 15,
+	str: 106,
+	vol: 105,
+	air: 23,
+	fre: 34,
+	cha: 109,
+	mix: "X3"
+},
+"S173-CSP": {
+	name: "Go For The Top",
+	diff: "CSP",
+	level: 18,
+	str: 157,
+	vol: 108,
+	air: 40,
+	fre: 28,
+	cha: 129,
+	mix: "X3"
+},
+"S174-ESP": {
+	name: "HAPPY☆LUCKY☆YEAPPY",
+	diff: "ESP",
+	level: 16,
+	str: 111,
+	vol: 121,
+	air: 47,
+	fre: 21,
+	cha: 102,
+	mix: "2014"
+},
+"S175-DSP": {
+	name: "HARD BRAIN",
+	diff: "DSP",
+	level: 10,
+	str: 60,
+	vol: 51,
+	air: 30,
+	fre: 31,
+	cha: 15,
+	mix: "A20+"
+},
+"S176-ESP": {
+	name: "HARD BRAIN",
+	diff: "ESP",
+	level: 15,
+	str: 100,
+	vol: 101,
+	air: 27,
+	fre: 32,
+	cha: 101,
+	mix: "A20+"
+},
+"S177-ESP": {
+	name: "Haunted Rhapsody",
+	diff: "ESP",
+	level: 13,
+	str: 69,
+	vol: 64,
+	air: 1,
+	fre: 39,
+	cha: 39,
+	mix: "X3"
+},
+"S178-ESP": {
+	name: "Healing Vision ～Angelic mix～",
+	diff: "ESP",
+	level: 13,
+	str: 96,
+	vol: 67,
+	air: 25,
+	fre: 0,
+	cha: 50,
+	mix: "MAX"
+},
+"S179-CSP": {
+	name: "Healing Vision(X-Special)",
+	diff: "CSP",
+	level: 14,
+	str: 89,
+	vol: 104,
+	air: 38,
+	fre: 47,
+	cha: 85,
+	mix: "X"
+},
+"S180-DSP": {
+	name: "Healing-D-Vision",
+	diff: "DSP",
+	level: 12,
+	str: 71,
+	vol: 77,
+	air: 106,
+	fre: 13,
+	cha: 47,
+	mix: "SN"
+},
+"S181-ESP": {
+	name: "Healing-D-Vision",
+	diff: "ESP",
+	level: 14,
+	str: 85,
+	vol: 77,
+	air: 112,
+	fre: 13,
+	cha: 79,
+	mix: "SN"
+},
+"S182-CSP": {
+	name: "Healing-D-Vision",
+	diff: "CSP",
+	level: 18,
+	str: 113,
+	vol: 103,
+	air: 90,
+	fre: 13,
+	cha: 102,
+	mix: "SN"
+},
+"S183-ESP": {
+	name: "HEART BEAT FORMULA (Vinyl Mix)",
+	diff: "ESP",
+	level: 13,
+	str: 80,
+	vol: 67,
+	air: 5,
+	fre: 32,
+	cha: 103,
+	mix: "2014"
+},
+"S184-ESP": {
+	name: "HEARTBREAK (Sound Selektaz remix)",
+	diff: "ESP",
+	level: 10,
+	str: 51,
+	vol: 55,
+	air: 43,
+	fre: 41,
+	cha: 14,
+	mix: "X3"
+},
+"S185-ESP": {
+	name: "heron",
+	diff: "ESP",
+	level: 12,
+	str: 82,
+	vol: 60,
+	air: 60,
+	fre: 10,
+	cha: 37,
+	mix: "2013"
+},
+"S186-CSP": {
+	name: "heron",
+	diff: "CSP",
+	level: 13,
+	str: 77,
+	vol: 75,
+	air: 60,
+	fre: 21,
+	cha: 47,
+	mix: "2013"
+},
+"S187-ESP": {
+	name: "Hoping To Be Good",
+	diff: "ESP",
+	level: 11,
+	str: 59,
+	vol: 55,
+	air: 0,
+	fre: 11,
+	cha: 40,
+	mix: "2013"
+},
+"S188-ESP": {
+	name: "Horatio",
+	diff: "ESP",
+	level: 15,
+	str: 135,
+	vol: 105,
+	air: 32,
+	fre: 20,
+	cha: 106,
+	mix: "X"
+},
+"S189-CSP": {
+	name: "Horatio",
+	diff: "CSP",
+	level: 15,
+	str: 122,
+	vol: 105,
+	air: 74,
+	fre: 20,
+	cha: 103,
+	mix: "X"
+},
+"S190-DSP": {
+	name: "Hunny Bunny",
+	diff: "DSP",
+	level: 10,
+	str: 57,
+	vol: 52,
+	air: 85,
+	fre: 31,
+	cha: 20,
+	mix: "A20"
+},
+"S191-ESP": {
+	name: "Hunny Bunny",
+	diff: "ESP",
+	level: 15,
+	str: 87,
+	vol: 97,
+	air: 96,
+	fre: 22,
+	cha: 101,
+	mix: "A20"
+},
+"S192-ESP": {
+	name: "HYENA",
+	diff: "ESP",
+	level: 14,
+	str: 81,
+	vol: 85,
+	air: 23,
+	fre: 43,
+	cha: 70,
+	mix: "2014"
+},
+"S193-DSP": {
+	name: "HyperTwist",
+	diff: "DSP",
+	level: 12,
+	str: 66,
+	vol: 63,
+	air: 50,
+	fre: 23,
+	cha: 17,
+	mix: "A20+"
+},
+"S194-ESP": {
+	name: "HyperTwist",
+	diff: "ESP",
+	level: 15,
+	str: 95,
+	vol: 95,
+	air: 36,
+	fre: 22,
+	cha: 66,
+	mix: "A20+"
+},
+"S195-CSP": {
+	name: "HyperTwist",
+	diff: "CSP",
+	level: 18,
+	str: 144,
+	vol: 113,
+	air: 29,
+	fre: 41,
+	cha: 106,
+	mix: "A20+"
+},
+"S196-DSP": {
+	name: "I'm so Happy",
+	diff: "DSP",
+	level: 8,
+	str: 55,
+	vol: 52,
+	air: 30,
+	fre: 55,
+	cha: 8,
+	mix: "X2"
+},
+"S197-ESP": {
+	name: "I'm so Happy",
+	diff: "ESP",
+	level: 12,
+	str: 79,
+	vol: 67,
+	air: 32,
+	fre: 82,
+	cha: 33,
+	mix: "X2"
+},
+"S198-CSP": {
+	name: "I'm so Happy",
+	diff: "CSP",
+	level: 16,
+	str: 119,
+	vol: 110,
+	air: 27,
+	fre: 77,
+	cha: 104,
+	mix: "X2"
+},
+"S199-DSP": {
+	name: "ICE ICE BABY",
+	diff: "DSP",
+	level: 6,
+	str: 33,
+	vol: 29,
+	air: 7,
+	fre: 21,
+	cha: 5,
+	mix: "X2"
+},
+"S200-ESP": {
+	name: "ICE ICE BABY",
+	diff: "ESP",
+	level: 8,
+	str: 41,
+	vol: 34,
+	air: 7,
+	fre: 88,
+	cha: 12,
+	mix: "X2"
+},
+"S201-CSP": {
+	name: "ICE ICE BABY",
+	diff: "CSP",
+	level: 4,
+	str: 25,
+	vol: 19,
+	air: 25,
+	fre: 16,
+	cha: 0,
+	mix: "X2"
+},
+"S202-DSP": {
+	name: "Idola",
+	diff: "DSP",
+	level: 12,
+	str: 66,
+	vol: 67,
+	air: 45,
+	fre: 64,
+	cha: 17,
+	mix: "2014"
+},
+"S203-ESP": {
+	name: "Idola",
+	diff: "ESP",
+	level: 16,
+	str: 98,
+	vol: 108,
+	air: 25,
+	fre: 43,
+	cha: 99,
+	mix: "2014"
+},
+"S204-CSP": {
+	name: "Idola",
+	diff: "CSP",
+	level: 17,
+	str: 104,
+	vol: 117,
+	air: 47,
+	fre: 58,
+	cha: 102,
+	mix: "2014"
+},
+"S205-DSP": {
+	name: "IF YOU WERE HERE",
+	diff: "DSP",
+	level: 8,
+	str: 49,
+	vol: 36,
+	air: 18,
+	fre: 0,
+	cha: 7,
+	mix: "2nd"
+},
+"S206-ESP": {
+	name: "IF YOU WERE HERE",
+	diff: "ESP",
+	level: 10,
+	str: 60,
+	vol: 42,
+	air: 10,
+	fre: 0,
+	cha: 23,
+	mix: "2nd"
+},
+"S207-CSP": {
+	name: "IF YOU WERE HERE",
+	diff: "CSP",
+	level: 14,
+	str: 98,
+	vol: 78,
+	air: 1,
+	fre: 10,
+	cha: 103,
+	mix: "2nd"
+},
+"S208-ESP": {
+	name: "IF YOU WERE HERE(L.E.D.-G STYLE REMIX)",
+	diff: "ESP",
+	level: 13,
+	str: 80,
+	vol: 86,
+	air: 21,
+	fre: 30,
+	cha: 65,
+	mix: "X2"
+},
+"S209-ESP": {
+	name: "IMANOGUILTS",
+	diff: "ESP",
+	level: 14,
+	str: 107,
+	vol: 90,
+	air: 30,
+	fre: 8,
+	cha: 105,
+	mix: "2014"
+},
+"S210-CSP": {
+	name: "IMANOGUILTS",
+	diff: "CSP",
+	level: 15,
+	str: 119,
+	vol: 103,
+	air: 41,
+	fre: 8,
+	cha: 107,
+	mix: "2014"
+},
+"S211-DSP": {
+	name: "in love wit you",
+	diff: "DSP",
+	level: 6,
+	str: 28,
+	vol: 37,
+	air: 30,
+	fre: 133,
+	cha: 2,
+	mix: "X2"
+},
+"S212-ESP": {
+	name: "in love wit you",
+	diff: "ESP",
+	level: 8,
+	str: 39,
+	vol: 43,
+	air: 18,
+	fre: 168,
+	cha: 8,
+	mix: "X2"
+},
+"S213-ESP": {
+	name: "In The Air",
+	diff: "ESP",
+	level: 11,
+	str: 69,
+	vol: 46,
+	air: 0,
+	fre: 13,
+	cha: 30,
+	mix: "X3"
+},
+"S214-ESP": {
+	name: "INSERTiON",
+	diff: "ESP",
+	level: 13,
+	str: 75,
+	vol: 64,
+	air: 0,
+	fre: 0,
+	cha: 97,
+	mix: "5th"
+},
+"S215-CSP": {
+	name: "Ishtar",
+	diff: "CSP",
+	level: 16,
+	str: 101,
+	vol: 101,
+	air: 108,
+	fre: 103,
+	cha: 104,
+	mix: "A"
+},
+"S216-DSP": {
+	name: "IX",
+	diff: "DSP",
+	level: 14,
+	str: 86,
+	vol: 102,
+	air: 21,
+	fre: 46,
+	cha: 54,
+	mix: "2014"
+},
+"S217-ESP": {
+	name: "IX",
+	diff: "ESP",
+	level: 17,
+	str: 147,
+	vol: 134,
+	air: 32,
+	fre: 30,
+	cha: 111,
+	mix: "2014"
+},
+"S218-CSP": {
+	name: "IX",
+	diff: "CSP",
+	level: 18,
+	str: 147,
+	vol: 139,
+	air: 67,
+	fre: 48,
+	cha: 117,
+	mix: "2014"
+},
+"S219-CSP": {
+	name: "JOKER",
+	diff: "CSP",
+	level: 14,
+	str: 84,
+	vol: 73,
+	air: 96,
+	fre: 16,
+	cha: 94,
+	mix: "2013"
+},
+"S220-ESP": {
+	name: "JOMANDA",
+	diff: "ESP",
+	level: 15,
+	str: 79,
+	vol: 90,
+	air: 14,
+	fre: 54,
+	cha: 107,
+	mix: "2014"
+},
+"S221-CSP": {
+	name: "JOMANDA",
+	diff: "CSP",
+	level: 17,
+	str: 104,
+	vol: 110,
+	air: 25,
+	fre: 34,
+	cha: 119,
+	mix: "2014"
+},
+"S222-DSP": {
+	name: "Jucunda Memoria",
+	diff: "DSP",
+	level: 14,
+	str: 84,
+	vol: 93,
+	air: 40,
+	fre: 31,
+	cha: 21,
+	mix: "A20+"
+},
+"S223-ESP": {
+	name: "Jucunda Memoria",
+	diff: "ESP",
+	level: 17,
+	str: 124,
+	vol: 120,
+	air: 92,
+	fre: 13,
+	cha: 56,
+	mix: "A20+"
+},
+"S224-ESP": {
+	name: "KEEP ON MOVIN' (Y&Co. DJ BOSS remix)",
+	diff: "ESP",
+	level: 14,
+	str: 87,
+	vol: 85,
+	air: 45,
+	fre: 10,
+	cha: 102,
+	mix: "X3"
+},
+"S225-ESP": {
+	name: "KIMONO♥PRINCESS",
+	diff: "ESP",
+	level: 15,
+	str: 97,
+	vol: 94,
+	air: 49,
+	fre: 38,
+	cha: 100,
+	mix: "X2"
+},
+"S226-CSP": {
+	name: "Kind Lady",
+	diff: "CSP",
+	level: 12,
+	str: 75,
+	vol: 61,
+	air: 20,
+	fre: 5,
+	cha: 69,
+	mix: "EXTR"
+},
+"S227-CSP": {
+	name: "KUNG FU FIGHTING",
+	diff: "CSP",
+	level: 10,
+	str: 58,
+	vol: 43,
+	air: 32,
+	fre: 34,
+	cha: 54,
+	mix: "1st"
+},
+"S228-ESP": {
+	name: "La libertad",
+	diff: "ESP",
+	level: 12,
+	str: 73,
+	vol: 63,
+	air: 16,
+	fre: 4,
+	cha: 35,
+	mix: "X2"
+},
+"S229-CSP": {
+	name: "La libertad",
+	diff: "CSP",
+	level: 14,
+	str: 84,
+	vol: 70,
+	air: 16,
+	fre: 4,
+	cha: 63,
+	mix: "X2"
+},
+"S230-DSP": {
+	name: "Lachryma《Re:Queen’M》",
+	diff: "DSP",
+	level: 14,
+	str: 84,
+	vol: 78,
+	air: 47,
+	fre: 75,
+	cha: 32,
+	mix: "A20"
+},
+"S231-ESP": {
+	name: "Lachryma《Re:Queen’M》",
+	diff: "ESP",
+	level: 18,
+	str: 182,
+	vol: 128,
+	air: 63,
+	fre: 22,
+	cha: 109,
+	mix: "A20"
+},
+"S232-CSP": {
+	name: "Lachryma《Re:Queen’M》",
+	diff: "CSP",
+	level: 19,
+	str: 207,
+	vol: 128,
+	air: 101,
+	fre: 40,
+	cha: 117,
+	mix: "A20"
+},
+"S233-DSP": {
+	name: "Last Card",
+	diff: "DSP",
+	level: 12,
+	str: 80,
+	vol: 85,
+	air: 32,
+	fre: 10,
+	cha: 80,
+	mix: "A20+"
+},
+"S234-ESP": {
+	name: "Last Card",
+	diff: "ESP",
+	level: 15,
+	str: 124,
+	vol: 110,
+	air: 29,
+	fre: 7,
+	cha: 117,
+	mix: "A20+"
+},
+"S235-DSP": {
+	name: "London EVOLVED ver.A",
+	diff: "DSP",
+	level: 11,
+	str: 66,
+	vol: 133,
+	air: 21,
+	fre: 2,
+	cha: 33,
+	mix: "X3"
+},
+"S236-ESP": {
+	name: "London EVOLVED ver.A",
+	diff: "ESP",
+	level: 14,
+	str: 85,
+	vol: 177,
+	air: 20,
+	fre: 4,
+	cha: 96,
+	mix: "X3"
+},
+"S237-CSP": {
+	name: "London EVOLVED ver.A",
+	diff: "CSP",
+	level: 17,
+	str: 132,
+	vol: 177,
+	air: 54,
+	fre: 2,
+	cha: 105,
+	mix: "X3"
+},
+"S238-DSP": {
+	name: "London EVOLVED ver.B",
+	diff: "DSP",
+	level: 11,
+	str: 68,
+	vol: 78,
+	air: 29,
+	fre: 35,
+	cha: 6,
+	mix: "X3"
+},
+"S239-ESP": {
+	name: "London EVOLVED ver.B",
+	diff: "ESP",
+	level: 14,
+	str: 87,
+	vol: 102,
+	air: 27,
+	fre: 48,
+	cha: 14,
+	mix: "X3"
+},
+"S240-CSP": {
+	name: "London EVOLVED ver.B",
+	diff: "CSP",
+	level: 17,
+	str: 135,
+	vol: 129,
+	air: 67,
+	fre: 64,
+	cha: 73,
+	mix: "X3"
+},
+"S241-DSP": {
+	name: "London EVOLVED ver.C",
+	diff: "DSP",
+	level: 11,
+	str: 70,
+	vol: 74,
+	air: 36,
+	fre: 2,
+	cha: 5,
+	mix: "X3"
+},
+"S242-ESP": {
+	name: "London EVOLVED ver.C",
+	diff: "ESP",
+	level: 14,
+	str: 88,
+	vol: 99,
+	air: 25,
+	fre: 1,
+	cha: 15,
+	mix: "X3"
+},
+"S243-CSP": {
+	name: "London EVOLVED ver.C",
+	diff: "CSP",
+	level: 17,
+	str: 148,
+	vol: 124,
+	air: 60,
+	fre: 1,
+	cha: 72,
+	mix: "X3"
+},
+"S244-ESP": {
+	name: "LOVE & JOY -Risk Junk MIX-",
+	diff: "ESP",
+	level: 13,
+	str: 88,
+	vol: 82,
+	air: 61,
+	fre: 21,
+	cha: 41,
+	mix: "2013"
+},
+"S245-DSP": {
+	name: "LOVE IS THE POWER -Re:born-",
+	diff: "DSP",
+	level: 7,
+	str: 40,
+	vol: 31,
+	air: 1,
+	fre: 23,
+	cha: 6,
+	mix: "X3"
+},
+"S246-ESP": {
+	name: "LOVE IS THE POWER -Re:born-",
+	diff: "ESP",
+	level: 10,
+	str: 53,
+	vol: 57,
+	air: 5,
+	fre: 26,
+	cha: 39,
+	mix: "X3"
+},
+"S247-DSP": {
+	name: "Magnetic",
+	diff: "DSP",
+	level: 11,
+	str: 66,
+	vol: 73,
+	air: 12,
+	fre: 61,
+	cha: 50,
+	mix: "2013"
+},
+"S248-ESP": {
+	name: "Magnetic",
+	diff: "ESP",
+	level: 15,
+	str: 97,
+	vol: 108,
+	air: 18,
+	fre: 51,
+	cha: 105,
+	mix: "2013"
+},
+"S249-CSP": {
+	name: "Magnetic",
+	diff: "CSP",
+	level: 17,
+	str: 121,
+	vol: 114,
+	air: 25,
+	fre: 68,
+	cha: 113,
+	mix: "2013"
+},
+"S250-CSP": {
+	name: "Malacca",
+	diff: "CSP",
+	level: 13,
+	str: 77,
+	vol: 64,
+	air: 7,
+	fre: 23,
+	cha: 100,
+	mix: "X"
+},
+"S251-DSP": {
+	name: "MAX 300",
+	diff: "DSP",
+	level: 12,
+	str: 83,
+	vol: 97,
+	air: 14,
+	fre: 31,
+	cha: 12,
+	mix: "MAX"
+},
+"S252-ESP": {
+	name: "MAX 300",
+	diff: "ESP",
+	level: 15,
+	str: 143,
+	vol: 97,
+	air: 21,
+	fre: 7,
+	cha: 54,
+	mix: "MAX"
+},
+"S253-DSP": {
+	name: "MAX 300 (Super-Max-Me Mix)",
+	diff: "DSP",
+	level: 13,
+	str: 80,
+	vol: 99,
+	air: 116,
+	fre: 37,
+	cha: 12,
+	mix: "SN"
+},
+"S254-ESP": {
+	name: "MAX 300 (Super-Max-Me Mix)",
+	diff: "ESP",
+	level: 15,
+	str: 127,
+	vol: 99,
+	air: 72,
+	fre: 41,
+	cha: 37,
+	mix: "SN"
+},
+"S255-CSP": {
+	name: "MAX 300 (Super-Max-Me Mix)",
+	diff: "CSP",
+	level: 16,
+	str: 136,
+	vol: 99,
+	air: 70,
+	fre: 41,
+	cha: 41,
+	mix: "SN"
+},
+"S256-CSP": {
+	name: "MAX 300(X-Special)",
+	diff: "CSP",
+	level: 17,
+	str: 130,
+	vol: 97,
+	air: 25,
+	fre: 31,
+	cha: 49,
+	mix: "X"
+},
+"S257-DSP": {
+	name: "MAX 360",
+	diff: "DSP",
+	level: 15,
+	str: 123,
+	vol: 147,
+	air: 40,
+	fre: 22,
+	cha: 66,
+	mix: "A"
+},
+"S258-ESP": {
+	name: "MAX 360",
+	diff: "ESP",
+	level: 18,
+	str: 188,
+	vol: 154,
+	air: 21,
+	fre: 21,
+	cha: 103,
+	mix: "A"
+},
+"S259-CSP": {
+	name: "MAX 360",
+	diff: "CSP",
+	level: 19,
+	str: 222,
+	vol: 154,
+	air: 36,
+	fre: 24,
+	cha: 115,
+	mix: "A"
+},
+"S260-DSP": {
+	name: "MAX.(period)",
+	diff: "DSP",
+	level: 14,
+	str: 85,
+	vol: 100,
+	air: 25,
+	fre: 4,
+	cha: 16,
+	mix: "2014"
+},
+"S261-ESP": {
+	name: "MAX.(period)",
+	diff: "ESP",
+	level: 16,
+	str: 144,
+	vol: 100,
+	air: 56,
+	fre: 7,
+	cha: 51,
+	mix: "2014"
+},
+"S262-CSP": {
+	name: "MAX.(period)",
+	diff: "CSP",
+	level: 18,
+	str: 155,
+	vol: 100,
+	air: 56,
+	fre: 24,
+	cha: 81,
+	mix: "2014"
+},
+"S263-DSP": {
+	name: "MAXX UNLIMITED",
+	diff: "DSP",
+	level: 13,
+	str: 67,
+	vol: 70,
+	air: 106,
+	fre: 83,
+	cha: 11,
+	mix: "MAX2"
+},
+"S264-ESP": {
+	name: "MAXX UNLIMITED",
+	diff: "ESP",
+	level: 16,
+	str: 122,
+	vol: 108,
+	air: 49,
+	fre: 41,
+	cha: 59,
+	mix: "MAX2"
+},
+"S265-CSP": {
+	name: "MAXX UNLIMITED(X-Special)",
+	diff: "CSP",
+	level: 18,
+	str: 154,
+	vol: 126,
+	air: 69,
+	fre: 74,
+	cha: 93,
+	mix: "X"
+},
+"S266-DSP": {
+	name: "Melody Life",
+	diff: "DSP",
+	level: 7,
+	str: 47,
+	vol: 35,
+	air: 38,
+	fre: 31,
+	cha: 1,
+	mix: "X2"
+},
+"S267-ESP": {
+	name: "Melody Life",
+	diff: "ESP",
+	level: 10,
+	str: 60,
+	vol: 50,
+	air: 47,
+	fre: 28,
+	cha: 11,
+	mix: "X2"
+},
+"S268-CSP": {
+	name: "Melody Life",
+	diff: "CSP",
+	level: 11,
+	str: 60,
+	vol: 50,
+	air: 76,
+	fre: 20,
+	cha: 11,
+	mix: "X2"
+},
+"S269-DSP": {
+	name: "message",
+	diff: "DSP",
+	level: 7,
+	str: 47,
+	vol: 31,
+	air: 12,
+	fre: 32,
+	cha: 6,
+	mix: "X3"
+},
+"S270-ESP": {
+	name: "message",
+	diff: "ESP",
+	level: 11,
+	str: 63,
+	vol: 50,
+	air: 25,
+	fre: 46,
+	cha: 23,
+	mix: "X3"
+},
+"S271-ESP": {
+	name: "Mind Parasite",
+	diff: "ESP",
+	level: 13,
+	str: 79,
+	vol: 72,
+	air: 9,
+	fre: 41,
+	cha: 89,
+	mix: "SN"
+},
+"S272-ESP": {
+	name: "MITOれて！いばらきっしゅだ～りん",
+	diff: "ESP",
+	level: 13,
+	str: 79,
+	vol: 72,
+	air: 63,
+	fre: 30,
+	cha: 39,
+	mix: "2014"
+},
+"S273-DSP": {
+	name: "Monkey Business",
+	diff: "DSP",
+	level: 9,
+	str: 59,
+	vol: 80,
+	air: 29,
+	fre: 67,
+	cha: 58,
+	mix: "2013"
+},
+"S274-ESP": {
+	name: "Monkey Business",
+	diff: "ESP",
+	level: 13,
+	str: 76,
+	vol: 97,
+	air: 36,
+	fre: 29,
+	cha: 103,
+	mix: "2013"
+},
+"S275-CSP": {
+	name: "Monkey Business",
+	diff: "CSP",
+	level: 16,
+	str: 122,
+	vol: 133,
+	air: 30,
+	fre: 58,
+	cha: 133,
+	mix: "2013"
+},
+"S276-DSP": {
+	name: "more more more",
+	diff: "DSP",
+	level: 7,
+	str: 32,
+	vol: 33,
+	air: 32,
+	fre: 84,
+	cha: 4,
+	mix: "X2"
+},
+"S277-ESP": {
+	name: "more more more",
+	diff: "ESP",
+	level: 10,
+	str: 51,
+	vol: 45,
+	air: 40,
+	fre: 81,
+	cha: 24,
+	mix: "X2"
+},
+"S278-ESP": {
+	name: "NEPHILIM DELTA",
+	diff: "ESP",
+	level: 14,
+	str: 122,
+	vol: 73,
+	air: 14,
+	fre: 19,
+	cha: 53,
+	mix: "X3"
+},
+"S279-DSP": {
+	name: "Neutrino",
+	diff: "DSP",
+	level: 12,
+	str: 65,
+	vol: 65,
+	air: 18,
+	fre: 35,
+	cha: 52,
+	mix: "A"
+},
+"S280-ESP": {
+	name: "Neutrino",
+	diff: "ESP",
+	level: 16,
+	str: 101,
+	vol: 115,
+	air: 56,
+	fre: 25,
+	cha: 115,
+	mix: "A"
+},
+"S281-CSP": {
+	name: "Neutrino",
+	diff: "CSP",
+	level: 18,
+	str: 127,
+	vol: 126,
+	air: 67,
+	fre: 27,
+	cha: 130,
+	mix: "A"
+},
+"S282-ESP": {
+	name: "New Beginning",
+	diff: "ESP",
+	level: 11,
+	str: 64,
+	vol: 49,
+	air: 18,
+	fre: 36,
+	cha: 23,
+	mix: "X3"
+},
+"S283-CSP": {
+	name: "New Beginning",
+	diff: "CSP",
+	level: 12,
+	str: 64,
+	vol: 49,
+	air: 40,
+	fre: 36,
+	cha: 23,
+	mix: "X3"
+},
+"S284-ESP": {
+	name: "New Century",
+	diff: "ESP",
+	level: 17,
+	str: 139,
+	vol: 123,
+	air: 54,
+	fre: 36,
+	cha: 107,
+	mix: "A"
+},
+"S285-CSP": {
+	name: "New Century",
+	diff: "CSP",
+	level: 18,
+	str: 160,
+	vol: 119,
+	air: 98,
+	fre: 34,
+	cha: 110,
+	mix: "A"
+},
+"S286-DSP": {
+	name: "New Decade",
+	diff: "DSP",
+	level: 14,
+	str: 87,
+	vol: 117,
+	air: 36,
+	fre: 47,
+	cha: 37,
+	mix: "X2"
+},
+"S287-ESP": {
+	name: "New Decade",
+	diff: "ESP",
+	level: 17,
+	str: 124,
+	vol: 124,
+	air: 76,
+	fre: 29,
+	cha: 74,
+	mix: "X2"
+},
+"S288-CSP": {
+	name: "New Decade",
+	diff: "CSP",
+	level: 18,
+	str: 139,
+	vol: 158,
+	air: 112,
+	fre: 35,
+	cha: 101,
+	mix: "X2"
+},
+"S289-ESP": {
+	name: "New Generation",
+	diff: "ESP",
+	level: 14,
+	str: 95,
+	vol: 95,
+	air: 5,
+	fre: 63,
+	cha: 65,
+	mix: "2013"
+},
+"S290-CSP": {
+	name: "New Generation",
+	diff: "CSP",
+	level: 17,
+	str: 139,
+	vol: 113,
+	air: 60,
+	fre: 24,
+	cha: 104,
+	mix: "2013"
+},
+"S291-DSP": {
+	name: "New Gravity",
+	diff: "DSP",
+	level: 9,
+	str: 59,
+	vol: 51,
+	air: 5,
+	fre: 3,
+	cha: 19,
+	mix: "2013"
+},
+"S292-ESP": {
+	name: "New Gravity",
+	diff: "ESP",
+	level: 12,
+	str: 74,
+	vol: 57,
+	air: 18,
+	fre: 3,
+	cha: 39,
+	mix: "2013"
+},
+"S293-CSP": {
+	name: "New Gravity",
+	diff: "CSP",
+	level: 14,
+	str: 92,
+	vol: 89,
+	air: 23,
+	fre: 3,
+	cha: 100,
+	mix: "2013"
+},
+"S294-ESP": {
+	name: "New York EVOLVED (Type A)",
+	diff: "ESP",
+	level: 16,
+	str: 99,
+	vol: 114,
+	air: 58,
+	fre: 74,
+	cha: 104,
+	mix: "X3"
+},
+"S295-ESP": {
+	name: "New York EVOLVED (Type B)",
+	diff: "ESP",
+	level: 16,
+	str: 86,
+	vol: 99,
+	air: 41,
+	fre: 30,
+	cha: 103,
+	mix: "X3"
+},
+"S296-ESP": {
+	name: "New York EVOLVED (Type C)",
+	diff: "ESP",
+	level: 16,
+	str: 86,
+	vol: 91,
+	air: 47,
+	fre: 21,
+	cha: 105,
+	mix: "X3"
+},
+"S297-DSP": {
+	name: "NGO",
+	diff: "DSP",
+	level: 12,
+	str: 54,
+	vol: 58,
+	air: 45,
+	fre: 17,
+	cha: 11,
+	mix: "SN2"
+},
+"S298-ESP": {
+	name: "NGO",
+	diff: "ESP",
+	level: 15,
+	str: 78,
+	vol: 78,
+	air: 40,
+	fre: 17,
+	cha: 34,
+	mix: "SN2"
+},
+"S299-CSP": {
+	name: "NGO",
+	diff: "CSP",
+	level: 18,
+	str: 88,
+	vol: 78,
+	air: 118,
+	fre: 17,
+	cha: 45,
+	mix: "SN2"
+},
+"S300-ESP": {
+	name: "nightbird lost wing",
+	diff: "ESP",
+	level: 14,
+	str: 92,
+	vol: 74,
+	air: 47,
+	fre: 24,
+	cha: 75,
+	mix: "2013"
+},
+"S301-CSP": {
+	name: "on the bounce",
+	diff: "CSP",
+	level: 16,
+	str: 100,
+	vol: 81,
+	air: 74,
+	fre: 36,
+	cha: 103,
+	mix: "X"
+},
+"S302-DSP": {
+	name: "ORCA",
+	diff: "DSP",
+	level: 14,
+	str: 71,
+	vol: 92,
+	air: 67,
+	fre: 10,
+	cha: 124,
+	mix: "A20"
+},
+"S303-ESP": {
+	name: "ORCA",
+	diff: "ESP",
+	level: 17,
+	str: 124,
+	vol: 124,
+	air: 63,
+	fre: 10,
+	cha: 172,
+	mix: "A20"
+},
+"S304-DSP": {
+	name: "osaka EVOLVED -毎度、おおきに！- (TYPE1)",
+	diff: "DSP",
+	level: 13,
+	str: 70,
+	vol: 88,
+	air: 20,
+	fre: 34,
+	cha: 44,
+	mix: "X3"
+},
+"S305-ESP": {
+	name: "osaka EVOLVED -毎度、おおきに！- (TYPE1)",
+	diff: "ESP",
+	level: 15,
+	str: 87,
+	vol: 88,
+	air: 41,
+	fre: 40,
+	cha: 97,
+	mix: "X3"
+},
+"S306-DSP": {
+	name: "osaka EVOLVED -毎度、おおきに！- (TYPE2)",
+	diff: "DSP",
+	level: 13,
+	str: 70,
+	vol: 88,
+	air: 20,
+	fre: 34,
+	cha: 45,
+	mix: "X3"
+},
+"S307-ESP": {
+	name: "osaka EVOLVED -毎度、おおきに！- (TYPE2)",
+	diff: "ESP",
+	level: 15,
+	str: 82,
+	vol: 88,
+	air: 96,
+	fre: 16,
+	cha: 89,
+	mix: "X3"
+},
+"S308-DSP": {
+	name: "osaka EVOLVED -毎度、おおきに！- (TYPE3)",
+	diff: "DSP",
+	level: 13,
+	str: 71,
+	vol: 90,
+	air: 20,
+	fre: 36,
+	cha: 51,
+	mix: "X3"
+},
+"S309-ESP": {
+	name: "osaka EVOLVED -毎度、おおきに！- (TYPE3)",
+	diff: "ESP",
+	level: 15,
+	str: 87,
+	vol: 90,
+	air: 34,
+	fre: 89,
+	cha: 100,
+	mix: "X3"
+},
+"S310-DSP": {
+	name: "Over The “Period”",
+	diff: "DSP",
+	level: 15,
+	str: 91,
+	vol: 107,
+	air: 45,
+	fre: 62,
+	cha: 119,
+	mix: "2014"
+},
+"S311-ESP": {
+	name: "Over The “Period”",
+	diff: "ESP",
+	level: 18,
+	str: 132,
+	vol: 123,
+	air: 65,
+	fre: 52,
+	cha: 141,
+	mix: "2014"
+},
+"S312-CSP": {
+	name: "Over The “Period”",
+	diff: "CSP",
+	level: 19,
+	str: 151,
+	vol: 140,
+	air: 78,
+	fre: 32,
+	cha: 159,
+	mix: "2014"
+},
+"S313-DSP": {
+	name: "PANIC HOLIC",
+	diff: "DSP",
+	level: 12,
+	str: 87,
+	vol: 101,
+	air: 47,
+	fre: 18,
+	cha: 47,
+	mix: "A20+"
+},
+"S314-ESP": {
+	name: "PANIC HOLIC",
+	diff: "ESP",
+	level: 16,
+	str: 127,
+	vol: 110,
+	air: 50,
+	fre: 14,
+	cha: 101,
+	mix: "A20+"
+},
+"S315-DSP": {
+	name: "PARANOiA",
+	diff: "DSP",
+	level: 9,
+	str: 58,
+	vol: 52,
+	air: 49,
+	fre: 0,
+	cha: 6,
+	mix: "1st"
+},
+"S316-ESP": {
+	name: "PARANOiA",
+	diff: "ESP",
+	level: 11,
+	str: 67,
+	vol: 52,
+	air: 25,
+	fre: 0,
+	cha: 17,
+	mix: "1st"
+},
+"S317-DSP": {
+	name: "PARANOiA (kskst mix)",
+	diff: "DSP",
+	level: 13,
+	str: 90,
+	vol: 63,
+	air: 34,
+	fre: 20,
+	cha: 39,
+	mix: "X3"
+},
+"S318-ESP": {
+	name: "PARANOiA (kskst mix)",
+	diff: "ESP",
+	level: 17,
+	str: 143,
+	vol: 113,
+	air: 61,
+	fre: 28,
+	cha: 103,
+	mix: "X3"
+},
+"S319-DSP": {
+	name: "PARANOiA ～HADES～",
+	diff: "DSP",
+	level: 15,
+	str: 89,
+	vol: 93,
+	air: 113,
+	fre: 6,
+	cha: 29,
+	mix: "SN2"
+},
+"S320-ESP": {
+	name: "PARANOiA ～HADES～",
+	diff: "ESP",
+	level: 16,
+	str: 104,
+	vol: 112,
+	air: 90,
+	fre: 6,
+	cha: 56,
+	mix: "SN2"
+},
+"S321-CSP": {
+	name: "PARANOiA ～HADES～",
+	diff: "CSP",
+	level: 18,
+	str: 155,
+	vol: 158,
+	air: 74,
+	fre: 6,
+	cha: 105,
+	mix: "SN2"
+},
+"S322-ESP": {
+	name: "PARANOiA ETERNAL",
+	diff: "ESP",
+	level: 13,
+	str: 81,
+	vol: 66,
+	air: 50,
+	fre: 4,
+	cha: 29,
+	mix: "5th"
+},
+"S323-CSP": {
+	name: "PARANOiA ETERNAL(X-Special)",
+	diff: "CSP",
+	level: 13,
+	str: 96,
+	vol: 66,
+	air: 34,
+	fre: 30,
+	cha: 41,
+	mix: "X"
+},
+"S324-ESP": {
+	name: "PARANOIA EVOLUTION",
+	diff: "ESP",
+	level: 12,
+	str: 86,
+	vol: 66,
+	air: 54,
+	fre: 0,
+	cha: 29,
+	mix: "4th"
+},
+"S325-CSP": {
+	name: "PARANOIA EVOLUTION(X-Special)",
+	diff: "CSP",
+	level: 14,
+	str: 86,
+	vol: 66,
+	air: 45,
+	fre: 8,
+	cha: 36,
+	mix: "X"
+},
+"S326-ESP": {
+	name: "PARANOiA KCET ～clean mix～",
+	diff: "ESP",
+	level: 11,
+	str: 74,
+	vol: 52,
+	air: 30,
+	fre: 0,
+	cha: 19,
+	mix: "2nd"
+},
+"S327-CSP": {
+	name: "PARANOiA KCET ～clean mix～",
+	diff: "CSP",
+	level: 15,
+	str: 109,
+	vol: 82,
+	air: 58,
+	fre: 16,
+	cha: 79,
+	mix: "2nd"
+},
+"S328-ESP": {
+	name: "PARANOiA MAX～DIRTY MIX～",
+	diff: "ESP",
+	level: 12,
+	str: 76,
+	vol: 63,
+	air: 67,
+	fre: 0,
+	cha: 19,
+	mix: "2nd"
+},
+"S329-CSP": {
+	name: "PARANOiA MAX～DIRTY MIX～(X-Special)",
+	diff: "CSP",
+	level: 13,
+	str: 93,
+	vol: 63,
+	air: 21,
+	fre: 4,
+	cha: 36,
+	mix: "X"
+},
+"S330-DSP": {
+	name: "PARANOiA Rebirth",
+	diff: "DSP",
+	level: 10,
+	str: 69,
+	vol: 63,
+	air: 45,
+	fre: 0,
+	cha: 15,
+	mix: "3rd"
+},
+"S331-ESP": {
+	name: "PARANOiA Rebirth",
+	diff: "ESP",
+	level: 13,
+	str: 93,
+	vol: 63,
+	air: 16,
+	fre: 0,
+	cha: 36,
+	mix: "3rd"
+},
+"S332-CSP": {
+	name: "PARANOiA Rebirth(X-Special)",
+	diff: "CSP",
+	level: 14,
+	str: 99,
+	vol: 63,
+	air: 25,
+	fre: 25,
+	cha: 46,
+	mix: "X"
+},
+"S333-DSP": {
+	name: "PARANOiA Revolution",
+	diff: "DSP",
+	level: 14,
+	str: 92,
+	vol: 104,
+	air: 32,
+	fre: 29,
+	cha: 17,
+	mix: "X3"
+},
+"S334-ESP": {
+	name: "PARANOiA Revolution",
+	diff: "ESP",
+	level: 18,
+	str: 142,
+	vol: 158,
+	air: 58,
+	fre: 29,
+	cha: 60,
+	mix: "X3"
+},
+"S335-CSP": {
+	name: "PARANOiA Revolution",
+	diff: "CSP",
+	level: 19,
+	str: 168,
+	vol: 158,
+	air: 89,
+	fre: 42,
+	cha: 100,
+	mix: "X3"
+},
+"S336-ESP": {
+	name: "PARANOIA survivor",
+	diff: "ESP",
+	level: 15,
+	str: 120,
+	vol: 98,
+	air: 21,
+	fre: 17,
+	cha: 56,
+	mix: "EXTR"
+},
+"S337-DSP": {
+	name: "PARANOIA survivor MAX",
+	diff: "DSP",
+	level: 11,
+	str: 80,
+	vol: 68,
+	air: 9,
+	fre: 5,
+	cha: 20,
+	mix: "EXTR"
+},
+"S338-ESP": {
+	name: "PARANOIA survivor MAX",
+	diff: "ESP",
+	level: 15,
+	str: 140,
+	vol: 119,
+	air: 21,
+	fre: 9,
+	cha: 91,
+	mix: "EXTR"
+},
+"S339-CSP": {
+	name: "PARANOIA survivor MAX",
+	diff: "CSP",
+	level: 16,
+	str: 159,
+	vol: 119,
+	air: 49,
+	fre: 8,
+	cha: 100,
+	mix: "EXTR"
+},
+"S340-DSP": {
+	name: "PARANOiA-Respect-",
+	diff: "DSP",
+	level: 12,
+	str: 83,
+	vol: 97,
+	air: 38,
+	fre: 25,
+	cha: 15,
+	mix: "SN"
+},
+"S341-ESP": {
+	name: "PARANOiA-Respect-",
+	diff: "ESP",
+	level: 16,
+	str: 123,
+	vol: 97,
+	air: 25,
+	fre: 38,
+	cha: 60,
+	mix: "SN"
+},
+"S342-CSP": {
+	name: "PARANOiA(X-Special)",
+	diff: "CSP",
+	level: 13,
+	str: 78,
+	vol: 60,
+	air: 65,
+	fre: 17,
+	cha: 26,
+	mix: "X"
+},
+"S343-ESP": {
+	name: "Party Lights (Tommie Sunshine's Brooklyn Fire Remix)",
+	diff: "ESP",
+	level: 11,
+	str: 54,
+	vol: 54,
+	air: 0,
+	fre: 29,
+	cha: 30,
+	mix: "2014"
+},
+"S344-DSP": {
+	name: "Pierce The Sky",
+	diff: "DSP",
+	level: 11,
+	str: 69,
+	vol: 66,
+	air: 23,
+	fre: 38,
+	cha: 46,
+	mix: "X2"
+},
+"S345-ESP": {
+	name: "Pierce The Sky",
+	diff: "ESP",
+	level: 14,
+	str: 91,
+	vol: 92,
+	air: 34,
+	fre: 22,
+	cha: 101,
+	mix: "X2"
+},
+"S346-DSP": {
+	name: "Pluto",
+	diff: "DSP",
+	level: 12,
+	str: 55,
+	vol: 79,
+	air: 18,
+	fre: 31,
+	cha: 104,
+	mix: "SN2"
+},
+"S347-ESP": {
+	name: "Pluto ",
+	diff: "ESP",
+	level: 14,
+	str: 70,
+	vol: 84,
+	air: 45,
+	fre: 19,
+	cha: 116,
+	mix: "SN2"
+},
+"S348-CSP": {
+	name: "Pluto ",
+	diff: "CSP",
+	level: 16,
+	str: 98,
+	vol: 124,
+	air: 32,
+	fre: 25,
+	cha: 145,
+	mix: "SN2"
+},
+"S349-DSP": {
+	name: "Pluto Relinquish",
+	diff: "DSP",
+	level: 14,
+	str: 83,
+	vol: 145,
+	air: 54,
+	fre: 31,
+	cha: 93,
+	mix: "SN2"
+},
+"S350-ESP": {
+	name: "Pluto Relinquish",
+	diff: "ESP",
+	level: 17,
+	str: 127,
+	vol: 158,
+	air: 76,
+	fre: 39,
+	cha: 113,
+	mix: "SN2"
+},
+"S351-CSP": {
+	name: "Pluto Relinquish",
+	diff: "CSP",
+	level: 18,
+	str: 131,
+	vol: 158,
+	air: 76,
+	fre: 35,
+	cha: 115,
+	mix: "SN2"
+},
+"S352-DSP": {
+	name: "Pluto The First",
+	diff: "DSP",
+	level: 14,
+	str: 80,
+	vol: 106,
+	air: 23,
+	fre: 24,
+	cha: 103,
+	mix: "X2"
+},
+"S353-ESP": {
+	name: "Pluto The First",
+	diff: "ESP",
+	level: 17,
+	str: 112,
+	vol: 134,
+	air: 69,
+	fre: 12,
+	cha: 120,
+	mix: "X2"
+},
+"S354-CSP": {
+	name: "Pluto The First",
+	diff: "CSP",
+	level: 18,
+	str: 117,
+	vol: 134,
+	air: 98,
+	fre: 12,
+	cha: 123,
+	mix: "X2"
+},
+"S355-ESP": {
+	name: "Poseidon",
+	diff: "ESP",
+	level: 11,
+	str: 60,
+	vol: 99,
+	air: 25,
+	fre: 21,
+	cha: 49,
+	mix: "SN2"
+},
+"S356-DSP": {
+	name: "POSSESSION",
+	diff: "DSP",
+	level: 14,
+	str: 90,
+	vol: 105,
+	air: 102,
+	fre: 30,
+	cha: 48,
+	mix: "X2"
+},
+"S357-ESP": {
+	name: "POSSESSION",
+	diff: "ESP",
+	level: 17,
+	str: 123,
+	vol: 161,
+	air: 110,
+	fre: 26,
+	cha: 95,
+	mix: "X2"
+},
+"S358-CSP": {
+	name: "POSSESSION",
+	diff: "CSP",
+	level: 18,
+	str: 134,
+	vol: 161,
+	air: 115,
+	fre: 35,
+	cha: 100,
+	mix: "X2"
+},
+"S359-DSP": {
+	name: "POSSESSION (20th Anniversary Mix)",
+	diff: "DSP",
+	level: 14,
+	str: 91,
+	vol: 103,
+	air: 50,
+	fre: 21,
+	cha: 70,
+	mix: "A"
+},
+"S360-ESP": {
+	name: "POSSESSION (20th Anniversary Mix)",
+	diff: "ESP",
+	level: 16,
+	str: 116,
+	vol: 130,
+	air: 108,
+	fre: 22,
+	cha: 103,
+	mix: "A"
+},
+"S361-CSP": {
+	name: "POSSESSION (20th Anniversary Mix)",
+	diff: "CSP",
+	level: 18,
+	str: 151,
+	vol: 144,
+	air: 152,
+	fre: 13,
+	cha: 112,
+	mix: "A"
+},
+"S362-ESP": {
+	name: "POSSESSION(EDP Live Mix)",
+	diff: "ESP",
+	level: 16,
+	str: 119,
+	vol: 111,
+	air: 103,
+	fre: 45,
+	cha: 106,
+	mix: "2014"
+},
+"S363-DSP": {
+	name: "PRANA",
+	diff: "DSP",
+	level: 11,
+	str: 70,
+	vol: 54,
+	air: 38,
+	fre: 20,
+	cha: 33,
+	mix: "2013"
+},
+"S364-ESP": {
+	name: "PRANA",
+	diff: "ESP",
+	level: 14,
+	str: 91,
+	vol: 78,
+	air: 60,
+	fre: 15,
+	cha: 70,
+	mix: "2013"
+},
+"S365-CSP": {
+	name: "PRANA",
+	diff: "CSP",
+	level: 16,
+	str: 119,
+	vol: 112,
+	air: 70,
+	fre: 17,
+	cha: 104,
+	mix: "2013"
+},
+"S366-ESP": {
+	name: "PRANA＋REVOLUTIONARY ADDICT (U1 DJ Mix)",
+	diff: "ESP",
+	level: 17,
+	str: 140,
+	vol: 113,
+	air: 58,
+	fre: 10,
+	cha: 106,
+	mix: "2014"
+},
+"S367-DSP": {
+	name: "Prey",
+	diff: "DSP",
+	level: 15,
+	str: 95,
+	vol: 96,
+	air: 18,
+	fre: 25,
+	cha: 59,
+	mix: "A"
+},
+"S368-ESP": {
+	name: "Prey",
+	diff: "ESP",
+	level: 18,
+	str: 147,
+	vol: 120,
+	air: 27,
+	fre: 24,
+	cha: 106,
+	mix: "A"
+},
+"S369-CSP": {
+	name: "Prey",
+	diff: "CSP",
+	level: 18,
+	str: 86,
+	vol: 70,
+	air: 167,
+	fre: 49,
+	cha: 42,
+	mix: "A"
+},
+"S370-ESP": {
+	name: "printemps",
+	diff: "ESP",
+	level: 13,
+	str: 74,
+	vol: 97,
+	air: 20,
+	fre: 13,
+	cha: 76,
+	mix: "2013"
+},
+"S371-ESP": {
+	name: "PUNISHER",
+	diff: "ESP",
+	level: 14,
+	str: 87,
+	vol: 75,
+	air: 25,
+	fre: 33,
+	cha: 75,
+	mix: "2014"
+},
+"S372-DSP": {
+	name: "Pursuer",
+	diff: "DSP",
+	level: 14,
+	str: 77,
+	vol: 105,
+	air: 56,
+	fre: 41,
+	cha: 105,
+	mix: "A"
+},
+"S373-ESP": {
+	name: "Pursuer",
+	diff: "ESP",
+	level: 17,
+	str: 114,
+	vol: 126,
+	air: 60,
+	fre: 35,
+	cha: 120,
+	mix: "A"
+},
+"S374-ESP": {
+	name: "PUT YOUR FAITH IN ME (DA's Twinkly Disco Remix)",
+	diff: "ESP",
+	level: 13,
+	str: 77,
+	vol: 57,
+	air: 38,
+	fre: 63,
+	cha: 100,
+	mix: "X3"
+},
+"S375-ESP": {
+	name: "Qipchãq",
+	diff: "ESP",
+	level: 11,
+	str: 66,
+	vol: 50,
+	air: 69,
+	fre: 35,
+	cha: 34,
+	mix: "2013"
+},
+"S376-ESP": {
+	name: "Quickening",
+	diff: "ESP",
+	level: 11,
+	str: 67,
+	vol: 93,
+	air: 7,
+	fre: 40,
+	cha: 36,
+	mix: "SN"
+},
+"S377-ESP": {
+	name: "Remain",
+	diff: "ESP",
+	level: 15,
+	str: 80,
+	vol: 115,
+	air: 27,
+	fre: 9,
+	cha: 104,
+	mix: "2014"
+},
+"S378-ESP": {
+	name: "Rescue Me",
+	diff: "ESP",
+	level: 12,
+	str: 64,
+	vol: 48,
+	air: 0,
+	fre: 0,
+	cha: 49,
+	mix: "X3"
+},
+"S379-DSP": {
+	name: "REVOLUTIONARY ADDICT",
+	diff: "DSP",
+	level: 10,
+	str: 56,
+	vol: 43,
+	air: 18,
+	fre: 51,
+	cha: 21,
+	mix: "X3"
+},
+"S380-ESP": {
+	name: "REVOLUTIONARY ADDICT",
+	diff: "ESP",
+	level: 13,
+	str: 86,
+	vol: 73,
+	air: 16,
+	fre: 69,
+	cha: 87,
+	mix: "X3"
+},
+"S381-CSP": {
+	name: "REVOLUTIONARY ADDICT",
+	diff: "CSP",
+	level: 16,
+	str: 125,
+	vol: 108,
+	air: 54,
+	fre: 54,
+	cha: 115,
+	mix: "X3"
+},
+"S382-ESP": {
+	name: "Right on time (Ryu☆Remix)",
+	diff: "ESP",
+	level: 14,
+	str: 77,
+	vol: 74,
+	air: 78,
+	fre: 8,
+	cha: 85,
+	mix: "2013"
+},
+"S383-CSP": {
+	name: "Right on time (Ryu☆Remix)",
+	diff: "CSP",
+	level: 13,
+	str: 56,
+	vol: 49,
+	air: 200,
+	fre: 17,
+	cha: 49,
+	mix: "2013"
+},
+"S384-ESP": {
+	name: "RISING FIRE HAWK",
+	diff: "ESP",
+	level: 15,
+	str: 104,
+	vol: 91,
+	air: 41,
+	fre: 13,
+	cha: 102,
+	mix: "A"
+},
+"S385-CSP": {
+	name: "RISING FIRE HAWK",
+	diff: "CSP",
+	level: 17,
+	str: 132,
+	vol: 102,
+	air: 85,
+	fre: 14,
+	cha: 107,
+	mix: "A"
+},
+"S386-DSP": {
+	name: "roppongi EVOLVED ver.A",
+	diff: "DSP",
+	level: 11,
+	str: 63,
+	vol: 56,
+	air: 25,
+	fre: 78,
+	cha: 21,
+	mix: "X2"
+},
+"S387-ESP": {
+	name: "roppongi EVOLVED ver.A",
+	diff: "ESP",
+	level: 15,
+	str: 93,
+	vol: 99,
+	air: 20,
+	fre: 79,
+	cha: 102,
+	mix: "X2"
+},
+"S388-DSP": {
+	name: "roppongi EVOLVED ver.B",
+	diff: "DSP",
+	level: 11,
+	str: 62,
+	vol: 60,
+	air: 18,
+	fre: 67,
+	cha: 27,
+	mix: "X2"
+},
+"S389-ESP": {
+	name: "roppongi EVOLVED ver.B",
+	diff: "ESP",
+	level: 15,
+	str: 85,
+	vol: 94,
+	air: 23,
+	fre: 68,
+	cha: 101,
+	mix: "X2"
+},
+"S390-DSP": {
+	name: "roppongi EVOLVED ver.C",
+	diff: "DSP",
+	level: 11,
+	str: 66,
+	vol: 65,
+	air: 21,
+	fre: 31,
+	cha: 38,
+	mix: "X2"
+},
+"S391-ESP": {
+	name: "roppongi EVOLVED ver.C",
+	diff: "ESP",
+	level: 15,
+	str: 88,
+	vol: 102,
+	air: 30,
+	fre: 42,
+	cha: 103,
+	mix: "X2"
+},
+"S392-DSP": {
+	name: "roppongi EVOLVED ver.D",
+	diff: "DSP",
+	level: 11,
+	str: 68,
+	vol: 63,
+	air: 30,
+	fre: 60,
+	cha: 54,
+	mix: "X2"
+},
+"S393-ESP": {
+	name: "roppongi EVOLVED ver.D",
+	diff: "ESP",
+	level: 15,
+	str: 94,
+	vol: 113,
+	air: 32,
+	fre: 56,
+	cha: 112,
+	mix: "X2"
+},
+"S394-ESP": {
+	name: "RЁVOLUTIФN",
+	diff: "ESP",
+	level: 14,
+	str: 94,
+	vol: 75,
+	air: 43,
+	fre: 24,
+	cha: 38,
+	mix: "2013"
+},
+"S395-CSP": {
+	name: "RЁVOLUTIФN",
+	diff: "CSP",
+	level: 17,
+	str: 151,
+	vol: 117,
+	air: 49,
+	fre: 24,
+	cha: 103,
+	mix: "2013"
+},
+"S396-DSP": {
+	name: "SABER WING",
+	diff: "DSP",
+	level: 10,
+	str: 65,
+	vol: 84,
+	air: 43,
+	fre: 68,
+	cha: 24,
+	mix: "X"
+},
+"S397-ESP": {
+	name: "SABER WING",
+	diff: "ESP",
+	level: 13,
+	str: 83,
+	vol: 100,
+	air: 49,
+	fre: 48,
+	cha: 63,
+	mix: "X"
+},
+"S398-CSP": {
+	name: "SABER WING",
+	diff: "CSP",
+	level: 13,
+	str: 84,
+	vol: 100,
+	air: 98,
+	fre: 35,
+	cha: 63,
+	mix: "X"
+},
+"S399-DSP": {
+	name: "SABER WING (Akira Ishihara Headshot mix)",
+	diff: "DSP",
+	level: 12,
+	str: 78,
+	vol: 72,
+	air: 27,
+	fre: 15,
+	cha: 25,
+	mix: "X"
+},
+"S400-ESP": {
+	name: "SABER WING (Akira Ishihara Headshot mix)",
+	diff: "ESP",
+	level: 15,
+	str: 96,
+	vol: 101,
+	air: 30,
+	fre: 30,
+	cha: 100,
+	mix: "X"
+},
+"S401-CSP": {
+	name: "SABER WING (Akira Ishihara Headshot mix)",
+	diff: "CSP",
+	level: 17,
+	str: 114,
+	vol: 106,
+	air: 36,
+	fre: 32,
+	cha: 104,
+	mix: "X"
+},
+"S402-DSP": {
+	name: "SABER WING (satellite silhouette remix)",
+	diff: "DSP",
+	level: 9,
+	str: 48,
+	vol: 40,
+	air: 3,
+	fre: 42,
+	cha: 20,
+	mix: "2014"
+},
+"S403-ESP": {
+	name: "SABER WING (satellite silhouette remix)",
+	diff: "ESP",
+	level: 12,
+	str: 69,
+	vol: 69,
+	air: 5,
+	fre: 27,
+	cha: 77,
+	mix: "2014"
+},
+"S404-CSP": {
+	name: "SABER WING (satellite silhouette remix)",
+	diff: "CSP",
+	level: 15,
+	str: 95,
+	vol: 92,
+	air: 36,
+	fre: 16,
+	cha: 105,
+	mix: "2014"
+},
+"S405-ESP": {
+	name: "Sakura Sunrise",
+	diff: "ESP",
+	level: 14,
+	str: 86,
+	vol: 75,
+	air: 69,
+	fre: 40,
+	cha: 48,
+	mix: "X2"
+},
+"S406-ESP": {
+	name: "Samurai Shogun vs. Master Ninja",
+	diff: "ESP",
+	level: 14,
+	str: 112,
+	vol: 86,
+	air: 60,
+	fre: 17,
+	cha: 36,
+	mix: "2014"
+},
+"S407-ESP": {
+	name: "Sand Blow",
+	diff: "ESP",
+	level: 15,
+	str: 95,
+	vol: 88,
+	air: 49,
+	fre: 29,
+	cha: 103,
+	mix: "2014"
+},
+"S408-ESP": {
+	name: "Second Heaven",
+	diff: "ESP",
+	level: 11,
+	str: 61,
+	vol: 49,
+	air: 50,
+	fre: 21,
+	cha: 23,
+	mix: "X2"
+},
+"S409-CSP": {
+	name: "Second Heaven",
+	diff: "CSP",
+	level: 14,
+	str: 81,
+	vol: 80,
+	air: 18,
+	fre: 24,
+	cha: 87,
+	mix: "X2"
+},
+"S410-ESP": {
+	name: "second spring storm",
+	diff: "ESP",
+	level: 14,
+	str: 80,
+	vol: 70,
+	air: 87,
+	fre: 15,
+	cha: 100,
+	mix: "2014"
+},
+"S411-ESP": {
+	name: "Seule",
+	diff: "ESP",
+	level: 12,
+	str: 57,
+	vol: 46,
+	air: 3,
+	fre: 17,
+	cha: 24,
+	mix: "X2"
+},
+"S412-DSP": {
+	name: "Shiny World",
+	diff: "DSP",
+	level: 11,
+	str: 59,
+	vol: 41,
+	air: 18,
+	fre: 23,
+	cha: 77,
+	mix: "X2"
+},
+"S413-ESP": {
+	name: "Shiny World",
+	diff: "ESP",
+	level: 14,
+	str: 83,
+	vol: 55,
+	air: 34,
+	fre: 1,
+	cha: 107,
+	mix: "X2"
+},
+"S414-CSP": {
+	name: "Shiny World",
+	diff: "CSP",
+	level: 16,
+	str: 96,
+	vol: 74,
+	air: 65,
+	fre: 21,
+	cha: 120,
+	mix: "X2"
+},
+"S415-DSP": {
+	name: "Silent Hill",
+	diff: "DSP",
+	level: 9,
+	str: 44,
+	vol: 41,
+	air: 23,
+	fre: 0,
+	cha: 6,
+	mix: "3rd"
+},
+"S416-ESP": {
+	name: "Silent Hill",
+	diff: "ESP",
+	level: 10,
+	str: 58,
+	vol: 41,
+	air: 16,
+	fre: 0,
+	cha: 19,
+	mix: "3rd"
+},
+"S417-DSP": {
+	name: "SILVER☆DREAM",
+	diff: "DSP",
+	level: 11,
+	str: 78,
+	vol: 61,
+	air: 87,
+	fre: 37,
+	cha: 29,
+	mix: "X3"
+},
+"S418-ESP": {
+	name: "SILVER☆DREAM",
+	diff: "ESP",
+	level: 15,
+	str: 108,
+	vol: 92,
+	air: 70,
+	fre: 64,
+	cha: 85,
+	mix: "X3"
+},
+"S419-CSP": {
+	name: "snow prism",
+	diff: "CSP",
+	level: 16,
+	str: 99,
+	vol: 107,
+	air: 80,
+	fre: 28,
+	cha: 100,
+	mix: "X3"
+},
+"S420-DSP": {
+	name: "Somehow You Found Me",
+	diff: "DSP",
+	level: 10,
+	str: 60,
+	vol: 52,
+	air: 69,
+	fre: 9,
+	cha: 13,
+	mix: "2013"
+},
+"S421-ESP": {
+	name: "Somehow You Found Me",
+	diff: "ESP",
+	level: 13,
+	str: 80,
+	vol: 67,
+	air: 76,
+	fre: 0,
+	cha: 33,
+	mix: "2013"
+},
+"S422-CSP": {
+	name: "Somehow You Found Me",
+	diff: "CSP",
+	level: 16,
+	str: 136,
+	vol: 90,
+	air: 45,
+	fre: 19,
+	cha: 101,
+	mix: "2013"
+},
+"S423-ESP": {
+	name: "Something Special",
+	diff: "ESP",
+	level: 11,
+	str: 47,
+	vol: 31,
+	air: 0,
+	fre: 13,
+	cha: 42,
+	mix: "X3"
+},
+"S424-ESP": {
+	name: "south",
+	diff: "ESP",
+	level: 10,
+	str: 58,
+	vol: 40,
+	air: 29,
+	fre: 46,
+	cha: 21,
+	mix: "2013"
+},
+"S425-CSP": {
+	name: "south",
+	diff: "CSP",
+	level: 10,
+	str: 58,
+	vol: 46,
+	air: 125,
+	fre: 17,
+	cha: 49,
+	mix: "2013"
+},
+"S426-DSP": {
+	name: "Spanish Snowy Dance",
+	diff: "DSP",
+	level: 11,
+	str: 76,
+	vol: 60,
+	air: 32,
+	fre: 17,
+	cha: 35,
+	mix: "2013"
+},
+"S427-ESP": {
+	name: "Spanish Snowy Dance",
+	diff: "ESP",
+	level: 15,
+	str: 100,
+	vol: 90,
+	air: 49,
+	fre: 68,
+	cha: 103,
+	mix: "2013"
+},
+"S428-CSP": {
+	name: "Spanish Snowy Dance",
+	diff: "CSP",
+	level: 17,
+	str: 141,
+	vol: 110,
+	air: 54,
+	fre: 33,
+	cha: 107,
+	mix: "2013"
+},
+"S429-ESP": {
+	name: "Squeeze",
+	diff: "ESP",
+	level: 15,
+	str: 90,
+	vol: 81,
+	air: 25,
+	fre: 34,
+	cha: 106,
+	mix: "2014"
+},
+"S430-DSP": {
+	name: "Stay 4 Ever",
+	diff: "DSP",
+	level: 9,
+	str: 47,
+	vol: 40,
+	air: 18,
+	fre: 14,
+	cha: 11,
+	mix: "A20"
+},
+"S431-ESP": {
+	name: "Stay 4 Ever",
+	diff: "ESP",
+	level: 11,
+	str: 58,
+	vol: 58,
+	air: 16,
+	fre: 27,
+	cha: 33,
+	mix: "A20"
+},
+"S432-ESP": {
+	name: "Stella Sinistra",
+	diff: "ESP",
+	level: 15,
+	str: 75,
+	vol: 87,
+	air: 60,
+	fre: 59,
+	cha: 101,
+	mix: "2014"
+},
+"S433-DSP": {
+	name: "Step This Way",
+	diff: "DSP",
+	level: 12,
+	str: 83,
+	vol: 58,
+	air: 23,
+	fre: 11,
+	cha: 41,
+	mix: "A20+"
+},
+"S434-ESP": {
+	name: "Step This Way",
+	diff: "ESP",
+	level: 16,
+	str: 126,
+	vol: 94,
+	air: 47,
+	fre: 11,
+	cha: 106,
+	mix: "A20+"
+},
+"S435-DSP": {
+	name: "Straight Oath",
+	diff: "DSP",
+	level: 11,
+	str: 59,
+	vol: 60,
+	air: 30,
+	fre: 41,
+	cha: 14,
+	mix: "2013"
+},
+"S436-ESP": {
+	name: "Straight Oath",
+	diff: "ESP",
+	level: 13,
+	str: 86,
+	vol: 68,
+	air: 38,
+	fre: 30,
+	cha: 42,
+	mix: "2013"
+},
+"S437-CSP": {
+	name: "Straight Oath",
+	diff: "CSP",
+	level: 15,
+	str: 103,
+	vol: 110,
+	air: 30,
+	fre: 70,
+	cha: 93,
+	mix: "2013"
+},
+"S438-ESP": {
+	name: "STULTI",
+	diff: "ESP",
+	level: 15,
+	str: 96,
+	vol: 90,
+	air: 32,
+	fre: 56,
+	cha: 111,
+	mix: "2013"
+},
+"S439-ESP": {
+	name: "Sucka Luva",
+	diff: "ESP",
+	level: 11,
+	str: 50,
+	vol: 44,
+	air: 83,
+	fre: 9,
+	cha: 27,
+	mix: "2013"
+},
+"S440-ESP": {
+	name: "Summer Fairytale",
+	diff: "ESP",
+	level: 9,
+	str: 38,
+	vol: 41,
+	air: 29,
+	fre: 82,
+	cha: 7,
+	mix: "2013"
+},
+"S441-CSP": {
+	name: "Summer Fairytale",
+	diff: "CSP",
+	level: 14,
+	str: 74,
+	vol: 64,
+	air: 49,
+	fre: 29,
+	cha: 73,
+	mix: "2013"
+},
+"S442-ESP": {
+	name: "SUNKiSS♥DROP",
+	diff: "ESP",
+	level: 12,
+	str: 82,
+	vol: 61,
+	air: 25,
+	fre: 12,
+	cha: 30,
+	mix: "SN2"
+},
+"S443-CSP": {
+	name: "SUNKiSS♥DROP",
+	diff: "CSP",
+	level: 12,
+	str: 67,
+	vol: 61,
+	air: 90,
+	fre: 14,
+	cha: 20,
+	mix: "SN2"
+},
+"S444-ESP": {
+	name: "SUPER SAMURAI",
+	diff: "ESP",
+	level: 15,
+	str: 99,
+	vol: 105,
+	air: 74,
+	fre: 38,
+	cha: 104,
+	mix: "X"
+},
+"S445-ESP": {
+	name: "Sweet Rain",
+	diff: "ESP",
+	level: 12,
+	str: 75,
+	vol: 71,
+	air: 25,
+	fre: 51,
+	cha: 53,
+	mix: "2013"
+},
+"S446-ESP": {
+	name: "Synergy For Angels",
+	diff: "ESP",
+	level: 14,
+	str: 93,
+	vol: 86,
+	air: 10,
+	fre: 22,
+	cha: 87,
+	mix: "2013"
+},
+"S447-ESP": {
+	name: "Take A Step Forward",
+	diff: "ESP",
+	level: 11,
+	str: 61,
+	vol: 48,
+	air: 18,
+	fre: 20,
+	cha: 20,
+	mix: "X3"
+},
+"S448-ESP": {
+	name: "Tell me what to do",
+	diff: "ESP",
+	level: 12,
+	str: 73,
+	vol: 60,
+	air: 0,
+	fre: 7,
+	cha: 48,
+	mix: "2013"
+},
+"S449-CSP": {
+	name: "Tell me what to do",
+	diff: "CSP",
+	level: 14,
+	str: 88,
+	vol: 90,
+	air: 14,
+	fre: 27,
+	cha: 100,
+	mix: "2013"
+},
+"S450-ESP": {
+	name: "The Heavens Above",
+	diff: "ESP",
+	level: 11,
+	str: 59,
+	vol: 46,
+	air: 7,
+	fre: 41,
+	cha: 26,
+	mix: "X3"
+},
+"S451-DSP": {
+	name: "The Island Song",
+	diff: "DSP",
+	level: 7,
+	str: 31,
+	vol: 28,
+	air: 0,
+	fre: 40,
+	cha: 18,
+	mix: "2013"
+},
+"S452-ESP": {
+	name: "The Island Song",
+	diff: "ESP",
+	level: 9,
+	str: 44,
+	vol: 38,
+	air: 0,
+	fre: 6,
+	cha: 46,
+	mix: "2013"
+},
+"S453-CSP": {
+	name: "The Island Song",
+	diff: "CSP",
+	level: 13,
+	str: 77,
+	vol: 56,
+	air: 45,
+	fre: 40,
+	cha: 106,
+	mix: "2013"
+},
+"S454-DSP": {
+	name: "The legend of MAX",
+	diff: "DSP",
+	level: 13,
+	str: 77,
+	vol: 91,
+	air: 40,
+	fre: 31,
+	cha: 6,
+	mix: "EXTR"
+},
+"S455-ESP": {
+	name: "The legend of MAX",
+	diff: "ESP",
+	level: 15,
+	str: 114,
+	vol: 108,
+	air: 85,
+	fre: 11,
+	cha: 44,
+	mix: "EXTR"
+},
+"S456-CSP": {
+	name: "The legend of MAX(X-Special)",
+	diff: "CSP",
+	level: 17,
+	str: 126,
+	vol: 128,
+	air: 36,
+	fre: 36,
+	cha: 61,
+	mix: "X"
+},
+"S457-ESP": {
+	name: "THE REASON",
+	diff: "ESP",
+	level: 12,
+	str: 59,
+	vol: 46,
+	air: 1,
+	fre: 21,
+	cha: 102,
+	mix: "2013"
+},
+"S458-CSP": {
+	name: "THE REASON",
+	diff: "CSP",
+	level: 15,
+	str: 79,
+	vol: 69,
+	air: 124,
+	fre: 28,
+	cha: 115,
+	mix: "2013"
+},
+"S459-ESP": {
+	name: "The Wind of Gold",
+	diff: "ESP",
+	level: 14,
+	str: 87,
+	vol: 77,
+	air: 74,
+	fre: 49,
+	cha: 100,
+	mix: "2013"
+},
+"S460-DSP": {
+	name: "The World Ends Now",
+	diff: "DSP",
+	level: 12,
+	str: 78,
+	vol: 75,
+	air: 41,
+	fre: 44,
+	cha: 28,
+	mix: "A20"
+},
+"S461-ESP": {
+	name: "The World Ends Now",
+	diff: "ESP",
+	level: 16,
+	str: 119,
+	vol: 116,
+	air: 65,
+	fre: 43,
+	cha: 102,
+	mix: "A20"
+},
+"S462-DSP": {
+	name: "Tohoku EVOLVED",
+	diff: "DSP",
+	level: 14,
+	str: 101,
+	vol: 106,
+	air: 3,
+	fre: 0,
+	cha: 30,
+	mix: "X3"
+},
+"S463-ESP": {
+	name: "Tohoku EVOLVED",
+	diff: "ESP",
+	level: 17,
+	str: 162,
+	vol: 106,
+	air: 50,
+	fre: 11,
+	cha: 100,
+	mix: "X3"
+},
+"S464-CSP": {
+	name: "Tohoku EVOLVED",
+	diff: "CSP",
+	level: 18,
+	str: 175,
+	vol: 106,
+	air: 74,
+	fre: 26,
+	cha: 101,
+	mix: "X3"
+},
+"S465-DSP": {
+	name: "tokyoEVOLVED (TYPE1)",
+	diff: "DSP",
+	level: 13,
+	str: 76,
+	vol: 84,
+	air: 32,
+	fre: 54,
+	cha: 33,
+	mix: "X3"
+},
+"S466-ESP": {
+	name: "tokyoEVOLVED (TYPE1)",
+	diff: "ESP",
+	level: 16,
+	str: 119,
+	vol: 102,
+	air: 50,
+	fre: 22,
+	cha: 91,
+	mix: "X3"
+},
+"S467-DSP": {
+	name: "tokyoEVOLVED (TYPE2)",
+	diff: "DSP",
+	level: 13,
+	str: 72,
+	vol: 83,
+	air: 29,
+	fre: 51,
+	cha: 25,
+	mix: "X3"
+},
+"S468-ESP": {
+	name: "tokyoEVOLVED (TYPE2)",
+	diff: "ESP",
+	level: 16,
+	str: 113,
+	vol: 102,
+	air: 76,
+	fre: 24,
+	cha: 93,
+	mix: "X3"
+},
+"S469-DSP": {
+	name: "tokyoEVOLVED (TYPE3)",
+	diff: "DSP",
+	level: 13,
+	str: 70,
+	vol: 83,
+	air: 29,
+	fre: 53,
+	cha: 33,
+	mix: "X3"
+},
+"S470-ESP": {
+	name: "tokyoEVOLVED (TYPE3)",
+	diff: "ESP",
+	level: 16,
+	str: 106,
+	vol: 102,
+	air: 83,
+	fre: 21,
+	cha: 91,
+	mix: "X3"
+},
+"S471-CSP": {
+	name: "Top The Charts",
+	diff: "CSP",
+	level: 14,
+	str: 97,
+	vol: 73,
+	air: 102,
+	fre: 32,
+	cha: 79,
+	mix: "2013"
+},
+"S472-CSP": {
+	name: "Tribe",
+	diff: "CSP",
+	level: 13,
+	str: 79,
+	vol: 69,
+	air: 32,
+	fre: 48,
+	cha: 69,
+	mix: "X3"
+},
+"S473-DSP": {
+	name: "Trigger",
+	diff: "DSP",
+	level: 12,
+	str: 72,
+	vol: 97,
+	air: 67,
+	fre: 16,
+	cha: 58,
+	mix: "X"
+},
+"S474-ESP": {
+	name: "Trigger",
+	diff: "ESP",
+	level: 16,
+	str: 93,
+	vol: 131,
+	air: 94,
+	fre: 39,
+	cha: 103,
+	mix: "X"
+},
+"S475-CSP": {
+	name: "Trigger",
+	diff: "CSP",
+	level: 18,
+	str: 119,
+	vol: 141,
+	air: 89,
+	fre: 67,
+	cha: 110,
+	mix: "X"
+},
+"S476-ESP": {
+	name: "Trim",
+	diff: "ESP",
+	level: 16,
+	str: 89,
+	vol: 90,
+	air: 72,
+	fre: 73,
+	cha: 58,
+	mix: "SN2"
+},
+"S477-DSP": {
+	name: "TRIP MACHINE (xac nanoglide mix)",
+	diff: "DSP",
+	level: 12,
+	str: 72,
+	vol: 56,
+	air: 27,
+	fre: 54,
+	cha: 34,
+	mix: "X3"
+},
+"S478-ESP": {
+	name: "TRIP MACHINE (xac nanoglide mix)",
+	diff: "ESP",
+	level: 16,
+	str: 113,
+	vol: 92,
+	air: 41,
+	fre: 64,
+	cha: 102,
+	mix: "X3"
+},
+"S479-DSP": {
+	name: "TRIP MACHINE EVOLUTION",
+	diff: "DSP",
+	level: 12,
+	str: 80,
+	vol: 61,
+	air: 60,
+	fre: 18,
+	cha: 46,
+	mix: "X3"
+},
+"S480-ESP": {
+	name: "TRIP MACHINE EVOLUTION",
+	diff: "ESP",
+	level: 16,
+	str: 132,
+	vol: 103,
+	air: 87,
+	fre: 15,
+	cha: 108,
+	mix: "X3"
+},
+"S481-CSP": {
+	name: "TRIP MACHINE EVOLUTION",
+	diff: "CSP",
+	level: 18,
+	str: 164,
+	vol: 111,
+	air: 105,
+	fre: 22,
+	cha: 115,
+	mix: "X3"
+},
+"S482-ESP": {
+	name: "TRIP MACHINE PhoeniX",
+	diff: "ESP",
+	level: 15,
+	str: 86,
+	vol: 79,
+	air: 78,
+	fre: 4,
+	cha: 100,
+	mix: "SN2"
+},
+"S483-CSP": {
+	name: "TRIP MACHINE PhoeniX",
+	diff: "CSP",
+	level: 15,
+	str: 103,
+	vol: 79,
+	air: 25,
+	fre: 4,
+	cha: 104,
+	mix: "SN2"
+},
+"S484-DSP": {
+	name: "Triple Cross",
+	diff: "DSP",
+	level: 13,
+	str: 80,
+	vol: 81,
+	air: 25,
+	fre: 29,
+	cha: 32,
+	mix: "A20+"
+},
+"S485-ESP": {
+	name: "Triple Cross",
+	diff: "ESP",
+	level: 17,
+	str: 121,
+	vol: 111,
+	air: 45,
+	fre: 30,
+	cha: 103,
+	mix: "A20+"
+},
+"S486-DSP": {
+	name: "Triple Journey -TAG EDITION-",
+	diff: "DSP",
+	level: 12,
+	str: 81,
+	vol: 60,
+	air: 14,
+	fre: 28,
+	cha: 37,
+	mix: "2013"
+},
+"S487-ESP": {
+	name: "Triple Journey -TAG EDITION-",
+	diff: "ESP",
+	level: 16,
+	str: 135,
+	vol: 110,
+	air: 34,
+	fre: 20,
+	cha: 106,
+	mix: "2013"
+},
+"S488-CSP": {
+	name: "Triple Journey -TAG EDITION-",
+	diff: "CSP",
+	level: 18,
+	str: 175,
+	vol: 110,
+	air: 63,
+	fre: 18,
+	cha: 112,
+	mix: "2013"
+},
+"S489-DSP": {
+	name: "Truare!",
+	diff: "DSP",
+	level: 11,
+	str: 73,
+	vol: 68,
+	air: 41,
+	fre: 9,
+	cha: 63,
+	mix: "2014"
+},
+"S490-ESP": {
+	name: "Truare!",
+	diff: "ESP",
+	level: 16,
+	str: 103,
+	vol: 91,
+	air: 52,
+	fre: 9,
+	cha: 105,
+	mix: "2014"
+},
+"S491-DSP": {
+	name: "True Blue",
+	diff: "DSP",
+	level: 11,
+	str: 63,
+	vol: 54,
+	air: 23,
+	fre: 44,
+	cha: 24,
+	mix: "2014"
+},
+"S492-ESP": {
+	name: "True Blue",
+	diff: "ESP",
+	level: 16,
+	str: 101,
+	vol: 104,
+	air: 29,
+	fre: 41,
+	cha: 104,
+	mix: "2014"
+},
+"S493-CSP": {
+	name: "TSUGARU (APPLE MIX)",
+	diff: "CSP",
+	level: 11,
+	str: 77,
+	vol: 60,
+	air: 20,
+	fre: 11,
+	cha: 35,
+	mix: "MAX2"
+},
+"S494-ESP": {
+	name: "TWINKLE♡HEART",
+	diff: "ESP",
+	level: 11,
+	str: 68,
+	vol: 53,
+	air: 41,
+	fre: 57,
+	cha: 24,
+	mix: "X3"
+},
+"S495-CSP": {
+	name: "TWINKLE♡HEART",
+	diff: "CSP",
+	level: 10,
+	str: 53,
+	vol: 30,
+	air: 165,
+	fre: 80,
+	cha: 1,
+	mix: "X3"
+},
+"S496-ESP": {
+	name: "UNBELIEVABLE (Sparky remix)",
+	diff: "ESP",
+	level: 15,
+	str: 86,
+	vol: 105,
+	air: 32,
+	fre: 88,
+	cha: 69,
+	mix: "X3"
+},
+"S497-ESP": {
+	name: "Under the Sky",
+	diff: "ESP",
+	level: 11,
+	str: 44,
+	vol: 56,
+	air: 0,
+	fre: 104,
+	cha: 11,
+	mix: "SN"
+},
+"S498-DSP": {
+	name: "Unreal",
+	diff: "DSP",
+	level: 12,
+	str: 64,
+	vol: 56,
+	air: 132,
+	fre: 0,
+	cha: 31,
+	mix: "SN2"
+},
+"S499-ESP": {
+	name: "Unreal",
+	diff: "ESP",
+	level: 15,
+	str: 84,
+	vol: 77,
+	air: 106,
+	fre: 0,
+	cha: 51,
+	mix: "SN2"
+},
+"S500-DSP": {
+	name: "Valkyrie dimension",
+	diff: "DSP",
+	level: 15,
+	str: 77,
+	vol: 92,
+	air: 21,
+	fre: 77,
+	cha: 110,
+	mix: "X2"
+},
+"S501-ESP": {
+	name: "Valkyrie dimension",
+	diff: "ESP",
+	level: 18,
+	str: 119,
+	vol: 111,
+	air: 21,
+	fre: 73,
+	cha: 143,
+	mix: "X2"
+},
+"S502-CSP": {
+	name: "Valkyrie dimension",
+	diff: "CSP",
+	level: 19,
+	str: 145,
+	vol: 143,
+	air: 70,
+	fre: 55,
+	cha: 153,
+	mix: "X2"
+},
+"S503-DSP": {
+	name: "VANESSA",
+	diff: "DSP",
+	level: 11,
+	str: 70,
+	vol: 61,
+	air: 54,
+	fre: 35,
+	cha: 41,
+	mix: "X2"
+},
+"S504-ESP": {
+	name: "VANESSA",
+	diff: "ESP",
+	level: 16,
+	str: 125,
+	vol: 92,
+	air: 32,
+	fre: 21,
+	cha: 106,
+	mix: "X2"
+},
+"S505-ESP": {
+	name: "VEGA",
+	diff: "ESP",
+	level: 14,
+	str: 100,
+	vol: 95,
+	air: 54,
+	fre: 35,
+	cha: 80,
+	mix: "2014"
+},
+"S506-ESP": {
+	name: "Wicked Plastik",
+	diff: "ESP",
+	level: 13,
+	str: 65,
+	vol: 66,
+	air: 14,
+	fre: 16,
+	cha: 53,
+	mix: "X3"
+},
+"S507-ESP": {
+	name: "WILD SIDE",
+	diff: "ESP",
+	level: 11,
+	str: 64,
+	vol: 55,
+	air: 27,
+	fre: 53,
+	cha: 30,
+	mix: "2013"
+},
+"S508-CSP": {
+	name: "WILD SIDE",
+	diff: "CSP",
+	level: 13,
+	str: 80,
+	vol: 68,
+	air: 38,
+	fre: 49,
+	cha: 61,
+	mix: "2013"
+},
+"S509-DSP": {
+	name: "Windy Fairy",
+	diff: "DSP",
+	level: 11,
+	str: 58,
+	vol: 60,
+	air: 32,
+	fre: 43,
+	cha: 12,
+	mix: "2013"
+},
+"S510-ESP": {
+	name: "Windy Fairy",
+	diff: "ESP",
+	level: 15,
+	str: 94,
+	vol: 97,
+	air: 10,
+	fre: 51,
+	cha: 100,
+	mix: "2013"
+},
+"S511-ESP": {
+	name: "Wings of an Angel (Fly With Me)",
+	diff: "ESP",
+	level: 12,
+	str: 64,
+	vol: 80,
+	air: 20,
+	fre: 82,
+	cha: 35,
+	mix: "X3"
+},
+"S512-DSP": {
+	name: "Wow Wow VENUS",
+	diff: "DSP",
+	level: 8,
+	str: 48,
+	vol: 39,
+	air: 41,
+	fre: 49,
+	cha: 8,
+	mix: "2013"
+},
+"S513-ESP": {
+	name: "Wow Wow VENUS",
+	diff: "ESP",
+	level: 11,
+	str: 63,
+	vol: 52,
+	air: 49,
+	fre: 36,
+	cha: 29,
+	mix: "2013"
+},
+"S514-ESP": {
+	name: "Xepher",
+	diff: "ESP",
+	level: 13,
+	str: 89,
+	vol: 63,
+	air: 36,
+	fre: 25,
+	cha: 53,
+	mix: "SN"
+},
+"S515-CSP": {
+	name: "Xepher",
+	diff: "CSP",
+	level: 15,
+	str: 113,
+	vol: 85,
+	air: 36,
+	fre: 25,
+	cha: 101,
+	mix: "SN"
+},
+"S516-DSP": {
+	name: "You",
+	diff: "DSP",
+	level: 6,
+	str: 28,
+	vol: 21,
+	air: 9,
+	fre: 111,
+	cha: 11,
+	mix: "2013"
+},
+"S517-ESP": {
+	name: "You",
+	diff: "ESP",
+	level: 10,
+	str: 40,
+	vol: 36,
+	air: 0,
+	fre: 95,
+	cha: 54,
+	mix: "2013"
+},
+"S518-DSP": {
+	name: "ZETA～素数の世界と超越者～",
+	diff: "DSP",
+	level: 11,
+	str: 61,
+	vol: 57,
+	air: 38,
+	fre: 52,
+	cha: 14,
+	mix: "X2"
+},
+"S519-ESP": {
+	name: "ZETA～素数の世界と超越者～",
+	diff: "ESP",
+	level: 15,
+	str: 97,
+	vol: 93,
+	air: 32,
+	fre: 36,
+	cha: 92,
+	mix: "X2"
+},
+"S520-CSP": {
+	name: "ZETA～素数の世界と超越者～",
+	diff: "CSP",
+	level: 17,
+	str: 154,
+	vol: 125,
+	air: 58,
+	fre: 51,
+	cha: 112,
+	mix: "X2"
+},
+"S521-ESP": {
+	name: "アルストロメリア (walk with you remix)",
+	diff: "ESP",
+	level: 11,
+	str: 64,
+	vol: 61,
+	air: 10,
+	fre: 36,
+	cha: 28,
+	mix: "X3"
+},
+"S522-CSP": {
+	name: "アルストロメリア (walk with you remix)",
+	diff: "CSP",
+	level: 13,
+	str: 73,
+	vol: 74,
+	air: 38,
+	fre: 22,
+	cha: 67,
+	mix: "X3"
+},
+"S523-DSP": {
+	name: "ウッーウッーウマウマ(ﾟ∀ﾟ)(Speedcake Remix)",
+	diff: "DSP",
+	level: 8,
+	str: 50,
+	vol: 41,
+	air: 43,
+	fre: 21,
+	cha: 6,
+	mix: "2013"
+},
+"S524-ESP": {
+	name: "ウッーウッーウマウマ(ﾟ∀ﾟ)(Speedcake Remix)",
+	diff: "ESP",
+	level: 11,
+	str: 66,
+	vol: 54,
+	air: 43,
+	fre: 27,
+	cha: 23,
+	mix: "2013"
+},
+"S525-CSP": {
+	name: "ウッーウッーウマウマ(ﾟ∀ﾟ)(Speedcake Remix)",
+	diff: "CSP",
+	level: 14,
+	str: 89,
+	vol: 82,
+	air: 47,
+	fre: 21,
+	cha: 78,
+	mix: "2013"
+},
+"S526-CSP": {
+	name: "オリオンをなぞる",
+	diff: "CSP",
+	level: 12,
+	str: 76,
+	vol: 60,
+	air: 36,
+	fre: 6,
+	cha: 36,
+	mix: "2013"
+},
+"S527-ESP": {
+	name: "お米の美味しい炊き方、そしてお米を食べることによるその効果。",
+	diff: "ESP",
+	level: 16,
+	str: 128,
+	vol: 105,
+	air: 41,
+	fre: 10,
+	cha: 102,
+	mix: "2013"
+},
+"S528-ESP": {
+	name: "からふるぱすてる",
+	diff: "ESP",
+	level: 12,
+	str: 93,
+	vol: 93,
+	air: 20,
+	fre: 33,
+	cha: 46,
+	mix: "2013"
+},
+"S529-ESP": {
+	name: "キケンな果実",
+	diff: "ESP",
+	level: 13,
+	str: 79,
+	vol: 79,
+	air: 20,
+	fre: 34,
+	cha: 42,
+	mix: "2013"
+},
+"S530-DSP": {
+	name: "コネクト",
+	diff: "DSP",
+	level: 8,
+	str: 38,
+	vol: 43,
+	air: 14,
+	fre: 68,
+	cha: 4,
+	mix: "X3"
+},
+"S531-ESP": {
+	name: "コネクト",
+	diff: "ESP",
+	level: 12,
+	str: 65,
+	vol: 65,
+	air: 43,
+	fre: 48,
+	cha: 22,
+	mix: "X3"
+},
+"S532-CSP": {
+	name: "コネクト",
+	diff: "CSP",
+	level: 7,
+	str: 46,
+	vol: 51,
+	air: 52,
+	fre: 38,
+	cha: 2,
+	mix: "X3"
+},
+"S533-ESP": {
+	name: "この子の七つのお祝いに",
+	diff: "ESP",
+	level: 14,
+	str: 96,
+	vol: 103,
+	air: 12,
+	fre: 4,
+	cha: 103,
+	mix: "SN"
+},
+"S534-DSP": {
+	name: "ジョジョ～その血の運命～",
+	diff: "DSP",
+	level: 8,
+	str: 52,
+	vol: 42,
+	air: 18,
+	fre: 13,
+	cha: 15,
+	mix: "2013"
+},
+"S535-ESP": {
+	name: "ジョジョ～その血の運命～",
+	diff: "ESP",
+	level: 12,
+	str: 69,
+	vol: 73,
+	air: 40,
+	fre: 25,
+	cha: 51,
+	mix: "2013"
+},
+"S536-CSP": {
+	name: "ずっとみつめていて (Ryu☆Remix)",
+	diff: "CSP",
+	level: 15,
+	str: 104,
+	vol: 103,
+	air: 3,
+	fre: 42,
+	cha: 102,
+	mix: "2013"
+},
+"S537-ESP": {
+	name: "セツナトリップ",
+	diff: "ESP",
+	level: 14,
+	str: 89,
+	vol: 72,
+	air: 14,
+	fre: 17,
+	cha: 100,
+	mix: "2014"
+},
+"S538-DSP": {
+	name: "ちゅ～いん☆バニー",
+	diff: "DSP",
+	level: 8,
+	str: 48,
+	vol: 45,
+	air: 27,
+	fre: 36,
+	cha: 7,
+	mix: "2014"
+},
+"S539-ESP": {
+	name: "ちゅ～いん☆バニー",
+	diff: "ESP",
+	level: 10,
+	str: 63,
+	vol: 52,
+	air: 41,
+	fre: 24,
+	cha: 20,
+	mix: "2014"
+},
+"S540-CSP": {
+	name: "ちゅ～いん☆バニー",
+	diff: "CSP",
+	level: 13,
+	str: 76,
+	vol: 75,
+	air: 105,
+	fre: 32,
+	cha: 42,
+	mix: "2014"
+},
+"S541-ESP": {
+	name: "つけまつける",
+	diff: "ESP",
+	level: 10,
+	str: 60,
+	vol: 42,
+	air: 27,
+	fre: 30,
+	cha: 17,
+	mix: "2013"
+},
+"S542-CSP": {
+	name: "つけまつける",
+	diff: "CSP",
+	level: 10,
+	str: 61,
+	vol: 42,
+	air: 54,
+	fre: 20,
+	cha: 17,
+	mix: "2013"
+},
+"S543-ESP": {
+	name: "び",
+	diff: "ESP",
+	level: 17,
+	str: 155,
+	vol: 106,
+	air: 20,
+	fre: 28,
+	cha: 109,
+	mix: "A20"
+},
+"S544-CSP": {
+	name: "び",
+	diff: "CSP",
+	level: 18,
+	str: 178,
+	vol: 106,
+	air: 32,
+	fre: 33,
+	cha: 113,
+	mix: "A20"
+},
+"S545-ESP": {
+	name: "フー・フローツ",
+	diff: "ESP",
+	level: 12,
+	str: 79,
+	vol: 67,
+	air: 30,
+	fre: 16,
+	cha: 40,
+	mix: "2013"
+},
+"S546-ESP": {
+	name: "ふりそでーしょん",
+	diff: "ESP",
+	level: 12,
+	str: 82,
+	vol: 66,
+	air: 63,
+	fre: 24,
+	cha: 25,
+	mix: "2013"
+},
+"S547-DSP": {
+	name: "ほしのつくるかた",
+	diff: "DSP",
+	level: 10,
+	str: 58,
+	vol: 52,
+	air: 30,
+	fre: 34,
+	cha: 12,
+	mix: "A20+"
+},
+"S548-ESP": {
+	name: "ほしのつくるかた",
+	diff: "ESP",
+	level: 14,
+	str: 88,
+	vol: 67,
+	air: 43,
+	fre: 21,
+	cha: 42,
+	mix: "A20+"
+},
+"S549-ESP": {
+	name: "マインド・ゲーム",
+	diff: "ESP",
+	level: 14,
+	str: 88,
+	vol: 82,
+	air: 23,
+	fre: 35,
+	cha: 64,
+	mix: "2014"
+},
+"S550-CSP": {
+	name: "マジLOVE1000%",
+	diff: "CSP",
+	level: 7,
+	str: 32,
+	vol: 43,
+	air: 78,
+	fre: 96,
+	cha: 16,
+	mix: "2013"
+},
+"S551-ESP": {
+	name: "めうめうぺったんたん！！",
+	diff: "ESP",
+	level: 12,
+	str: 72,
+	vol: 84,
+	air: 41,
+	fre: 24,
+	cha: 30,
+	mix: "2013"
+},
+"S552-CSP": {
+	name: "めうめうぺったんたん！！",
+	diff: "CSP",
+	level: 16,
+	str: 124,
+	vol: 92,
+	air: 40,
+	fre: 37,
+	cha: 101,
+	mix: "2013"
+},
+"S553-DSP": {
+	name: "ヤマトなでなで♡かぐや姫",
+	diff: "DSP",
+	level: 8,
+	str: 44,
+	vol: 46,
+	air: 20,
+	fre: 51,
+	cha: 5,
+	mix: "2014"
+},
+"S554-ESP": {
+	name: "ヤマトなでなで♡かぐや姫",
+	diff: "ESP",
+	level: 11,
+	str: 60,
+	vol: 53,
+	air: 27,
+	fre: 52,
+	cha: 18,
+	mix: "2014"
+},
+"S555-CSP": {
+	name: "ヤマトなでなで♡かぐや姫",
+	diff: "CSP",
+	level: 14,
+	str: 80,
+	vol: 86,
+	air: 29,
+	fre: 94,
+	cha: 72,
+	mix: "2014"
+},
+"S556-ESP": {
+	name: "ラクガキスト",
+	diff: "ESP",
+	level: 13,
+	str: 94,
+	vol: 66,
+	air: 5,
+	fre: 5,
+	cha: 36,
+	mix: "2014"
+},
+"S557-CSP": {
+	name: "ラクガキスト",
+	diff: "CSP",
+	level: 16,
+	str: 134,
+	vol: 116,
+	air: 25,
+	fre: 1,
+	cha: 103,
+	mix: "2014"
+},
+"S558-ESP": {
+	name: "回レ！雪月花",
+	diff: "ESP",
+	level: 11,
+	str: 69,
+	vol: 53,
+	air: 27,
+	fre: 16,
+	cha: 26,
+	mix: "2014"
+},
+"S559-CSP": {
+	name: "回レ！雪月花",
+	diff: "CSP",
+	level: 13,
+	str: 76,
+	vol: 73,
+	air: 65,
+	fre: 24,
+	cha: 67,
+	mix: "2014"
+},
+"S560-ESP": {
+	name: "海神",
+	diff: "ESP",
+	level: 16,
+	str: 93,
+	vol: 102,
+	air: 7,
+	fre: 65,
+	cha: 105,
+	mix: "2014"
+},
+"S561-DSP": {
+	name: "隅田川夏恋歌",
+	diff: "DSP",
+	level: 10,
+	str: 63,
+	vol: 52,
+	air: 23,
+	fre: 12,
+	cha: 11,
+	mix: "X3"
+},
+"S562-ESP": {
+	name: "隅田川夏恋歌",
+	diff: "ESP",
+	level: 12,
+	str: 86,
+	vol: 60,
+	air: 14,
+	fre: 0,
+	cha: 31,
+	mix: "X3"
+},
+"S563-CSP": {
+	name: "隅田川夏恋歌",
+	diff: "CSP",
+	level: 16,
+	str: 108,
+	vol: 110,
+	air: 85,
+	fre: 20,
+	cha: 90,
+	mix: "X3"
+},
+"S564-DSP": {
+	name: "幻想系世界修復少女",
+	diff: "DSP",
+	level: 9,
+	str: 66,
+	vol: 56,
+	air: 9,
+	fre: 31,
+	cha: 14,
+	mix: "2014"
+},
+"S565-ESP": {
+	name: "幻想系世界修復少女",
+	diff: "ESP",
+	level: 12,
+	str: 78,
+	vol: 64,
+	air: 47,
+	fre: 51,
+	cha: 27,
+	mix: "2014"
+},
+"S566-DSP": {
+	name: "御千手メディテーション",
+	diff: "DSP",
+	level: 12,
+	str: 63,
+	vol: 68,
+	air: 21,
+	fre: 38,
+	cha: 36,
+	mix: "2014"
+},
+"S567-ESP": {
+	name: "御千手メディテーション",
+	diff: "ESP",
+	level: 15,
+	str: 93,
+	vol: 92,
+	air: 18,
+	fre: 33,
+	cha: 101,
+	mix: "2014"
+},
+"S568-CSP": {
+	name: "紅焔",
+	diff: "CSP",
+	level: 15,
+	str: 113,
+	vol: 101,
+	air: 74,
+	fre: 30,
+	cha: 102,
+	mix: "X3"
+},
+"S569-ESP": {
+	name: "轟け！恋のビーンボール！！",
+	diff: "ESP",
+	level: 16,
+	str: 108,
+	vol: 110,
+	air: 58,
+	fre: 6,
+	cha: 101,
+	mix: "2014"
+},
+"S570-ESP": {
+	name: "桜",
+	diff: "ESP",
+	level: 13,
+	str: 92,
+	vol: 103,
+	air: 16,
+	fre: 1,
+	cha: 31,
+	mix: "EXTR"
+},
+"S571-DSP": {
+	name: "灼熱 Pt.2 Long Train Running",
+	diff: "DSP",
+	level: 13,
+	str: 83,
+	vol: 75,
+	air: 25,
+	fre: 16,
+	cha: 62,
+	mix: "A20+"
+},
+"S572-ESP": {
+	name: "灼熱 Pt.2 Long Train Running",
+	diff: "ESP",
+	level: 16,
+	str: 122,
+	vol: 105,
+	air: 70,
+	fre: 22,
+	cha: 104,
+	mix: "A20+"
+},
+"S573-ESP": {
+	name: "灼熱Beach Side Bunny",
+	diff: "ESP",
+	level: 15,
+	str: 97,
+	vol: 101,
+	air: 128,
+	fre: 16,
+	cha: 103,
+	mix: "2014"
+},
+"S574-ESP": {
+	name: "女々しくて",
+	diff: "ESP",
+	level: 11,
+	str: 55,
+	vol: 83,
+	air: 10,
+	fre: 35,
+	cha: 31,
+	mix: "X3"
+},
+"S575-CSP": {
+	name: "女々しくて",
+	diff: "CSP",
+	level: 10,
+	str: 51,
+	vol: 47,
+	air: 106,
+	fre: 99,
+	cha: 54,
+	mix: "X3"
+},
+"S576-ESP": {
+	name: "創世ノート",
+	diff: "ESP",
+	level: 13,
+	str: 81,
+	vol: 66,
+	air: 58,
+	fre: 42,
+	cha: 39,
+	mix: "2013"
+},
+"S577-ESP": {
+	name: "嘆きの樹",
+	diff: "ESP",
+	level: 16,
+	str: 114,
+	vol: 103,
+	air: 94,
+	fre: 23,
+	cha: 105,
+	mix: "2014"
+},
+"S578-CSP": {
+	name: "嘆きの樹",
+	diff: "CSP",
+	level: 18,
+	str: 144,
+	vol: 116,
+	air: 87,
+	fre: 42,
+	cha: 111,
+	mix: "2014"
+},
+"S579-DSP": {
+	name: "未完成ノ蒸氣驅動乙女 (DDR Edition)",
+	diff: "DSP",
+	level: 13,
+	str: 82,
+	vol: 120,
+	air: 41,
+	fre: 61,
+	cha: 100,
+	mix: "A20"
+},
+"S580-ESP": {
+	name: "未完成ノ蒸氣驅動乙女 (DDR Edition)",
+	diff: "ESP",
+	level: 17,
+	str: 146,
+	vol: 126,
+	air: 34,
+	fre: 61,
+	cha: 116,
+	mix: "A20"
+},
+"S581-ESP": {
+	name: "冥",
+	diff: "ESP",
+	level: 16,
+	str: 95,
+	vol: 109,
+	air: 47,
+	fre: 20,
+	cha: 100,
+	mix: "X2"
+},
+"S582-CSP": {
+	name: "冥",
+	diff: "CSP",
+	level: 18,
+	str: 124,
+	vol: 109,
+	air: 72,
+	fre: 10,
+	cha: 106,
+	mix: "X2"
+},
+"S583-ESP": {
+	name: "野球の遊び方　そしてその歴史　～決定版～",
+	diff: "ESP",
+	level: 14,
+	str: 71,
+	vol: 76,
+	air: 69,
+	fre: 28,
+	cha: 63,
+	mix: "2014"
+},
+"S584-ESP": {
+	name: "恋はどう？モロ◎波動OK☆方程式！！",
+	diff: "ESP",
+	level: 14,
+	str: 91,
+	vol: 97,
+	air: 25,
+	fre: 39,
+	cha: 32,
+	mix: "2014"
+},
+"S585-CSP": {
+	name: "恋閃繚乱",
+	diff: "CSP",
+	level: 15,
+	str: 94,
+	vol: 94,
+	air: 50,
+	fre: 31,
+	cha: 103,
+	mix: "X3"
+},
+"S586-DSP": {
+	name: "ΔMAX",
+	diff: "DSP",
+	level: 13,
+	str: 77,
+	vol: 91,
+	air: 30,
+	fre: 8,
+	cha: 22,
+	mix: "X2"
+},
+"S587-ESP": {
+	name: "ΔMAX",
+	diff: "ESP",
+	level: 17,
+	str: 95,
+	vol: 106,
+	air: 89,
+	fre: 31,
+	cha: 74,
+	mix: "X2"
+},
+"S588-CSP": {
+	name: "ΔMAX",
+	diff: "CSP",
+	level: 17,
+	str: 98,
+	vol: 101,
+	air: 115,
+	fre: 31,
+	cha: 100,
+	mix: "X2"
+},
+"S589-DSP": {
+	name: "ΩVERSOUL",
+	diff: "DSP",
+	level: 12,
+	str: 66,
+	vol: 58,
+	air: 23,
+	fre: 30,
+	cha: 42,
+	mix: "A20"
+},
+"S590-ESP": {
+	name: "ΩVERSOUL",
+	diff: "ESP",
+	level: 15,
+	str: 87,
+	vol: 101,
+	air: 61,
+	fre: 35,
+	cha: 102,
+	mix: "A20"
+},
+"S591-CSP": {
+	name: "ΩVERSOUL",
+	diff: "CSP",
+	level: 17,
+	str: 123,
+	vol: 101,
+	air: 69,
+	fre: 24,
+	cha: 110,
+	mix: "A20"
+},
+"S592-DSP": {
+	name: "MAXIMIZER",
+	diff: "DSP",
+	level: 9,
+	str: 56,
+	vol: 54,
+	air: 16,
+	fre: 35,
+	cha: 20,
+	mix: "SN"
+},
+"S593-ESP": {
+	name: "MAXIMIZER",
+	diff: "ESP",
+	level: 12,
+	str: 76,
+	vol: 62,
+	air: 27,
+	fre: 22,
+	cha: 38,
+	mix: "SN"
+}
+            }
+
+            const mixes = ["1st", "2nd", "3rd", "4th", "5th", "MAX", "MAX2", "EXTR", "SN", "SN2", "X", "X2", "X3", "2013", "2014", "A", "A20", "A20+"];
+            const mixNames = ["DDR 1st", "DDR 2ndMIX", "DDR 3rdMIX", "DDR 4thMIX", "DDR 5thMIX", "DDRMAX", "DDRMAX2", "DDR EXTREME", "DDR SuperNOVA", "DDR SuperNOVA2", "DDR X", "DDR X2", "DDR X3 VS 2ndMIX", "DDR (2013)", "DDR (2014)", "DDR A", "DDR A20", "DDR A20 PLUS"];
+			const diffs = ["bSP", "BSP", "DSP", "ESP", "CSP"];
+
+            var songOfChoice = null;
+            var attempts = 0;
+
+            const MAX_ATTEMPTS = 8;
+            const RADAR_SCALE = 175;
+
+            // small hash function lifted from:
+            // https://github.com/MatthewBarker/hash-string/
+            function tinyHash(text) {
+                
+                var hash = 5381;
+                var index = text.length;
+
+                while (index) {
+                    hash = (hash * 33) ^ text.charCodeAt(--index);
+                }
+
+                return hash >>> 0;
+            }
+
+            // Clears the game table
+            function clearGameTable() {
+
+                var gameTable = document.getElementById("game");
+                if (gameTable) {
+                    while (gameTable.firstChild) {
+                        gameTable.removeChild(gameTable.firstChild);
+                    }
+                }
+
+                insertFirstGameRow();
+            }
+
+            // Creates a new empty row in the game table
+            function insertGameRow(classes = []) {
+                var gameTable = document.getElementById("game");
+                var newRow = document.createElement("div");
+                newRow.classList.add("game-row");
+                if (classes.length > 0) {
+                    for (var c in classes) {
+                        newRow.classList.add(classes[c]);
+                    }
+                }
+                gameTable.appendChild(newRow);
+                return newRow;
+            }
+
+            // Inserts data into a game row
+            function insertRowCell(row, data, classes=["game-row-value"]) {
+
+                // spawn a new cell element
+                var newCell = document.createElement("div");
+                if (classes.length > 0) {
+                    for (var c in classes) {
+                        newCell.classList.add(classes[c]);
+                    }
+                }
+
+                // fill it and put it into the proper place on the page
+                newCell.innerHTML = data.toString();
+                row.appendChild(newCell);
+
+                return newCell;
+            }
+
+            // Creates the header row in the game table
+            function insertFirstGameRow() {
+
+                var firstRow = insertGameRow(["header"]);
+
+                insertRowCell(firstRow, "#", ["game-row-attempt"]);
+                insertRowCell(firstRow, "", ["game-row-chartname"]);
+				insertRowCell(firstRow, "DIFF");
+                insertRowCell(firstRow, "LV");
+                insertRowCell(firstRow, "STR");
+                insertRowCell(firstRow, "VOL");
+                insertRowCell(firstRow, "AIR");
+                insertRowCell(firstRow, "FRE");
+                insertRowCell(firstRow, "CHA");
+                insertRowCell(firstRow, "MIX");
+
+            }
+
+            function check() {
+
+                // don't allow play if the max number of attempts have been made
+                if (attempts > MAX_ATTEMPTS - 1) {
+                    return 0;
+                }
+
+                // get the choice from the dropdown selection
+                var selection = document.getElementById("ddr-chart").value;
+
+                // (and disallow an attempt if no song is actually selected)
+                if (selection == "nosong") {
+                    return 0;
+                }
+
+                // get song information for comparison
+                var selectionData = songData[selection];
+                var correctData = songData[songOfChoice];
+
+                // generate the data comparison row for the attempt
+                var rowData = [
+					selectionData.diff + "<br />" + (selectionData.diff === correctData.diff ? "✓" : (diffs.indexOf(selectionData.diff) < diffs.indexOf(correctData.diff) ? "↑" : "↓")),
+                    selectionData.level + "<br />" + (selectionData.level === correctData.level ? "✓" : (selectionData.level < correctData.level ? "↑" : "↓")),
+                    selectionData.str + "<br />" + (selectionData.str === correctData.str ? "✓" : (selectionData.str < correctData.str ? "↑" : "↓")),
+                    selectionData.vol + "<br />" + (selectionData.vol === correctData.vol ? "✓" : (selectionData.vol < correctData.vol ? "↑" : "↓")),
+                    selectionData.air + "<br />" + (selectionData.air === correctData.air ? "✓" : (selectionData.air < correctData.air ? "↑" : "↓")),
+                    selectionData.fre + "<br />" + (selectionData.fre === correctData.fre ? "✓" : (selectionData.fre < correctData.fre ? "↑" : "↓")),
+                    selectionData.cha + "<br />" + (selectionData.cha === correctData.cha ? "✓" : (selectionData.cha < correctData.cha ? "↑" : "↓")),
+                    selectionData.mix + "<br />" + (selectionData.mix == correctData.mix ? "✓" : (mixes.indexOf(selectionData.mix) < mixes.indexOf(correctData.mix) ? "↑" : "↓" ))
+                ];
+
+                // perform the insertion of the new row
+                var newRow = insertGameRow();
+                insertRowCell(newRow, attempts + 1, ["game-row-attempt"]);
+                insertRowCell(newRow, selectionData.name, ["game-row-chartname"]);
+                for (var i = 0; i < rowData.length; i++) {
+                    var rowText = rowData[i];
+                    var rowCell = insertRowCell(newRow, rowText);
+                    if (rowText.includes("✓")) {
+                        rowCell.classList.add("rightval");
+                    } else {
+                        rowCell.classList.add("wrongval");
+                    }
+                }
+
+                // if the player's right, end the game
+                if (selection == songOfChoice) {
+                    newRow.classList.add("correct");
+                    document.getElementById("submit").disabled = true;
+                    document.getElementById("ddr-chart").disabled = true;
+
+                    document.getElementById("postgame").style.display = "inherit";
+                }
+
+                // otherwise...
+                else {
+
+                    // increase the number of attempts made
+                    attempts++;
+
+                    // and if out of attempts...
+                    if (attempts > MAX_ATTEMPTS - 1) {
+
+                        // turn off the game and show the correct choice in the dropdown
+                        // (so groove radar illustration updates)
+                        document.getElementById("submit").disabled = true;
+                        document.getElementById("ddr-chart").value = songOfChoice;
+                        updateInfo();
+                        document.getElementById("ddr-chart").disabled = true;
+
+                        // generate a data row that shows the correct answer
+                        var answerData = [
+							correctData.diff,
+                            correctData.level,
+                            correctData.str,
+                            correctData.vol,
+                            correctData.air,
+                            correctData.fre,
+                            correctData.cha,
+                            correctData.mix
+                        ];
+
+                        // perform the insertion of the new row
+                        var answerRow = insertGameRow();
+                        insertRowCell(answerRow, "--", ["game-row-attempt"]);
+                        insertRowCell(answerRow, correctData.name, ["game-row-chartname"]);
+
+                        for (var i = 0; i < answerData.length; i++) {
+                            insertRowCell(answerRow, answerData[i], ["game-row-value", "finalval"]);
+                        }
+
+                        document.getElementById("postgame").style.display = "inherit";
+                    }
+                }
+            }
+
+            function updateInfo() {
+
+                // no matter what, clear the radar (if we go to "select song" it should all clear away)
+                const ctx = document.getElementById("selector-radar").getContext("2d");
+                ctx.clearRect(0, 0, ctx.canvas.width, ctx.canvas.height);
+
+                ctx.fillStyle = "#333";
+                ctx.fillRect(0, 0, 104, 104);
+
+                // draw the frame polygon
+                ctx.strokeStyle = "gray";
+                ctx.moveTo(52, 52);
+                ctx.beginPath();
+                for (var i = 0; i <= 5; i++) {
+                    var xx = (50 * 0.75) * Math.cos((90 + (i % 5) * 72) * (Math.PI / 180));
+                    var yy = (50 * 0.75) * Math.sin((90 + (i % 5) * 72) * (Math.PI / 180));
+
+                    ctx.lineTo(52 + xx, 52 - yy);
+                    ctx.lineTo(52, 52);
+                    ctx.lineTo(52 + xx, 52 - yy);
+                }
+                ctx.closePath();
+                ctx.stroke();
+
+                // if we actually picked a song... draw updated radar
+                var selection = document.getElementById("ddr-chart").value;
+                if (selection != "nosong") {
+
+                    // get distances
+                    var radarValues = [
+                        songData[selection].str / RADAR_SCALE,
+                        songData[selection].vol / RADAR_SCALE,
+                        songData[selection].air / RADAR_SCALE,
+                        songData[selection].fre / RADAR_SCALE,
+                        songData[selection].cha / RADAR_SCALE
+                    ];
+
+                    // draw the groove radar polygon itself
+                    ctx.fillStyle = "lightgreen";
+                    ctx.moveTo(52, 52);
+                    ctx.beginPath();
+                    for (var i = 0; i <= 5; i++) {
+
+                        var xx = (50 * radarValues[i % 5]) * Math.cos((90 + (i % 5) * 72) * (Math.PI / 180));
+                        var yy = (50 * radarValues[i % 5]) * Math.sin((90 + (i % 5) * 72) * (Math.PI / 180));
+
+                        ctx.lineTo(52 + xx, 52 - yy);
+                    }
+                    ctx.closePath();
+                    ctx.fill();
+
+                }
+
+            }
+
+            function init() {
+
+                // clear groove radar drawing
+                const ctx = document.getElementById("selector-radar").getContext("2d");
+                ctx.clearRect(0, 0, ctx.canvas.width, ctx.canvas.height);
+
+                ctx.fillStyle = "#333";
+                ctx.fillRect(0, 0, 104, 104);
+
+                // draw the frame polygon
+                ctx.strokeStyle = "gray";
+                    ctx.moveTo(52, 52);
+                    ctx.beginPath();
+                    for (var i = 0; i <= 5; i++) {
+                        var xx = (50 * 0.75) * Math.cos((90 + (i % 5) * 72) * (Math.PI / 180));
+                        var yy = (50 * 0.75) * Math.sin((90 + (i % 5) * 72) * (Math.PI / 180));
+
+                        ctx.lineTo(52 + xx, 52 - yy);
+                        ctx.lineTo(52, 52);
+                        ctx.lineTo(52 + xx, 52 - yy);
+                    }
+                    ctx.closePath();
+                    ctx.stroke();
+
+                // pick a random song
+                const keys = Object.keys(songData);
+                songOfChoice = keys[Math.floor(Math.random() * keys.length)];
+
+                // get the reference to the dropdown
+                var dropdown = document.getElementById("ddr-chart");
+                
+                if (dropdown.options.length == 1) {
+                    // populate dropdown with mix groups
+                    for (var mix in mixes) {
+                        dropdown.innerHTML += `<optgroup label="${mixNames[mix]}" id="group-${mixes[mix]}"></optgroup>`
+                    }
+
+                    // populate dropdown w/ charts (sorted accordingly)
+                    for (var chart in songData) {
+                        document.getElementById(`group-${songData[chart].mix}`).innerHTML +=  `<option value="${chart}">${songData[chart].name} [${songData[chart].diff} - Level ${songData[chart].level}]</option>`;
+                    }
+                }
+
+                // set up blank game table
+                clearGameTable();
+
+                // initialize game
+                attempts = 0;
+                // document.getElementById("game-type").innerHTML = "Random Game";
+                document.getElementById("postgame").style.display = "none";
+
+                document.getElementById("ddr-chart").disabled = false;
+                document.getElementById("submit").disabled = false;
+            }
+
+        </script>
+    </head>
+    <body onload="init();">
+        
+        <h1>stepchartle</h1>
+        <div id="selector">
+            <div id="selector-h2p">
+                <p>How to Play:</p>
+                <ul>
+                    <li>Select a DDR chart from the dropdown menu below.</li>
+                    <li>Click "Guess" to guess what the secret chart is.</li>
+                    <li>Use its numeric values and the Groove Radar graphic to identify the secret chart within eight (8) guesses.</li>
+                </ul>
+            </div>
+            <canvas id="selector-radar" width="104" height="104"></canvas>
+            <select name="ddr-chart" id="ddr-chart" onchange="updateInfo();">
+                <option value="nosong">Select Music!</option>
+            </select>
+            <button name="submit" id="submit" onclick="check();">Guess</button>
+        </div>
+        <div id="game-info" style="display: none;">
+            <span id="game-type">Game ID:</span>
+        </div>
+        <div id="game">
+            <!--
+            <div class="game-row header">
+                <div class="game-row-attempt">#</div>
+                <div class="game-row-chartname"></div>
+                <div class="game-row-value">LV</div>
+                <div class="game-row-value">STR</div>
+                <div class="game-row-value">VOL</div>
+                <div class="game-row-value">AIR</div>
+                <div class="game-row-value">FRE</div>
+                <div class="game-row-value">CHA</div>
+                <div class="game-row-value">MIX</div>
+            </div>
+            --> 
+        </div>
+        <div id="postgame">
+            <!--
+            <span id="game-rating">Marvelous!!!</span>
+            <br />
+            -->
+            <button name="reset" id="reset" onclick="init();">New Game</button>
+        </div>
+		<footer>
+			<p>by <a href="http://twitter.com/PilotVG">@PilotVG</a> | more mistakes at <a href="https://pilot.dev/">pilot.dev</a></p>
+		</footer>
+    </body>
+</html>
